@@ -1,6 +1,10 @@
 # Cloudflare Pages redirects
 # Format: source destination [status] (one rule per line; order = priority)
 
-# /scan → /b2b-pipeline-assessment (permanent · keep indefinitely for old bookmarks + external shares)
-/scan          /b2b-pipeline-assessment  301
-/scan/         /b2b-pipeline-assessment  301
+# Legacy short URL → new canonical (keep indefinitely for old bookmarks + external shares)
+/scan                        /assessment  301
+/scan/                       /assessment  301
+
+# Old long URL → new canonical (keep indefinitely for backlinks + indexed pages)
+/b2b-pipeline-assessment     /assessment  301
+/b2b-pipeline-assessment/    /assessment  301

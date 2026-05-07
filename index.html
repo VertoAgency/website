@@ -81,6 +81,8 @@
           radial-gradient(ellipse 60% 50% at 90% 50%, rgba(67, 229, 255, 0.2), transparent 60%),
           linear-gradient(180deg, #d9f0ff 0%, #ffffff 70%);
       }
+      /* Hero/display stat numerals — tight tracking, medium weight */
+      .hero-stat { font-family: 'Geist', sans-serif; font-weight: 500; line-height: 0.85; letter-spacing: -0.04em; }
       /* Legacy drop-cap removed — Geist doesn't work as drop cap; we use a Caveat monogram instead */
       /* Light Blue panel (the v3 signature) */
       .panel-light-blue { background-color: #66CCFF; }
@@ -440,15 +442,15 @@
           </div>
 
           <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            <div class="bg-[#F8FAFC] rounded-2xl p-8">
+            <div class="bg-light-blue/50 rounded-2xl p-8">
               <p class="font-mono text-[12px] text-brand-blue uppercase tracking-widest font-medium mb-4">The metric trap</p>
               <p class="text-[15px] text-brand-dark/80 leading-[1.6]">Clicks. Impressions. MQLs. Vanity numbers that look good on a slide but don't show up in the CRM as revenue.</p>
             </div>
-            <div class="bg-[#F8FAFC] rounded-2xl p-8">
+            <div class="bg-light-blue/50 rounded-2xl p-8">
               <p class="font-mono text-[12px] text-brand-blue uppercase tracking-widest font-medium mb-4">The channel trap</p>
               <p class="text-[15px] text-brand-dark/80 leading-[1.6]">CMOs used to ask "which channel?" Now the board asks "which opportunity?" The shift is real — most agencies haven't made it.</p>
             </div>
-            <div class="bg-[#F8FAFC] rounded-2xl p-8">
+            <div class="bg-light-blue/50 rounded-2xl p-8">
               <p class="font-mono text-[12px] text-brand-blue uppercase tracking-widest font-medium mb-4">The speed trap</p>
               <p class="text-[15px] text-brand-dark/80 leading-[1.6]">Board timelines are six months. Most agency retainers take twelve to show results. Speed and proof are the gaps we close first.</p>
             </div>
@@ -471,7 +473,7 @@
 
           <div class=”grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6”>
             <!-- IRONSCALES — verified G2 quote -->
-            <article class=”bg-white rounded-2xl p-8 flex flex-col hover:shadow-2xl hover:shadow-brand-dark/10 transition-all group”>
+            <article class=”bg-white rounded-2xl p-8 flex flex-col shadow-lg shadow-brand-dark/8 hover:shadow-2xl hover:shadow-brand-dark/10 transition-all group”>
               <div class=”flex items-start justify-between gap-4 mb-6”>
                 <span class=”text-xl font-medium text-brand-dark”>IRONSCALES</span>
                 <span class=”font-mono text-[10px] uppercase tracking-widest text-brand-dark/50 font-medium”>Cybersecurity</span>
@@ -492,7 +494,7 @@
             </article>
 
             <!-- Cribl -->
-            <article class=”bg-white rounded-2xl p-8 flex flex-col hover:shadow-2xl hover:shadow-brand-dark/10 transition-all group”>
+            <article class=”bg-white rounded-2xl p-8 flex flex-col shadow-lg shadow-brand-dark/8 hover:shadow-2xl hover:shadow-brand-dark/10 transition-all group”>
               <div class=”flex items-start justify-between gap-4 mb-6”>
                 <span class=”text-xl font-medium text-brand-dark”>Cribl</span>
                 <span class=”font-mono text-[10px] uppercase tracking-widest text-brand-dark/50 font-medium”>Observability</span>
@@ -511,7 +513,7 @@
             </article>
 
             <!-- AMPECO -->
-            <article class=”bg-white rounded-2xl p-8 flex flex-col hover:shadow-2xl hover:shadow-brand-dark/10 transition-all group”>
+            <article class=”bg-white rounded-2xl p-8 flex flex-col shadow-lg shadow-brand-dark/8 hover:shadow-2xl hover:shadow-brand-dark/10 transition-all group”>
               <div class=”flex items-start justify-between gap-4 mb-6”>
                 <span class=”text-xl font-medium text-brand-dark”>AMPECO</span>
                 <span class=”font-mono text-[10px] uppercase tracking-widest text-brand-dark/50 font-medium”>EV Charging</span>
@@ -530,7 +532,7 @@
             </article>
 
             <!-- SnapLogic -->
-            <article class=”bg-white rounded-2xl p-8 flex flex-col hover:shadow-2xl hover:shadow-brand-dark/10 transition-all group”>
+            <article class=”bg-white rounded-2xl p-8 flex flex-col shadow-lg shadow-brand-dark/8 hover:shadow-2xl hover:shadow-brand-dark/10 transition-all group”>
               <div class=”flex items-start justify-between gap-4 mb-6”>
                 <span class=”text-xl font-medium text-brand-dark”>SnapLogic</span>
                 <span class=”font-mono text-[10px] uppercase tracking-widest text-brand-dark/50 font-medium”>iPaaS</span>
@@ -549,7 +551,7 @@
             </article>
 
             <!-- SmartRecruiters -->
-            <article class=”bg-white rounded-2xl p-8 flex flex-col hover:shadow-2xl hover:shadow-brand-dark/10 transition-all group”>
+            <article class=”bg-white rounded-2xl p-8 flex flex-col shadow-lg shadow-brand-dark/8 hover:shadow-2xl hover:shadow-brand-dark/10 transition-all group”>
               <div class=”flex items-start justify-between gap-4 mb-6”>
                 <span class=”text-xl font-medium text-brand-dark”>SmartRecruiters</span>
                 <span class=”font-mono text-[10px] uppercase tracking-widest text-brand-dark/50 font-medium”>ATS / HR Tech</span>
@@ -601,7 +603,7 @@
 
             <div>
               <div class="w-10 h-10 rounded-xl bg-light-blue flex items-center justify-center mb-5">
-                <i data-lucide="presentation" class="w-5 h-5 text-brand-blue"></i>
+                <i data-lucide="layout-dashboard" class="w-5 h-5 text-brand-blue"></i>
               </div>
               <h3 class="text-[20px] font-medium text-brand-dark mb-3">Board-ready reporting, monthly.</h3>
               <p class="text-brand-dark/70 leading-[1.6] text-[15px]">Every month: pipeline sourced, CAC, payback period, cohort retention. A deck your CEO can walk into a board meeting with. "We increased CTR" is not a board conversation.</p>
@@ -744,7 +746,7 @@
       </section>
 
       <!-- Customer Voice — verified G2 -->
-      <section id=”voice” class=”py-24 md:py-32 bg-[#F8FAFC]”>
+      <section id=”voice” class=”py-24 md:py-32 bg-white”>
         <div class=”container-brand”>
           <div class=”max-w-3xl mb-16”>
             <p class=”font-mono text-[12px] text-brand-blue uppercase tracking-[0.3em] font-medium mb-4”>Customer Voice</p>
@@ -753,7 +755,7 @@
 
           <div class=”grid grid-cols-1 lg:grid-cols-2 gap-6”>
             <!-- Grant Ho — verified G2 quote -->
-            <figure class=”bg-white rounded-2xl p-10 hover:shadow-xl hover:shadow-brand-dark/8 transition-shadow”>
+            <figure class=”bg-white rounded-2xl p-10 shadow-lg shadow-brand-dark/8 hover:shadow-xl hover:shadow-brand-dark/10 transition-shadow”>
               <div class=”flex items-center gap-2 mb-6”>
                 <span class=”inline-flex items-center gap-1.5 bg-light-blue text-brand-blue rounded-full px-3 py-1 font-mono text-[10px] uppercase tracking-wider font-medium”>
                   <i data-lucide=”check-circle” class=”w-3 h-3”></i>
@@ -773,7 +775,7 @@
             </figure>
 
             <!-- G2 aggregate -->
-            <div class=”bg-white rounded-2xl p-10 hover:shadow-xl hover:shadow-brand-dark/8 transition-shadow flex flex-col”>
+            <div class=”bg-white rounded-2xl p-10 shadow-lg shadow-brand-dark/8 hover:shadow-xl hover:shadow-brand-dark/10 transition-shadow flex flex-col”>
               <div class=”flex items-center gap-4 mb-8”>
                 <p class=”text-[56px] font-medium text-brand-dark leading-none”>4.9</p>
                 <div>

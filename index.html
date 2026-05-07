@@ -81,11 +81,6 @@
           radial-gradient(ellipse 60% 50% at 90% 50%, rgba(67, 229, 255, 0.2), transparent 60%),
           linear-gradient(180deg, #d9f0ff 0%, #ffffff 70%);
       }
-      /* Subtle rule used between editorial sections */
-      .editorial-rule {
-        height: 1px;
-        background: linear-gradient(90deg, transparent, rgba(6, 0, 38, 0.15), transparent);
-      }
       /* Legacy drop-cap removed — Geist doesn't work as drop cap; we use a Caveat monogram instead */
       /* Light Blue panel (the v3 signature) */
       .panel-light-blue { background-color: #66CCFF; }
@@ -342,595 +337,455 @@
     <main>
       <!-- Hero -->
       <section class="hero-gradient relative overflow-hidden">
-        <div class="container-brand pt-20 pb-16 md:pt-28 md:pb-24 grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
-          <div class="lg:col-span-7 space-y-8">
-            <div class="inline-flex items-center gap-2 text-brand-dark/70 text-[12px] font-mono uppercase tracking-[0.2em] font-medium">
+        <div class="container-brand pt-20 pb-16 md:pt-28 md:pb-20">
+          <div class="max-w-5xl">
+            <!-- Eyebrow -->
+            <div class="inline-flex items-center gap-2 text-brand-dark/70 text-[12px] font-mono uppercase tracking-[0.2em] font-medium mb-6">
               <span class="w-8 h-px bg-brand-blue"></span>
               For B2B CMOs · Since 2018
             </div>
-            <h1 class="text-[32px] md:text-[48px] font-medium leading-[1.2] tracking-[-0.02em] text-brand-dark">
-              The agency CMOs call when <span class="font-script text-brand-blue text-[1.15em] leading-none">pipeline</span> is the only number the board still counts.
+
+            <!-- H1 -->
+            <h1 class="text-[40px] md:text-[60px] lg:text-[72px] font-medium leading-[1.05] tracking-[-0.025em] text-brand-dark mb-8">
+              Pipeline-Driven Digital Marketing for B2B Companies.
             </h1>
-            <p class="text-[16px] md:text-[18px] text-brand-dark/80 max-w-[72ch] leading-[1.5]">
-              Eight years inside B2B SaaS funnels — <span class="font-medium text-brand-dark">Neo4j, Netgain, SnapLogic</span>, plus a couple hundred others. Top of funnel always looks fine on the dashboard. The middle's where the money goes missing. That's the part we work on.
+
+            <!-- Subhead -->
+            <p class="text-[18px] md:text-[20px] text-brand-dark/80 max-w-3xl leading-[1.55] mb-10">
+              200+ B2B technology clients. <span class="font-medium text-brand-dark">$1B+ in pipeline generated.</span> One framework, two growth streams: <span class="font-medium text-brand-dark">Inbound</span> and <span class="font-medium text-brand-dark">Outbound</span>. Both wired to your CRM. Both measured to pipeline.
             </p>
-            <div class="flex flex-col sm:flex-row gap-4 pt-2">
-              <a href="/contact" class="bg-brand-dark hover:bg-brand-blue text-white px-7 py-4 rounded-lg font-medium text-base transition-colors inline-flex items-center justify-center gap-2 group">
-                Book a pipeline diagnostic
+
+            <!-- CTAs -->
+            <div class="flex flex-col sm:flex-row gap-3 mb-3">
+              <a href="/b2b-pipeline-assessment" class="bg-brand-blue hover:bg-dark-blue text-white px-7 py-4 rounded-lg font-medium text-base transition-colors inline-flex items-center justify-center gap-2 group">
+                Book your free Pipeline Assessment
                 <i data-lucide="arrow-right" class="w-5 h-5 group-hover:translate-x-0.5 transition-transform"></i>
               </a>
-              <a href="#report" class="bg-white hover:bg-brand-light/40 text-brand-dark px-7 py-4 rounded-lg font-medium text-base transition-colors inline-flex items-center justify-center gap-2">
-                <i data-lucide="file-text" class="w-5 h-5"></i>
-                Read the 2026 Pipeline Report
+              <a href="#framework" class="bg-white hover:bg-brand-light/40 text-brand-dark px-7 py-4 rounded-lg font-medium text-base transition-colors inline-flex items-center justify-center gap-2">
+                See how we work
+                <i data-lucide="arrow-right" class="w-5 h-5"></i>
               </a>
             </div>
-          </div>
 
-          <!-- Right column: executive-style data card -->
-          <div class="lg:col-span-5">
-            <div class="bg-white rounded-2xl shadow-xl shadow-brand-blue/10 overflow-hidden">
-              <div class="px-6 py-5 border-b border-brand-dark/10 flex items-center justify-between">
-                <div>
-                  <p class="font-mono text-[12px] text-brand-dark/60 uppercase tracking-widest font-medium">Avg. client outcome · 90 days</p>
-                  <p class="text-xl font-medium text-brand-dark mt-1">Stage 1 Pipeline Impact</p>
-                </div>
-                <span class="inline-flex items-center gap-1.5 text-[12px] font-mono font-medium text-brand-blue uppercase tracking-wider bg-brand-light/30 px-2.5 py-1 rounded-full">
-                  <i data-lucide="trending-up" class="w-3 h-3"></i> Verified
-                </span>
-              </div>
-              <div class="p-6 space-y-6">
-                <div>
-                  <div class="flex items-baseline justify-between mb-2">
-                    <span class="text-xs font-mono uppercase tracking-widest text-brand-dark/60 font-medium">Before Verto</span>
-                    <span class="font-mono text-sm font-medium text-brand-dark/60">$2.1M</span>
-                  </div>
-                  <div class="h-3 bg-brand-dark/5 rounded-full overflow-hidden">
-                    <div class="bar h-full bg-brand-dark/30 rounded-full" style="width: 40%"></div>
-                  </div>
-                </div>
-                <div>
-                  <div class="flex items-baseline justify-between mb-2">
-                    <span class="text-xs font-mono uppercase tracking-widest text-brand-dark font-medium">After Verto</span>
-                    <span class="font-mono text-sm font-medium text-brand-blue">$4.7M</span>
-                  </div>
-                  <div class="h-3 bg-brand-dark/5 rounded-full overflow-hidden">
-                    <div class="bar h-full bg-gradient-to-r from-brand-blue to-accent-cyan rounded-full" style="width: 90%"></div>
-                  </div>
-                </div>
-                <div class="pt-2 border-t border-brand-dark/10 grid grid-cols-3 gap-4">
-                  <div>
-                    <p class="font-mono text-[12px] uppercase tracking-wider text-brand-dark/60 font-medium">Pipeline</p>
-                    <p class="font-mono text-2xl font-medium text-brand-blue mt-1 tabular-nums">+125%</p>
-                  </div>
-                  <div>
-                    <p class="font-mono text-[12px] uppercase tracking-wider text-brand-dark/60 font-medium">CAC</p>
-                    <p class="font-mono text-2xl font-medium text-brand-dark mt-1 tabular-nums">−38%</p>
-                  </div>
-                  <div>
-                    <p class="font-mono text-[12px] uppercase tracking-wider text-brand-dark/60 font-medium">Velocity</p>
-                    <p class="font-mono text-2xl font-medium text-brand-dark mt-1 tabular-nums">+60%</p>
-                  </div>
-                </div>
-              </div>
-              <div class="px-6 py-4 bg-brand-light/15 border-t border-brand-dark/10 flex items-center justify-between">
-                <p class="text-[12px] text-brand-dark/70">Benchmarks from 45 B2B SaaS clients, 2024–2026</p>
-                <a href="#report" class="text-xs font-medium text-brand-blue hover:underline inline-flex items-center gap-1">
-                  Source <i data-lucide="arrow-up-right" class="w-3 h-3"></i>
-                </a>
-              </div>
-            </div>
+            <!-- Microcopy -->
+            <p class="text-[13px] text-brand-dark/55 font-mono uppercase tracking-[0.15em]">
+              Five business days · 30-minute debrief · No commitment
+            </p>
           </div>
         </div>
 
-        <!-- Trust strip -->
+        <!-- Trust strip — partner badges -->
         <div class="border-t border-brand-dark/10">
           <div class="container-brand py-4 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 font-mono text-[11px] md:text-[12px] uppercase tracking-[0.2em] text-brand-dark/70 font-medium">
-            <span>Since 2018</span>
+            <span>LinkedIn Ads Certified</span>
             <span class="w-1 h-1 rounded-full bg-brand-dark/25" aria-hidden="true"></span>
-            <span>200+ B2B clients served</span>
+            <span>Google Premier Partner</span>
             <span class="w-1 h-1 rounded-full bg-brand-dark/25" aria-hidden="true"></span>
-            <span>$1B+ pipeline generated</span>
+            <span>Microsoft Select Partner</span>
             <span class="w-1 h-1 rounded-full bg-brand-dark/25" aria-hidden="true"></span>
-            <a href="https://www.g2.com/products/vertodigital/reviews" target="_blank" rel="noopener noreferrer" class="hover:text-brand-blue transition-colors">★ 4.9 on G2</a>
+            <span>Meta Business Partner</span>
             <span class="w-1 h-1 rounded-full bg-brand-dark/25" aria-hidden="true"></span>
-            <span>50+ people team</span>
+            <a href="https://www.g2.com/products/vertodigital/reviews" target="_blank" rel="noopener noreferrer" class="hover:text-brand-blue transition-colors">★ 4.9 on G2 (37 reviews)</a>
           </div>
         </div>
 
-        <!-- Client logo marquee -->
+        <!-- Client logo marquee — 12 verified clients -->
         <div class="border-t border-brand-dark/10 bg-white/60 backdrop-blur-sm">
           <div class="container-brand py-6 flex items-center gap-8 overflow-hidden">
             <p class="flex-shrink-0 font-mono text-[12px] uppercase tracking-[0.2em] text-brand-dark/60 font-medium whitespace-nowrap">Trusted by CMOs at</p>
             <div class="relative flex-1 overflow-hidden">
               <div class="marquee-track flex items-center gap-16 whitespace-nowrap">
-                <span class="text-xl font-medium text-brand-dark/60">Neo4j</span>
-                <span class="text-xl font-medium text-brand-dark/60">Payhawk</span>
-                <span class="text-xl font-medium text-brand-dark/60">Cribl</span>
-                <span class="text-xl font-medium text-brand-dark/60">Camunda</span>
                 <span class="text-xl font-medium text-brand-dark/60">SnapLogic</span>
+                <span class="text-xl font-medium text-brand-dark/60">IRONSCALES</span>
+                <span class="text-xl font-medium text-brand-dark/60">Cribl</span>
+                <span class="text-xl font-medium text-brand-dark/60">Payhawk</span>
+                <span class="text-xl font-medium text-brand-dark/60">Cloudflare</span>
+                <span class="text-xl font-medium text-brand-dark/60">Neo4j</span>
+                <span class="text-xl font-medium text-brand-dark/60">Camunda</span>
                 <span class="text-xl font-medium text-brand-dark/60">Scalefocus</span>
                 <span class="text-xl font-medium text-brand-dark/60">Netgain</span>
+                <span class="text-xl font-medium text-brand-dark/60">SmartRecruiters</span>
+                <span class="text-xl font-medium text-brand-dark/60">AMPECO</span>
+                <span class="text-xl font-medium text-brand-dark/60">Safe Security</span>
                 <!-- repeated for seamless loop -->
-                <span class="text-xl font-medium text-brand-dark/60">Neo4j</span>
-                <span class="text-xl font-medium text-brand-dark/60">Payhawk</span>
-                <span class="text-xl font-medium text-brand-dark/60">Cribl</span>
-                <span class="text-xl font-medium text-brand-dark/60">Camunda</span>
                 <span class="text-xl font-medium text-brand-dark/60">SnapLogic</span>
+                <span class="text-xl font-medium text-brand-dark/60">IRONSCALES</span>
+                <span class="text-xl font-medium text-brand-dark/60">Cribl</span>
+                <span class="text-xl font-medium text-brand-dark/60">Payhawk</span>
+                <span class="text-xl font-medium text-brand-dark/60">Cloudflare</span>
+                <span class="text-xl font-medium text-brand-dark/60">Neo4j</span>
+                <span class="text-xl font-medium text-brand-dark/60">Camunda</span>
                 <span class="text-xl font-medium text-brand-dark/60">Scalefocus</span>
                 <span class="text-xl font-medium text-brand-dark/60">Netgain</span>
+                <span class="text-xl font-medium text-brand-dark/60">SmartRecruiters</span>
+                <span class="text-xl font-medium text-brand-dark/60">AMPECO</span>
+                <span class="text-xl font-medium text-brand-dark/60">Safe Security</span>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Editorial opening -->
-      <section class="py-24 md:py-32 bg-white">
-        <div class="container-brand"><div class="max-w-[72ch] mx-auto">
-          <div class="mb-12">
-            <p class="font-mono text-[12px] text-brand-blue uppercase tracking-[0.3em] font-medium mb-4">An Open Letter</p>
-            <h2 class="text-[24px] md:text-[32px] font-medium text-brand-dark leading-[1.2] tracking-[-0.015em]">
-              To every B2B CMO who's tired of presenting <span class="font-script text-brand-blue text-[1.15em] leading-none">MQLs</span> to the board.
+      <!-- The Problem -->
+      <section id="the-problem" class="py-24 md:py-32 bg-white">
+        <div class="container-brand">
+          <div class="max-w-4xl mx-auto text-center mb-16">
+            <p class="font-mono text-[12px] text-brand-blue uppercase tracking-[0.3em] font-medium mb-6">The question every CMO is being asked</p>
+            <h2 class="text-[32px] md:text-[48px] lg:text-[56px] font-medium text-brand-dark leading-[1.1] tracking-[-0.025em] mb-8">
+              "If I give you more budget, can you give me more pipeline?"
             </h2>
-          </div>
-
-          <div class="editorial-rule mb-12"></div>
-
-          <div class="space-y-6 text-[16px] md:text-[16px] leading-[1.5] text-brand-dark/85">
-            <p>
-              Your CEO doesn't care about MQLs. Your CFO doesn't care about cost per lead. And your board, between you and us, isn't tracking brand awareness scores. They care about one number: pipeline that closes. So do we.
-            </p>
-            <p>
-              Eight years working only with B2B SaaS. Same pattern, every time: marketing optimizes for the metric on the slide while RevOps quietly admits that <span class="font-medium text-brand-dark">under 30% of those "leads" ever reach Stage 1</span>. The funnel leaks at the top. Nobody's measuring where.
-            </p>
-
-            <blockquote class="text-[20px] md:text-[24px] font-medium text-brand-blue py-5 border-l-[3px] border-brand-blue pl-8 my-10 leading-[1.35] tracking-[-0.01em]">
-              The gap between what marketing reports and what sales accepts is where most B2B companies lose the plot.
-            </blockquote>
-
-            <p>
-              If you're a CMO, VP Marketing, or Marketing Director at a Series B–E B2B SaaS company, this letter's for you. Below: the outcomes we've produced for clients, the principles that got us there, and a standing offer to talk. No form to fill out.
+            <p class="text-[18px] md:text-[20px] text-brand-dark/75 leading-[1.55] max-w-2xl mx-auto">
+              Every CMO is being asked it. Every board is measuring it. Most marketing doesn't connect to it.
             </p>
           </div>
 
-          <!-- Signature -->
-          <div class="mt-14 pt-10 border-t border-brand-dark/10 flex items-end gap-5">
-            <img src="paul-green-headshot.avif" alt="Paul Green, Growth & AI Solutions at VertoDigital" class="w-14 h-14 rounded-full object-cover shadow-lg shadow-brand-blue/20 flex-shrink-0" />
-            <div>
-              <p class="font-script text-[40px] md:text-[48px] text-brand-dark leading-none">Paul Green</p>
-              <p class="text-sm text-brand-dark/60 mt-2">Growth &amp; AI Solutions · VertoDigital · Boston, MA</p>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            <div class="bg-[#F8FAFC] rounded-2xl p-8">
+              <p class="font-mono text-[12px] text-brand-blue uppercase tracking-widest font-medium mb-4">The metric trap</p>
+              <p class="text-[15px] text-brand-dark/80 leading-[1.6]">Clicks. Impressions. MQLs. Vanity numbers that look good on a slide but don't show up in the CRM as revenue.</p>
+            </div>
+            <div class="bg-[#F8FAFC] rounded-2xl p-8">
+              <p class="font-mono text-[12px] text-brand-blue uppercase tracking-widest font-medium mb-4">The channel trap</p>
+              <p class="text-[15px] text-brand-dark/80 leading-[1.6]">CMOs used to ask "which channel?" Now the board asks "which opportunity?" The shift is real — most agencies haven't made it.</p>
+            </div>
+            <div class="bg-[#F8FAFC] rounded-2xl p-8">
+              <p class="font-mono text-[12px] text-brand-blue uppercase tracking-widest font-medium mb-4">The speed trap</p>
+              <p class="text-[15px] text-brand-dark/80 leading-[1.6]">Board timelines are six months. Most agency retainers take twelve to show results. Speed and proof are the gaps we close first.</p>
             </div>
           </div>
-        </div></div>
+        </div>
       </section>
 
-      <!-- Named case studies -->
-      <section id="case-studies" class="panel-light-blue relative overflow-hidden">
-
-        <div class="relative container-brand py-24 md:py-32">
-          <div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 mb-16">
-            <div class="max-w-2xl">
-              <p class="font-mono text-[12px] text-brand-dark uppercase tracking-[0.2em] font-medium mb-4">Field Notes · Case Studies</p>
-              <h2 class="text-[24px] md:text-[32px] font-medium text-brand-dark leading-[1.2] tracking-[-0.02em]">Three companies. Three <span class="font-script text-[1.1em] leading-none">pipeline</span> problems. Solved.</h2>
+      <!-- Proof — 5 real case study cards -->
+      <section id=”proof” class=”panel-light-blue relative overflow-hidden”>
+        <div class=”relative container-brand py-24 md:py-32”>
+          <div class=”flex flex-col md:flex-row justify-between items-start md:items-end gap-6 mb-16”>
+            <div class=”max-w-2xl”>
+              <p class=”font-mono text-[12px] text-brand-dark uppercase tracking-[0.2em] font-medium mb-4”>Proof · Case Studies</p>
+              <h2 class=”text-[24px] md:text-[32px] font-medium text-brand-dark leading-[1.2] tracking-[-0.02em]”>Real clients. Real numbers. Measured to pipeline.</h2>
             </div>
-            <a href="#" class="text-brand-dark font-medium text-sm inline-flex items-center gap-2 hover:gap-3 transition-all whitespace-nowrap">
-              All 45 case studies <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            <a href=”/case-studies” class=”text-brand-dark font-medium text-sm inline-flex items-center gap-2 hover:gap-3 transition-all whitespace-nowrap”>
+              All case studies <i data-lucide=”arrow-right” class=”w-4 h-4”></i>
             </a>
           </div>
 
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <!-- Case 1: Neo4j -->
-            <article class="bg-white rounded-2xl p-8 flex flex-col hover:shadow-2xl hover:shadow-brand-dark/10 transition-all group">
-              <div class="flex items-center justify-between mb-8">
-                <span class="text-xl font-medium text-brand-dark">Neo4j</span>
-                <span class="font-mono text-[12px] uppercase tracking-widest text-brand-dark/60 font-medium">Graph DB · Series F</span>
+          <div class=”grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6”>
+            <!-- IRONSCALES — verified G2 quote -->
+            <article class=”bg-white rounded-2xl p-8 flex flex-col hover:shadow-2xl hover:shadow-brand-dark/10 transition-all group”>
+              <div class=”flex items-start justify-between gap-4 mb-6”>
+                <span class=”text-xl font-medium text-brand-dark”>IRONSCALES</span>
+                <span class=”font-mono text-[10px] uppercase tracking-widest text-brand-dark/50 font-medium”>Cybersecurity</span>
               </div>
-              <p class="font-mono text-[12px] text-brand-blue uppercase tracking-widest font-medium mb-3">The Problem</p>
-              <p class="text-brand-dark/75 text-[14px] leading-[1.5] mb-6">Marketing-sourced pipeline flat three quarters running. Ad spend up 40% YoY. The board started asking why.</p>
-
-              <p class="font-mono text-[12px] text-brand-blue uppercase tracking-widest font-medium mb-3">The Outcome</p>
-              <div class="mb-6">
-                <p class="font-mono text-[40px] md:text-[48px] font-medium text-brand-blue leading-none tabular-nums">70%+</p>
-                <p class="text-brand-dark/75 text-[14px] mt-3 leading-[1.5]">of pipeline now connected to LinkedIn ads — up from 12%.</p>
+              <p class=”font-mono text-[11px] text-brand-blue uppercase tracking-widest font-medium mb-3”>Inbound + Pipeline Intelligence</p>
+              <div class=”mb-5”>
+                <p class=”hero-stat text-[52px] text-brand-blue leading-none”>2.3×</p>
+                <p class=”font-mono text-[11px] uppercase tracking-[0.18em] text-brand-dark/55 font-medium mt-1”>pipeline in 90 days</p>
               </div>
-
-              <div class="mt-auto pt-6 border-t border-brand-dark/10">
-                <p class="text-[16px] text-brand-dark/85 leading-[1.45] mb-4">“They rebuilt our attribution from the ground up. We finally know what's working.”</p>
-                <div class="flex items-center justify-between">
-                  <div class="text-[14px]">
-                    <p class="font-medium text-brand-dark">Sarah Chen</p>
-                    <p class="text-brand-dark/60">CMO, Neo4j</p>
-                  </div>
-                  <a href="#" class="text-xs font-medium text-brand-blue inline-flex items-center gap-1 group-hover:gap-2 transition-all">
-                    Read case <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
-                  </a>
-                </div>
+              <p class=”text-[14px] text-brand-dark/70 leading-[1.6] mb-6”>Rebuilt campaign infrastructure on first-party data activation. 4× opportunities at 50% budget.</p>
+              <div class=”mt-auto border-t border-brand-dark/8 pt-5”>
+                <p class=”text-[14px] italic text-brand-dark/75 leading-[1.5] mb-2”>&ldquo;They built a paid acquisition program that became one of marketing&rsquo;s top three sources of pipeline generation for our business.&rdquo;</p>
+                <p class=”font-mono text-[10px] uppercase tracking-[0.15em] text-brand-dark/45 font-medium mb-4”>Grant Ho · CMO, IRONSCALES</p>
+                <a href=”/case-studies/ironscales” class=”text-xs font-medium text-brand-blue inline-flex items-center gap-1 group-hover:gap-2 transition-all”>
+                  Read case study <i data-lucide=”arrow-up-right” class=”w-3.5 h-3.5”></i>
+                </a>
               </div>
             </article>
 
-            <!-- Case 2: Netgain -->
-            <article class="bg-white rounded-2xl p-8 flex flex-col hover:shadow-2xl hover:shadow-brand-dark/10 transition-all group">
-              <div class="flex items-center justify-between mb-8">
-                <span class="text-xl font-medium text-brand-dark">Netgain</span>
-                <span class="font-mono text-[12px] uppercase tracking-widest text-brand-dark/60 font-medium">Cloud · Series C</span>
+            <!-- Cribl -->
+            <article class=”bg-white rounded-2xl p-8 flex flex-col hover:shadow-2xl hover:shadow-brand-dark/10 transition-all group”>
+              <div class=”flex items-start justify-between gap-4 mb-6”>
+                <span class=”text-xl font-medium text-brand-dark”>Cribl</span>
+                <span class=”font-mono text-[10px] uppercase tracking-widest text-brand-dark/50 font-medium”>Observability</span>
               </div>
-              <p class="font-mono text-[12px] text-brand-blue uppercase tracking-widest font-medium mb-3">The Problem</p>
-              <p class="text-brand-dark/75 text-[14px] leading-[1.5] mb-6">MQL volume looked healthy. Sales was rejecting 73% of them. Marketing-sourced ARR sat below target anyway.</p>
-
-              <p class="font-mono text-[12px] text-brand-blue uppercase tracking-widest font-medium mb-3">The Outcome</p>
-              <div class="mb-6">
-                <p class="font-mono text-[40px] md:text-[48px] font-medium text-brand-blue leading-none tabular-nums">+130%</p>
-                <p class="text-brand-dark/75 text-[14px] mt-3 leading-[1.5]">increase in marketing-sourced ARR in 9 months.</p>
+              <p class=”font-mono text-[11px] text-brand-blue uppercase tracking-widest font-medium mb-3”>SEO + AEO</p>
+              <div class=”mb-5”>
+                <p class=”hero-stat text-[52px] text-brand-blue leading-none”>95%</p>
+                <p class=”font-mono text-[11px] uppercase tracking-[0.18em] text-brand-dark/55 font-medium mt-1”>organic traffic growth YoY</p>
               </div>
-
-              <div class="mt-auto pt-6 border-t border-brand-dark/10">
-                <p class="text-[16px] text-brand-dark/85 leading-[1.45] mb-4">“We stopped optimizing for leads and started optimizing for deals. Pipeline doubled.”</p>
-                <div class="flex items-center justify-between">
-                  <div class="text-[14px]">
-                    <p class="font-medium text-brand-dark">Marcus Rivera</p>
-                    <p class="text-brand-dark/60">VP Marketing, Netgain</p>
-                  </div>
-                  <a href="#" class="text-xs font-medium text-brand-blue inline-flex items-center gap-1 group-hover:gap-2 transition-all">
-                    Read case <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
-                  </a>
-                </div>
+              <p class=”text-[14px] text-brand-dark/70 leading-[1.6] mb-6”>Hybrid AI + human content engine with technical SEO foundation. Content program contributed to $100M ARR milestone.</p>
+              <div class=”mt-auto border-t border-brand-dark/8 pt-5”>
+                <a href=”/case-studies” class=”text-xs font-medium text-brand-blue inline-flex items-center gap-1 group-hover:gap-2 transition-all”>
+                  View all case studies <i data-lucide=”arrow-up-right” class=”w-3.5 h-3.5”></i>
+                </a>
               </div>
             </article>
 
-            <!-- Case 3: SnapLogic -->
-            <article class="bg-white rounded-2xl p-8 flex flex-col hover:shadow-2xl hover:shadow-brand-dark/10 transition-all group">
-              <div class="flex items-center justify-between mb-8">
-                <span class="text-xl font-medium text-brand-dark">SnapLogic</span>
-                <span class="font-mono text-[12px] uppercase tracking-widest text-brand-dark/60 font-medium">iPaaS · Series H</span>
+            <!-- AMPECO -->
+            <article class=”bg-white rounded-2xl p-8 flex flex-col hover:shadow-2xl hover:shadow-brand-dark/10 transition-all group”>
+              <div class=”flex items-start justify-between gap-4 mb-6”>
+                <span class=”text-xl font-medium text-brand-dark”>AMPECO</span>
+                <span class=”font-mono text-[10px] uppercase tracking-widest text-brand-dark/50 font-medium”>EV Charging</span>
               </div>
-              <p class="font-mono text-[12px] text-brand-blue uppercase tracking-widest font-medium mb-3">The Problem</p>
-              <p class="text-brand-dark/75 text-[14px] leading-[1.5] mb-6">ABM generating plenty of meetings. Zero of them becoming Stage 1 opportunities. Sales and marketing reading different signals.</p>
-
-              <p class="font-mono text-[12px] text-brand-blue uppercase tracking-widest font-medium mb-3">The Outcome</p>
-              <div class="mb-6">
-                <p class="font-mono text-[40px] md:text-[48px] font-medium text-brand-blue leading-none tabular-nums">+125%</p>
-                <p class="text-brand-dark/75 text-[14px] mt-3 leading-[1.5]">increase in Stage 1 opportunities in two quarters.</p>
+              <p class=”font-mono text-[11px] text-brand-blue uppercase tracking-widest font-medium mb-3”>Contact-Level ABM</p>
+              <div class=”mb-5”>
+                <p class=”hero-stat text-[52px] text-brand-blue leading-none”>58%</p>
+                <p class=”font-mono text-[11px] uppercase tracking-[0.18em] text-brand-dark/55 font-medium mt-1”>more cold meetings booked</p>
               </div>
+              <p class=”text-[14px] text-brand-dark/70 leading-[1.6] mb-6”>Contact-Level ABM with SDR trigger workflows on named individuals. 40% more pipeline per outreach attempt.</p>
+              <div class=”mt-auto border-t border-brand-dark/8 pt-5”>
+                <a href=”/case-studies” class=”text-xs font-medium text-brand-blue inline-flex items-center gap-1 group-hover:gap-2 transition-all”>
+                  View all case studies <i data-lucide=”arrow-up-right” class=”w-3.5 h-3.5”></i>
+                </a>
+              </div>
+            </article>
 
-              <div class="mt-auto pt-6 border-t border-brand-dark/10">
-                <p class="text-[16px] text-brand-dark/85 leading-[1.45] mb-4">“They're the only agency that ever asked to see our Salesforce data first. It showed.”</p>
-                <div class="flex items-center justify-between">
-                  <div class="text-[14px]">
-                    <p class="font-medium text-brand-dark">Elena Vasquez</p>
-                    <p class="text-brand-dark/60">Director of Demand, SnapLogic</p>
-                  </div>
-                  <a href="#" class="text-xs font-medium text-brand-blue inline-flex items-center gap-1 group-hover:gap-2 transition-all">
-                    Read case <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
-                  </a>
-                </div>
+            <!-- SnapLogic -->
+            <article class=”bg-white rounded-2xl p-8 flex flex-col hover:shadow-2xl hover:shadow-brand-dark/10 transition-all group”>
+              <div class=”flex items-start justify-between gap-4 mb-6”>
+                <span class=”text-xl font-medium text-brand-dark”>SnapLogic</span>
+                <span class=”font-mono text-[10px] uppercase tracking-widest text-brand-dark/50 font-medium”>iPaaS</span>
+              </div>
+              <p class=”font-mono text-[11px] text-brand-blue uppercase tracking-widest font-medium mb-3”>LinkedIn AI + Pipeline Intelligence</p>
+              <div class=”mb-5”>
+                <p class=”hero-stat text-[52px] text-brand-blue leading-none”>11×</p>
+                <p class=”font-mono text-[11px] uppercase tracking-[0.18em] text-brand-dark/55 font-medium mt-1”>ROAS on opportunities</p>
+              </div>
+              <p class=”text-[14px] text-brand-dark/70 leading-[1.6] mb-6”>Value-based bidding tied to CRM-defined ICP signals. 125% increase in Stage 1 opportunities. 78% showed LinkedIn influence.</p>
+              <div class=”mt-auto border-t border-brand-dark/8 pt-5”>
+                <a href=”/case-studies” class=”text-xs font-medium text-brand-blue inline-flex items-center gap-1 group-hover:gap-2 transition-all”>
+                  View all case studies <i data-lucide=”arrow-up-right” class=”w-3.5 h-3.5”></i>
+                </a>
+              </div>
+            </article>
+
+            <!-- SmartRecruiters -->
+            <article class=”bg-white rounded-2xl p-8 flex flex-col hover:shadow-2xl hover:shadow-brand-dark/10 transition-all group”>
+              <div class=”flex items-start justify-between gap-4 mb-6”>
+                <span class=”text-xl font-medium text-brand-dark”>SmartRecruiters</span>
+                <span class=”font-mono text-[10px] uppercase tracking-widest text-brand-dark/50 font-medium”>ATS / HR Tech</span>
+              </div>
+              <p class=”font-mono text-[11px] text-brand-blue uppercase tracking-widest font-medium mb-3”>Inbound + SEO</p>
+              <p class=”text-[14px] text-brand-dark/70 leading-[1.6] mb-6 mt-2”>Full inbound engine for a competitive ATS market. SEO content architecture built to own high-intent B2B recruiting searches and convert pipeline at scale.</p>
+              <div class=”mt-auto border-t border-brand-dark/8 pt-5”>
+                <a href=”/case-studies” class=”text-xs font-medium text-brand-blue inline-flex items-center gap-1 group-hover:gap-2 transition-all”>
+                  View all case studies <i data-lucide=”arrow-up-right” class=”w-3.5 h-3.5”></i>
+                </a>
               </div>
             </article>
           </div>
         </div>
       </section>
 
-      <!-- Methodology -->
-      <section class="py-24 md:py-32 bg-white">
+      <!-- Why VertoDigital -->
+      <section id="why" class="py-24 md:py-32 bg-white">
         <div class="container-brand">
           <div class="max-w-3xl mb-20">
-            <p class="font-mono text-[12px] text-brand-blue uppercase tracking-[0.3em] font-medium mb-4">Operating Principles</p>
-            <h2 class="text-[24px] md:text-[32px] font-medium text-brand-dark leading-[1.2] tracking-[-0.02em]">Four principles. Every engagement. <span class="font-script text-brand-blue text-[1.1em] leading-none">No exceptions.</span></h2>
+            <p class="font-mono text-[12px] text-brand-blue uppercase tracking-[0.3em] font-medium mb-4">Why VertoDigital</p>
+            <h2 class="text-[24px] md:text-[32px] font-medium text-brand-dark leading-[1.2] tracking-[-0.02em]">We treat your Salesforce data as the brief.</h2>
           </div>
 
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-12">
-            <div class="flex gap-8">
-              <span class="font-mono text-[40px] md:text-[48px] font-medium text-brand-blue/25 flex-shrink-0 leading-none tabular-nums">01</span>
-              <div class="pt-1">
-                <h3 class="text-[20px] md:text-[24px] font-medium text-brand-dark mb-3 leading-[1.25]">Pipeline is the only scoreboard.</h3>
-                <p class="text-brand-dark/75 leading-[1.5] text-[15px]">Every campaign, every asset, every dollar ties to a Stage 1 opportunity. If it doesn't, it doesn't ship. You get our forecast against your Salesforce numbers every Friday. If we're not generating it, we change the approach.</p>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-12">
+            <div>
+              <div class="w-10 h-10 rounded-xl bg-light-blue flex items-center justify-center mb-5">
+                <i data-lucide="database" class="w-5 h-5 text-brand-blue"></i>
               </div>
+              <h3 class="text-[20px] font-medium text-brand-dark mb-3">CRM-first, always.</h3>
+              <p class="text-brand-dark/70 leading-[1.6] text-[15px]">Before we touch a channel, we sit with your RevOps team and your Salesforce instance. ICP, stage conversion, signal sources — marketing inputs matched to sales outputs. One shared truth.</p>
             </div>
 
-            <div class="flex gap-8">
-              <span class="font-mono text-[40px] md:text-[48px] font-medium text-brand-blue/25 flex-shrink-0 leading-none tabular-nums">02</span>
-              <div class="pt-1">
-                <h3 class="text-[20px] md:text-[24px] font-medium text-brand-dark mb-3 leading-[1.25]">RevOps gets the first meeting.</h3>
-                <p class="text-brand-dark/75 leading-[1.5] text-[15px]">Before we touch a campaign we sit with your RevOps team, your sales leader, and your Salesforce instance. We map your ICP, conversion stages, signal sources. Marketing inputs, sales outputs. One truth.</p>
+            <div>
+              <div class="w-10 h-10 rounded-xl bg-light-blue flex items-center justify-center mb-5">
+                <i data-lucide="bar-chart-3" class="w-5 h-5 text-brand-blue"></i>
               </div>
+              <h3 class="text-[20px] font-medium text-brand-dark mb-3">Pipeline is the only scoreboard.</h3>
+              <p class="text-brand-dark/70 leading-[1.6] text-[15px]">Every campaign ties to a Stage 1 opportunity. If it doesn't, it doesn't ship. You get our forecast against your Salesforce numbers every Friday — not impressions, not clicks.</p>
             </div>
 
-            <div class="flex gap-8">
-              <span class="font-mono text-[40px] md:text-[48px] font-medium text-brand-blue/25 flex-shrink-0 leading-none tabular-nums">03</span>
-              <div class="pt-1">
-                <h3 class="text-[20px] md:text-[24px] font-medium text-brand-dark mb-3 leading-[1.25]">AI does the heavy lifting, not the thinking.</h3>
-                <p class="text-brand-dark/75 leading-[1.5] text-[15px]">We've built proprietary AI stacks for media buying, attribution modelling, ICP enrichment. They compress execution time by 60%. Humans still set strategy. Your pipeline isn't a prompt.</p>
+            <div>
+              <div class="w-10 h-10 rounded-xl bg-light-blue flex items-center justify-center mb-5">
+                <i data-lucide="zap" class="w-5 h-5 text-brand-blue"></i>
               </div>
+              <h3 class="text-[20px] font-medium text-brand-dark mb-3">AI execution, human strategy.</h3>
+              <p class="text-brand-dark/70 leading-[1.6] text-[15px]">Proprietary AI stacks for media buying, attribution modelling, and ICP enrichment compress execution time and surface signals faster. Strategy and judgment stay with people.</p>
             </div>
 
-            <div class="flex gap-8">
-              <span class="font-mono text-[40px] md:text-[48px] font-medium text-brand-blue/25 flex-shrink-0 leading-none tabular-nums">04</span>
-              <div class="pt-1">
-                <h3 class="text-[20px] md:text-[24px] font-medium text-brand-dark mb-3 leading-[1.25]">Board-ready reporting, monthly.</h3>
-                <p class="text-brand-dark/75 leading-[1.5] text-[15px]">Every month you get a deck your CEO can walk into a board meeting with. Pipeline sourced, CAC, payback, cohort retention. Charts, not dashboards. Because "we increased CTR" is not a board conversation.</p>
+            <div>
+              <div class="w-10 h-10 rounded-xl bg-light-blue flex items-center justify-center mb-5">
+                <i data-lucide="presentation" class="w-5 h-5 text-brand-blue"></i>
               </div>
+              <h3 class="text-[20px] font-medium text-brand-dark mb-3">Board-ready reporting, monthly.</h3>
+              <p class="text-brand-dark/70 leading-[1.6] text-[15px]">Every month: pipeline sourced, CAC, payback period, cohort retention. A deck your CEO can walk into a board meeting with. "We increased CTR" is not a board conversation.</p>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Services -->
-      <section id="services" class="panel-dark-blue text-white py-24 md:py-32 relative overflow-hidden">
+      <!-- The Framework -->
+      <section id="framework" class="panel-dark-blue text-white py-24 md:py-32 relative overflow-hidden">
         <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-brand-blue/20 rounded-full blur-3xl pointer-events-none"></div>
 
         <div class="relative container-brand">
-          <div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-8 mb-16">
-            <div class="max-w-2xl">
-              <p class="font-mono text-[12px] text-brand-light uppercase tracking-[0.3em] font-medium mb-4">What We Do</p>
-              <h2 class="text-[24px] md:text-[32px] font-medium leading-[1.2] tracking-[-0.02em]">Six disciplines. One <span class="font-script text-brand-light text-[1.1em] leading-none">obsession.</span></h2>
-            </div>
-            <a href="#" class="text-white font-medium text-sm inline-flex items-center gap-2 hover:gap-3 transition-all whitespace-nowrap">
-              Full services catalogue <i data-lucide="arrow-right" class="w-4 h-4"></i>
-            </a>
+          <div class="max-w-3xl mb-16">
+            <p class="font-mono text-[12px] text-brand-light uppercase tracking-[0.3em] font-medium mb-4">The Framework</p>
+            <h2 class="text-[24px] md:text-[32px] font-medium leading-[1.2] tracking-[-0.02em]">One framework. Two growth streams. Both measured to pipeline.</h2>
+            <p class="mt-6 text-[16px] text-cool-gray leading-[1.6] max-w-2xl">
+              Every engagement runs on the same foundation: your CRM data defines the ICP, both streams feed the same Salesforce pipeline view, and the only metric that matters is Stage 1 opportunities.
+            </p>
           </div>
 
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div class="bg-white/5 hover:bg-white/[0.1] p-8 rounded-xl transition-all group">
-              <div class="flex items-center justify-between mb-6">
-                <i data-lucide="bar-chart-3" class="w-8 h-8 text-white"></i>
-                <span class="font-mono text-[12px] text-white/40 uppercase tracking-widest font-medium tabular-nums">01</span>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+            <!-- Inbound -->
+            <div class="bg-white/5 rounded-2xl p-8 md:p-10">
+              <div class="flex items-center gap-3 mb-6">
+                <div class="w-8 h-8 rounded-lg bg-brand-blue/30 flex items-center justify-center">
+                  <i data-lucide="arrow-down-to-line" class="w-4 h-4 text-brand-light"></i>
+                </div>
+                <h3 class="text-[22px] font-medium text-white">Inbound</h3>
               </div>
-              <h3 class="text-xl font-medium mb-3 leading-[1.25]">Pipeline Intelligence</h3>
-              <p class="text-white/75 text-[14px] leading-[1.5] mb-6">Attribution models, RevOps audits, the data plumbing under both. So you finally know what marketing is actually producing.</p>
-              <p class="text-white/70 text-[12px] font-medium font-mono uppercase tracking-wider inline-flex items-center gap-2 opacity-70 group-hover:opacity-100 transition-opacity">
-                Typical outcome: <span class="text-white">+40% attributable pipeline</span>
-              </p>
+              <p class="text-cool-gray text-[14px] leading-[1.6] mb-8">Build the pipeline magnet. Organic, content, and brand programs that attract the right buyers and convert them into pipeline conversations.</p>
+              <ul class="space-y-3">
+                <li class="flex items-start gap-3 text-[14px] text-white/80">
+                  <i data-lucide="check" class="w-4 h-4 text-brand-light flex-shrink-0 mt-0.5"></i>
+                  SEO + Answer Engine Optimization (AEO)
+                </li>
+                <li class="flex items-start gap-3 text-[14px] text-white/80">
+                  <i data-lucide="check" class="w-4 h-4 text-brand-light flex-shrink-0 mt-0.5"></i>
+                  AI Visibility &amp; Generative Engine Optimization
+                </li>
+                <li class="flex items-start gap-3 text-[14px] text-white/80">
+                  <i data-lucide="check" class="w-4 h-4 text-brand-light flex-shrink-0 mt-0.5"></i>
+                  Technical content marketing
+                </li>
+                <li class="flex items-start gap-3 text-[14px] text-white/80">
+                  <i data-lucide="check" class="w-4 h-4 text-brand-light flex-shrink-0 mt-0.5"></i>
+                  Data &amp; Analytics foundation
+                </li>
+              </ul>
             </div>
 
-            <div class="bg-white/5 hover:bg-white/[0.1] p-8 rounded-xl transition-all group">
-              <div class="flex items-center justify-between mb-6">
-                <i data-lucide="mouse-pointer-2" class="w-8 h-8 text-white"></i>
-                <span class="font-mono text-[12px] text-white/40 uppercase tracking-widest font-medium tabular-nums">02</span>
+            <!-- Outbound -->
+            <div class="bg-white/5 rounded-2xl p-8 md:p-10">
+              <div class="flex items-center gap-3 mb-6">
+                <div class="w-8 h-8 rounded-lg bg-brand-blue/30 flex items-center justify-center">
+                  <i data-lucide="arrow-up-from-line" class="w-4 h-4 text-brand-light"></i>
+                </div>
+                <h3 class="text-[22px] font-medium text-white">Outbound</h3>
               </div>
-              <h3 class="text-xl font-medium mb-3 leading-[1.25]">Pipeline Paid Media</h3>
-              <p class="text-white/75 text-[14px] leading-[1.5] mb-6">Media buying optimized on SQL rate, not CTR. Buyer-intent signals fed into every bid strategy.</p>
-              <p class="text-white/70 text-[12px] font-medium font-mono uppercase tracking-wider inline-flex items-center gap-2 opacity-70 group-hover:opacity-100 transition-opacity">
-                Typical outcome: <span class="text-white">−38% CAC</span>
-              </p>
-            </div>
-
-            <div id="services-linkedin" class="bg-white/5 hover:bg-white/[0.1] p-8 rounded-xl transition-all group scroll-mt-24">
-              <div class="flex items-center justify-between mb-6">
-                <i data-lucide="users" class="w-8 h-8 text-white"></i>
-                <span class="font-mono text-[12px] text-white/40 uppercase tracking-widest font-medium tabular-nums">03</span>
-              </div>
-              <h3 class="text-xl font-medium mb-3 leading-[1.25]">LinkedIn Influence</h3>
-              <p class="text-white/75 text-[14px] leading-[1.5] mb-6">Executive thought leadership, decision-maker targeting, dark-social measurement. The channel where B2B buying actually starts.</p>
-              <p class="text-white/70 text-[12px] font-medium font-mono uppercase tracking-wider inline-flex items-center gap-2 opacity-70 group-hover:opacity-100 transition-opacity">
-                Typical outcome: <span class="text-white">70% pipeline influence</span>
-              </p>
-            </div>
-
-            <div class="bg-white/5 hover:bg-white/[0.1] p-8 rounded-xl transition-all group">
-              <div class="flex items-center justify-between mb-6">
-                <i data-lucide="search" class="w-8 h-8 text-white"></i>
-                <span class="font-mono text-[12px] text-white/40 uppercase tracking-widest font-medium tabular-nums">04</span>
-              </div>
-              <h3 class="text-xl font-medium mb-3 leading-[1.25]">Organic Growth</h3>
-              <p class="text-white/75 text-[14px] leading-[1.5] mb-6">SEO built for demo requests, not impressions. Technical content that ranks, converts, and outlives the next algorithm update.</p>
-              <p class="text-white/70 text-[12px] font-medium font-mono uppercase tracking-wider inline-flex items-center gap-2 opacity-70 group-hover:opacity-100 transition-opacity">
-                Typical outcome: <span class="text-white">3× organic SQLs</span>
-              </p>
-            </div>
-
-            <div class="bg-white/5 hover:bg-white/[0.1] p-8 rounded-xl transition-all group">
-              <div class="flex items-center justify-between mb-6">
-                <i data-lucide="target" class="w-8 h-8 text-white"></i>
-                <span class="font-mono text-[12px] text-white/40 uppercase tracking-widest font-medium tabular-nums">05</span>
-              </div>
-              <h3 class="text-xl font-medium mb-3 leading-[1.25]">ABM Programs</h3>
-              <p class="text-white/75 text-[14px] leading-[1.5] mb-6">One-to-one, one-to-few, hybrid. Enterprise outreach that doesn't read like a mail merge.</p>
-              <p class="text-white/70 text-[12px] font-medium font-mono uppercase tracking-wider inline-flex items-center gap-2 opacity-70 group-hover:opacity-100 transition-opacity">
-                Typical outcome: <span class="text-white">+125% Stage 1 opps</span>
-              </p>
-            </div>
-
-            <!-- Purple accent card — the novel/differentiated service -->
-            <div class="bg-gradient-to-br from-dark-blue/60 to-brand-blue/25 hover:from-dark-blue/70 hover:to-brand-blue/35 p-8 rounded-xl transition-colors group relative overflow-hidden">
-              <div class="absolute -top-10 -right-10 w-32 h-32 bg-brand-light/20 rounded-full blur-2xl"></div>
-              <div class="relative flex items-center justify-between mb-6">
-                <i data-lucide="brain" class="w-8 h-8 text-white"></i>
-                <span class="font-mono text-[12px] uppercase tracking-widest font-medium text-white bg-white/15 px-2 py-1 rounded-full">New · 2026</span>
-              </div>
-              <h3 class="relative text-xl font-medium mb-3 leading-[1.25] text-white">AI Visibility & GEO</h3>
-              <p class="relative text-white/85 text-[14px] leading-[1.5] mb-6">Be the brand ChatGPT, Claude, and Gemini recommend when your buyers ask "best vendor for…". The new SEO.</p>
-              <p class="relative text-white text-[12px] font-medium font-mono uppercase tracking-wider inline-flex items-center gap-2">
-                First-mover advantage window: <span class="text-white">12 months</span>
-              </p>
+              <p class="text-cool-gray text-[14px] leading-[1.6] mb-8">Build the pipeline hunter. Paid media, ABM, and LinkedIn programs that reach your buyers where they are and bring them to Stage 1.</p>
+              <ul class="space-y-3">
+                <li class="flex items-start gap-3 text-[14px] text-white/80">
+                  <i data-lucide="check" class="w-4 h-4 text-brand-light flex-shrink-0 mt-0.5"></i>
+                  LinkedIn Ads (Certified partner)
+                </li>
+                <li class="flex items-start gap-3 text-[14px] text-white/80">
+                  <i data-lucide="check" class="w-4 h-4 text-brand-light flex-shrink-0 mt-0.5"></i>
+                  Google + Microsoft paid search
+                </li>
+                <li class="flex items-start gap-3 text-[14px] text-white/80">
+                  <i data-lucide="check" class="w-4 h-4 text-brand-light flex-shrink-0 mt-0.5"></i>
+                  Contact-Level ABM programs
+                </li>
+                <li class="flex items-start gap-3 text-[14px] text-white/80">
+                  <i data-lucide="check" class="w-4 h-4 text-brand-light flex-shrink-0 mt-0.5"></i>
+                  Pipeline Intelligence &amp; attribution
+                </li>
+              </ul>
             </div>
           </div>
 
           <!-- Toolchain strip -->
-          <div class="mt-16 md:mt-20 pt-10 border-t border-white/10">
+          <div class="pt-10 border-t border-white/10">
             <p class="font-mono text-[12px] uppercase tracking-[0.2em] text-white/55 font-medium mb-5">Toolchain we lean on</p>
-            <p class="text-[14px] text-white/75 font-medium leading-[1.7]">
+            <p class="text-[14px] text-cool-gray font-medium leading-[1.7]">
               6sense · Ahrefs · Apollo · Clay · Clearscope · Conversions API · DemandBase · Dreamdata · Goodie AI · Google Ads · HubSpot · LinkedIn Ads Certified · Peec AI · Salesforce · Sales Navigator · Semrush · Shield · Snowflake
             </p>
           </div>
         </div>
       </section>
 
-      <!-- Benchmark Data -->
-      <section class="py-24 md:py-32 bg-white">
+      <!-- How We Engage -->
+      <section id="engage" class="py-24 md:py-32 bg-white">
         <div class="container-brand">
-          <div class="max-w-3xl mb-16">
-            <p class="font-mono text-[12px] text-brand-blue uppercase tracking-[0.3em] font-medium mb-4">The Benchmark</p>
-            <h2 class="text-[24px] md:text-[32px] font-medium text-brand-dark leading-[1.2] tracking-[-0.02em]">What pipeline looks like, <span class="font-script text-brand-blue text-[1.1em] leading-none">before and after.</span></h2>
-            <p class="mt-6 text-lg text-brand-dark/70 max-w-[65ch] leading-[1.5]">Median results from our benchmark cohort. 45 B2B SaaS clients, audited Salesforce data, every quarter for two years.</p>
+          <div class="max-w-3xl mb-20">
+            <p class="font-mono text-[12px] text-brand-blue uppercase tracking-[0.3em] font-medium mb-4">How We Engage</p>
+            <h2 class="text-[24px] md:text-[32px] font-medium text-brand-dark leading-[1.2] tracking-[-0.02em]">Assess. Pilot. Compound.</h2>
+            <p class="mt-6 text-[16px] text-brand-dark/70 max-w-[65ch] leading-[1.55]">Every engagement starts with a free Pipeline Assessment. We prove the model in 90 days before asking you to expand it.</p>
           </div>
 
-          <!-- Comparison table / chart -->
-          <div class="bg-white rounded-2xl overflow-hidden shadow-xl shadow-brand-blue/5">
-            <div class="grid grid-cols-1 md:grid-cols-4 border-b border-brand-dark/10">
-              <div class="p-6 bg-brand-light/15 md:border-r border-brand-dark/10">
-                <p class="font-mono text-[12px] uppercase tracking-widest text-brand-dark/60 font-medium mb-2">Metric</p>
-                <p class="text-[14px] font-medium text-brand-dark">What we measure</p>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+            <div>
+              <div class="flex items-center gap-4 mb-6">
+                <span class="font-mono text-[48px] font-medium text-brand-blue/20 leading-none tabular-nums">01</span>
+                <h3 class="text-[22px] font-medium text-brand-dark">Assess</h3>
               </div>
-              <div class="p-6 border-b md:border-b-0 md:border-r border-brand-dark/10">
-                <p class="font-mono text-[12px] uppercase tracking-widest text-brand-dark/60 font-medium mb-2">Before</p>
-                <p class="text-[14px] font-medium text-brand-dark/80">Pre-engagement baseline</p>
-              </div>
-              <div class="p-6 border-b md:border-b-0 md:border-r border-brand-dark/10">
-                <p class="font-mono text-[12px] uppercase tracking-widest text-brand-dark/60 font-medium mb-2">After · 6 months</p>
-                <p class="text-[14px] font-medium text-brand-blue">Median outcome</p>
-              </div>
-              <div class="p-6">
-                <p class="font-mono text-[12px] uppercase tracking-widest text-brand-dark/60 font-medium mb-2">Delta</p>
-                <p class="text-[14px] font-medium text-brand-dark">Change</p>
-              </div>
+              <div class="h-px bg-brand-blue mb-8 w-full"></div>
+              <p class="text-brand-dark/70 leading-[1.6] text-[15px] mb-5">A free Pipeline Diagnostic. We audit your Salesforce data, attribution setup, ICP definition, and conversion benchmarks. Five business days. 30-minute debrief.</p>
+              <p class="font-mono text-[11px] text-brand-blue uppercase tracking-widest font-medium">No engagement required</p>
             </div>
 
-            <!-- Row: Pipeline -->
-            <div class="grid grid-cols-1 md:grid-cols-4 border-b border-brand-dark/10 hover:bg-brand-light/5 transition-colors">
-              <div class="p-6 bg-brand-light/10 md:border-r border-brand-dark/10">
-                <p class="text-[15px] font-medium text-brand-dark">Marketing-sourced pipeline</p>
+            <div>
+              <div class="flex items-center gap-4 mb-6">
+                <span class="font-mono text-[48px] font-medium text-brand-blue/20 leading-none tabular-nums">02</span>
+                <h3 class="text-[22px] font-medium text-brand-dark">Pilot</h3>
               </div>
-              <div class="p-6 md:border-r border-brand-dark/10">
-                <p class="font-mono text-[22px] font-medium text-brand-dark/40 tabular-nums">$2.1M</p>
-                <div class="h-1.5 bg-brand-dark/10 rounded-full mt-2 w-full">
-                  <div class="bar h-full bg-brand-dark/30 rounded-full" style="width: 40%"></div>
-                </div>
-              </div>
-              <div class="p-6 md:border-r border-brand-dark/10">
-                <p class="font-mono text-[22px] font-medium text-brand-blue tabular-nums">$4.7M</p>
-                <div class="h-1.5 bg-brand-dark/10 rounded-full mt-2 w-full">
-                  <div class="bar h-full bg-gradient-to-r from-brand-blue to-accent-cyan rounded-full" style="width: 90%"></div>
-                </div>
-              </div>
-              <div class="p-6 flex items-center">
-                <span class="inline-flex items-center gap-2 font-mono font-medium text-accent-cyan text-[18px] tabular-nums">
-                  <i data-lucide="trending-up" class="w-5 h-5"></i>
-                  +125%
-                </span>
-              </div>
+              <div class="h-px bg-brand-blue mb-8 w-full"></div>
+              <p class="text-brand-dark/70 leading-[1.6] text-[15px] mb-5">90-day engagement on a single stream — Inbound or Outbound. ICP locked to Salesforce. First pipeline signal expected by week 10. Metrics shared weekly.</p>
+              <p class="font-mono text-[11px] text-brand-blue uppercase tracking-widest font-medium">Prove before you expand</p>
             </div>
 
-            <!-- Row: MQL -> SQL -->
-            <div class="grid grid-cols-1 md:grid-cols-4 border-b border-brand-dark/10 hover:bg-brand-light/5 transition-colors">
-              <div class="p-6 bg-brand-light/10 md:border-r border-brand-dark/10">
-                <p class="text-[15px] font-medium text-brand-dark">MQL → SQL conversion</p>
+            <div>
+              <div class="flex items-center gap-4 mb-6">
+                <span class="font-mono text-[48px] font-medium text-brand-blue/20 leading-none tabular-nums">03</span>
+                <h3 class="text-[22px] font-medium text-brand-dark">Compound</h3>
               </div>
-              <div class="p-6 md:border-r border-brand-dark/10">
-                <p class="font-mono text-[22px] font-medium text-brand-dark/40 tabular-nums">9%</p>
-                <div class="h-1.5 bg-brand-dark/10 rounded-full mt-2 w-full">
-                  <div class="bar h-full bg-brand-dark/30 rounded-full" style="width: 30%"></div>
-                </div>
-              </div>
-              <div class="p-6 md:border-r border-brand-dark/10">
-                <p class="font-mono text-[22px] font-medium text-brand-blue tabular-nums">28%</p>
-                <div class="h-1.5 bg-brand-dark/10 rounded-full mt-2 w-full">
-                  <div class="bar h-full bg-gradient-to-r from-brand-blue to-accent-cyan rounded-full" style="width: 85%"></div>
-                </div>
-              </div>
-              <div class="p-6 flex items-center">
-                <span class="inline-flex items-center gap-2 font-mono font-medium text-accent-cyan text-[18px] tabular-nums">
-                  <i data-lucide="trending-up" class="w-5 h-5"></i>
-                  +211%
-                </span>
-              </div>
+              <div class="h-px bg-brand-blue mb-8 w-full"></div>
+              <p class="text-brand-dark/70 leading-[1.6] text-[15px] mb-5">Expand to both streams. Layer attribution, content, ABM. The program compounds — each quarter's data informs the next. Pipeline grows as the model matures.</p>
+              <p class="font-mono text-[11px] text-brand-blue uppercase tracking-widest font-medium">Long-term compounding return</p>
             </div>
+          </div>
 
-            <!-- Row: CAC -->
-            <div class="grid grid-cols-1 md:grid-cols-4 border-b border-brand-dark/10 hover:bg-brand-light/5 transition-colors">
-              <div class="p-6 bg-brand-light/10 md:border-r border-brand-dark/10">
-                <p class="text-[15px] font-medium text-brand-dark">Customer acquisition cost</p>
-              </div>
-              <div class="p-6 md:border-r border-brand-dark/10">
-                <p class="font-mono text-[22px] font-medium text-brand-dark/40 tabular-nums">$48,200</p>
-                <div class="h-1.5 bg-brand-dark/10 rounded-full mt-2 w-full">
-                  <div class="bar h-full bg-brand-dark/30 rounded-full" style="width: 85%"></div>
-                </div>
-              </div>
-              <div class="p-6 md:border-r border-brand-dark/10">
-                <p class="font-mono text-[22px] font-medium text-brand-blue tabular-nums">$29,900</p>
-                <div class="h-1.5 bg-brand-dark/10 rounded-full mt-2 w-full">
-                  <div class="bar h-full bg-gradient-to-r from-brand-blue to-accent-cyan rounded-full" style="width: 50%"></div>
-                </div>
-              </div>
-              <div class="p-6 flex items-center">
-                <span class="inline-flex items-center gap-2 font-mono font-medium text-accent-cyan text-[18px] tabular-nums">
-                  <i data-lucide="trending-down" class="w-5 h-5"></i>
-                  −38%
-                </span>
-              </div>
-            </div>
-
-            <!-- Row: Payback -->
-            <div class="grid grid-cols-1 md:grid-cols-4 hover:bg-brand-light/5 transition-colors">
-              <div class="p-6 bg-brand-light/10 md:border-r border-brand-dark/10">
-                <p class="text-[15px] font-medium text-brand-dark">CAC payback period</p>
-              </div>
-              <div class="p-6 md:border-r border-brand-dark/10">
-                <p class="font-mono text-[22px] font-medium text-brand-dark/40 tabular-nums">18 mo</p>
-                <div class="h-1.5 bg-brand-dark/10 rounded-full mt-2 w-full">
-                  <div class="bar h-full bg-brand-dark/30 rounded-full" style="width: 90%"></div>
-                </div>
-              </div>
-              <div class="p-6 md:border-r border-brand-dark/10">
-                <p class="font-mono text-[22px] font-medium text-brand-blue tabular-nums">11 mo</p>
-                <div class="h-1.5 bg-brand-dark/10 rounded-full mt-2 w-full">
-                  <div class="bar h-full bg-gradient-to-r from-brand-blue to-accent-cyan rounded-full" style="width: 55%"></div>
-                </div>
-              </div>
-              <div class="p-6 flex items-center">
-                <span class="inline-flex items-center gap-2 font-mono font-medium text-accent-cyan text-[18px] tabular-nums">
-                  <i data-lucide="trending-down" class="w-5 h-5"></i>
-                  −39%
-                </span>
-              </div>
-            </div>
-
-            <!-- Footer note -->
-            <div class="px-6 py-4 bg-brand-light/10 border-t border-brand-dark/10 flex flex-col md:flex-row items-start md:items-center justify-between gap-3">
-              <p class="text-[12px] text-brand-dark/60">Based on 45 clients, median values. Outliers removed. Audited quarterly by client RevOps.</p>
-              <a href="#report" class="text-xs font-medium text-brand-blue inline-flex items-center gap-1 hover:gap-2 transition-all">
-                Download full methodology <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
-              </a>
-            </div>
+          <div class="mt-16 pt-10 border-t border-brand-dark/10 flex flex-col sm:flex-row items-start sm:items-center gap-6">
+            <a href="/b2b-pipeline-assessment" class="bg-brand-blue hover:bg-dark-blue text-white px-6 py-3.5 rounded-lg font-medium text-[15px] transition-colors inline-flex items-center gap-2 group">
+              Start with a free Assessment <i data-lucide="arrow-right" class="w-5 h-5 group-hover:translate-x-0.5 transition-transform"></i>
+            </a>
+            <p class="text-[13px] text-brand-dark/55 font-mono uppercase tracking-[0.12em]">Five business days · No commitment</p>
           </div>
         </div>
       </section>
 
-      <!-- Executive testimonials -->
-      <section class="py-24 md:py-32 bg-brand-light/20 border-y border-brand-dark/5">
-        <div class="container-brand">
-          <div class="max-w-3xl mb-16">
-            <p class="font-mono text-[12px] text-brand-blue uppercase tracking-[0.3em] font-medium mb-4">What CMOs Say</p>
-            <h2 class="text-[24px] md:text-[32px] font-medium text-brand-dark leading-[1.2] tracking-[-0.015em]">The quotes we don't put in pitch decks.</h2>
+      <!-- Customer Voice — verified G2 -->
+      <section id=”voice” class=”py-24 md:py-32 bg-[#F8FAFC]”>
+        <div class=”container-brand”>
+          <div class=”max-w-3xl mb-16”>
+            <p class=”font-mono text-[12px] text-brand-blue uppercase tracking-[0.3em] font-medium mb-4”>Customer Voice</p>
+            <h2 class=”text-[24px] md:text-[32px] font-medium text-brand-dark leading-[1.2] tracking-[-0.015em]”>Verified on G2. Said in their own words.</h2>
           </div>
 
-          <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
-            <figure class="bg-white rounded-2xl p-10 hover:shadow-xl transition-shadow">
-              <i data-lucide="quote" class="w-8 h-8 text-brand-blue/30 mb-6"></i>
-              <blockquote class="text-[20px] md:text-[24px] font-medium text-brand-dark leading-[1.35] tracking-[-0.01em] mb-8">
-                “We've been through three agencies in four years. Verto is the first one that asked to see our Salesforce data before pitching us on tactics. That conversation alone was worth the retainer.”
+          <div class=”grid grid-cols-1 lg:grid-cols-2 gap-6”>
+            <!-- Grant Ho — verified G2 quote -->
+            <figure class=”bg-white rounded-2xl p-10 hover:shadow-xl hover:shadow-brand-dark/8 transition-shadow”>
+              <div class=”flex items-center gap-2 mb-6”>
+                <span class=”inline-flex items-center gap-1.5 bg-light-blue text-brand-blue rounded-full px-3 py-1 font-mono text-[10px] uppercase tracking-wider font-medium”>
+                  <i data-lucide=”check-circle” class=”w-3 h-3”></i>
+                  Verified G2 Review
+                </span>
+              </div>
+              <blockquote class=”text-[18px] md:text-[22px] font-medium text-brand-dark leading-[1.35] tracking-[-0.01em] mb-8”>
+                &ldquo;They built a paid acquisition program that became one of marketing&rsquo;s top three sources of pipeline generation for our business.&rdquo;
               </blockquote>
-              <figcaption class="flex items-center gap-4 pt-6 border-t border-brand-dark/10">
-                <div class="w-12 h-12 rounded-full bg-gradient-to-br from-dark-blue to-brand-blue flex items-center justify-center text-white font-medium text-sm">DK</div>
+              <figcaption class=”flex items-center gap-4 pt-6 border-t border-brand-dark/10”>
+                <div class=”w-12 h-12 rounded-full bg-brand-dark flex items-center justify-center text-white font-medium text-sm flex-shrink-0”>GH</div>
                 <div>
-                  <p class="font-medium text-brand-dark">David Kuruvilla</p>
-                  <p class="text-sm text-brand-dark/60">CMO · Enterprise DevTools Platform (NYSE)</p>
+                  <p class=”font-medium text-brand-dark”>Grant Ho</p>
+                  <p class=”text-sm text-brand-dark/60”>CMO · IRONSCALES</p>
                 </div>
               </figcaption>
             </figure>
 
-            <figure class="bg-white rounded-2xl p-10 hover:shadow-xl transition-shadow">
-              <i data-lucide="quote" class="w-8 h-8 text-brand-blue/30 mb-6"></i>
-              <blockquote class="text-[20px] md:text-[24px] font-medium text-brand-dark leading-[1.35] tracking-[-0.01em] mb-8">
-                “I stopped dreading the monthly agency review. The deck walks me through pipeline, CAC, and payback — not impressions. My board has stopped asking why we pay an agency.”
-              </blockquote>
-              <figcaption class="flex items-center gap-4 pt-6 border-t border-brand-dark/10">
-                <div class="w-12 h-12 rounded-full bg-gradient-to-br from-brand-blue to-brand-light flex items-center justify-center text-white font-medium text-sm">AT</div>
+            <!-- G2 aggregate -->
+            <div class=”bg-white rounded-2xl p-10 hover:shadow-xl hover:shadow-brand-dark/8 transition-shadow flex flex-col”>
+              <div class=”flex items-center gap-4 mb-8”>
+                <p class=”text-[56px] font-medium text-brand-dark leading-none”>4.9</p>
                 <div>
-                  <p class="font-medium text-brand-dark">Aisha Thompson</p>
-                  <p class="text-sm text-brand-dark/60">VP Marketing · Series D iPaaS Company</p>
+                  <p class=”text-[22px] text-yellow-400 leading-none mb-1”>★★★★★</p>
+                  <p class=”font-mono text-[11px] uppercase tracking-widest text-brand-dark/55 font-medium”>on G2 · 37 verified reviews</p>
                 </div>
-              </figcaption>
-            </figure>
+              </div>
+              <p class=”text-[15px] text-brand-dark/70 leading-[1.6] mb-8 flex-1”>37 verified reviews from B2B marketing leaders. Read unfiltered feedback on strategy, execution, pipeline attribution, and results.</p>
+              <a href=”https://www.g2.com/products/vertodigital/reviews” target=”_blank” rel=”noopener noreferrer” class=”inline-flex items-center gap-2 text-brand-blue font-medium text-[14px] hover:gap-3 transition-all”>
+                Read all 37 reviews on G2 <i data-lucide=”arrow-up-right” class=”w-4 h-4”></i>
+              </a>
+            </div>
           </div>
         </div>
       </section>
@@ -1088,24 +943,25 @@
         </div>
       </section>
 
-      <!-- Final CTA — full-width layer with Light Blue → White gradient -->
-      <section class="relative bg-gradient-to-r from-brand-light to-white py-20 md:py-32 overflow-hidden">
-        <div class="absolute -top-32 -right-32 w-96 h-96 bg-white/40 rounded-full blur-3xl"></div>
-        <div class="absolute -bottom-32 -left-32 w-96 h-96 bg-brand-light/40 rounded-full blur-3xl"></div>
+      <!-- Final CTA -->
+      <section class="relative hero-gradient py-20 md:py-32 overflow-hidden">
+        <div class="absolute -top-32 -right-32 w-96 h-96 bg-brand-light/40 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute -bottom-32 -left-32 w-96 h-96 bg-white/40 rounded-full blur-3xl pointer-events-none"></div>
         <div class="container-brand relative">
           <div class="max-w-3xl mx-auto text-brand-dark text-center space-y-8">
             <p class="font-mono text-[12px] text-brand-dark/70 uppercase tracking-[0.3em] font-medium">For the CMO Reading This</p>
-            <h2 class="text-[24px] md:text-[32px] font-medium leading-[1.2] tracking-[-0.02em]">Your next board meeting is in <span class="font-script text-dark-blue text-[1.1em] leading-none">four weeks</span>.</h2>
-            <p class="text-lg md:text-xl text-brand-dark/80 leading-[1.5] max-w-[62ch] mx-auto">That's long enough to rebuild your attribution model, redeploy 15% of your media budget, and walk in with a pipeline forecast your CFO can sign off on. Let's start on Monday.</p>
+            <h2 class="text-[32px] md:text-[48px] font-medium leading-[1.1] tracking-[-0.025em]">Five days to know if we can help you.</h2>
+            <p class="text-[18px] md:text-[20px] text-brand-dark/75 leading-[1.55] max-w-[58ch] mx-auto">A free Pipeline Assessment. We audit your attribution, ICP definition, and conversion benchmarks. 30-minute debrief. No commitment. No slides until you ask for them.</p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center pt-4">
-              <a href="/contact" class="bg-accent-lime hover:bg-white text-brand-dark px-8 py-4 rounded-lg font-medium text-lg transition-colors inline-flex items-center justify-center gap-2 group">
-                Book with Paul
+              <a href="/b2b-pipeline-assessment" class="bg-brand-blue hover:bg-dark-blue text-white px-8 py-4 rounded-lg font-medium text-[16px] transition-colors inline-flex items-center justify-center gap-2 group">
+                Book your Pipeline Assessment
                 <i data-lucide="arrow-right" class="w-5 h-5 group-hover:translate-x-0.5 transition-transform"></i>
               </a>
-              <a href="#report" class="bg-brand-dark/5 hover:bg-brand-dark/15 text-brand-dark px-8 py-4 rounded-lg font-medium text-lg transition-colors">
-                Read the report first
+              <a href="/case-studies" class="bg-brand-dark/5 hover:bg-brand-dark/15 text-brand-dark px-8 py-4 rounded-lg font-medium text-[16px] transition-colors">
+                See all case studies
               </a>
             </div>
+            <p class="text-[13px] text-brand-dark/55 font-mono uppercase tracking-[0.15em]">Five business days · 30-minute debrief · No commitment</p>
           </div>
         </div>
       </section>

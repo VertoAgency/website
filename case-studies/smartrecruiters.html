@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SmartRecruiters Case Study — 4× opportunities at 50% budget | VertoDigital</title>
+    <meta name="description" content="SmartRecruiters' first-party data infrastructure connected Marketo and Salesforce to Google Ads. 4× opportunity volume, 88% lower cost per MQL, 50% budget reduction." />
+    <link rel="canonical" href="https://vertodigital.com/case-studies/smartrecruiters" />
+
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="SmartRecruiters Case Study — 4× opportunities at 50% budget | VertoDigital" />
+    <meta property="og:description" content="SmartRecruiters' first-party data infrastructure connected Marketo and Salesforce to Google Ads. 4× opportunity volume, 88% lower cost per MQL, 50% budget reduction." />
+    <meta property="og:url" content="https://vertodigital.com/case-studies/smartrecruiters" />
+    <meta property="og:site_name" content="VertoDigital" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- BreadcrumbList schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Case Studies", "item": "https://vertodigital.com/case-studies" },
+        { "@type": "ListItem", "position": 2, "name": "SmartRecruiters", "item": "https://vertodigital.com/case-studies/smartrecruiters" }
+      ]
+    }
+    </script>
+
+    <!-- Article schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "SmartRecruiters Case Study — 4× opportunities at 50% budget | VertoDigital",
+      "description": "SmartRecruiters' first-party data infrastructure connected Marketo and Salesforce to Google Ads. 4× opportunity volume, 88% lower cost per MQL, 50% budget reduction.",
+      "url": "https://vertodigital.com/case-studies/smartrecruiters",
+      "publisher": {
+        "@type": "Organization",
+        "name": "VertoDigital",
+        "url": "https://vertodigital.com"
+      },
+      "about": {
+        "@type": "Organization",
+        "name": "SmartRecruiters"
+      }
+    }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500&family=Geist+Mono:wght@400;500&family=Caveat:wght@400;600&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: { extend: {
+          fontFamily: {
+            sans: ['Geist', 'Inter', 'system-ui', '-apple-system', '"Segoe UI"', 'Roboto', 'sans-serif'],
+            display: ['Geist', 'Inter', 'system-ui', '-apple-system', '"Segoe UI"', 'Roboto', 'sans-serif'],
+            mono: ['"Geist Mono"', 'ui-monospace', 'monospace'],
+            script: ['Caveat', 'cursive'],
+          },
+          colors: {
+            'brand-light': '#66CCFF', 'brand-blue': '#0099FF', 'dark-blue': '#0066CC',
+            'brand-dark': '#060026', 'navy': '#060026',
+            'accent-purple': '#8B57F4', 'accent-cyan': '#43E5FF', 'accent-lime': '#E1F77E',
+            'cool-gray': '#B4D9C0', 'light-blue': '#d9f0ff',
+            primary: '#060026', secondary: '#0099FF', accent: '#43E5FF',
+          }
+        } }
+      }
+    </script>
+    <style>
+      html { scroll-padding-top: 96px; }
+      body { font-family: 'Geist', 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; font-weight: 400; font-size: 16px; line-height: 1.5; background-color: #ffffff; color: #060026; font-feature-settings: "ss01", "cv11"; }
+      h1, h2, h3, h4, h5, h6 { font-family: 'Geist', 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; font-weight: 500; line-height: 1.2; letter-spacing: -0.015em; }
+      .font-script { font-family: 'Caveat', cursive; font-weight: 400; }
+      .font-mono, .tabular-nums { font-variant-numeric: tabular-nums; }
+      .hero-gradient { background: radial-gradient(ellipse 70% 50% at 20% 10%, rgba(102, 204, 255, 0.45), transparent 60%), radial-gradient(ellipse 60% 50% at 90% 50%, rgba(67, 229, 255, 0.2), transparent 60%), linear-gradient(180deg, #d9f0ff 0%, #ffffff 70%); }
+      .container-brand { width: 100%; max-width: 1440px; margin-left: auto; margin-right: auto; padding-left: 24px; padding-right: 24px; }
+      @media (min-width: 768px)  { .container-brand { padding-left: 80px;  padding-right: 80px; } }
+      @media (min-width: 1280px) { .container-brand { padding-left: 120px; padding-right: 120px; } }
+      .section-eyebrow { font-family: 'Geist Mono', ui-monospace, monospace; font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(6, 0, 38, 0.55); font-weight: 500; }
+      .section-eyebrow-light { font-family: 'Geist Mono', ui-monospace, monospace; font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; color: #B4D9C0; font-weight: 500; }
+      .hero-stat { font-family: 'Geist', sans-serif; font-weight: 500; line-height: 0.85; letter-spacing: -0.04em; }
+      .blueprint-grid { background-image: linear-gradient(rgba(6, 0, 38, 0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(6, 0, 38, 0.04) 1px, transparent 1px); background-size: 32px 32px; }
+      .panel-dark-blue { background-color: #060026; }
+      .menu-icon-stack { position: relative; width: 22px; height: 22px; display: inline-flex; align-items: center; justify-content: center; }
+      .hamburger-icon { position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: center; gap: 5px; transition: opacity 180ms ease; }
+      .hamburger-line { display: block; height: 2px; width: 100%; background-color: currentColor; border-radius: 2px; }
+      .dollar-icon { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-size: 22px; font-weight: 700; line-height: 1; color: #0099FF; opacity: 0; transform: scale(0.6); transition: opacity 200ms ease, transform 280ms cubic-bezier(0.22, 1, 0.36, 1); }
+      [aria-expanded="true"] .hamburger-icon { opacity: 0; }
+      [aria-expanded="true"] .dollar-icon { opacity: 1; transform: scale(1); }
+      @media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
+    </style>
+  </head>
+  <body class="antialiased">
+
+    <!-- ============================================================
+         NAV
+         ============================================================ -->
+    <nav class="sticky top-0 w-full z-50 bg-white/85 backdrop-blur-xl border-b border-brand-dark/10">
+      <div class="container-brand flex justify-between items-center py-5">
+        <a href="/" class="flex items-center" aria-label="VertoDigital home"><img src="/images/vertodigital-logo-dark.svg" alt="VertoDigital logo" class="h-11 w-auto" /></a>
+        <div class="hidden md:flex items-center space-x-8 lg:space-x-10 text-[15px]">
+          <a class="text-brand-blue font-medium transition-colors" href="/case-studies" aria-current="true">Case studies</a>
+          <div class="relative group">
+            <a class="text-brand-dark hover:text-brand-blue transition-colors inline-flex items-center gap-1" href="/services" aria-haspopup="true">
+              Services
+              <i data-lucide="chevron-down" class="w-3.5 h-3.5 transition-transform group-hover:rotate-180 group-focus-within:rotate-180"></i>
+            </a>
+            <div class="absolute right-0 lg:left-1/2 lg:-translate-x-1/2 top-full pt-3 hidden group-hover:block group-focus-within:block z-50">
+              <div class="bg-white rounded-2xl shadow-2xl shadow-brand-dark/10 p-7 grid grid-cols-4 gap-7 w-[860px]">
+                <!-- Inbound -->
+                <div>
+                  <p class="font-mono text-[10px] uppercase tracking-[0.2em] text-brand-blue font-medium mb-3">Inbound</p>
+                  <ul class="space-y-2.5 text-[14px]">
+                    <li><a class="text-brand-dark font-medium hover:text-brand-blue transition-colors" href="/services/inbound-pipeline-growth">Pipeline growth</a></li>
+                    <li><a class="text-brand-dark/75 hover:text-brand-blue transition-colors" href="/services/inbound/linkedin-paid-social">LinkedIn Paid Social</a></li>
+                    <li><a class="text-brand-dark/75 hover:text-brand-blue transition-colors" href="/services/inbound/paid-search">Paid Search</a></li>
+                    <li><a class="text-brand-dark/75 hover:text-brand-blue transition-colors" href="/services/inbound/seo-and-aeo">SEO &amp; AEO</a></li>
+                  </ul>
+                </div>
+                <!-- Outbound -->
+                <div>
+                  <p class="font-mono text-[10px] uppercase tracking-[0.2em] text-brand-blue font-medium mb-3">Outbound</p>
+                  <ul class="space-y-2.5 text-[14px]">
+                    <li><a class="text-brand-dark font-medium hover:text-brand-blue transition-colors" href="/services/outbound-pipeline-growth">Pipeline growth</a></li>
+                    <li><a class="text-brand-dark/75 hover:text-brand-blue transition-colors" href="/services/outbound/abm-6sense-demandbase">6sense &amp; DemandBase</a></li>
+                    <li><a class="text-brand-dark/75 hover:text-brand-blue transition-colors" href="/services/outbound/linkedin-ai-targeting">LinkedIn AI Targeting</a></li>
+                    <li><a class="text-brand-dark/75 hover:text-brand-blue transition-colors" href="/services/outbound/contact-level-abm">Contact-Level ABM</a></li>
+                  </ul>
+                </div>
+                <!-- Industries -->
+                <div>
+                  <p class="font-mono text-[10px] uppercase tracking-[0.2em] text-brand-blue font-medium mb-3">Industries</p>
+                  <ul class="space-y-2.5 text-[14px]">
+                    <li><a class="text-brand-dark/75 hover:text-brand-blue transition-colors" href="/industries/cybersecurity">Cybersecurity</a></li>
+                    <li><a class="text-brand-dark/75 hover:text-brand-blue transition-colors" href="/industries/data-platforms-and-ai-infrastructure">Data Platforms &amp; AI</a></li>
+                    <li><a class="text-brand-dark/75 hover:text-brand-blue transition-colors" href="/industries/fintech-and-financial-services">FinTech &amp; Financial</a></li>
+                  </ul>
+                </div>
+                <!-- Spine + engagement -->
+                <div class="flex flex-col gap-5">
+                  <div>
+                    <p class="font-mono text-[10px] uppercase tracking-[0.2em] text-brand-blue font-medium mb-3">Data &amp; Analytics</p>
+                    <ul class="space-y-2.5 text-[14px]">
+                      <li><a class="text-brand-dark font-medium hover:text-brand-blue transition-colors" href="/services/pipeline-intelligence">Pipeline Intelligence</a></li>
+                    </ul>
+                  </div>
+                  <div>
+                    <p class="font-mono text-[10px] uppercase tracking-[0.2em] text-brand-blue font-medium mb-3">Foundation</p>
+                    <ul class="space-y-2.5 text-[14px]">
+                      <li><a class="text-brand-dark hover:text-brand-blue transition-colors" href="/assessment">Pipeline Assessment</a></li>
+                      <li><a class="text-brand-dark/75 hover:text-brand-blue transition-colors" href="/services">All services</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a class="text-brand-dark hover:text-brand-blue transition-colors" href="/#insights">Research</a>
+          <a class="text-brand-dark hover:text-brand-blue transition-colors" href="/about">About</a>
+          <a class="text-brand-dark hover:text-brand-blue transition-colors" href="/contact">Contact</a>
+        </div>
+        <div class="flex items-center gap-3 md:gap-4">
+          <a href="/#report" class="hidden lg:inline-flex items-center gap-2 text-brand-dark text-sm font-medium hover:text-brand-blue transition-colors">
+            <i data-lucide="file-text" class="w-4 h-4"></i>
+            2026 Pipeline Report
+          </a>
+          <a href="/contact" class="hidden md:inline-flex bg-brand-dark hover:bg-brand-blue text-white px-5 py-2.5 rounded-lg font-medium text-sm transition-colors items-center gap-2">
+            Book a call <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </a>
+          <button id="mobile-menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu-panel" aria-label="Open menu" class="md:hidden inline-flex items-center justify-center w-10 h-10 rounded-lg text-brand-dark hover:bg-brand-dark/5 transition-colors">
+            <span class="menu-icon-stack" aria-hidden="true">
+              <span class="hamburger-icon"><span class="hamburger-line"></span><span class="hamburger-line"></span><span class="hamburger-line"></span></span>
+              <span class="dollar-icon">$</span>
+            </span>
+          </button>
+        </div>
+      </div>
+      <!-- Mobile menu -->
+      <div id="mobile-menu-panel" class="hidden md:hidden absolute top-full left-0 right-0 border-t border-brand-dark/10 bg-white shadow-lg shadow-brand-dark/5 max-h-[80vh] overflow-y-auto">
+        <div class="container-brand py-3 flex flex-col text-[15px]">
+          <a class="text-brand-blue font-medium py-3 transition-colors" href="/case-studies" aria-current="true">Case studies</a>
+          <details class="group nav-services-mobile">
+            <summary class="flex items-center justify-between py-3 cursor-pointer text-brand-dark hover:text-brand-blue transition-colors">
+              <span>Services</span>
+              <i data-lucide="chevron-down" class="w-4 h-4 transition-transform group-open:rotate-180"></i>
+            </summary>
+            <div class="pb-3 pl-3 border-l-2 border-brand-light/40 ml-1 space-y-1">
+              <a class="block py-2 text-[14px] text-brand-dark hover:text-brand-blue font-medium" href="/services">All services · overview</a>
+              <p class="font-mono text-[10px] uppercase tracking-[0.2em] text-brand-blue font-medium mt-3 mb-1.5">Inbound</p>
+              <a class="block py-1.5 text-[14px] text-brand-dark hover:text-brand-blue" href="/services/inbound-pipeline-growth">Pipeline growth</a>
+              <a class="block py-1.5 text-[14px] text-brand-dark/75 hover:text-brand-blue" href="/services/inbound/linkedin-paid-social">LinkedIn Paid Social</a>
+              <a class="block py-1.5 text-[14px] text-brand-dark/75 hover:text-brand-blue" href="/services/inbound/paid-search">Paid Search</a>
+              <a class="block py-1.5 text-[14px] text-brand-dark/75 hover:text-brand-blue" href="/services/inbound/seo-and-aeo">SEO &amp; AEO</a>
+              <p class="font-mono text-[10px] uppercase tracking-[0.2em] text-brand-blue font-medium mt-3 mb-1.5">Outbound</p>
+              <a class="block py-1.5 text-[14px] text-brand-dark hover:text-brand-blue" href="/services/outbound-pipeline-growth">Pipeline growth</a>
+              <a class="block py-1.5 text-[14px] text-brand-dark/75 hover:text-brand-blue" href="/services/outbound/abm-6sense-demandbase">6sense &amp; DemandBase</a>
+              <a class="block py-1.5 text-[14px] text-brand-dark/75 hover:text-brand-blue" href="/services/outbound/linkedin-ai-targeting">LinkedIn AI Targeting</a>
+              <a class="block py-1.5 text-[14px] text-brand-dark/75 hover:text-brand-blue" href="/services/outbound/contact-level-abm">Contact-Level ABM</a>
+              <p class="font-mono text-[10px] uppercase tracking-[0.2em] text-brand-blue font-medium mt-3 mb-1.5">Data &amp; Analytics</p>
+              <a class="block py-1.5 text-[14px] text-brand-dark hover:text-brand-blue" href="/services/pipeline-intelligence">Pipeline Intelligence</a>
+              <p class="font-mono text-[10px] uppercase tracking-[0.2em] text-brand-blue font-medium mt-3 mb-1.5">Industries</p>
+              <a class="block py-1.5 text-[14px] text-brand-dark/75 hover:text-brand-blue" href="/industries/cybersecurity">Cybersecurity</a>
+              <a class="block py-1.5 text-[14px] text-brand-dark/75 hover:text-brand-blue" href="/industries/data-platforms-and-ai-infrastructure">Data Platforms &amp; AI</a>
+              <a class="block py-1.5 text-[14px] text-brand-dark/75 hover:text-brand-blue" href="/industries/fintech-and-financial-services">FinTech &amp; Financial</a>
+              <p class="font-mono text-[10px] uppercase tracking-[0.2em] text-brand-blue font-medium mt-3 mb-1.5">Foundation</p>
+              <a class="block py-1.5 text-[14px] text-brand-dark hover:text-brand-blue" href="/assessment">Pipeline Assessment</a>
+            </div>
+          </details>
+          <a class="text-brand-dark hover:text-brand-blue py-3 transition-colors" href="/#insights">Research</a>
+          <a class="text-brand-dark hover:text-brand-blue py-3 transition-colors" href="/about">About</a>
+          <a class="text-brand-dark hover:text-brand-blue py-3 transition-colors" href="/contact">Contact</a>
+          <a class="text-brand-dark hover:text-brand-blue py-3 transition-colors inline-flex items-center gap-2" href="/#report">
+            <i data-lucide="file-text" class="w-4 h-4"></i>
+            2026 Pipeline Report
+          </a>
+          <a href="/contact" class="mt-3 bg-brand-dark hover:bg-brand-blue text-white py-3 rounded-lg font-medium text-[15px] transition-colors flex items-center justify-center gap-2">
+            Book a call <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+
+      <!-- ============================================================
+           HERO
+           ============================================================ -->
+      <section class="hero-gradient relative overflow-hidden pt-20 pb-16 md:pt-28 md:pb-24">
+        <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-brand-light/20 rounded-full blur-[140px] pointer-events-none" aria-hidden="true"></div>
+
+        <div class="container-brand relative">
+
+          <!-- Breadcrumb -->
+          <nav aria-label="Breadcrumb" class="mb-10 text-[13px] font-mono uppercase tracking-[0.18em] text-brand-dark/55">
+            <a href="/case-studies" class="hover:text-brand-blue transition-colors">Case Studies</a>
+            <span class="mx-2 text-brand-dark/30">/</span>
+            <span class="text-brand-dark/85">SmartRecruiters</span>
+          </nav>
+
+          <div class="max-w-5xl">
+
+            <!-- Client logo placeholder · replace with /images/clients/smartrecruiters.svg when uploaded -->
+            <div class="mb-8">
+              <div class="inline-flex items-center justify-center bg-brand-dark/8 rounded-md h-[80px] w-[200px]">
+                <span class="font-mono text-[11px] uppercase tracking-[0.15em] text-brand-dark/40">Client logo</span>
+              </div>
+            </div>
+
+            <!-- Industry / service tags -->
+            <div class="flex flex-wrap gap-2 mb-10 md:mb-12">
+              <span class="inline-flex items-center bg-light-blue text-brand-dark/75 rounded-full px-3 py-1 font-mono text-[11px] uppercase tracking-wider font-medium">ATS / HR Tech</span>
+              <span class="inline-flex items-center bg-light-blue text-brand-dark/75 rounded-full px-3 py-1 font-mono text-[11px] uppercase tracking-wider font-medium">Inbound Pipeline Growth</span>
+              <span class="inline-flex items-center bg-light-blue text-brand-dark/75 rounded-full px-3 py-1 font-mono text-[11px] uppercase tracking-wider font-medium">Pipeline Intelligence</span>
+            </div>
+
+            <!-- H1 -->
+            <h1 class="hero-stat text-[48px] md:text-[80px] lg:text-[96px] text-brand-dark mb-8 md:mb-10">
+              <span class="text-brand-blue">4×</span> opportunities at 50% budget.
+            </h1>
+
+            <!-- Subhead -->
+            <p class="text-[18px] md:text-[20px] text-brand-dark/75 leading-[1.55] max-w-3xl mb-10 md:mb-12">
+              A first-party data infrastructure connecting Marketo and Salesforce to Google Ads &mdash; and bid algorithms that learned what real opportunities look like.
+            </p>
+
+            <!-- Hero stats -->
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 md:gap-10 mb-12 md:mb-14 pt-10 md:pt-12 border-t border-brand-dark/10">
+              <div>
+                <p class="hero-stat text-[42px] md:text-[52px] text-brand-blue mb-2">4×</p>
+                <p class="text-[13px] text-brand-dark/65 leading-[1.45]">opportunity volume</p>
+              </div>
+              <div>
+                <p class="hero-stat text-[42px] md:text-[52px] text-brand-blue mb-2">88%</p>
+                <p class="text-[13px] text-brand-dark/65 leading-[1.45]">lower cost per MQL</p>
+              </div>
+              <div>
+                <p class="hero-stat text-[42px] md:text-[52px] text-brand-blue mb-2">386%</p>
+                <p class="text-[13px] text-brand-dark/65 leading-[1.45]">MQL volume growth</p>
+              </div>
+            </div>
+
+            <!-- CTAs -->
+            <div class="flex flex-wrap gap-3">
+              <a href="/assessment" data-track="case_cta_primary" data-source="hero" data-case="smartrecruiters" class="inline-flex items-center gap-2 bg-brand-blue hover:bg-dark-blue text-white px-6 md:px-7 py-3.5 md:py-4 rounded-lg font-medium text-[15px] md:text-[16px] transition-colors">
+                Book your free Pipeline Assessment
+                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+              </a>
+              <a href="/case-studies" data-track="case_cta_secondary" data-source="hero" data-case="smartrecruiters" class="inline-flex items-center gap-2 bg-white hover:bg-brand-light/30 text-brand-dark px-6 md:px-7 py-3.5 md:py-4 rounded-lg font-medium text-[15px] md:text-[16px] transition-colors">
+                See all case studies
+                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+              </a>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           SECTION 01 — ABOUT
+           ============================================================ -->
+      <section id="company" class="py-20 md:py-24">
+        <div class="container-brand">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16">
+
+            <div class="lg:col-span-8">
+              <p class="section-eyebrow mb-5">Section 01 · The company</p>
+              <h2 class="text-[32px] md:text-[44px] font-medium text-brand-dark leading-[1.1] tracking-[-0.02em] mb-8">About SmartRecruiters.</h2>
+              <div class="space-y-5 text-[17px] md:text-[18px] text-brand-dark/80 leading-[1.65] max-w-2xl">
+                <p>SmartRecruiters is an enterprise talent acquisition suite that helps large organizations attract, select, and hire talent at scale. The product sits inside the applicant tracking and talent acquisition category &mdash; alongside Workday Recruiting, Greenhouse, and iCIMS &mdash; and competes on its candidate experience, marketplace ecosystem, and AI-driven hiring workflows.</p>
+                <p>The buyer is the talent acquisition and HR leadership: chief HR officer, head of talent acquisition, head of TA operations. The sales motion targets enterprise organizations with high-volume, high-complexity hiring needs, with named-account engagement driving the early stages of pipeline.</p>
+              </div>
+            </div>
+
+            <aside class="lg:col-span-4">
+              <div class="bg-light-blue/50 rounded-2xl p-7 md:p-8 lg:sticky lg:top-28">
+                <p class="font-mono text-[10px] uppercase tracking-[0.22em] text-brand-blue font-medium mb-6">At a glance</p>
+                <dl class="space-y-5">
+                  <div>
+                    <dt class="font-mono text-[10px] uppercase tracking-[0.18em] text-brand-dark/50 font-medium mb-1.5">Industry</dt>
+                    <dd class="text-[15px] text-brand-dark font-medium leading-snug">ATS / HR Tech</dd>
+                  </div>
+                  <div class="pt-5 border-t border-brand-dark/10">
+                    <dt class="font-mono text-[10px] uppercase tracking-[0.18em] text-brand-dark/50 font-medium mb-1.5">Engagement</dt>
+                    <dd class="text-[15px] text-brand-dark font-medium leading-snug">Inbound + Pipeline Intelligence</dd>
+                  </div>
+                  <div class="pt-5 border-t border-brand-dark/10">
+                    <dt class="font-mono text-[10px] uppercase tracking-[0.18em] text-brand-dark/50 font-medium mb-1.5">Timeframe</dt>
+                    <dd class="text-[15px] text-brand-dark font-medium leading-snug">90 days</dd>
+                  </div>
+                </dl>
+              </div>
+            </aside>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           SECTION 02 — THE PROBLEM
+           ============================================================ -->
+      <section id="problem" class="py-20 md:py-24 bg-light-blue/30">
+        <div class="container-brand">
+          <div class="max-w-4xl">
+            <p class="section-eyebrow mb-5">Section 02 · The problem</p>
+            <h2 class="text-[32px] md:text-[44px] font-medium text-brand-dark leading-[1.1] tracking-[-0.02em] mb-10">The problem.</h2>
+            <div class="space-y-5 text-[17px] md:text-[18px] text-brand-dark/80 leading-[1.65]">
+              <p>SmartRecruiters faced critical performance issues with their Google Ads campaigns. Their fragmented campaign structure resulted in incorrect bid strategies that prevented budget from spending efficiently. Lead quality was questionable, campaigns couldn't scale effectively, and without proper conversion tracking, they had no visibility into which efforts actually drove pipeline. Despite significant investment, the returns didn't justify the spend.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           SECTION 03 — WHAT WE BUILT
+           ============================================================ -->
+      <section id="work" class="panel-dark-blue text-white relative overflow-hidden py-20 md:py-28">
+        <div class="absolute inset-0 opacity-[0.04]" style="background-image: linear-gradient(rgba(255,255,255,0.7) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.7) 1px, transparent 1px); background-size: 32px 32px;" aria-hidden="true"></div>
+
+        <div class="container-brand relative">
+          <div class="max-w-4xl">
+            <p class="section-eyebrow-light mb-5">Section 03 · The work</p>
+            <h2 class="text-[32px] md:text-[44px] font-medium text-white leading-[1.1] tracking-[-0.02em] mb-10">What we built.</h2>
+            <div class="space-y-5 text-[17px] md:text-[18px] text-cool-gray leading-[1.65]">
+              <p>We conducted a two-week comprehensive account audit. Fragmented regional and solution-specific campaigns were united into brand and non-brand campaigns. We built an automated data pipeline integrating Marketo and Salesforce with Google Ads, implementing Offline Conversion Tracking for Leads, MQLs, and Opportunities. The bid strategy shifted to Maximize Conversions, enabling machine learning to optimize for deep-funnel conversions. A key challenge was mapping offline conversions to lead funnel stages in Google Ads, requiring careful alignment across all three platforms.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           SECTION 04 — WHAT CHANGED
+           ============================================================ -->
+      <section id="outcomes" class="py-20 md:py-28">
+        <div class="container-brand">
+          <div class="max-w-4xl mb-12 md:mb-16">
+            <p class="section-eyebrow mb-5">Section 04 · The outcomes</p>
+            <h2 class="text-[32px] md:text-[44px] font-medium text-brand-dark leading-[1.1] tracking-[-0.02em]">What changed.</h2>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6">
+              <div class="bg-light-blue/40 rounded-2xl p-7 md:p-9 flex flex-col">
+                <p class="hero-stat text-[64px] md:text-[80px] text-brand-blue mb-3 leading-[0.95]">4×</p>
+                <p class="text-[17px] font-medium text-brand-dark mb-2">opportunity volume.</p>
+                <p class="text-[14px] text-brand-dark/65 leading-[1.6]">Opportunity creation quadrupled vs the pre-restructure period as the bid algorithm started optimizing for deal-stage signal.</p>
+              </div>
+              <div class="bg-light-blue/40 rounded-2xl p-7 md:p-9 flex flex-col">
+                <p class="hero-stat text-[64px] md:text-[80px] text-brand-blue mb-3 leading-[0.95]">88%</p>
+                <p class="text-[17px] font-medium text-brand-dark mb-2">lower cost per MQL.</p>
+                <p class="text-[14px] text-brand-dark/65 leading-[1.6]">Cost-per-MQL dropped 88% as fragmented campaigns consolidated into brand vs non-brand structure.</p>
+              </div>
+              <div class="bg-light-blue/40 rounded-2xl p-7 md:p-9 flex flex-col">
+                <p class="hero-stat text-[64px] md:text-[80px] text-brand-blue mb-3 leading-[0.95]">386%</p>
+                <p class="text-[17px] font-medium text-brand-dark mb-2">MQL volume growth.</p>
+                <p class="text-[14px] text-brand-dark/65 leading-[1.6]">MQL volume rose 386% &mdash; while overall budget was reduced by 50%.</p>
+              </div>
+          </div>
+            <p class="text-[15px] text-brand-dark/65 italic max-w-2xl leading-[1.55] mt-10">100% budget utilization, 50% budget reduction, 4× opportunity creation &mdash; a more predictable pipeline contribution engine.</p>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           SECTION 05 — THE CUSTOMER VOICE
+           ============================================================ -->
+      <section id="customer-voice" class="bg-light-blue/30 py-20 md:py-28">
+        <div class="container-brand">
+          <div class="max-w-4xl mb-14 md:mb-16">
+            <p class="section-eyebrow mb-5">Section 05 · The customer voice</p>
+            <h2 class="text-[32px] md:text-[44px] font-medium text-brand-dark leading-[1.1] tracking-[-0.02em]">In their words.</h2>
+          </div>
+
+          <figure class="bg-white rounded-2xl p-8 md:p-12 lg:p-16 shadow-xl shadow-brand-dark/8">
+            <i data-lucide="quote" class="w-10 h-10 md:w-12 md:h-12 text-brand-blue/30 mb-8"></i>
+            <blockquote class="text-[24px] md:text-[34px] lg:text-[38px] font-medium text-brand-dark leading-[1.25] tracking-[-0.015em] mb-10 md:mb-12 max-w-4xl">
+              &ldquo;Partnering with VertoDigital transformed our Paid Media performance in 90 days. We 4× our opportunity creation, with a 50% reduction in budget, improved management of our investment and created a more predictable pipeline contribution engine.&rdquo;
+            </blockquote>
+            <figcaption class="flex items-center gap-5 sm:gap-6 pt-8 md:pt-10 border-t border-brand-dark/10">
+              <!-- Headshot placeholder · replace with /images/headshots/steve-hardy.jpg when uploaded -->
+              <div class="w-16 h-16 md:w-20 md:h-20 rounded-full bg-gradient-to-br from-dark-blue to-brand-blue flex items-center justify-center text-white font-medium text-[22px] md:text-[26px] flex-shrink-0" aria-hidden="true">SH</div>
+              <div class="flex-1 min-w-0">
+                <p class="font-medium text-brand-dark text-[17px] md:text-[19px] leading-tight mb-1.5">Steve Hardy</p>
+                <p class="text-brand-dark/70 text-[14px] md:text-[15px] leading-snug">CMO, SmartRecruiters</p>
+              </div>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           SECTION 06 — THE SERVICES
+           ============================================================ -->
+      <section id="services" class="py-20 md:py-24">
+        <div class="container-brand">
+          <div class="max-w-4xl mb-12 md:mb-14">
+            <p class="section-eyebrow mb-5">Section 06 · The services</p>
+            <h2 class="text-[32px] md:text-[44px] font-medium text-brand-dark leading-[1.1] tracking-[-0.02em]">Services behind the work.</h2>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="bg-white rounded-2xl p-7 md:p-8 shadow-sm shadow-brand-dark/5 flex flex-col">
+              <p class="font-mono text-[10px] uppercase tracking-[0.22em] text-brand-blue font-medium mb-4">Service 01</p>
+              <h3 class="text-[18px] font-medium text-brand-dark mb-3 leading-snug">Inbound Pipeline Growth</h3>
+              <p class="text-[14px] text-brand-dark/65 leading-[1.6] flex-1">Account restructure: fragmented regional and solution campaigns united into brand vs non-brand.</p>
+            </div>
+            <div class="bg-white rounded-2xl p-7 md:p-8 shadow-sm shadow-brand-dark/5 flex flex-col">
+              <p class="font-mono text-[10px] uppercase tracking-[0.22em] text-brand-blue font-medium mb-4">Service 02</p>
+              <h3 class="text-[18px] font-medium text-brand-dark mb-3 leading-snug">Paid Search</h3>
+              <p class="text-[14px] text-brand-dark/65 leading-[1.6] flex-1">Maximize Conversions bidding tuned to deep-funnel signal across the unified account.</p>
+            </div>
+            <div class="bg-white rounded-2xl p-7 md:p-8 shadow-sm shadow-brand-dark/5 flex flex-col">
+              <p class="font-mono text-[10px] uppercase tracking-[0.22em] text-brand-blue font-medium mb-4">Service 03</p>
+              <h3 class="text-[18px] font-medium text-brand-dark mb-3 leading-snug">Pipeline Intelligence</h3>
+              <p class="text-[14px] text-brand-dark/65 leading-[1.6] flex-1">Marketo + Salesforce + Google Ads pipeline with OCT for Leads, MQLs, and Opportunities.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           SECTION 07 — RELATED WORK
+           ============================================================ -->
+      <section id="related" class="py-20 md:py-24 bg-light-blue/30">
+        <div class="container-brand">
+          <div class="flex items-end justify-between gap-6 mb-10 pb-4 border-b border-brand-dark/10">
+            <h2 class="text-[22px] md:text-[28px] font-medium text-brand-dark leading-[1.2] tracking-[-0.02em]">Related work</h2>
+            <a href="/case-studies" class="text-[13px] font-medium text-brand-blue inline-flex items-center gap-1.5 hover:gap-2.5 transition-all whitespace-nowrap">
+              All case studies <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+            </a>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <article class="bg-white rounded-2xl p-6 md:p-7 flex flex-col shadow-sm shadow-brand-dark/5 hover:shadow-xl hover:shadow-brand-dark/10 transition-all group h-full">
+              <div class="h-10 mb-5 flex items-center">
+                <div class="bg-light-blue/40 rounded-md px-3 py-1.5">
+                  <span class="text-[13px] font-medium text-brand-dark">IRONSCALES</span>
+                </div>
+              </div>
+              <p class="font-mono text-[10px] uppercase tracking-[0.18em] text-brand-blue font-medium mb-3">Cybersecurity</p>
+              <p class="hero-stat text-[24px] md:text-[26px] text-brand-blue leading-[1.05] mb-4">2.3× pipeline in 90 days</p>
+              <p class="text-[14px] text-brand-dark/85 leading-[1.45] mb-6 flex-1">IRONSCALES grew pipeline 227% in 90 days</p>
+              <a href="/case-studies/ironscales" data-track="related_case_click" data-case="ironscales" class="text-xs font-medium text-brand-blue inline-flex items-center gap-1.5 group-hover:gap-2.5 transition-all mt-auto">
+                Read case study <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+              </a>
+            </article>
+            <article class="bg-white rounded-2xl p-6 md:p-7 flex flex-col shadow-sm shadow-brand-dark/5 hover:shadow-xl hover:shadow-brand-dark/10 transition-all group h-full">
+              <div class="h-10 mb-5 flex items-center">
+                <div class="bg-light-blue/40 rounded-md px-3 py-1.5">
+                  <span class="text-[13px] font-medium text-brand-dark">SnapLogic</span>
+                </div>
+              </div>
+              <p class="font-mono text-[10px] uppercase tracking-[0.18em] text-brand-blue font-medium mb-3">iPaaS</p>
+              <p class="hero-stat text-[24px] md:text-[26px] text-brand-blue leading-[1.05] mb-4">68% MQL, 47% SQL increase</p>
+              <p class="text-[14px] text-brand-dark/85 leading-[1.45] mb-6 flex-1">SnapLogic: one year of value-based bidding</p>
+              <a href="/case-studies/snaplogic-vbb" data-track="related_case_click" data-case="snaplogic-vbb" class="text-xs font-medium text-brand-blue inline-flex items-center gap-1.5 group-hover:gap-2.5 transition-all mt-auto">
+                Read case study <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+              </a>
+            </article>
+            <article class="bg-white rounded-2xl p-6 md:p-7 flex flex-col shadow-sm shadow-brand-dark/5 hover:shadow-xl hover:shadow-brand-dark/10 transition-all group h-full">
+              <div class="h-10 mb-5 flex items-center">
+                <div class="bg-light-blue/40 rounded-md px-3 py-1.5">
+                  <span class="text-[13px] font-medium text-brand-dark">Quantive</span>
+                </div>
+              </div>
+              <p class="font-mono text-[10px] uppercase tracking-[0.18em] text-brand-blue font-medium mb-3">Strategy SaaS</p>
+              <p class="hero-stat text-[24px] md:text-[26px] text-brand-blue leading-[1.05] mb-4">420% self-service pipeline</p>
+              <p class="text-[14px] text-brand-dark/85 leading-[1.45] mb-6 flex-1">Quantive: 420% self-service pipeline growth</p>
+              <a href="/case-studies/quantive" data-track="related_case_click" data-case="quantive" class="text-xs font-medium text-brand-blue inline-flex items-center gap-1.5 group-hover:gap-2.5 transition-all mt-auto">
+                Read case study <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+              </a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           SECTION 08 — PIPELINE ASSESSMENT CTA
+           ============================================================ -->
+      <section id="cta-bottom" class="py-20 md:py-28 panel-dark-blue text-white relative overflow-hidden">
+        <div class="absolute -top-32 -right-32 w-[500px] h-[500px] bg-brand-blue/15 rounded-full blur-[140px] pointer-events-none" aria-hidden="true"></div>
+        <div class="absolute -bottom-32 -left-32 w-[400px] h-[400px] bg-brand-light/8 rounded-full blur-[120px] pointer-events-none" aria-hidden="true"></div>
+        <div class="container-brand relative">
+          <div class="max-w-3xl mx-auto text-center">
+            <p class="section-eyebrow-light mb-6">Free · 5 business days · No commitment</p>
+            <h2 class="text-[28px] md:text-[40px] lg:text-[48px] font-medium leading-[1.15] tracking-[-0.025em] mb-6">See whether your pipeline could move like this.</h2>
+            <p class="text-[16px] md:text-[18px] text-cool-gray leading-[1.55] max-w-2xl mx-auto mb-10">
+              The Pipeline Assessment is the same diagnostic we ran with SmartRecruiters before the engagement. Five business days. Thirty-minute debrief. No commitment.
+            </p>
+            <a href="/assessment" data-track="case_cta_primary" data-source="bottom" data-case="smartrecruiters" class="bg-brand-blue hover:bg-dark-blue text-white px-7 py-4 rounded-lg font-medium text-[15px] transition-colors inline-flex items-center gap-2 group">
+              Book your free Pipeline Assessment <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-0.5 transition-transform"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- ============================================================
+         FOOTER
+         ============================================================ -->
+    <footer class="bg-navy text-cool-gray">
+      <div class="container-brand pt-16 pb-10">
+
+        <!-- Main grid: Brand · Services · Industries · Company -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-x-8 gap-y-12 mb-10 pb-12 border-b border-white/10">
+
+          <!-- Brand block -->
+          <div class="lg:col-span-4 space-y-6">
+            <a href="/" class="flex items-center" aria-label="VertoDigital home"><img src="/images/vertodigital-logo-light.svg" alt="VertoDigital logo" class="h-11 w-auto" /></a>
+            <p class="text-cool-gray text-sm leading-relaxed max-w-xs">The pipeline agency for B2B technology companies. Trusted by CMOs globally.</p>
+            <div class="flex items-center gap-5 flex-wrap">
+              <div class="flex gap-4">
+                <a class="text-cool-gray hover:text-white transition-colors" href="https://www.linkedin.com/company/vertodigital" target="_blank" rel="noopener noreferrer" aria-label="VertoDigital on LinkedIn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.852 3.37-1.852 3.601 0 4.267 2.37 4.267 5.455v6.288zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.063 2.063 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+                <a class="text-cool-gray hover:text-white transition-colors" href="https://www.youtube.com/@vertodigital" target="_blank" rel="noopener noreferrer" aria-label="VertoDigital on YouTube"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+                <a class="text-cool-gray hover:text-white transition-colors" href="https://www.instagram.com/vertodigitalagency/" target="_blank" rel="noopener noreferrer" aria-label="VertoDigital on Instagram"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
+              </div>
+              <span class="w-px h-4 bg-white/15 hidden sm:block" aria-hidden="true"></span>
+              <a href="https://www.g2.com/products/vertodigital/reviews" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-cool-gray hover:text-white text-sm transition-colors">
+                ★ 4.9 on G2 · 37 reviews
+                <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+              </a>
+            </div>
+            <!-- Newsletter inline -->
+            <div class="pt-5 border-t border-white/10">
+              <p class="text-sm text-white font-medium mb-1">Weekly dispatches</p>
+              <p class="text-cool-gray text-xs mb-4 leading-relaxed">Pipeline, CAC, and payback — not impressions. For B2B marketing leaders.</p>
+              <form class="flex gap-2">
+                <input type="email" placeholder="work@email.com" class="flex-1 min-w-0 bg-white/5 border border-white/15 text-white placeholder:text-cool-gray text-sm rounded-lg px-4 py-2.5 focus:border-brand-light focus:ring-1 focus:ring-brand-light/30 transition-colors" />
+                <button type="button" class="bg-brand-light text-brand-dark px-4 py-2.5 rounded-lg font-medium text-sm hover:bg-white transition-colors flex-shrink-0">Subscribe</button>
+              </form>
+            </div>
+          </div>
+
+          <!-- Services — 2x2 internal grid for balanced height -->
+          <div class="lg:col-span-4">
+            <p class="font-medium text-sm text-white mb-7">Services</p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-7">
+              <div>
+                <p class="font-mono text-[10px] uppercase tracking-[0.22em] text-cool-gray font-medium opacity-50 mb-3">Inbound</p>
+                <ul class="space-y-2.5 text-sm">
+                  <li><a class="text-cool-gray hover:text-white transition-colors" href="/services/inbound-pipeline-growth">Pipeline growth</a></li>
+                  <li><a class="text-cool-gray hover:text-white transition-colors" href="/services/inbound/linkedin-paid-social">LinkedIn Paid Social</a></li>
+                  <li><a class="text-cool-gray hover:text-white transition-colors" href="/services/inbound/paid-search">Paid Search</a></li>
+                  <li><a class="text-cool-gray hover:text-white transition-colors" href="/services/inbound/seo-and-aeo">SEO &amp; AEO</a></li>
+                </ul>
+              </div>
+              <div>
+                <p class="font-mono text-[10px] uppercase tracking-[0.22em] text-cool-gray font-medium opacity-50 mb-3">Outbound</p>
+                <ul class="space-y-2.5 text-sm">
+                  <li><a class="text-cool-gray hover:text-white transition-colors" href="/services/outbound-pipeline-growth">Pipeline growth</a></li>
+                  <li><a class="text-cool-gray hover:text-white transition-colors" href="/services/outbound/abm-6sense-demandbase">6sense &amp; DemandBase</a></li>
+                  <li><a class="text-cool-gray hover:text-white transition-colors" href="/services/outbound/linkedin-ai-targeting">LinkedIn AI Targeting</a></li>
+                  <li><a class="text-cool-gray hover:text-white transition-colors" href="/services/outbound/contact-level-abm">Contact-Level ABM</a></li>
+                </ul>
+              </div>
+              <div>
+                <p class="font-mono text-[10px] uppercase tracking-[0.22em] text-cool-gray font-medium opacity-50 mb-3">Data &amp; Analytics</p>
+                <ul class="space-y-2.5 text-sm">
+                  <li><a class="text-cool-gray hover:text-white transition-colors" href="/services/pipeline-intelligence">Pipeline Intelligence</a></li>
+                </ul>
+              </div>
+              <div>
+                <p class="font-mono text-[10px] uppercase tracking-[0.22em] text-cool-gray font-medium opacity-50 mb-3">Foundation</p>
+                <ul class="space-y-2.5 text-sm">
+                  <li><a class="text-cool-gray hover:text-white transition-colors" href="/assessment">Pipeline Assessment</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Industries -->
+          <div class="lg:col-span-2">
+            <p class="font-medium text-sm text-white mb-7">Industries</p>
+            <ul class="space-y-2.5 text-sm">
+              <li><a class="text-cool-gray hover:text-white transition-colors" href="/industries/cybersecurity">Cybersecurity</a></li>
+              <li><a class="text-cool-gray hover:text-white transition-colors" href="/industries/data-platforms-and-ai-infrastructure">Data Platforms &amp; AI</a></li>
+              <li><a class="text-cool-gray hover:text-white transition-colors" href="/industries/fintech-and-financial-services">FinTech &amp; Financial</a></li>
+            </ul>
+          </div>
+
+          <!-- Company -->
+          <div class="lg:col-span-2">
+            <p class="font-medium text-sm text-white mb-7">Company</p>
+            <ul class="space-y-2.5 text-sm">
+              <li><a class="text-cool-gray hover:text-white transition-colors" href="/about">About</a></li>
+              <li><a class="text-cool-gray hover:text-white transition-colors" href="/case-studies">Case studies</a></li>
+              <li><a class="text-cool-gray hover:text-white transition-colors" href="/careers">Careers</a></li>
+              <li><a class="text-cool-gray hover:text-white transition-colors" href="/contact">Contact</a></li>
+            </ul>
+          </div>
+
+        </div><!-- /main grid -->
+
+        <!-- Footer bottom: locations + legal -->
+        <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-3 text-xs text-cool-gray">
+          <div class="flex flex-wrap items-center gap-x-2 gap-y-1">
+            <span>🇧🇬 Sofia · Ruse · Blagoevgrad</span>
+            <span class="opacity-30" aria-hidden="true">·</span>
+            <span>🇺🇸 Boston</span>
+            <span class="opacity-30 hidden sm:inline" aria-hidden="true">·</span>
+            <span class="hidden sm:inline">© 2026 VertoDigital. Deployed wherever you need us.</span>
+          </div>
+          <span class="sm:hidden text-xs">© 2026 VertoDigital.</span>
+          <div class="flex gap-6">
+            <a href="/privacy" class="hover:text-white transition-colors">Privacy</a>
+            <a href="/terms" class="hover:text-white transition-colors">Terms</a>
+            <a href="/privacy#cookies" class="hover:text-white transition-colors">Cookies</a>
+          </div>
+        </div>
+
+      </div>
+    </footer>
+
+    <!-- Mobile menu script -->
+    <script>
+      (function() {
+        var btn = document.getElementById('mobile-menu-toggle');
+        var panel = document.getElementById('mobile-menu-panel');
+        if (!btn || !panel) return;
+        btn.addEventListener('click', function() {
+          var open = panel.classList.toggle('hidden');
+          btn.setAttribute('aria-expanded', !open ? 'false' : 'true');
+        });
+      })();
+    </script>
+
+    <!-- dataLayer click tracking -->
+    <script>
+      (function() {
+        document.addEventListener('click', function(e) {
+          var el = e.target.closest('[data-track]');
+          if (!el) return;
+          window.dataLayer = window.dataLayer || [];
+          var payload = { event: el.getAttribute('data-track') };
+          if (el.dataset.case)    payload.case_slug   = el.dataset.case;
+          if (el.dataset.service) payload.service     = el.dataset.service;
+          if (el.dataset.source)  payload.cta_source  = el.dataset.source;
+          window.dataLayer.push(payload);
+        }, true);
+      })();
+    </script>
+
+    <!-- Scroll depth tracking (25 / 50 / 75 / 100%) -->
+    <script>
+      (function() {
+        var marks = { 25: false, 50: false, 75: false, 100: false };
+        function onScroll() {
+          var scrolled = window.scrollY + window.innerHeight;
+          var total = document.documentElement.scrollHeight;
+          var pct = Math.round((scrolled / total) * 100);
+          [25, 50, 75, 100].forEach(function(m) {
+            if (!marks[m] && pct >= m) {
+              marks[m] = true;
+              window.dataLayer = window.dataLayer || [];
+              window.dataLayer.push({ event: 'case_scroll_depth', depth_pct: m, case_slug: 'ironscales' });
+            }
+          });
+        }
+        window.addEventListener('scroll', onScroll, { passive: true });
+      })();
+    </script>
+
+    <script>
+      if (window.lucide) lucide.createIcons();
+    </script>
+  </body>
+</html>

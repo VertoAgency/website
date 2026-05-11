@@ -733,60 +733,7 @@
         </div>
       </section>
 
-      <!-- ============================================================
-           BLOCK 6 — BEST FIT / NOT THE RIGHT FIT YET (NEW)
-           Trust act — says who shouldn't hire us
-           ============================================================ -->
-      <section id="fit" class="bg-white">
-        <div class="container-brand py-24 md:py-32">
-          <div class="max-w-3xl mb-14 md:mb-16">
-            <p class="section-eyebrow mb-6">Who this is for</p>
-            <h2 class="text-[28px] md:text-[40px] leading-[1.15] tracking-[-0.02em] text-brand-dark">
-              We&rsquo;re a fit if you&rsquo;re trying to prove pipeline. <span class="font-script text-brand-blue text-[1.05em] leading-none">We&rsquo;re not</span> if you&rsquo;re trying to outsource marketing.
-            </h2>
-          </div>
 
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-
-            <!-- Column 1 · Best fit -->
-            <article class="bg-light-blue/40 rounded-2xl p-8 md:p-10 flex flex-col">
-              <div class="flex items-center gap-3 mb-6">
-                <span class="inline-flex items-center justify-center w-9 h-9 rounded-lg bg-brand-blue text-white flex-shrink-0">
-                  <i data-lucide="check" class="w-5 h-5"></i>
-                </span>
-                <h3 class="text-[22px] md:text-[24px] font-medium text-brand-dark leading-[1.2]">Best fit for VertoDigital</h3>
-              </div>
-              <ul class="space-y-3 text-[15px] leading-[1.6] text-brand-dark/80">
-                <li class="flex items-start gap-3"><i data-lucide="check" class="w-4 h-4 text-brand-blue flex-shrink-0 mt-1.5"></i><span>B2B technology companies (SaaS, infrastructure, fintech, enterprise IT)</span></li>
-                <li class="flex items-start gap-3"><i data-lucide="check" class="w-4 h-4 text-brand-blue flex-shrink-0 mt-1.5"></i><span>Series B or later, $10M+ ARR, with a dedicated in-house marketing team of 10+</span></li>
-                <li class="flex items-start gap-3"><i data-lucide="check" class="w-4 h-4 text-brand-blue flex-shrink-0 mt-1.5"></i><span>Marketing leader being asked by the board or CEO to prove pipeline contribution</span></li>
-                <li class="flex items-start gap-3"><i data-lucide="check" class="w-4 h-4 text-brand-blue flex-shrink-0 mt-1.5"></i><span>A CRM that holds your truth &mdash; even if it&rsquo;s messy</span></li>
-                <li class="flex items-start gap-3"><i data-lucide="check" class="w-4 h-4 text-brand-blue flex-shrink-0 mt-1.5"></i><span>Willingness to share pipeline data, not just campaign data</span></li>
-              </ul>
-            </article>
-
-            <!-- Column 2 · Not the right fit yet -->
-            <article class="bg-brand-dark text-white rounded-2xl p-8 md:p-10 flex flex-col">
-              <div class="flex items-center gap-3 mb-6">
-                <span class="inline-flex items-center justify-center w-9 h-9 rounded-lg bg-white/10 text-brand-light flex-shrink-0">
-                  <i data-lucide="x" class="w-5 h-5"></i>
-                </span>
-                <h3 class="text-[22px] md:text-[24px] font-medium text-white leading-[1.2]">Not the right fit yet</h3>
-              </div>
-              <ul class="space-y-3 text-[15px] leading-[1.6] text-cool-gray">
-                <li class="flex items-start gap-3"><i data-lucide="minus" class="w-4 h-4 text-brand-light/70 flex-shrink-0 mt-1.5"></i><span>Companies without a dedicated in-house marketing function</span></li>
-                <li class="flex items-start gap-3"><i data-lucide="minus" class="w-4 h-4 text-brand-light/70 flex-shrink-0 mt-1.5"></i><span>Pre-Series-A startups still finding product&ndash;market fit</span></li>
-                <li class="flex items-start gap-3"><i data-lucide="minus" class="w-4 h-4 text-brand-light/70 flex-shrink-0 mt-1.5"></i><span>Teams looking for a generalist agency to run everything</span></li>
-                <li class="flex items-start gap-3"><i data-lucide="minus" class="w-4 h-4 text-brand-light/70 flex-shrink-0 mt-1.5"></i><span>Companies that measure success in clicks, impressions, or MQLs</span></li>
-                <li class="flex items-start gap-3"><i data-lucide="minus" class="w-4 h-4 text-brand-light/70 flex-shrink-0 mt-1.5"></i><span>Marketing teams that can&rsquo;t access their own CRM data</span></li>
-              </ul>
-              <p class="mt-7 pt-6 border-t border-white/15 text-[14px] leading-[1.55] text-cool-gray italic">
-                If that&rsquo;s you, we&rsquo;re happy to point you toward agencies that fit your stage. We&rsquo;ve sent a lot of business that way.
-              </p>
-            </article>
-          </div>
-        </div>
-      </section>
 
       <!-- ============================================================
            BOTTOM CTA
@@ -976,7 +923,7 @@
 
         // Section visibility — fires once per section when 50% visible
         if ('IntersectionObserver' in window) {
-          var ids = ['how-we-work', 'engagement', 'proof', 'fit'];
+          var ids = ['how-we-work', 'engagement', 'proof'];
           var seen = {};
           var io = new IntersectionObserver(function (entries) {
             entries.forEach(function (entry) {

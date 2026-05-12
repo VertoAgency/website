@@ -476,43 +476,72 @@
 
           <!-- Layered concentric diagram -->
           <div class="blueprint-grid rounded-2xl p-5 md:p-10 mb-14 md:mb-16 bg-white">
-            <svg viewBox="0 0 1080 460" class="w-full h-auto" role="img" aria-label="Three concentric rings: Account Intelligence (outer), Buying Group (middle), Named Individuals (inner)">
 
-              <!-- Concentric rings — centered at (280, 230) -->
+            <!-- Desktop: wide horizontal layout -->
+            <svg viewBox="0 0 1080 460" class="hidden md:block w-full h-auto" role="img" aria-label="Three concentric rings: Account Intelligence (outer), Buying Group (middle), Named Individuals (inner)">
               <g transform="translate(280 230)">
                 <circle cx="0" cy="0" r="185" fill="#d9f0ff" fill-opacity="0.55"/>
                 <circle cx="0" cy="0" r="122" fill="#66CCFF" fill-opacity="0.45"/>
                 <circle cx="0" cy="0" r="62"  fill="#0099FF" fill-opacity="0.85"/>
                 <circle cx="0" cy="0" r="18"  fill="#060026"/>
-
-                <!-- Ring labels — one per band, centered -->
                 <text x="0" y="-155" text-anchor="middle" font-family="Geist Mono, monospace" font-size="12" letter-spacing="2" fill="#060026" fill-opacity="0.7" font-weight="500">ACCOUNT INTELLIGENCE</text>
                 <text x="0" y="-92"  text-anchor="middle" font-family="Geist Mono, monospace" font-size="12" letter-spacing="2" fill="#060026" fill-opacity="0.7" font-weight="500">BUYING GROUP</text>
                 <text x="0" y="-34"  text-anchor="middle" font-family="Geist Mono, monospace" font-size="11" letter-spacing="1.5" fill="#ffffff" font-weight="500">NAMED INDIVIDUALS</text>
               </g>
-
-              <!-- Connector lines + right-side callouts -->
               <g>
-                <!-- Layer 1 — Account-based ABM -->
                 <line x1="465" y1="80" x2="548" y2="80" stroke="#060026" stroke-opacity="0.2" stroke-width="1"/>
                 <text x="564" y="72" font-family="Geist, sans-serif" font-size="17" fill="#060026" font-weight="500">Account-based ABM</text>
                 <text x="564" y="94" font-family="Geist, sans-serif" font-size="13" fill="#060026" fill-opacity="0.55">Company intent · 6sense &amp; DemandBase</text>
-
-                <!-- Layer 2 — Persona-based ABM -->
                 <line x1="465" y1="222" x2="548" y2="222" stroke="#060026" stroke-opacity="0.2" stroke-width="1"/>
                 <text x="564" y="214" font-family="Geist, sans-serif" font-size="17" fill="#060026" font-weight="500">Persona-based ABM</text>
                 <text x="564" y="236" font-family="Geist, sans-serif" font-size="13" fill="#060026" fill-opacity="0.55">Buying-group signal · 25,000+ titles scored</text>
-
-                <!-- Layer 3 — Contact-based ABM (differentiator) -->
                 <line x1="465" y1="364" x2="548" y2="364" stroke="#0099FF" stroke-width="1.5"/>
                 <text x="564" y="356" font-family="Geist, sans-serif" font-size="17" fill="#060026" font-weight="500">Contact-based ABM</text>
                 <text x="564" y="378" font-family="Geist, sans-serif" font-size="13" fill="#0099FF" font-weight="500">Named-individual signal · SDR triggers</text>
               </g>
-
-              <!-- Bottom outcome tag -->
               <rect x="158" y="426" width="244" height="24" rx="7" fill="#060026"/>
               <text x="280" y="442" text-anchor="middle" font-family="Geist Mono, monospace" font-size="10" letter-spacing="2" fill="#ffffff" font-weight="500">SALES HANDOFF · INTELLIGENCE-LED</text>
             </svg>
+
+            <!-- Mobile: compact circles + stacked callout rows -->
+            <div class="md:hidden flex flex-col items-center gap-6">
+              <svg viewBox="0 0 340 340" class="w-full max-w-[280px] h-auto" role="img" aria-label="Three concentric rings: Account Intelligence (outer), Buying Group (middle), Named Individuals (inner)">
+                <g transform="translate(170 170)">
+                  <circle cx="0" cy="0" r="155" fill="#d9f0ff" fill-opacity="0.55"/>
+                  <circle cx="0" cy="0" r="102" fill="#66CCFF" fill-opacity="0.45"/>
+                  <circle cx="0" cy="0" r="52"  fill="#0099FF" fill-opacity="0.85"/>
+                  <circle cx="0" cy="0" r="15"  fill="#060026"/>
+                  <text x="0" y="-128" text-anchor="middle" font-family="Geist Mono, monospace" font-size="11" letter-spacing="2" fill="#060026" fill-opacity="0.7" font-weight="500">ACCOUNT INTELLIGENCE</text>
+                  <text x="0" y="-76"  text-anchor="middle" font-family="Geist Mono, monospace" font-size="11" letter-spacing="2" fill="#060026" fill-opacity="0.7" font-weight="500">BUYING GROUP</text>
+                  <text x="0" y="-28"  text-anchor="middle" font-family="Geist Mono, monospace" font-size="10" letter-spacing="1.5" fill="#ffffff" font-weight="500">NAMED INDIVIDUALS</text>
+                </g>
+              </svg>
+              <div class="w-full flex flex-col divide-y divide-brand-dark/8">
+                <div class="flex items-start gap-3 py-4">
+                  <span class="mt-1.5 w-2.5 h-2.5 rounded-full bg-brand-dark/20 flex-shrink-0"></span>
+                  <div>
+                    <p class="text-[15px] font-medium text-brand-dark leading-snug">Account-based ABM</p>
+                    <p class="text-[13px] text-brand-dark/55 mt-0.5">Company intent · 6sense &amp; DemandBase</p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-3 py-4">
+                  <span class="mt-1.5 w-2.5 h-2.5 rounded-full bg-brand-dark/20 flex-shrink-0"></span>
+                  <div>
+                    <p class="text-[15px] font-medium text-brand-dark leading-snug">Persona-based ABM</p>
+                    <p class="text-[13px] text-brand-dark/55 mt-0.5">Buying-group signal · 25,000+ titles scored</p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-3 py-4">
+                  <span class="mt-1.5 w-2.5 h-2.5 rounded-full bg-[#0099FF] flex-shrink-0"></span>
+                  <div>
+                    <p class="text-[15px] font-medium text-brand-dark leading-snug">Contact-based ABM</p>
+                    <p class="text-[13px] text-[#0099FF] font-medium mt-0.5">Named-individual signal · SDR triggers</p>
+                  </div>
+                </div>
+              </div>
+              <span class="inline-flex items-center px-4 py-1.5 rounded-lg bg-brand-dark font-mono text-[10px] tracking-[0.15em] text-white font-medium uppercase">SALES HANDOFF · INTELLIGENCE-LED</span>
+            </div>
+
           </div>
 
           <!-- Three deep pillar cards -->

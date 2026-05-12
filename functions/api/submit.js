@@ -6,6 +6,7 @@ const NOTIFY_EMAILS = [
   'zoran@vertodigital.com',
   'ivo@vertodigital.com',
   'yasen.lilov@vertodigital.com',
+  'nikol.anestieva@vertodigital.com',
 ];
 
 const FROM_TEAM   = 'VertoDigital <team@resend.vertodigital.com>';

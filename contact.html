@@ -248,7 +248,7 @@
                   <h2 class="text-[24px] md:text-[28px] font-medium text-brand-dark leading-[1.2] tracking-[-0.015em]">A few details, then we'll be in touch.</h2>
                 </div>
 
-                <form id="contact-form" action="#" method="post" novalidate class="space-y-6">
+                <form id="contact-form" data-form="contact-full" action="#" method="post" novalidate class="space-y-6">
                   <!-- Name + Email row -->
                   <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
                     <div>
@@ -290,7 +290,8 @@
 
                   <!-- Submit -->
                   <div class="pt-2 flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-6">
-                    <button type="submit" class="bg-brand-dark hover:bg-brand-blue text-white px-7 py-3.5 rounded-lg font-medium text-[15px] transition-colors inline-flex items-center justify-center gap-2 group">
+                    <input type="text" name="_hp" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px">
+                  <button type="submit" class="bg-brand-dark hover:bg-brand-blue text-white px-7 py-3.5 rounded-lg font-medium text-[15px] transition-colors inline-flex items-center justify-center gap-2 group">
                       Send the message
                       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 group-hover:translate-x-0.5 transition-transform"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></i>
                     </button>
@@ -302,6 +303,7 @@
               </div>
 
               <!-- Inline success state -->
+              <div id="contact-error" class="hidden bg-red-50 rounded-xl p-4 mb-4 text-[14px] text-red-700">Something went wrong — please try again or email us directly.</div>
               <div id="contact-success" class="hidden bg-white rounded-2xl shadow-xl shadow-brand-blue/5 p-8 md:p-12 text-center">
                 <div class="inline-flex items-center justify-center w-14 h-14 rounded-full bg-gradient-to-br from-brand-blue to-brand-light text-white mb-5">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-7 h-7"><path d="M20 6 9 17l-5-5"/></svg></i>
@@ -431,10 +433,11 @@
             <div class="pt-5 border-t border-white/10">
               <p class="text-sm text-white font-medium mb-1">Newsletter</p>
               <p class="text-cool-gray text-xs mb-4 leading-relaxed">Once a week. Practical B2B marketing tips — from the team that does it.</p>
-              <form class="flex gap-2">
-                <input type="email" placeholder="work@email.com" class="flex-1 min-w-0 bg-white/5 border border-white/15 text-white placeholder:text-cool-gray text-sm rounded-lg px-4 py-2.5 focus:border-brand-light focus:ring-1 focus:ring-brand-light/30 transition-colors" />
-                <button type="button" class="bg-brand-light text-brand-dark px-4 py-2.5 rounded-lg font-medium text-sm hover:bg-white transition-colors flex-shrink-0">Subscribe</button>
+              <form class="flex gap-2" data-form="newsletter">
+                <input type="email" name="email" required placeholder="work@email.com" class="flex-1 min-w-0 bg-white/5 border border-white/15 text-white placeholder:text-cool-gray text-sm rounded-lg px-4 py-2.5 focus:border-brand-light focus:ring-1 focus:ring-brand-light/30 transition-colors" />
+                <button type="submit" class="bg-brand-light text-brand-dark px-4 py-2.5 rounded-lg font-medium text-sm hover:bg-white transition-colors flex-shrink-0">Subscribe</button>
               </form>
+              <p class="hidden text-sm text-cool-gray mt-2" data-form-success="newsletter">You're subscribed — first issue lands next week.</p>
             </div>
           </div>
 
@@ -507,19 +510,8 @@
       //       to the success state. Wire to a real endpoint (Formspree /
       //       Netlify Forms / Cloudflare Email Workers / etc.) before
       //       relying on inbound from this page.
-      (function () {
-        var form = document.getElementById('contact-form');
-        var wrapper = document.getElementById('contact-form-wrapper');
-        var success = document.getElementById('contact-success');
-        if (!form) return;
-        form.addEventListener('submit', function (e) {
-          e.preventDefault();
-          if (!form.checkValidity()) { form.reportValidity(); return; }
-          wrapper.classList.add('hidden');
-          success.classList.remove('hidden');
-          success.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        });
-      })();
+
     </script>
+    <script src="/js/forms.js" defer></script>
   </body>
 </html>

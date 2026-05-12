@@ -51,11 +51,13 @@
       e.preventDefault();
       var btn = miniForm.querySelector('button[type="submit"]');
       var payload = {
-        form_type:     'contact_mini',
-        email:         val(miniForm, 'email'),
-        company_title: val(miniForm, 'company_title'),
-        message:       val(miniForm, 'message'),
-        _hp:           val(miniForm, '_hp'),
+        form_type: 'contact_mini',
+        name:      val(miniForm, 'name'),
+        email:     val(miniForm, 'email'),
+        title:     val(miniForm, 'title'),
+        company:   val(miniForm, 'company'),
+        message:   val(miniForm, 'message'),
+        _hp:       val(miniForm, '_hp'),
       };
       if (!payload.email) return;
       var orig = btn.textContent;

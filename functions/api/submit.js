@@ -101,9 +101,11 @@ function buildProps(fields, formType) {
     p.jobtitle        = ROLE_LABELS[fields.role] || fields.role || '';
     p.lifecyclestage  = 'lead';
   } else if (formType === 'contact_mini') {
-    const [company, title] = (fields.company_title || '').split(/[·\-]/).map(s => s.trim());
-    if (company) p.company  = company;
-    if (title)   p.jobtitle = title;
+    const parts = (fields.name || '').trim().split(/\s+/);
+    p.firstname      = parts[0] || '';
+    p.lastname       = parts.slice(1).join(' ') || '';
+    p.company        = fields.company || '';
+    p.jobtitle       = fields.title   || '';
     p.lifecyclestage = 'lead';
   } else if (formType === 'newsletter') {
     p.lifecyclestage = 'subscriber';
@@ -275,8 +277,10 @@ function buildNotifyRows(fields, formType) {
     items.push(['Role',    ROLE_LABELS[fields.role] || fields.role || '—']);
     if (fields.problem) items.push(['Problem', fields.problem]);
   } else if (formType === 'contact_mini') {
-    items.push(['Email',           fields.email]);
-    items.push(['Company · Title', fields.company_title || '—']);
+    items.push(['Name',    fields.name    || '—']);
+    items.push(['Email',   fields.email]);
+    items.push(['Title',   fields.title   || '—']);
+    items.push(['Company', fields.company || '—']);
     if (fields.message) items.push(['Message', fields.message]);
   } else {
     items.push(['Email', fields.email]);

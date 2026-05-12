@@ -706,12 +706,20 @@
               <p class="text-[14px] text-brand-dark/70 mb-8 leading-[1.5]">Tell us what's not working. We reply within a business day.</p>
               <form id="contact-form" data-form="contact-mini" class="space-y-4">
                 <div>
+                  <label for="contact-name" class="font-mono text-[12px] text-brand-dark/60 uppercase tracking-widest font-medium">Name</label>
+                  <input id="contact-name" type="text" name="name" autocomplete="name" required placeholder="Jane Rivera" class="w-full mt-1 bg-white border border-brand-dark/15 text-brand-dark rounded-lg p-3 text-[14px] focus:border-brand-blue focus:ring-1 focus:ring-brand-blue/30 transition-colors placeholder:text-brand-dark/30" />
+                </div>
+                <div>
                   <label for="contact-email" class="font-mono text-[12px] text-brand-dark/60 uppercase tracking-widest font-medium">Work email</label>
                   <input id="contact-email" type="email" name="email" required placeholder="jane@company.com" class="w-full mt-1 bg-white border border-brand-dark/15 text-brand-dark rounded-lg p-3 text-[14px] focus:border-brand-blue focus:ring-1 focus:ring-brand-blue/30 transition-colors placeholder:text-brand-dark/30" />
                 </div>
                 <div>
-                  <label for="contact-company" class="font-mono text-[12px] text-brand-dark/60 uppercase tracking-widest font-medium">Company · Title</label>
-                  <input id="contact-company" type="text" name="company_title" placeholder="Acme · CMO" class="w-full mt-1 bg-white border border-brand-dark/15 text-brand-dark rounded-lg p-3 text-[14px] focus:border-brand-blue focus:ring-1 focus:ring-brand-blue/30 transition-colors placeholder:text-brand-dark/30" />
+                  <label for="contact-title" class="font-mono text-[12px] text-brand-dark/60 uppercase tracking-widest font-medium">Title</label>
+                  <input id="contact-title" type="text" name="title" placeholder="CMO" class="w-full mt-1 bg-white border border-brand-dark/15 text-brand-dark rounded-lg p-3 text-[14px] focus:border-brand-blue focus:ring-1 focus:ring-brand-blue/30 transition-colors placeholder:text-brand-dark/30" />
+                </div>
+                <div>
+                  <label for="contact-company" class="font-mono text-[12px] text-brand-dark/60 uppercase tracking-widest font-medium">Company</label>
+                  <input id="contact-company" type="text" name="company" placeholder="Acme Technologies" class="w-full mt-1 bg-white border border-brand-dark/15 text-brand-dark rounded-lg p-3 text-[14px] focus:border-brand-blue focus:ring-1 focus:ring-brand-blue/30 transition-colors placeholder:text-brand-dark/30" />
                 </div>
                 <div>
                   <label for="contact-message" class="font-mono text-[12px] text-brand-dark/60 uppercase tracking-widest font-medium">What's the problem?</label>

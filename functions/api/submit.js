@@ -136,14 +136,7 @@ async function createNote(contactId, body, env) {
 // ─── Resend emails ───────────────────────────────────────────────────────────
 
 async function sendEmails(fields, formType, env) {
-  await Promise.all([
-    sendEmail({
-      from:     FROM_TEAM,
-      to:       [fields.email],
-      reply_to: REPLY_TO,
-      subject:  confirmSubject(formType),
-      html:     confirmHtml(fields, formType),
-    }, env),
+  const sends = [
     sendEmail({
       from:     FROM_TEAM,
       to:       NOTIFY_EMAILS,
@@ -151,7 +144,19 @@ async function sendEmails(fields, formType, env) {
       subject:  `[${formLabel(formType)}] ${fields.email}`,
       html:     notifyHtml(fields, formType),
     }, env),
-  ]);
+  ];
+
+  if (formType !== 'newsletter') {
+    sends.push(sendEmail({
+      from:     FROM_TEAM,
+      to:       [fields.email],
+      reply_to: REPLY_TO,
+      subject:  confirmSubject(formType),
+      html:     confirmHtml(fields, formType),
+    }, env));
+  }
+
+  await Promise.all(sends);
 }
 
 async function sendEmail(payload, env) {

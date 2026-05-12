@@ -190,7 +190,7 @@ function confirmHtml(fields, formType) {
       body: `
         <p style="margin:0 0 16px;font-size:15px;color:#374151;line-height:1.7">The VertoDigital newsletter goes to B2B marketing leaders who want sharper pipeline thinking — not more noise.</p>
         <p style="margin:0 0 32px;font-size:15px;color:#374151;line-height:1.7">First issue lands next week.</p>
-        <p style="margin:0;font-size:13px;color:#9ca3af;line-height:1.6">— The VertoDigital team</p>`,
+        <p style="margin:0;font-size:13px;color:#9ca3af;line-height:1.6">— The VertoDigital Team</p>`,
     });
   }
 

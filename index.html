@@ -4,6 +4,48 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>VertoDigital — Pipeline for B2B CMOs</title>
+
+    <!-- SEO -->
+    <meta name="description" content="VertoDigital is the B2B pipeline agency for technology CMOs. 200+ clients. $1B+ in pipeline created. Inbound, outbound, and pipeline intelligence — all tied to your CRM." />
+    <link rel="canonical" href="https://vertodigital.com/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="VertoDigital — Pipeline for B2B CMOs" />
+    <meta property="og:description" content="The B2B pipeline agency for technology CMOs. 200+ clients. $1B+ in pipeline. Inbound, outbound, and pipeline intelligence — wired to your CRM." />
+    <meta property="og:url" content="https://vertodigital.com/" />
+    <meta property="og:site_name" content="VertoDigital" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="VertoDigital — Pipeline for B2B CMOs" />
+    <meta name="twitter:description" content="The B2B pipeline agency for technology CMOs. 200+ clients. $1B+ in pipeline. Inbound, outbound, and pipeline intelligence — wired to your CRM." />
+
+    <!-- Organization schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "VertoDigital",
+      "url": "https://vertodigital.com",
+      "logo": "https://vertodigital.com/images/vertodigital-logo-dark.svg",
+      "description": "B2B pipeline agency for technology CMOs. Inbound pipeline growth, outbound ABM, and pipeline intelligence — all tied to the CRM.",
+      "foundingDate": "2018",
+      "address": [
+        { "@type": "PostalAddress", "addressLocality": "Boston", "addressRegion": "MA", "addressCountry": "US" }
+      ],
+      "sameAs": [
+        "https://www.linkedin.com/company/vertodigital",
+        "https://www.youtube.com/@vertodigital",
+        "https://www.instagram.com/vertodigitalagency/"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "sales",
+        "email": "paul.green@vertodigital.com"
+      }
+    }
+    </script>
+
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -200,13 +242,13 @@
     </style>
   <!-- Google Calendar Appointment Scheduling -->
   <link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
-  <script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
+  <script src="https://calendar.google.com/calendar/scheduling-button-script.js" defer></script>
   </head>
   <body class="antialiased">
     <!-- Navbar -->
     <nav class="sticky top-0 w-full z-50 bg-white/85 backdrop-blur-xl border-b border-brand-dark/10">
       <div class="container-brand flex justify-between items-center py-5">
-        <a href="/" class="flex items-center" aria-label="VertoDigital home"><img src="/images/vertodigital-logo-dark.svg" alt="VertoDigital logo" class="h-11 w-auto" /></a>
+        <a href="/" class="flex items-center" aria-label="VertoDigital home"><img src="/images/vertodigital-logo-dark.svg" alt="VertoDigital logo" class="h-11 w-auto" width="160" height="44" /></a>
         <div class="hidden md:flex items-center space-x-8 lg:space-x-10 text-[15px]">
 
           <!-- Services · desktop dropdown -->
@@ -523,7 +565,7 @@
             <p class="font-mono text-[12px] text-brand-light uppercase tracking-[0.3em] font-medium mb-4">How we work</p>
             <h2 class="text-[24px] md:text-[32px] font-medium leading-[1.2] tracking-[-0.02em]">Three practices. Wired to your CRM.</h2>
             <p class="mt-6 text-[16px] text-cool-gray leading-[1.6] max-w-2xl">
-              Pipeline isn&rsquo;t built channel-by-channel. It&rsquo;s built by sequencing demand generation with demand capture, and connecting both back to deal outcomes. Inbound creates the pipeline. Outbound captures it. Pipeline Intelligence wires the whole thing into your CRM. One pipeline. One scoreboard. One agency.
+              Pipeline isn&rsquo;t built channel-by-channel. It&rsquo;s built by connecting demand generation with demand capture, and wiring both back to deal outcomes. Inbound creates the pipeline. Outbound captures it. Pipeline Intelligence wires the whole thing into your CRM. One pipeline. One scoreboard. One agency.
             </p>
           </div>
 
@@ -650,7 +692,7 @@
               <div class="absolute -bottom-24 -left-24 w-64 h-64 bg-brand-light/15 rounded-full blur-3xl"></div>
 
               <div class="relative flex items-start gap-6 mb-8">
-                <img src="/images/paul-green.webp" alt="Paul Green, Growth & AI Solutions at VertoDigital" class="w-20 h-20 rounded-full object-cover shadow-lg ring-4 ring-white/15 flex-shrink-0" />
+                <img src="/images/paul-green.webp" alt="Paul Green, Growth & AI Solutions at VertoDigital" class="w-20 h-20 rounded-full object-cover shadow-lg ring-4 ring-white/15 flex-shrink-0" loading="lazy" width="80" height="80" />
                 <div class="min-w-0">
                   <p class="font-mono text-[12px] text-brand-light uppercase tracking-widest font-medium mb-2">Your call is with</p>
                   <h3 class="font-script text-[40px] md:text-[48px] leading-none mb-1">Paul Green</h3>
@@ -696,24 +738,28 @@
               <p class="font-mono text-[12px] text-brand-dark/60 uppercase tracking-widest font-medium mb-2">Not ready for a call?</p>
               <h3 class="text-2xl font-medium text-brand-dark mb-2 leading-[1.2]">Send a note instead.</h3>
               <p class="text-[14px] text-brand-dark/70 mb-8 leading-[1.5]">Tell us what's not working. We reply within a business day.</p>
-              <form class="space-y-4">
+              <form id="contact-form" class="space-y-4">
                 <div>
-                  <label class="font-mono text-[12px] text-brand-dark/60 uppercase tracking-widest font-medium">Work email</label>
-                  <input type="email" placeholder="jane@company.com" class="w-full mt-1 bg-white border border-brand-dark/15 text-brand-dark rounded-lg p-3 text-[14px] focus:border-brand-blue focus:ring-1 focus:ring-brand-blue/30 transition-colors placeholder:text-brand-dark/30" />
+                  <label for="contact-email" class="font-mono text-[12px] text-brand-dark/60 uppercase tracking-widest font-medium">Work email</label>
+                  <input id="contact-email" type="email" name="email" required placeholder="jane@company.com" class="w-full mt-1 bg-white border border-brand-dark/15 text-brand-dark rounded-lg p-3 text-[14px] focus:border-brand-blue focus:ring-1 focus:ring-brand-blue/30 transition-colors placeholder:text-brand-dark/30" />
                 </div>
                 <div>
-                  <label class="font-mono text-[12px] text-brand-dark/60 uppercase tracking-widest font-medium">Company · Title</label>
-                  <input type="text" placeholder="Acme · CMO" class="w-full mt-1 bg-white border border-brand-dark/15 text-brand-dark rounded-lg p-3 text-[14px] focus:border-brand-blue focus:ring-1 focus:ring-brand-blue/30 transition-colors placeholder:text-brand-dark/30" />
+                  <label for="contact-company" class="font-mono text-[12px] text-brand-dark/60 uppercase tracking-widest font-medium">Company · Title</label>
+                  <input id="contact-company" type="text" name="company_title" placeholder="Acme · CMO" class="w-full mt-1 bg-white border border-brand-dark/15 text-brand-dark rounded-lg p-3 text-[14px] focus:border-brand-blue focus:ring-1 focus:ring-brand-blue/30 transition-colors placeholder:text-brand-dark/30" />
                 </div>
                 <div>
-                  <label class="font-mono text-[12px] text-brand-dark/60 uppercase tracking-widest font-medium">What's the problem?</label>
-                  <textarea rows="4" placeholder="In a sentence or two…" class="w-full mt-1 bg-white border border-brand-dark/15 text-brand-dark rounded-lg p-3 text-[14px] focus:border-brand-blue focus:ring-1 focus:ring-brand-blue/30 transition-colors placeholder:text-brand-dark/30 resize-none"></textarea>
+                  <label for="contact-message" class="font-mono text-[12px] text-brand-dark/60 uppercase tracking-widest font-medium">What's the problem?</label>
+                  <textarea id="contact-message" name="message" rows="4" placeholder="In a sentence or two…" class="w-full mt-1 bg-white border border-brand-dark/15 text-brand-dark rounded-lg p-3 text-[14px] focus:border-brand-blue focus:ring-1 focus:ring-brand-blue/30 transition-colors placeholder:text-brand-dark/30 resize-none"></textarea>
                 </div>
                 <button type="submit" class="w-full bg-brand-dark hover:bg-brand-blue text-white font-medium py-3.5 rounded-lg transition-colors inline-flex items-center justify-center gap-2">
                   Send note <i data-lucide="arrow-right" class="w-4 h-4"></i>
                 </button>
                 <p class="text-[12px] text-brand-dark/60 text-center">We only reply. No newsletters, no retargeting.</p>
               </form>
+              <div id="contact-success" class="hidden text-center py-8">
+                <p class="text-[22px] font-medium text-brand-dark mb-2">Thanks — note received.</p>
+                <p class="text-[14px] text-brand-dark/65">We'll reply within one business day.</p>
+              </div>
             </div>
           </div>
         </div>
@@ -749,7 +795,7 @@
 
           <!-- Brand block -->
           <div class="lg:col-span-4 space-y-6">
-            <a href="/" class="flex items-center" aria-label="VertoDigital home"><img src="/images/vertodigital-logo-light.svg" alt="VertoDigital logo" class="h-11 w-auto" /></a>
+            <a href="/" class="flex items-center" aria-label="VertoDigital home"><img src="/images/vertodigital-logo-light.svg" alt="VertoDigital logo" class="h-11 w-auto" width="160" height="44" loading="lazy" /></a>
             <p class="text-cool-gray text-sm leading-relaxed max-w-xs">The pipeline agency for B2B technology companies. Trusted by US and Europe CMOs.</p>
             <div class="flex items-center gap-5 flex-wrap">
               <div class="flex gap-4">
@@ -767,10 +813,11 @@
             <div class="pt-5 border-t border-white/10">
               <p class="text-sm text-white font-medium mb-1">Newsletter</p>
               <p class="text-cool-gray text-xs mb-4 leading-relaxed">Once a week. Practical B2B marketing tips — from the team that does it.</p>
-              <form class="flex gap-2">
-                <input type="email" placeholder="work@email.com" class="flex-1 min-w-0 bg-white/5 border border-white/15 text-white placeholder:text-cool-gray text-sm rounded-lg px-4 py-2.5 focus:border-brand-light focus:ring-1 focus:ring-brand-light/30 transition-colors" />
-                <button type="button" class="bg-brand-light text-brand-dark px-4 py-2.5 rounded-lg font-medium text-sm hover:bg-white transition-colors flex-shrink-0">Subscribe</button>
+              <form id="newsletter-form" class="flex gap-2">
+                <input type="email" name="email" required placeholder="work@email.com" class="flex-1 min-w-0 bg-white/5 border border-white/15 text-white placeholder:text-cool-gray text-sm rounded-lg px-4 py-2.5 focus:border-brand-light focus:ring-1 focus:ring-brand-light/30 transition-colors" />
+                <button type="submit" class="bg-brand-light text-brand-dark px-4 py-2.5 rounded-lg font-medium text-sm hover:bg-white transition-colors flex-shrink-0">Subscribe</button>
               </form>
+              <p id="newsletter-success" class="hidden text-sm text-brand-light mt-2">You're in — first issue lands next week.</p>
             </div>
           </div>
 
@@ -859,6 +906,30 @@
         });
         panel.querySelectorAll('a').forEach(function (a) {
           a.addEventListener('click', close);
+        });
+      })();
+
+      // Contact form — show success state on submit
+      (function () {
+        var form = document.getElementById('contact-form');
+        var success = document.getElementById('contact-success');
+        if (!form || !success) return;
+        form.addEventListener('submit', function (e) {
+          e.preventDefault();
+          form.classList.add('hidden');
+          success.classList.remove('hidden');
+        });
+      })();
+
+      // Newsletter form — show success message on submit
+      (function () {
+        var form = document.getElementById('newsletter-form');
+        var msg = document.getElementById('newsletter-success');
+        if (!form || !msg) return;
+        form.addEventListener('submit', function (e) {
+          e.preventDefault();
+          form.classList.add('hidden');
+          msg.classList.remove('hidden');
         });
       })();
     </script>

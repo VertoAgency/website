@@ -16,3 +16,7 @@
 # Renamed page: contact-level-abm → contact-based-abm
 /services/outbound/contact-level-abm     /services/outbound/contact-based-abm  301
 /services/outbound/contact-level-abm/    /services/outbound/contact-based-abm  301
+
+# Renamed page: linkedin-ai-targeting → persona-based-abm
+/services/outbound/linkedin-ai-targeting     /services/outbound/persona-based-abm  301
+/services/outbound/linkedin-ai-targeting/    /services/outbound/persona-based-abm  301

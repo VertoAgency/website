@@ -319,16 +319,7 @@ function emailShell({ eyebrow, heading, body }) {
 
       <!-- Logo -->
       <tr><td style="padding-bottom:28px;padding-left:4px">
-        <table cellpadding="0" cellspacing="0">
-          <tr>
-            <td style="background:#0099FF;width:32px;height:32px;border-radius:7px;text-align:center;vertical-align:middle">
-              <span style="color:#ffffff;font-size:18px;font-weight:800;line-height:1;font-family:-apple-system,'Helvetica Neue',Helvetica,Arial,sans-serif">V</span>
-            </td>
-            <td style="padding-left:10px;vertical-align:middle">
-              <span style="color:#060026;font-size:16px;font-weight:700;letter-spacing:-0.02em;font-family:-apple-system,'Helvetica Neue',Helvetica,Arial,sans-serif">VertoDigital</span>
-            </td>
-          </tr>
-        </table>
+        <img src="${SITE_URL}/images/VertoDigital-brandmark-color-black.png" alt="VertoDigital" width="160" style="display:block;height:auto;border:0">
       </td></tr>
 
       <!-- Card -->

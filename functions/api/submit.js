@@ -178,39 +178,90 @@ function confirmHtml(fields, formType) {
   const firstName = (fields.name || '').trim().split(/\s+/)[0];
   const greeting  = firstName ? `Hi ${esc(firstName)},` : 'Hi,';
 
-  const body = formType === 'newsletter'
-    ? `<p style="${P}">You're in.</p>
-       <p style="${P}">The VertoDigital newsletter goes to B2B marketing leaders who want sharper pipeline thinking — not more noise.</p>
-       <p style="${P_LAST}">First issue lands next week.</p>
-       <p style="${SIGN}">— The VertoDigital team</p>`
-    : `<p style="${P}">${greeting}</p>
-       <p style="${P}">We received your note. Someone from the team will reply within one business day.</p>
-       <p style="${P_LAST}">In the meantime, you can <a href="${SITE_URL}/assessment" style="color:#0099FF;text-decoration:none">book a pipeline diagnostic</a> and get on the calendar directly.</p>
-       <p style="${SIGN}">— Paul Green, VertoDigital</p>`;
+  if (formType === 'newsletter') {
+    return emailShell({
+      eyebrow:  'Newsletter',
+      heading:  "You're in.",
+      body: `
+        <p style="margin:0 0 16px;font-size:15px;color:#374151;line-height:1.7">The VertoDigital newsletter goes to B2B marketing leaders who want sharper pipeline thinking — not more noise.</p>
+        <p style="margin:0 0 32px;font-size:15px;color:#374151;line-height:1.7">First issue lands next week.</p>
+        <p style="margin:0;font-size:13px;color:#9ca3af;line-height:1.6">— The VertoDigital team</p>`,
+    });
+  }
 
-  return emailWrapper(body);
+  return emailShell({
+    eyebrow:  'Note received',
+    heading:  greeting,
+    body: `
+      <p style="margin:0 0 16px;font-size:15px;color:#374151;line-height:1.7">We received your note. Someone from the team will reply within one business day.</p>
+      <p style="margin:0 0 32px;font-size:15px;color:#374151;line-height:1.7">In the meantime, you can book time directly if that's easier.</p>
+      <table cellpadding="0" cellspacing="0" style="margin-bottom:32px">
+        <tr>
+          <td style="background:#0099FF;border-radius:8px">
+            <a href="${SITE_URL}/assessment" style="display:inline-block;padding:12px 24px;font-size:14px;font-weight:600;color:#ffffff;text-decoration:none;letter-spacing:-0.01em">Book a pipeline diagnostic &rarr;</a>
+          </td>
+        </tr>
+      </table>
+      <p style="margin:0;font-size:13px;color:#9ca3af;line-height:1.6">— Paul Green, VertoDigital</p>`,
+  });
 }
 
 function notifyHtml(fields, formType) {
-  const rows = notifyRows(fields, formType);
-  const time  = new Date().toUTCString();
+  const time = new Date().toUTCString();
 
-  const body = `
-    <table width="100%" cellpadding="0" cellspacing="0" style="background:#060026;border-radius:8px 8px 0 0;margin-bottom:24px">
-      <tr>
-        <td style="padding:20px 32px">
-          <p style="margin:0;font-size:10px;font-family:monospace;letter-spacing:0.15em;text-transform:uppercase;color:#43E5FF">${esc(formLabel(formType))}</p>
-          <p style="margin:4px 0 0;font-size:17px;font-weight:600;color:#ffffff">${esc(fields.email)}</p>
-        </td>
-      </tr>
+  const rows = buildNotifyRows(fields, formType);
+
+  return `<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>New submission</title></head>
+<body style="margin:0;padding:0;background:#0d0d1a;font-family:-apple-system,'Helvetica Neue',Helvetica,Arial,sans-serif">
+<table width="100%" cellpadding="0" cellspacing="0" style="background:#0d0d1a;padding:32px 16px">
+  <tr><td align="center">
+    <table width="580" cellpadding="0" cellspacing="0" style="max-width:580px;width:100%">
+
+      <!-- Logo row -->
+      <tr><td style="padding-bottom:24px">
+        ${logoHtml()}
+      </td></tr>
+
+      <!-- Card -->
+      <tr><td style="background:#ffffff;border-radius:12px;overflow:hidden">
+
+        <!-- Card header: navy + cyan accent border -->
+        <table width="100%" cellpadding="0" cellspacing="0">
+          <tr><td style="background:#060026;padding:24px 32px 20px;border-bottom:2px solid #0099FF">
+            <p style="margin:0 0 4px;font-size:10px;font-family:monospace;letter-spacing:0.18em;text-transform:uppercase;color:#43E5FF">${esc(formLabel(formType))}</p>
+            <p style="margin:0;font-size:20px;font-weight:700;color:#ffffff;letter-spacing:-0.02em">${esc(fields.email)}</p>
+          </td></tr>
+        </table>
+
+        <!-- Data rows -->
+        <table width="100%" cellpadding="0" cellspacing="0" style="padding:0">
+          ${rows}
+        </table>
+
+        <!-- Timestamp footer -->
+        <table width="100%" cellpadding="0" cellspacing="0">
+          <tr><td style="padding:14px 32px 20px;border-top:1px solid #f0f0f0">
+            <p style="margin:0;font-size:10px;font-family:monospace;letter-spacing:0.08em;color:#b4bec8">${esc(time)}</p>
+          </td></tr>
+        </table>
+
+      </td></tr>
+
+      <!-- Footer -->
+      <tr><td style="padding-top:20px;text-align:center">
+        <p style="margin:0;font-size:11px;color:#4a5568">VertoDigital &nbsp;·&nbsp; <a href="${SITE_URL}" style="color:#43E5FF;text-decoration:none">vertodigital.com</a></p>
+      </td></tr>
+
     </table>
-    ${rows}
-    <p style="margin:24px 0 0;padding-top:16px;border-top:1px solid #e5e7eb;font-size:11px;font-family:monospace;color:#9ca3af">${time}</p>`;
-
-  return emailWrapper(body, true);
+  </td></tr>
+</table>
+</body></html>`;
 }
 
-function notifyRows(fields, formType) {
+function buildNotifyRows(fields, formType) {
   const items = [];
   if (formType === 'contact_full') {
     items.push(['Name',    fields.name    || '—']);
@@ -219,42 +270,93 @@ function notifyRows(fields, formType) {
     items.push(['Role',    ROLE_LABELS[fields.role] || fields.role || '—']);
     if (fields.problem) items.push(['Problem', fields.problem]);
   } else if (formType === 'contact_mini') {
-    items.push(['Email',          fields.email]);
+    items.push(['Email',           fields.email]);
     items.push(['Company · Title', fields.company_title || '—']);
     if (fields.message) items.push(['Message', fields.message]);
   } else {
     items.push(['Email', fields.email]);
   }
 
-  return items.map(([label, value]) => `
-    <table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:14px">
-      <tr>
-        <td width="130" style="font-size:10px;font-family:monospace;letter-spacing:0.1em;text-transform:uppercase;color:#9ca3af;padding-top:2px;vertical-align:top">${esc(label)}</td>
-        <td style="font-size:14px;color:#060026;line-height:1.5;vertical-align:top;white-space:pre-wrap">${esc(String(value))}</td>
-      </tr>
-    </table>`).join('');
+  return items.map(([label, value], i) => {
+    const bg = i % 2 === 0 ? '#ffffff' : '#f9fafb';
+    const isLong = String(value).length > 80;
+    return `<tr style="background:${bg}">
+      <td width="120" style="padding:14px 16px 14px 32px;font-size:10px;font-family:monospace;letter-spacing:0.12em;text-transform:uppercase;color:#9ca3af;vertical-align:top">${esc(label)}</td>
+      <td style="padding:14px 32px 14px 0;font-size:${isLong ? 13 : 14}px;color:#060026;line-height:1.55;vertical-align:top">${esc(String(value))}</td>
+    </tr>`;
+  }).join('');
 }
 
-// Shared email shell
-const P      = 'margin:0 0 14px;font-size:15px;color:#374151;line-height:1.6';
-const P_LAST = 'margin:0 0 28px;font-size:15px;color:#374151;line-height:1.6';
-const SIGN   = 'margin:0;font-size:14px;color:#6b7280;line-height:1.6';
+// ─── Shared components ───────────────────────────────────────────────────────
 
-function emailWrapper(inner, compact = false) {
-  const pad = compact ? '24px 32px' : '36px 40px 32px';
+function logoHtml() {
+  return `<table cellpadding="0" cellspacing="0">
+    <tr>
+      <td style="background:#0099FF;width:32px;height:32px;border-radius:7px;text-align:center;vertical-align:middle">
+        <span style="color:#ffffff;font-size:18px;font-weight:800;line-height:1;font-family:-apple-system,'Helvetica Neue',Helvetica,Arial,sans-serif">V</span>
+      </td>
+      <td style="padding-left:10px;vertical-align:middle">
+        <span style="color:#ffffff;font-size:16px;font-weight:700;letter-spacing:-0.02em;font-family:-apple-system,'Helvetica Neue',Helvetica,Arial,sans-serif">VertoDigital</span>
+      </td>
+    </tr>
+  </table>`;
+}
+
+function emailShell({ eyebrow, heading, body }) {
   return `<!DOCTYPE html>
-<html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"></head>
-<body style="margin:0;padding:0;background:#f1f5f9;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif">
-<table width="100%" cellpadding="0" cellspacing="0" style="background:#f1f5f9;padding:40px 16px">
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>${esc(heading)}</title></head>
+<body style="margin:0;padding:0;background:#d9f0ff;font-family:-apple-system,'Helvetica Neue',Helvetica,Arial,sans-serif">
+<table width="100%" cellpadding="0" cellspacing="0" style="background:#d9f0ff;padding:40px 16px">
   <tr><td align="center">
-    <table width="580" cellpadding="0" cellspacing="0" style="background:#ffffff;border-radius:12px;overflow:hidden;max-width:580px;width:100%">
-      <tr><td style="background:#060026;padding:24px 40px">
-        <img src="${SITE_URL}/images/vertodigital-logo-light.svg" alt="VertoDigital" width="140" height="39" style="display:block">
+    <table width="580" cellpadding="0" cellspacing="0" style="max-width:580px;width:100%">
+
+      <!-- Logo -->
+      <tr><td style="padding-bottom:28px;padding-left:4px">
+        <table cellpadding="0" cellspacing="0">
+          <tr>
+            <td style="background:#0099FF;width:32px;height:32px;border-radius:7px;text-align:center;vertical-align:middle">
+              <span style="color:#ffffff;font-size:18px;font-weight:800;line-height:1;font-family:-apple-system,'Helvetica Neue',Helvetica,Arial,sans-serif">V</span>
+            </td>
+            <td style="padding-left:10px;vertical-align:middle">
+              <span style="color:#060026;font-size:16px;font-weight:700;letter-spacing:-0.02em;font-family:-apple-system,'Helvetica Neue',Helvetica,Arial,sans-serif">VertoDigital</span>
+            </td>
+          </tr>
+        </table>
       </td></tr>
-      <tr><td style="padding:${pad}">${inner}</td></tr>
-      <tr><td style="background:#f8fafc;padding:16px 40px;border-top:1px solid #e5e7eb">
-        <p style="margin:0;font-size:11px;color:#9ca3af">VertoDigital &nbsp;·&nbsp; <a href="${SITE_URL}" style="color:#0099FF;text-decoration:none">vertodigital.com</a></p>
+
+      <!-- Card -->
+      <tr><td style="background:#ffffff;border-radius:16px;overflow:hidden">
+
+        <!-- Top accent bar -->
+        <table width="100%" cellpadding="0" cellspacing="0">
+          <tr>
+            <td width="4" style="background:#0099FF;font-size:0;line-height:0">&nbsp;</td>
+            <td style="padding:32px 36px 28px">
+              <p style="margin:0 0 10px;font-size:10px;font-family:monospace;letter-spacing:0.18em;text-transform:uppercase;color:#0099FF">${esc(eyebrow)}</p>
+              <p style="margin:0;font-size:26px;font-weight:700;color:#060026;letter-spacing:-0.025em;line-height:1.2">${esc(heading)}</p>
+            </td>
+          </tr>
+        </table>
+
+        <!-- Divider -->
+        <table width="100%" cellpadding="0" cellspacing="0">
+          <tr><td style="padding:0 36px"><div style="height:1px;background:#e9ecef;font-size:0;line-height:0">&nbsp;</div></td></tr>
+        </table>
+
+        <!-- Body -->
+        <table width="100%" cellpadding="0" cellspacing="0">
+          <tr><td style="padding:28px 36px 32px">${body}</td></tr>
+        </table>
+
       </td></tr>
+
+      <!-- Footer -->
+      <tr><td style="padding-top:20px;text-align:center">
+        <p style="margin:0;font-size:11px;color:#4a6a7a">VertoDigital &nbsp;·&nbsp; <a href="${SITE_URL}" style="color:#0066CC;text-decoration:none">vertodigital.com</a></p>
+      </td></tr>
+
     </table>
   </td></tr>
 </table>

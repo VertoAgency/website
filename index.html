@@ -206,7 +206,8 @@
       }
     </style>
   <!-- Google Calendar Appointment Scheduling -->
-  <link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
+  <link rel="preload" href="https://calendar.google.com/calendar/scheduling-button-script.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet"></noscript>
   <script src="https://calendar.google.com/calendar/scheduling-button-script.js" defer></script>
   </head>
   <body class="antialiased">

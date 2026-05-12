@@ -12,3 +12,7 @@
 # Renamed page: abm-6sense-demandbase → account-based-abm
 /services/outbound/abm-6sense-demandbase     /services/outbound/account-based-abm  301
 /services/outbound/abm-6sense-demandbase/    /services/outbound/account-based-abm  301
+
+# Renamed page: contact-level-abm → contact-based-abm
+/services/outbound/contact-level-abm     /services/outbound/contact-based-abm  301
+/services/outbound/contact-level-abm/    /services/outbound/contact-based-abm  301

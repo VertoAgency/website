@@ -181,7 +181,7 @@ function confirmSubject(formType) {
 
 function confirmHtml(fields, formType) {
   const firstName = (fields.name || '').trim().split(/\s+/)[0];
-  const greeting  = firstName ? `Hi ${esc(firstName)},` : 'Hi,';
+  const greeting  = firstName ? `Hi ${esc(firstName)},` : `Hi ${esc(fields.email)},`;
 
   if (formType === 'newsletter') {
     return emailShell({
@@ -341,7 +341,7 @@ function emailShell({ eyebrow, heading, body }) {
 
       <!-- Footer -->
       <tr><td style="padding-top:20px;text-align:center">
-        <p style="margin:0;font-size:11px;color:#4a6a7a">VertoDigital &nbsp;·&nbsp; <a href="${SITE_URL}" style="color:#0066CC;text-decoration:none">vertodigital.com</a></p>
+        <p style="margin:0;font-size:11px;color:#4a6a7a"><a href="${SITE_URL}" style="color:#0066CC;text-decoration:none">vertodigital.com</a></p>
       </td></tr>
 
     </table>

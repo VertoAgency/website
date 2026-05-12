@@ -476,59 +476,42 @@
 
           <!-- Layered concentric diagram -->
           <div class="blueprint-grid rounded-2xl p-5 md:p-10 mb-14 md:mb-16 bg-white">
-            <svg viewBox="0 0 1080 420" class="w-full h-auto" role="img" aria-labelledby="pillars-title pillars-desc">
-              <title id="pillars-title">Three pillars of named-account coverage</title>
-              <desc id="pillars-desc">Three concentric rings narrow the targeting from broadest to sharpest. The outermost ring is Account Intelligence (Account-based ABM). The middle ring is Buying Group Engagement (Persona-based ABM). The innermost ring is Named Individuals (Contact-based ABM). At the center, the named contact triggers a sales handoff.</desc>
-              <defs>
-                <marker id="pl-blue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-                  <path d="M 0 0 L 10 5 L 0 10 z" fill="#0099FF"/>
-                </marker>
-              </defs>
+            <svg viewBox="0 0 1080 460" class="w-full h-auto" role="img" aria-label="Three concentric rings: Account Intelligence (outer), Buying Group (middle), Named Individuals (inner)">
 
-              <!-- Concentric rings (left half of canvas) -->
-              <g transform="translate(280 210)">
-                <circle cx="0" cy="0" r="180" fill="#d9f0ff" fill-opacity="0.55"/>
-                <circle cx="0" cy="0" r="120" fill="#66CCFF" fill-opacity="0.45"/>
+              <!-- Concentric rings — centered at (280, 230) -->
+              <g transform="translate(280 230)">
+                <circle cx="0" cy="0" r="185" fill="#d9f0ff" fill-opacity="0.55"/>
+                <circle cx="0" cy="0" r="122" fill="#66CCFF" fill-opacity="0.45"/>
                 <circle cx="0" cy="0" r="62"  fill="#0099FF" fill-opacity="0.85"/>
-                <circle cx="0" cy="0" r="14"  fill="#060026"/>
+                <circle cx="0" cy="0" r="18"  fill="#060026"/>
 
-                <!-- Layer labels positioned just inside each ring -->
-                <text x="0" y="-150" text-anchor="middle" font-family="Geist Mono, monospace" font-size="11" letter-spacing="2" fill="#060026" font-weight="500">01 · ACCOUNT INTELLIGENCE</text>
-                <text x="0" y="-90"  text-anchor="middle" font-family="Geist Mono, monospace" font-size="11" letter-spacing="2" fill="#060026" font-weight="500">02 · BUYING GROUP</text>
-                <text x="0" y="-32"  text-anchor="middle" font-family="Geist Mono, monospace" font-size="11" letter-spacing="2" fill="#ffffff" font-weight="500">03 · NAMED INDIVIDUALS</text>
-                <text x="0" y="6"    text-anchor="middle" font-family="Geist, sans-serif" font-size="11" fill="#ffffff" fill-opacity="0.85">contact-level</text>
+                <!-- Ring labels — one per band, centered -->
+                <text x="0" y="-155" text-anchor="middle" font-family="Geist Mono, monospace" font-size="12" letter-spacing="2" fill="#060026" fill-opacity="0.7" font-weight="500">ACCOUNT INTELLIGENCE</text>
+                <text x="0" y="-92"  text-anchor="middle" font-family="Geist Mono, monospace" font-size="12" letter-spacing="2" fill="#060026" fill-opacity="0.7" font-weight="500">BUYING GROUP</text>
+                <text x="0" y="-34"  text-anchor="middle" font-family="Geist Mono, monospace" font-size="11" letter-spacing="1.5" fill="#ffffff" font-weight="500">NAMED INDIVIDUALS</text>
               </g>
 
-              <!-- Right side: pillar callouts with named tools -->
+              <!-- Connector lines + right-side callouts -->
               <g>
-                <!-- Pillar 1 -->
-                <line x1="460" y1="70" x2="540" y2="70" stroke="#060026" stroke-opacity="0.25" stroke-width="1"/>
-                <text x="556" y="60" font-family="Geist Mono, monospace" font-size="10" letter-spacing="1.5" fill="#060026" fill-opacity="0.55" font-weight="500">PILLAR 01</text>
-                <text x="556" y="80" font-family="Geist, sans-serif" font-size="15" fill="#060026" font-weight="500">Account-based ABM</text>
-                <text x="556" y="100" font-family="Geist, sans-serif" font-size="12" fill="#060026" fill-opacity="0.65">Company intent signal · 6sense &amp; DemandBase</text>
+                <!-- Layer 1 — Account-based ABM -->
+                <line x1="465" y1="80" x2="548" y2="80" stroke="#060026" stroke-opacity="0.2" stroke-width="1"/>
+                <text x="564" y="72" font-family="Geist, sans-serif" font-size="17" fill="#060026" font-weight="500">Account-based ABM</text>
+                <text x="564" y="94" font-family="Geist, sans-serif" font-size="13" fill="#060026" fill-opacity="0.55">Company intent · 6sense &amp; DemandBase</text>
 
-                <!-- Pillar 2 -->
-                <line x1="460" y1="200" x2="540" y2="200" stroke="#060026" stroke-opacity="0.25" stroke-width="1"/>
-                <text x="556" y="190" font-family="Geist Mono, monospace" font-size="10" letter-spacing="1.5" fill="#060026" fill-opacity="0.55" font-weight="500">PILLAR 02</text>
-                <text x="556" y="210" font-family="Geist, sans-serif" font-size="15" fill="#060026" font-weight="500">Persona-based ABM</text>
-                <text x="556" y="230" font-family="Geist, sans-serif" font-size="12" fill="#060026" fill-opacity="0.65">Buying-group signal · 25,000+ titles scored</text>
+                <!-- Layer 2 — Persona-based ABM -->
+                <line x1="465" y1="222" x2="548" y2="222" stroke="#060026" stroke-opacity="0.2" stroke-width="1"/>
+                <text x="564" y="214" font-family="Geist, sans-serif" font-size="17" fill="#060026" font-weight="500">Persona-based ABM</text>
+                <text x="564" y="236" font-family="Geist, sans-serif" font-size="13" fill="#060026" fill-opacity="0.55">Buying-group signal · 25,000+ titles scored</text>
 
-                <!-- Pillar 3 -->
-                <line x1="460" y1="330" x2="540" y2="330" stroke="#0099FF" stroke-width="1.5"/>
-                <text x="556" y="320" font-family="Geist Mono, monospace" font-size="10" letter-spacing="1.5" fill="#0099FF" font-weight="500">PILLAR 03 · OUR DIFFERENTIATOR</text>
-                <text x="556" y="340" font-family="Geist, sans-serif" font-size="15" fill="#060026" font-weight="500">Contact-based ABM</text>
-                <text x="556" y="360" font-family="Geist, sans-serif" font-size="12" fill="#060026" fill-opacity="0.65">Named-individual signal · SDR triggers</text>
+                <!-- Layer 3 — Contact-based ABM (differentiator) -->
+                <line x1="465" y1="364" x2="548" y2="364" stroke="#0099FF" stroke-width="1.5"/>
+                <text x="564" y="356" font-family="Geist, sans-serif" font-size="17" fill="#060026" font-weight="500">Contact-based ABM</text>
+                <text x="564" y="378" font-family="Geist, sans-serif" font-size="13" fill="#0099FF" font-weight="500">Named-individual signal · SDR triggers</text>
               </g>
 
-              <!-- Outcome arrow from center to "Sales handoff" -->
-              <line x1="460" y1="380" x2="556" y2="380" stroke="#060026" stroke-opacity="0" stroke-width="1"/>
-              <g>
-                <line x1="280" y1="392" x2="280" y2="406" stroke="#060026" stroke-width="0"/>
-              </g>
-
-              <!-- Outcome bar (bottom) -->
-              <rect x="160" y="394" width="240" height="22" rx="6" fill="#060026"/>
-              <text x="280" y="409" text-anchor="middle" font-family="Geist Mono, monospace" font-size="10" letter-spacing="1.5" fill="#ffffff" font-weight="500">SALES HANDOFF · INTELLIGENCE-LED</text>
+              <!-- Bottom outcome tag -->
+              <rect x="158" y="426" width="244" height="24" rx="7" fill="#060026"/>
+              <text x="280" y="442" text-anchor="middle" font-family="Geist Mono, monospace" font-size="10" letter-spacing="2" fill="#ffffff" font-weight="500">SALES HANDOFF · INTELLIGENCE-LED</text>
             </svg>
           </div>
 

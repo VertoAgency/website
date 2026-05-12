@@ -70,7 +70,7 @@ async function upsertContact(fields, formType, env) {
     {
       method: 'POST',
       headers: {
-        Authorization: `Bearer ${env.HUBSPOT_TOKEN}`,
+        Authorization: `Bearer ${env.HUBSPOT_SERVICE_KEY}`,
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
@@ -116,7 +116,7 @@ async function createNote(contactId, body, env) {
   const res = await fetch('https://api.hubapi.com/crm/v3/objects/notes', {
     method: 'POST',
     headers: {
-      Authorization: `Bearer ${env.HUBSPOT_TOKEN}`,
+      Authorization: `Bearer ${env.HUBSPOT_SERVICE_KEY}`,
       'Content-Type': 'application/json',
     },
     body: JSON.stringify({

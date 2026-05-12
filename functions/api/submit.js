@@ -111,6 +111,10 @@ function buildProps(fields, formType) {
     p.lifecyclestage = 'subscriber';
   }
 
+  if (fields.utm_source)   p.utm_source   = fields.utm_source;
+  if (fields.utm_medium)   p.utm_medium   = fields.utm_medium;
+  if (fields.utm_campaign) p.utm_campaign = fields.utm_campaign;
+
   return p;
 }
 
@@ -245,6 +249,11 @@ function buildNotifyRows(fields, formType) {
   } else {
     items.push(['Email', fields.email]);
   }
+
+  if (fields.utm_source)   items.push(['UTM Source',   fields.utm_source]);
+  if (fields.utm_medium)   items.push(['UTM Medium',   fields.utm_medium]);
+  if (fields.utm_campaign) items.push(['UTM Campaign', fields.utm_campaign]);
+  if (fields.referrer)     items.push(['Referrer',     fields.referrer]);
 
   return items.map(([label, value], i) => {
     const isLast  = i === items.length - 1;

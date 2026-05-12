@@ -1,6 +1,24 @@
 (function () {
   var API = '/api/submit';
 
+  // Persist UTMs from the landing URL into sessionStorage so they survive
+  // navigation to other pages before the form is submitted.
+  (function () {
+    var p = new URLSearchParams(window.location.search);
+    ['utm_source', 'utm_medium', 'utm_campaign'].forEach(function (k) {
+      if (p.get(k)) sessionStorage.setItem(k, p.get(k));
+    });
+  })();
+
+  function utmFields() {
+    return {
+      utm_source:   sessionStorage.getItem('utm_source')   || '',
+      utm_medium:   sessionStorage.getItem('utm_medium')   || '',
+      utm_campaign: sessionStorage.getItem('utm_campaign') || '',
+      referrer:     document.referrer || '',
+    };
+  }
+
   function post(payload) {
     return fetch(API, {
       method: 'POST',
@@ -31,7 +49,7 @@
       var orig = btn.textContent;
       btn.disabled = true;
       btn.textContent = 'Subscribing…';
-      post({ form_type: 'newsletter', email: email })
+      post(Object.assign({ form_type: 'newsletter', email: email }, utmFields()))
         .then(function () {
           form.classList.add('hidden');
           if (success) success.classList.remove('hidden');
@@ -50,7 +68,7 @@
     miniForm.addEventListener('submit', function (e) {
       e.preventDefault();
       var btn = miniForm.querySelector('button[type="submit"]');
-      var payload = {
+      var payload = Object.assign({
         form_type: 'contact_mini',
         name:      val(miniForm, 'name'),
         email:     val(miniForm, 'email'),
@@ -58,7 +76,7 @@
         company:   val(miniForm, 'company'),
         message:   val(miniForm, 'message'),
         _hp:       val(miniForm, '_hp'),
-      };
+      }, utmFields());
       if (!payload.email) return;
       var orig = btn.textContent;
       btn.disabled = true;
@@ -85,7 +103,7 @@
       e.preventDefault();
       if (!fullForm.checkValidity()) { fullForm.reportValidity(); return; }
       var btn = fullForm.querySelector('button[type="submit"]');
-      var payload = {
+      var payload = Object.assign({
         form_type: 'contact_full',
         name:      val(fullForm, 'name'),
         email:     val(fullForm, 'email'),
@@ -93,7 +111,7 @@
         role:      val(fullForm, 'role'),
         problem:   val(fullForm, 'problem'),
         _hp:       val(fullForm, '_hp'),
-      };
+      }, utmFields());
       if (!payload.email) return;
       var orig = btn.textContent;
       btn.disabled = true;

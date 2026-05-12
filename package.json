@@ -1,0 +1,12 @@
+{
+  "name": "verto-website-new",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "tailwindcss -i src/input.css -o output.css --minify",
+    "dev": "tailwindcss -i src/input.css -o output.css --watch"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.17"
+  }
+}

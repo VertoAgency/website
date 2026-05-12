@@ -8,3 +8,7 @@
 # Old long URL → new canonical (keep indefinitely for backlinks + indexed pages)
 /b2b-pipeline-assessment     /assessment  301
 /b2b-pipeline-assessment/    /assessment  301
+
+# Renamed page: abm-6sense-demandbase → account-based-abm
+/services/outbound/abm-6sense-demandbase     /services/outbound/account-based-abm  301
+/services/outbound/abm-6sense-demandbase/    /services/outbound/account-based-abm  301

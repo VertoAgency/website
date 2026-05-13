@@ -65,9 +65,11 @@
   var miniForm = document.querySelector('[data-form="contact-mini"]');
   if (miniForm) {
     var miniSuccess = document.getElementById('contact-success');
+    var miniError   = document.getElementById('contact-mini-error');
     miniForm.addEventListener('submit', function (e) {
       e.preventDefault();
       var btn = miniForm.querySelector('button[type="submit"]');
+      if (!btn) return;
       var payload = Object.assign({
         form_type: 'contact_mini',
         name:      val(miniForm, 'name'),
@@ -78,6 +80,7 @@
         _hp:       val(miniForm, '_hp'),
       }, utmFields());
       if (!payload.email) return;
+      if (miniError) miniError.classList.add('hidden');
       var orig = btn.textContent;
       btn.disabled = true;
       btn.textContent = 'Sending…';
@@ -89,6 +92,7 @@
         .catch(function () {
           btn.disabled = false;
           btn.textContent = orig;
+          if (miniError) miniError.classList.remove('hidden');
         });
     });
   }

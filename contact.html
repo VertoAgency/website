@@ -56,14 +56,6 @@
         color: rgba(6, 0, 38, 0.55);
         font-weight: 500;
       }
-      .form-select {
-        appearance: none;
-        -webkit-appearance: none;
-        background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23060026' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'/%3e%3c/svg%3e");
-        background-repeat: no-repeat;
-        background-position: right 12px center;
-        padding-right: 36px;
-      }
       .hidden { display: none !important; }
     </style>
   </head>
@@ -211,10 +203,10 @@
                 <h2 class="text-2xl font-medium text-brand-dark mb-2 leading-[1.2]">A few details, then we'll be in touch.</h2>
                 <p class="text-[14px] text-brand-dark/70 mb-8 leading-[1.5]">Tell us what's not working. We reply within a business day.</p>
 
-                <form id="contact-form" data-form="contact-full" action="#" method="post" novalidate class="space-y-4">
-                  <!-- Full name -->
+                <form id="contact-form" data-form="contact-mini" action="#" method="post" novalidate class="space-y-4">
+                  <!-- Name -->
                   <div>
-                    <label for="name" class="font-mono text-[12px] text-brand-dark/60 uppercase tracking-widest font-medium">Full name <span class="text-brand-blue">*</span></label>
+                    <label for="name" class="font-mono text-[12px] text-brand-dark/60 uppercase tracking-widest font-medium">Name <span class="text-brand-blue">*</span></label>
                     <input id="name" name="name" type="text" autocomplete="name" required maxlength="100" placeholder="Jane Rivera" class="w-full mt-1 bg-white border border-brand-dark/15 text-brand-dark rounded-lg p-3 text-[14px] focus:border-brand-blue focus:ring-1 focus:ring-brand-blue/30 transition-colors placeholder:text-brand-dark/30" />
                   </div>
 
@@ -224,59 +216,47 @@
                     <input id="email" name="email" type="email" autocomplete="email" required maxlength="254" placeholder="jane@company.com" class="w-full mt-1 bg-white border border-brand-dark/15 text-brand-dark rounded-lg p-3 text-[14px] focus:border-brand-blue focus:ring-1 focus:ring-brand-blue/30 transition-colors placeholder:text-brand-dark/30" />
                   </div>
 
+                  <!-- Title -->
+                  <div>
+                    <label for="title" class="font-mono text-[12px] text-brand-dark/60 uppercase tracking-widest font-medium">Title</label>
+                    <input id="title" name="title" type="text" maxlength="100" placeholder="CMO" class="w-full mt-1 bg-white border border-brand-dark/15 text-brand-dark rounded-lg p-3 text-[14px] focus:border-brand-blue focus:ring-1 focus:ring-brand-blue/30 transition-colors placeholder:text-brand-dark/30" />
+                  </div>
+
                   <!-- Company -->
                   <div>
-                    <label for="company" class="font-mono text-[12px] text-brand-dark/60 uppercase tracking-widest font-medium">Company <span class="text-brand-blue">*</span></label>
-                    <input id="company" name="company" type="text" autocomplete="organization" required maxlength="100" placeholder="Acme Technologies" class="w-full mt-1 bg-white border border-brand-dark/15 text-brand-dark rounded-lg p-3 text-[14px] focus:border-brand-blue focus:ring-1 focus:ring-brand-blue/30 transition-colors placeholder:text-brand-dark/30" />
+                    <label for="company" class="font-mono text-[12px] text-brand-dark/60 uppercase tracking-widest font-medium">Company</label>
+                    <input id="company" name="company" type="text" autocomplete="organization" maxlength="100" placeholder="Acme Technologies" class="w-full mt-1 bg-white border border-brand-dark/15 text-brand-dark rounded-lg p-3 text-[14px] focus:border-brand-blue focus:ring-1 focus:ring-brand-blue/30 transition-colors placeholder:text-brand-dark/30" />
                   </div>
 
-                  <!-- Role dropdown -->
+                  <!-- What's the problem -->
                   <div>
-                    <label for="role" class="font-mono text-[12px] text-brand-dark/60 uppercase tracking-widest font-medium">Your role <span class="text-brand-blue">*</span></label>
-                    <select id="role" name="role" required class="form-select w-full mt-1 bg-white border border-brand-dark/15 text-brand-dark rounded-lg p-3 text-[14px] focus:border-brand-blue focus:ring-1 focus:ring-brand-blue/30 transition-colors">
-                      <option value="" disabled selected>Select one…</option>
-                      <option value="cmo">CMO</option>
-                      <option value="vp_marketing">VP / Head of Marketing</option>
-                      <option value="founder_ceo">Founder / CEO</option>
-                      <option value="head_growth">Head of Growth</option>
-                      <option value="demand_gen">Demand Gen / Performance lead</option>
-                      <option value="other">Other</option>
-                    </select>
-                  </div>
-
-                  <!-- Problem textarea -->
-                  <div>
-                    <label for="problem" class="font-mono text-[12px] text-brand-dark/60 uppercase tracking-widest font-medium">What are you trying to solve? <span class="text-brand-blue">*</span></label>
-                    <textarea id="problem" name="problem" required rows="4" placeholder="e.g. MQLs up, Stage 1 flat, CAC climbing." class="w-full mt-1 bg-white border border-brand-dark/15 text-brand-dark rounded-lg p-3 text-[14px] focus:border-brand-blue focus:ring-1 focus:ring-brand-blue/30 transition-colors placeholder:text-brand-dark/30 resize-none"></textarea>
+                    <label for="message" class="font-mono text-[12px] text-brand-dark/60 uppercase tracking-widest font-medium">What's the problem? <span class="text-brand-blue">*</span></label>
+                    <textarea id="message" name="message" required rows="4" placeholder="e.g. MQLs up, Stage 1 flat, CAC climbing." class="w-full mt-1 bg-white border border-brand-dark/15 text-brand-dark rounded-lg p-3 text-[14px] focus:border-brand-blue focus:ring-1 focus:ring-brand-blue/30 transition-colors placeholder:text-brand-dark/30 resize-none"></textarea>
                   </div>
 
                   <!-- Submit -->
                   <input type="text" name="_hp" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px">
                   <button type="submit" class="w-full bg-brand-dark hover:bg-brand-blue text-white font-medium py-3.5 rounded-lg transition-colors inline-flex items-center justify-center gap-2">
-                    Send the message
+                    Send message
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
                   </button>
                   <p class="text-[12px] text-brand-dark/60 text-center">By submitting, you agree to our <a href="/privacy" class="text-brand-blue hover:underline">Privacy Policy</a>.</p>
                 </form>
-              </div>
 
-              <!-- Inline success state -->
-              <div id="contact-error" class="hidden bg-red-50 rounded-xl p-4 mt-4 text-[14px] text-red-700">Something went wrong — please try again or email us directly.</div>
-              <div id="contact-success" class="hidden bg-light-blue rounded-2xl p-8 md:p-12 text-center">
-                <div class="inline-flex items-center justify-center w-14 h-14 rounded-full bg-gradient-to-br from-brand-blue to-brand-light text-white mb-5">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-7 h-7"><path d="M20 6 9 17l-5-5"/></svg>
-                </div>
-                <p class="font-mono text-[12px] text-brand-dark/60 uppercase tracking-widest font-medium mb-2">Message received</p>
-                <h2 class="text-[24px] md:text-[28px] font-medium text-brand-dark leading-[1.2] tracking-[-0.015em]">Got it. We'll be in touch within 1 business day.</h2>
-                <p class="text-[14px] text-brand-dark/70 mt-3 max-w-[48ch] mx-auto leading-[1.6]">
-                  A human reads every submission. Expect a short reply from the lead who'll actually be on the call — not a templated auto-response.
-                </p>
-                <div class="mt-7 flex flex-col sm:flex-row items-center justify-center gap-3">
-                  <a href="/" class="bg-brand-dark/10 hover:bg-brand-dark/15 text-brand-dark px-5 py-2.5 rounded-lg font-medium text-sm transition-colors inline-flex items-center gap-2">
+                <!-- Success state (shown after submit) -->
+                <div id="contact-success" class="hidden text-center py-6">
+                  <div class="inline-flex items-center justify-center w-14 h-14 rounded-full bg-gradient-to-br from-brand-blue to-brand-light text-white mb-5">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-7 h-7"><path d="M20 6 9 17l-5-5"/></svg>
+                  </div>
+                  <p class="font-mono text-[12px] text-brand-dark/60 uppercase tracking-widest font-medium mb-2">Message received</p>
+                  <p class="text-[22px] font-medium text-brand-dark mb-2">Got it. We'll be in touch within 1 business day.</p>
+                  <p class="text-[14px] text-brand-dark/65 leading-[1.6] max-w-[44ch] mx-auto">A human reads every submission — expect a short reply from the lead who'll be on the call.</p>
+                  <a href="/" class="mt-6 inline-flex items-center gap-2 text-sm font-medium text-brand-dark/70 hover:text-brand-blue transition-colors">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg>
                     Back to homepage
                   </a>
                 </div>
+                <p id="contact-mini-error" class="hidden bg-red-50 rounded-xl p-4 mt-2 text-[14px] text-red-700">Something went wrong — please try again or email us directly.</p>
               </div>
             </div>
 

@@ -50,12 +50,17 @@ export async function onRequestPost({ request, env }) {
   if (_hp) return jsonRes({ success: true });
 
   // Field length caps
-  if (fields.name    && fields.name.length    > 100) return jsonRes({ success: false, message: 'Invalid input' }, 400);
-  if (fields.company && fields.company.length > 100) return jsonRes({ success: false, message: 'Invalid input' }, 400);
-  if (fields.title   && fields.title.length   > 100) return jsonRes({ success: false, message: 'Invalid input' }, 400);
-  if (fields.message && fields.message.length > 2000) return jsonRes({ success: false, message: 'Invalid input' }, 400);
-  if (fields.problem && fields.problem.length > 2000) return jsonRes({ success: false, message: 'Invalid input' }, 400);
-  if (fields.email   && fields.email.length   > 254)  return jsonRes({ success: false, message: 'Valid work email required' }, 400);
+  if (fields.name         && fields.name.length         > 100)  return jsonRes({ success: false, message: 'Invalid input' }, 400);
+  if (fields.company      && fields.company.length      > 100)  return jsonRes({ success: false, message: 'Invalid input' }, 400);
+  if (fields.title        && fields.title.length        > 100)  return jsonRes({ success: false, message: 'Invalid input' }, 400);
+  if (fields.role         && fields.role.length         > 50)   return jsonRes({ success: false, message: 'Invalid input' }, 400);
+  if (fields.message      && fields.message.length      > 2000) return jsonRes({ success: false, message: 'Invalid input' }, 400);
+  if (fields.problem      && fields.problem.length      > 2000) return jsonRes({ success: false, message: 'Invalid input' }, 400);
+  if (fields.email        && fields.email.length        > 254)  return jsonRes({ success: false, message: 'Valid work email required' }, 400);
+  if (fields.utm_source   && fields.utm_source.length   > 100)  return jsonRes({ success: false, message: 'Invalid input' }, 400);
+  if (fields.utm_medium   && fields.utm_medium.length   > 100)  return jsonRes({ success: false, message: 'Invalid input' }, 400);
+  if (fields.utm_campaign && fields.utm_campaign.length > 200)  return jsonRes({ success: false, message: 'Invalid input' }, 400);
+  if (fields.referrer     && fields.referrer.length     > 500)  return jsonRes({ success: false, message: 'Invalid input' }, 400);
 
   if (!fields.email || !validEmail(fields.email)) {
     return jsonRes({ success: false, message: 'Valid work email required' }, 400);
@@ -114,19 +119,14 @@ async function upsertContact(fields, formType, env) {
 function buildProps(fields, formType) {
   const p = { email: fields.email };
 
-  if (formType === 'contact_full') {
-    const parts = (fields.name || '').trim().split(/\s+/);
-    p.firstname       = parts[0] || '';
-    p.lastname        = parts.slice(1).join(' ') || '';
-    p.company         = fields.company || '';
-    p.jobtitle        = ROLE_LABELS[fields.role] || fields.role || '';
-    p.lifecyclestage  = 'lead';
-  } else if (formType === 'contact_mini') {
+  if (formType === 'contact_full' || formType === 'contact_mini') {
     const parts = (fields.name || '').trim().split(/\s+/);
     p.firstname      = parts[0] || '';
     p.lastname       = parts.slice(1).join(' ') || '';
     p.company        = fields.company || '';
-    p.jobtitle       = fields.title   || '';
+    p.jobtitle       = formType === 'contact_full'
+      ? (ROLE_LABELS[fields.role] || fields.role || '')
+      : (fields.title || '');
     p.lifecyclestage = 'lead';
   } else if (formType === 'newsletter') {
     p.lifecyclestage = 'subscriber';

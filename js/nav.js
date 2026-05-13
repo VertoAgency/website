@@ -19,4 +19,12 @@
   panel.querySelectorAll('a').forEach(function (a) {
     a.addEventListener('click', close);
   });
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && !panel.classList.contains('hidden')) close();
+  });
+
+  document.addEventListener('click', function (e) {
+    if (!panel.classList.contains('hidden') && !panel.contains(e.target) && !btn.contains(e.target)) close();
+  });
 })();

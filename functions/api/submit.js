@@ -24,7 +24,19 @@ const ROLE_LABELS = {
 
 // ─── Entry point ────────────────────────────────────────────────────────────
 
+const ALLOWED_ORIGINS = [
+  'https://vertodigital.com',
+  'https://www.vertodigital.com',
+];
+
 export async function onRequestPost({ request, env }) {
+  // CSRF: only accept requests from the production domain or CF Pages previews
+  const origin = request.headers.get('Origin') || '';
+  const isPreview = origin.endsWith('.verto-website-new.pages.dev');
+  if (origin && !ALLOWED_ORIGINS.includes(origin) && !isPreview) {
+    return jsonRes({ success: false, message: 'Forbidden' }, 403);
+  }
+
   let body;
   try {
     body = await request.json();
@@ -36,6 +48,14 @@ export async function onRequestPost({ request, env }) {
 
   // Honeypot — silently accept but do nothing
   if (_hp) return jsonRes({ success: true });
+
+  // Field length caps
+  if (fields.name    && fields.name.length    > 100) return jsonRes({ success: false, message: 'Invalid input' }, 400);
+  if (fields.company && fields.company.length > 100) return jsonRes({ success: false, message: 'Invalid input' }, 400);
+  if (fields.title   && fields.title.length   > 100) return jsonRes({ success: false, message: 'Invalid input' }, 400);
+  if (fields.message && fields.message.length > 2000) return jsonRes({ success: false, message: 'Invalid input' }, 400);
+  if (fields.problem && fields.problem.length > 2000) return jsonRes({ success: false, message: 'Invalid input' }, 400);
+  if (fields.email   && fields.email.length   > 254)  return jsonRes({ success: false, message: 'Valid work email required' }, 400);
 
   if (!fields.email || !validEmail(fields.email)) {
     return jsonRes({ success: false, message: 'Valid work email required' }, 400);
@@ -334,7 +354,7 @@ function jsonRes(data, status = 200) {
   });
 }
 
-function validEmail(e) { return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(e); }
+function validEmail(e) { return /^[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}$/.test(e); }
 
 function esc(s) {
   return String(s)

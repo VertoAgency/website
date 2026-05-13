@@ -1104,56 +1104,7 @@
       </div>
     </footer>
 
-    <script>
-
-      // Mobile menu toggle
-      (function () {
-        var btn = document.getElementById('mobile-menu-toggle');
-        var panel = document.getElementById('mobile-menu-panel');
-        if (!btn || !panel) return;
-        function close() { panel.classList.add('hidden'); btn.setAttribute('aria-expanded', 'false'); btn.setAttribute('aria-label', 'Open menu'); }
-        btn.addEventListener('click', function () {
-          var willOpen = panel.classList.contains('hidden');
-          panel.classList.toggle('hidden');
-          btn.setAttribute('aria-expanded', String(willOpen));
-          btn.setAttribute('aria-label', willOpen ? 'Close menu' : 'Open menu');
-        });
-        panel.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', close); });
-      })();
-
-      // Tracking — pushes events to window.dataLayer (GTM/GA4) when present.
-      (function () {
-        function track(name, payload) {
-          window.dataLayer = window.dataLayer || [];
-          window.dataLayer.push(Object.assign({ event: name, page: 'industries/data-platforms-and-ai-infrastructure' }, payload || {}));
-        }
-        document.querySelectorAll('[data-track]').forEach(function (el) {
-          el.addEventListener('click', function () {
-            var name = el.getAttribute('data-track');
-            track(name, {
-              cta_href: el.getAttribute('href') || null,
-              cta_label: (el.textContent || '').trim().slice(0, 80)
-            });
-          });
-        });
-        if ('IntersectionObserver' in window) {
-          var ids = ['where-weve-worked', 'whats-different', 'services-mapping', 'proof', 'customer-voice', 'how-we-engage'];
-          var seen = {};
-          var io = new IntersectionObserver(function (entries) {
-            entries.forEach(function (entry) {
-              if (entry.isIntersecting && !seen[entry.target.id]) {
-                seen[entry.target.id] = true;
-                track('section_view', { section_id: entry.target.id });
-              }
-            });
-          }, { threshold: 0.5 });
-          ids.forEach(function (id) {
-            var el = document.getElementById(id);
-            if (el) io.observe(el);
-          });
-        }
-      })();
-    </script>
+    <script src="/js/nav.js" defer></script>
     <script src="/js/forms.js" defer></script>
   </body>
 </html>

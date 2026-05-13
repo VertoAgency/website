@@ -80,7 +80,7 @@
     <link rel="stylesheet" href="/output.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500&family=Geist+Mono:wght@400;500&family=Caveat:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500&family=Geist+Mono:wght@400;500&family=Caveat:wght@400;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500&family=Geist+Mono:wght@400;500&family=Caveat:wght@400;600&display=swap"></noscript>
     <style>
       html { scroll-padding-top: 156px; }
       body { font-family: 'Geist', 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; font-weight: 400; font-size: 16px; line-height: 1.5; background-color: #ffffff; color: #060026; font-feature-settings: "ss01", "cv11"; }
@@ -1217,70 +1217,9 @@
       </div>
     </footer>
 
-    <!-- Mobile menu script -->
-    <script>
-      (function() {
-        var btn = document.getElementById('mobile-menu-toggle');
-        var panel = document.getElementById('mobile-menu-panel');
-        if (!btn || !panel) return;
-        btn.addEventListener('click', function() {
-          var open = panel.classList.toggle('hidden');
-          btn.setAttribute('aria-expanded', !open ? 'false' : 'true');
-        });
-      })();
-    </script>
-    <!-- dataLayer click tracking — featured + grid + taxonomy + bottom CTA -->
-    <script>
-      (function() {
-        document.addEventListener('click', function(e) {
-          var el = e.target.closest('[data-track]');
-          if (!el) return;
-          window.dataLayer = window.dataLayer || [];
-          var payload = { event: el.getAttribute('data-track') };
-          if (el.dataset.case) payload.case_slug = el.dataset.case;
-          if (el.dataset.industry) payload.industry = el.dataset.industry;
-          if (el.dataset.service) payload.service = el.dataset.service;
-          if (el.dataset.source) payload.cta_source = el.dataset.source;
-          window.dataLayer.push(payload);
-        }, true);
-      })();
-    </script>
-    <!-- Industry filter chips: active state via IntersectionObserver -->
-    <script>
-      (function () {
-        var chips = document.querySelectorAll('[data-chip]');
-        var sections = document.querySelectorAll('[data-industry-section]');
-        if (!chips.length || !sections.length || !window.IntersectionObserver) return;
-
-        function setActive(id) {
-          chips.forEach(function (c) {
-            if (c.getAttribute('data-chip') === id) c.classList.add('chip-active');
-            else c.classList.remove('chip-active');
-          });
-        }
-
-        // Track which industry sections are currently in view; top-most wins.
-        var visible = new Set();
-        var orderedIds = Array.prototype.map.call(sections, function (s) { return s.id; });
-
-        var observer = new IntersectionObserver(function (entries) {
-          entries.forEach(function (e) {
-            if (e.isIntersecting) visible.add(e.target.id);
-            else visible.delete(e.target.id);
-          });
-          if (visible.size === 0) {
-            setActive('all');
-          } else {
-            var topMost = orderedIds.find(function (id) { return visible.has(id); });
-            setActive(topMost || 'all');
-          }
-        }, { rootMargin: '-160px 0px -55% 0px', threshold: 0 });
-
-        sections.forEach(function (s) { observer.observe(s); });
-      })();
-    </script>
-    <script>
-      if (window.lucide)    </script>
+    <script src="/js/nav.js" defer></script>
+    <script src="/js/tracking.js" defer></script>
+    <script src="/js/case-studies.js" defer></script>
     <script src="/js/forms.js" defer></script>
   </body>
 </html>

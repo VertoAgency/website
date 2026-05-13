@@ -253,18 +253,18 @@
                   <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
                     <div>
                       <label for="name" class="field-label">Full name<span class="req">*</span></label>
-                      <input id="name" name="name" type="text" autocomplete="name" required placeholder="Jane Rivera" class="field-input" />
+                      <input id="name" name="name" type="text" autocomplete="name" required maxlength="100" placeholder="Jane Rivera" class="field-input" />
                     </div>
                     <div>
                       <label for="email" class="field-label">Work email<span class="req">*</span></label>
-                      <input id="email" name="email" type="email" autocomplete="email" required placeholder="jane@company.com" class="field-input" />
+                      <input id="email" name="email" type="email" autocomplete="email" required maxlength="254" placeholder="jane@company.com" class="field-input" />
                     </div>
                   </div>
 
                   <!-- Company -->
                   <div>
                     <label for="company" class="field-label">Company<span class="req">*</span></label>
-                    <input id="company" name="company" type="text" autocomplete="organization" required placeholder="Acme Technologies" class="field-input" />
+                    <input id="company" name="company" type="text" autocomplete="organization" required maxlength="100" placeholder="Acme Technologies" class="field-input" />
                   </div>
 
                   <!-- Role dropdown -->
@@ -505,13 +505,6 @@
       </div>
     </footer>
 
-    <script>
-      // TODO: Form submissions currently go nowhere — this handler only flips
-      //       to the success state. Wire to a real endpoint (Formspree /
-      //       Netlify Forms / Cloudflare Email Workers / etc.) before
-      //       relying on inbound from this page.
-
-    </script>
     <script src="/js/forms.js" defer></script>
   </body>
 </html>

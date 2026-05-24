@@ -59,7 +59,7 @@
       font-size: 14px;
       font-weight: 500;
       font-family: inherit;
-      color: rgba(6,0,38,0.65);
+      color: #060026;
       border-radius: 7px;
       text-decoration: none;
       background: none;
@@ -69,17 +69,17 @@
       transition: color 140ms ease, background-color 140ms ease;
       line-height: 1.4;
     }
-    .vn-link:hover { color: #060026; background: rgba(6,0,38,0.04); }
+    .vn-link:hover { color: #0099FF; background: rgba(0,153,255,0.05); }
     .vn-link.vn-active { color: #0099FF; }
     .vn-link.vn-active:hover { color: #0077cc; background: rgba(0,153,255,0.05); }
 
     .vn-chevron {
       width: 13px; height: 13px;
       flex-shrink: 0;
-      opacity: 0.45;
+      opacity: 0.55;
       transition: transform 200ms ease, opacity 150ms ease;
     }
-    .vn-item.vn-open > .vn-link .vn-chevron { transform: rotate(180deg); opacity: 0.75; }
+    .vn-item.vn-open > .vn-link .vn-chevron { transform: rotate(180deg); opacity: 0.85; }
 
     /* ── Dropdown ── */
     .vn-item { position: relative; }
@@ -147,13 +147,13 @@
       padding: 8px 12px;
       font-size: 13.5px;
       font-weight: 500;
-      color: #2a2452;
+      color: #060026;
       text-decoration: none;
       border-radius: 8px;
       white-space: nowrap;
       transition: color 140ms ease, background 140ms ease;
     }
-    .vn-drop-link:hover { color: #060026; background: rgba(0,153,255,0.06); }
+    .vn-drop-link:hover { color: #0099FF; background: rgba(0,153,255,0.06); }
 
     .vn-drop-cta {
       display: block;
@@ -361,12 +361,12 @@
       padding: 2px 8px;
       font-size: 14px;
       font-weight: 500;
-      color: #2a2452;
+      color: #060026;
       text-decoration: none;
       border-radius: 6px;
       transition: color 140ms ease, background 140ms ease;
     }
-    .vn-mob-acc-link:hover { color: #060026; background: rgba(0,153,255,0.06); }
+    .vn-mob-acc-link:hover { color: #0099FF; background: rgba(0,153,255,0.06); }
 
     .vn-mob-acc-cta {
       display: flex;

@@ -139,7 +139,7 @@
       <!-- ── Band 4: Meta strip ───────────────────────────────────────── -->
       <div class="border-t border-white/10">
         <div class="container-brand py-6">
-          <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-5">
+          <div class="flex flex-col sm:flex-row justify-between items-center gap-5">
 
             <!-- Logo + Socials -->
             <div class="flex items-center gap-5">
@@ -167,7 +167,7 @@
             </div>
 
             <!-- Locations + copyright -->
-            <div class="flex flex-wrap items-center gap-x-2 gap-y-1 text-xs text-cool-gray">
+            <div class="flex flex-wrap items-center justify-center sm:justify-start gap-x-2 gap-y-1 text-xs text-cool-gray">
               <span>🇧🇬 Sofia · Ruse · Blagoevgrad</span>
               <span style="opacity:0.3" aria-hidden="true">·</span>
               <span>🇺🇸 Boston</span>

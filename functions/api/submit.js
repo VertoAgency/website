@@ -32,7 +32,7 @@ const ALLOWED_ORIGINS = [
 export async function onRequestPost({ request, env }) {
   // CSRF: only accept requests from the production domain or CF Pages previews
   const origin = request.headers.get('Origin') || '';
-  const isPreview = origin.endsWith('.verto-website-new.pages.dev');
+  const isPreview = origin.endsWith('.vertodigital.pages.dev');
   if (origin && !ALLOWED_ORIGINS.includes(origin) && !isPreview) {
     return jsonRes({ success: false, message: 'Forbidden' }, 403);
   }

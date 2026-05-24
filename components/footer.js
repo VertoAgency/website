@@ -16,6 +16,14 @@
     .footer-g2-badge:hover { color: #ffffff; }
     .footer-g2-badge:hover svg.g2-arrow { transform: translate(2px, -2px); }
     .footer-g2-badge .g2-arrow { transition: transform 200ms ease; }
+    /* Mobile column layout: Services spans both rows on the left;
+       Industries + Company stack on the right; Newsletter full-width below.
+       (Tailwind CDN doesn't reliably emit utilities found only in JS-injected
+       markup, so we ship explicit CSS here instead of row-span/col-span classes.) */
+    @media (max-width: 1023px) {
+      .vf-services   { grid-row: span 2 / span 2; }
+      .vf-newsletter { grid-column: span 2 / span 2; }
+    }
   `;
 
   /* ─────────────────────────────────── HTML ─────────────────────────────────── */
@@ -66,7 +74,7 @@
           <div class="grid grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-10">
 
             <!-- Services -->
-            <div class="row-span-2 lg:row-span-1">
+            <div class="vf-services">
               <p class="text-brand-light text-[11px] font-mono font-medium uppercase tracking-[0.18em] mb-5">Services</p>
               <ul class="space-y-3 text-sm mb-6">
                 <li><a href="/services" class="text-white hover:text-brand-blue transition-colors">All Services</a></li>
@@ -116,7 +124,7 @@
             </div>
 
             <!-- Newsletter -->
-            <div class="col-span-2 lg:col-span-1">
+            <div class="vf-newsletter">
               <p class="text-brand-light text-[11px] font-mono font-medium uppercase tracking-[0.18em] mb-2">Newsletter</p>
               <p class="text-cool-gray text-xs mb-4 leading-relaxed">Once a week. Practical B2B marketing tips — from the team that does it.</p>
               <form id="newsletter-form" data-form="newsletter" class="space-y-2">

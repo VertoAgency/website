@@ -233,6 +233,31 @@
       /* Footer */
       .footer-client-logo { filter: brightness(0) invert(1); opacity: 0.45; transition: opacity 200ms ease; display: block; height: 20px; width: auto; max-width: 110px; object-fit: contain; }
       .footer-client-logo:hover { opacity: 0.75; }
+      .footer-manifesto {
+        font-family: 'Geist', sans-serif;
+        font-weight: 500;
+        font-size: clamp(2rem, 5.5vw, 4.25rem);
+        line-height: 1.05;
+        letter-spacing: -0.025em;
+      }
+      .footer-mark {
+        display: block;
+        font-family: 'Geist', sans-serif;
+        font-weight: 500;
+        font-size: clamp(3.5rem, 17vw, 16rem);
+        line-height: 0.85;
+        letter-spacing: -0.045em;
+        color: rgba(255, 255, 255, 0.05);
+        white-space: nowrap;
+        text-align: center;
+        user-select: none;
+        margin-top: 0.5rem;
+        margin-bottom: -0.12em;
+      }
+      .footer-g2-badge { transition: color 180ms ease; }
+      .footer-g2-badge:hover { color: #ffffff; }
+      .footer-g2-badge:hover svg.g2-arrow { transform: translate(2px, -2px); }
+      .footer-g2-badge .g2-arrow { transition: transform 200ms ease; }
     </style>
   </head>
   <body class="antialiased">
@@ -692,38 +717,36 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-navy">
+    <footer class="bg-navy overflow-hidden">
 
-      <!-- ── Band 1: Brand + proof strip ──────────────────────────────── -->
-      <div class="container-brand pt-14 pb-10">
+      <!-- ── Band 1: Manifesto ────────────────────────────────────────── -->
+      <div class="container-brand pt-20 pb-16 lg:pt-28 lg:pb-20 text-center">
+        <h2 class="footer-manifesto text-white max-w-4xl mx-auto">
+          Pipeline-Driven Digital Marketing.
+        </h2>
+        <p class="text-cool-gray text-base lg:text-lg mt-5 max-w-xl mx-auto leading-relaxed">
+          For B2B technology companies. Trusted by US and Europe CMOs.
+        </p>
+        <!-- G2 trust badge -->
+        <a href="https://www.g2.com/products/vertodigital/reviews" target="_blank" rel="noopener noreferrer"
+          class="footer-g2-badge inline-flex items-center gap-3 mt-10 text-cool-gray" aria-label="4.9 on G2">
+          <span class="flex gap-0.5" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#E1F77E"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#E1F77E"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#E1F77E"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#E1F77E"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#E1F77E"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </span>
+          <span class="text-white text-sm font-medium">4.9 on G2</span>
+          <svg class="g2-arrow" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg>
+        </a>
+      </div><!-- /band 1 -->
 
-        <!-- Top row: logo + tagline left, G2 right -->
-        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-6 mb-10">
-          <div>
-            <a href="/" aria-label="VertoDigital home" class="inline-block mb-3">
-              <img src="/images/logos/vertodigital-logo-light.svg" alt="VertoDigital" class="h-9 w-auto" loading="lazy">
-            </a>
-            <p class="text-cool-gray text-sm leading-relaxed">The pipeline agency for B2B technology companies.<br class="hidden sm:block"> Trusted by US and Europe CMOs.</p>
-          </div>
-          <!-- G2 — no review count per brand rule -->
-          <a href="https://www.g2.com/products/vertodigital/reviews" target="_blank" rel="noopener noreferrer"
-            class="inline-flex items-center gap-3 text-cool-gray hover:text-white transition-colors flex-shrink-0" aria-label="4.9 on G2">
-            <div class="flex gap-0.5" aria-hidden="true">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="#E1F77E"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="#E1F77E"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="#E1F77E"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="#E1F77E"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="#E1F77E"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            </div>
-            <span class="text-white text-sm font-medium">4.9 on G2</span>
-            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg>
-          </a>
-        </div>
-
-        <!-- Client logos — single flex row, uniform height, even spacing -->
-        <div>
-          <p class="text-cool-gray text-[11px] font-mono uppercase tracking-[0.18em] mb-5">Trusted by teams at</p>
-          <div class="flex flex-wrap items-center gap-x-10 gap-y-5">
+      <!-- ── Band 2: Client logos strip ───────────────────────────────── -->
+      <div class="border-t border-white/10">
+        <div class="container-brand py-10">
+          <p class="text-cool-gray text-[11px] font-mono uppercase tracking-[0.18em] mb-6 text-center">Trusted by teams at</p>
+          <div class="flex flex-wrap items-center justify-center gap-x-10 gap-y-5">
             <img src="/images/logos/cloudflare-logo.png"      alt="Cloudflare"      loading="lazy" class="footer-client-logo">
             <img src="/images/logos/neo4j-logo.png"           alt="Neo4j"           loading="lazy" class="footer-client-logo">
             <img src="/images/logos/cribl-logo.png"           alt="Cribl"           loading="lazy" class="footer-client-logo">
@@ -732,10 +755,9 @@
             <img src="/images/logos/payhawk-logo.png"         alt="Payhawk"         loading="lazy" class="footer-client-logo">
           </div>
         </div>
+      </div><!-- /band 2 -->
 
-      </div><!-- /band 1 -->
-
-      <!-- ── Band 2: Site map ───────────────────────────────────────── -->
+      <!-- ── Band 3: Site map ───────────────────────────────────────── -->
       <div class="border-t border-white/10">
         <div class="container-brand py-12">
           <div class="grid grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-10">
@@ -791,11 +813,11 @@
 
           </div>
         </div>
-      </div><!-- /band 2 -->
+      </div><!-- /band 3 -->
 
-      <!-- ── Band 3: Bottom bar ─────────────────────────────────────── -->
+      <!-- ── Band 4: Meta strip + Big mark ────────────────────────────── -->
       <div class="border-t border-white/10">
-        <div class="container-brand py-6">
+        <div class="container-brand pt-8 pb-6">
           <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-5">
 
             <!-- Socials -->
@@ -832,7 +854,12 @@
 
           </div>
         </div>
-      </div><!-- /band 3 -->
+
+        <!-- Massive brand wordmark — visual signoff -->
+        <div aria-hidden="true">
+          <span class="footer-mark">VertoDigital</span>
+        </div>
+      </div><!-- /band 4 -->
 
     </footer>
 

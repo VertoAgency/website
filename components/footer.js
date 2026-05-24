@@ -66,7 +66,7 @@
           <div class="grid grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-10">
 
             <!-- Services -->
-            <div>
+            <div class="row-span-2 lg:row-span-1">
               <p class="text-brand-light text-[11px] font-mono font-medium uppercase tracking-[0.18em] mb-5">Services</p>
               <ul class="space-y-3 text-sm mb-6">
                 <li><a href="/services" class="text-white hover:text-brand-blue transition-colors">All Services</a></li>
@@ -116,7 +116,7 @@
             </div>
 
             <!-- Newsletter -->
-            <div>
+            <div class="col-span-2 lg:col-span-1">
               <p class="text-brand-light text-[11px] font-mono font-medium uppercase tracking-[0.18em] mb-2">Newsletter</p>
               <p class="text-cool-gray text-xs mb-4 leading-relaxed">Once a week. Practical B2B marketing tips — from the team that does it.</p>
               <form id="newsletter-form" data-form="newsletter" class="space-y-2">

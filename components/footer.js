@@ -16,10 +16,10 @@
     .footer-g2-badge:hover { color: #ffffff; }
     .footer-g2-badge:hover svg.g2-arrow { transform: translate(2px, -2px); }
     .footer-g2-badge .g2-arrow { transition: transform 200ms ease; }
-    /* Mobile column layout: Services spans both rows on the left;
-       Industries + Company stack on the right; Newsletter full-width below.
-       (Tailwind CDN doesn't reliably emit utilities found only in JS-injected
-       markup, so we ship explicit CSS here instead of row-span/col-span classes.) */
+    /* Mobile layout: Services spans the left column, Industries + Company
+       stack on the right, Newsletter is full-width below. Explicit CSS
+       (not Tailwind row-span/col-span utilities) so it applies to the
+       JS-injected markup without depending on the CDN's runtime scan. */
     @media (max-width: 1023px) {
       .vf-services   { grid-row: span 2 / span 2; }
       .vf-newsletter {

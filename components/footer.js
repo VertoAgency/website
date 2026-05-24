@@ -22,7 +22,10 @@
        markup, so we ship explicit CSS here instead of row-span/col-span classes.) */
     @media (max-width: 1023px) {
       .vf-services   { grid-row: span 2 / span 2; }
-      .vf-newsletter { grid-column: span 2 / span 2; }
+      .vf-newsletter {
+        grid-column: span 2 / span 2;
+        margin-top: 2.5rem;
+      }
     }
   `;
 

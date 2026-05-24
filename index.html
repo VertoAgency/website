@@ -122,8 +122,10 @@
         0% { transform: translateX(0); }
         100% { transform: translateX(-50%); }
       }
-      .marquee-track { animation: marquee 40s linear infinite; will-change: transform; }
+      .marquee-track { animation: marquee 45s linear infinite; will-change: transform; display: flex; align-items: center; gap: 96px; width: max-content; }
       .marquee-track:hover { animation-play-state: paused; }
+      .marquee-logo { height: 28px; width: auto; flex-shrink: 0; opacity: 0.55; transition: opacity 180ms; display: block; }
+      .marquee-logo:hover { opacity: 0.9; }
       /* Soft fade at both edges so logos don't hard-clip */
       .marquee-wrap {
         -webkit-mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
@@ -376,33 +378,33 @@
         <div class="border-t border-brand-dark/10 bg-white/60 backdrop-blur-sm py-6 overflow-hidden">
           <p class="container-brand font-mono text-[11px] uppercase tracking-[0.2em] text-brand-dark/55 font-medium mb-5">A few of the 200+</p>
           <div class="marquee-wrap overflow-hidden">
-          <div class="marquee-track flex items-center gap-16 w-max">
+          <div class="marquee-track">
             <!-- set 1 -->
-            <img src="/images/logos/cloudflare-logo.png"       alt="Cloudflare"       class="h-7 w-auto object-contain opacity-50 hover:opacity-80 transition-opacity" loading="lazy">
-            <img src="/images/logos/cribl-logo.png"            alt="Cribl"            class="h-7 w-auto object-contain opacity-50 hover:opacity-80 transition-opacity" loading="lazy">
-            <img src="/images/logos/snaplogic-logo.webp"       alt="SnapLogic"        class="h-7 w-auto object-contain opacity-50 hover:opacity-80 transition-opacity" loading="lazy">
-            <img src="/images/logos/neo4j-logo.png"            alt="Neo4j"            class="h-7 w-auto object-contain opacity-50 hover:opacity-80 transition-opacity" loading="lazy">
-            <img src="/images/logos/ironscales-logo.png"       alt="IRONSCALES"       class="h-7 w-auto object-contain opacity-50 hover:opacity-80 transition-opacity" loading="lazy">
-            <img src="/images/logos/payhawk-logo.png"          alt="Payhawk"          class="h-7 w-auto object-contain opacity-50 hover:opacity-80 transition-opacity" loading="lazy">
-            <img src="/images/logos/smartrecruiters-logo.png"  alt="SmartRecruiters"  class="h-7 w-auto object-contain opacity-50 hover:opacity-80 transition-opacity" loading="lazy">
-            <img src="/images/logos/safe-security-logo.png"    alt="Safe Security"    class="h-7 w-auto object-contain opacity-50 hover:opacity-80 transition-opacity" loading="lazy">
-            <img src="/images/logos/ampeco-logo.png"           alt="AMPECO"           class="h-7 w-auto object-contain opacity-50 hover:opacity-80 transition-opacity" loading="lazy">
-            <img src="/images/logos/common-room-logo.svg"      alt="Common Room"      class="h-7 w-auto object-contain opacity-50 hover:opacity-80 transition-opacity" loading="lazy">
-            <img src="/images/logos/quantive-logo.png"         alt="Quantive"         class="h-7 w-auto object-contain opacity-50 hover:opacity-80 transition-opacity" loading="lazy">
-            <img src="/images/logos/officernd-logo.svg"        alt="OfficeRnD"        class="h-7 w-auto object-contain opacity-50 hover:opacity-80 transition-opacity" loading="lazy">
+            <img src="/images/logos/cloudflare-logo.png"      alt="Cloudflare"      class="marquee-logo" loading="lazy">
+            <img src="/images/logos/cribl-logo.png"           alt="Cribl"           class="marquee-logo" loading="lazy">
+            <img src="/images/logos/snaplogic-logo.webp"      alt="SnapLogic"       class="marquee-logo" loading="lazy">
+            <img src="/images/logos/neo4j-logo.png"           alt="Neo4j"           class="marquee-logo" loading="lazy">
+            <img src="/images/logos/ironscales-logo.png"      alt="IRONSCALES"      class="marquee-logo" loading="lazy">
+            <img src="/images/logos/payhawk-logo.png"         alt="Payhawk"         class="marquee-logo" loading="lazy">
+            <img src="/images/logos/smartrecruiters-logo.png" alt="SmartRecruiters" class="marquee-logo" loading="lazy">
+            <img src="/images/logos/coreview-logo.png"        alt="CoreView"        class="marquee-logo" loading="lazy">
+            <img src="/images/logos/ampeco-logo.png"          alt="AMPECO"          class="marquee-logo" loading="lazy">
+            <img src="/images/logos/common-room-logo.svg"     alt="Common Room"     class="marquee-logo" loading="lazy">
+            <img src="/images/logos/expert-ai-logo.png"       alt="Expert.ai"       class="marquee-logo" loading="lazy">
+            <img src="/images/logos/officernd-logo.svg"       alt="OfficeRnD"       class="marquee-logo" loading="lazy">
             <!-- set 2 — duplicate for seamless loop -->
-            <img src="/images/logos/cloudflare-logo.png"       alt=""                 class="h-7 w-auto object-contain opacity-50 hover:opacity-80 transition-opacity" loading="lazy" aria-hidden="true">
-            <img src="/images/logos/cribl-logo.png"            alt=""                 class="h-7 w-auto object-contain opacity-50 hover:opacity-80 transition-opacity" loading="lazy" aria-hidden="true">
-            <img src="/images/logos/snaplogic-logo.webp"       alt=""                 class="h-7 w-auto object-contain opacity-50 hover:opacity-80 transition-opacity" loading="lazy" aria-hidden="true">
-            <img src="/images/logos/neo4j-logo.png"            alt=""                 class="h-7 w-auto object-contain opacity-50 hover:opacity-80 transition-opacity" loading="lazy" aria-hidden="true">
-            <img src="/images/logos/ironscales-logo.png"       alt=""                 class="h-7 w-auto object-contain opacity-50 hover:opacity-80 transition-opacity" loading="lazy" aria-hidden="true">
-            <img src="/images/logos/payhawk-logo.png"          alt=""                 class="h-7 w-auto object-contain opacity-50 hover:opacity-80 transition-opacity" loading="lazy" aria-hidden="true">
-            <img src="/images/logos/smartrecruiters-logo.png"  alt=""                 class="h-7 w-auto object-contain opacity-50 hover:opacity-80 transition-opacity" loading="lazy" aria-hidden="true">
-            <img src="/images/logos/safe-security-logo.png"    alt=""                 class="h-7 w-auto object-contain opacity-50 hover:opacity-80 transition-opacity" loading="lazy" aria-hidden="true">
-            <img src="/images/logos/ampeco-logo.png"           alt=""                 class="h-7 w-auto object-contain opacity-50 hover:opacity-80 transition-opacity" loading="lazy" aria-hidden="true">
-            <img src="/images/logos/common-room-logo.svg"      alt=""                 class="h-7 w-auto object-contain opacity-50 hover:opacity-80 transition-opacity" loading="lazy" aria-hidden="true">
-            <img src="/images/logos/quantive-logo.png"         alt=""                 class="h-7 w-auto object-contain opacity-50 hover:opacity-80 transition-opacity" loading="lazy" aria-hidden="true">
-            <img src="/images/logos/officernd-logo.svg"        alt=""                 class="h-7 w-auto object-contain opacity-50 hover:opacity-80 transition-opacity" loading="lazy" aria-hidden="true">
+            <img src="/images/logos/cloudflare-logo.png"      alt="" class="marquee-logo" loading="lazy" aria-hidden="true">
+            <img src="/images/logos/cribl-logo.png"           alt="" class="marquee-logo" loading="lazy" aria-hidden="true">
+            <img src="/images/logos/snaplogic-logo.webp"      alt="" class="marquee-logo" loading="lazy" aria-hidden="true">
+            <img src="/images/logos/neo4j-logo.png"           alt="" class="marquee-logo" loading="lazy" aria-hidden="true">
+            <img src="/images/logos/ironscales-logo.png"      alt="" class="marquee-logo" loading="lazy" aria-hidden="true">
+            <img src="/images/logos/payhawk-logo.png"         alt="" class="marquee-logo" loading="lazy" aria-hidden="true">
+            <img src="/images/logos/smartrecruiters-logo.png" alt="" class="marquee-logo" loading="lazy" aria-hidden="true">
+            <img src="/images/logos/coreview-logo.png"        alt="" class="marquee-logo" loading="lazy" aria-hidden="true">
+            <img src="/images/logos/ampeco-logo.png"          alt="" class="marquee-logo" loading="lazy" aria-hidden="true">
+            <img src="/images/logos/common-room-logo.svg"     alt="" class="marquee-logo" loading="lazy" aria-hidden="true">
+            <img src="/images/logos/expert-ai-logo.png"       alt="" class="marquee-logo" loading="lazy" aria-hidden="true">
+            <img src="/images/logos/officernd-logo.svg"       alt="" class="marquee-logo" loading="lazy" aria-hidden="true">
           </div>
           </div>
         </div>

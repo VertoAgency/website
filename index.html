@@ -122,7 +122,13 @@
         0% { transform: translateX(0); }
         100% { transform: translateX(-50%); }
       }
-      .marquee-track { animation: marquee 40s linear infinite; }
+      .marquee-track { animation: marquee 40s linear infinite; will-change: transform; }
+      .marquee-track:hover { animation-play-state: paused; }
+      /* Soft fade at both edges so logos don't hard-clip */
+      .marquee-wrap {
+        -webkit-mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+        mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+      }
       /* Before/after bar chart bars */
       .bar { transition: width 1.2s cubic-bezier(0.22, 1, 0.36, 1); }
       /* Hamburger ↔ $ cross-fade (driven by aria-expanded on the parent button) */
@@ -366,22 +372,38 @@
           </div>
         </div>
 
-        <!-- Trust strip — 10 unique client logos, static (no scroll) -->
-        <div class="border-t border-brand-dark/10 bg-white/60 backdrop-blur-sm">
-          <div class="container-brand py-6">
-            <p class="font-mono text-[11px] uppercase tracking-[0.2em] text-brand-dark/55 font-medium mb-4">A few of the 200+</p>
-            <div class="flex flex-wrap items-center gap-x-8 gap-y-3 md:gap-x-10">
-              <span class="text-[17px] md:text-[18px] font-medium text-brand-dark/60">Cloudflare</span>
-              <span class="text-[17px] md:text-[18px] font-medium text-brand-dark/60">Cribl</span>
-              <span class="text-[17px] md:text-[18px] font-medium text-brand-dark/60">SnapLogic</span>
-              <span class="text-[17px] md:text-[18px] font-medium text-brand-dark/60">Neo4j</span>
-              <span class="text-[17px] md:text-[18px] font-medium text-brand-dark/60">IRONSCALES</span>
-              <span class="text-[17px] md:text-[18px] font-medium text-brand-dark/60">Payhawk</span>
-              <span class="text-[17px] md:text-[18px] font-medium text-brand-dark/60">SmartRecruiters</span>
-              <span class="text-[17px] md:text-[18px] font-medium text-brand-dark/60">Safe Security</span>
-              <span class="text-[17px] md:text-[18px] font-medium text-brand-dark/60">AMPECO</span>
-              <span class="text-[17px] md:text-[18px] font-medium text-brand-dark/60">Camunda</span>
-            </div>
+        <!-- Trust strip — logo marquee -->
+        <div class="border-t border-brand-dark/10 bg-white/60 backdrop-blur-sm py-6 overflow-hidden">
+          <p class="container-brand font-mono text-[11px] uppercase tracking-[0.2em] text-brand-dark/55 font-medium mb-5">A few of the 200+</p>
+          <div class="marquee-wrap overflow-hidden">
+          <div class="marquee-track flex items-center gap-16 w-max">
+            <!-- set 1 -->
+            <img src="/images/logos/cloudflare-logo.png"       alt="Cloudflare"       class="h-7 w-auto object-contain opacity-50 hover:opacity-80 transition-opacity" loading="lazy">
+            <img src="/images/logos/cribl-logo.png"            alt="Cribl"            class="h-7 w-auto object-contain opacity-50 hover:opacity-80 transition-opacity" loading="lazy">
+            <img src="/images/logos/snaplogic-logo.webp"       alt="SnapLogic"        class="h-7 w-auto object-contain opacity-50 hover:opacity-80 transition-opacity" loading="lazy">
+            <img src="/images/logos/neo4j-logo.png"            alt="Neo4j"            class="h-7 w-auto object-contain opacity-50 hover:opacity-80 transition-opacity" loading="lazy">
+            <img src="/images/logos/ironscales-logo.png"       alt="IRONSCALES"       class="h-7 w-auto object-contain opacity-50 hover:opacity-80 transition-opacity" loading="lazy">
+            <img src="/images/logos/payhawk-logo.png"          alt="Payhawk"          class="h-7 w-auto object-contain opacity-50 hover:opacity-80 transition-opacity" loading="lazy">
+            <img src="/images/logos/smartrecruiters-logo.png"  alt="SmartRecruiters"  class="h-7 w-auto object-contain opacity-50 hover:opacity-80 transition-opacity" loading="lazy">
+            <img src="/images/logos/safe-security-logo.png"    alt="Safe Security"    class="h-7 w-auto object-contain opacity-50 hover:opacity-80 transition-opacity" loading="lazy">
+            <img src="/images/logos/ampeco-logo.png"           alt="AMPECO"           class="h-7 w-auto object-contain opacity-50 hover:opacity-80 transition-opacity" loading="lazy">
+            <img src="/images/logos/common-room-logo.svg"      alt="Common Room"      class="h-7 w-auto object-contain opacity-50 hover:opacity-80 transition-opacity" loading="lazy">
+            <img src="/images/logos/quantive-logo.png"         alt="Quantive"         class="h-7 w-auto object-contain opacity-50 hover:opacity-80 transition-opacity" loading="lazy">
+            <img src="/images/logos/officernd-logo.svg"        alt="OfficeRnD"        class="h-7 w-auto object-contain opacity-50 hover:opacity-80 transition-opacity" loading="lazy">
+            <!-- set 2 — duplicate for seamless loop -->
+            <img src="/images/logos/cloudflare-logo.png"       alt=""                 class="h-7 w-auto object-contain opacity-50 hover:opacity-80 transition-opacity" loading="lazy" aria-hidden="true">
+            <img src="/images/logos/cribl-logo.png"            alt=""                 class="h-7 w-auto object-contain opacity-50 hover:opacity-80 transition-opacity" loading="lazy" aria-hidden="true">
+            <img src="/images/logos/snaplogic-logo.webp"       alt=""                 class="h-7 w-auto object-contain opacity-50 hover:opacity-80 transition-opacity" loading="lazy" aria-hidden="true">
+            <img src="/images/logos/neo4j-logo.png"            alt=""                 class="h-7 w-auto object-contain opacity-50 hover:opacity-80 transition-opacity" loading="lazy" aria-hidden="true">
+            <img src="/images/logos/ironscales-logo.png"       alt=""                 class="h-7 w-auto object-contain opacity-50 hover:opacity-80 transition-opacity" loading="lazy" aria-hidden="true">
+            <img src="/images/logos/payhawk-logo.png"          alt=""                 class="h-7 w-auto object-contain opacity-50 hover:opacity-80 transition-opacity" loading="lazy" aria-hidden="true">
+            <img src="/images/logos/smartrecruiters-logo.png"  alt=""                 class="h-7 w-auto object-contain opacity-50 hover:opacity-80 transition-opacity" loading="lazy" aria-hidden="true">
+            <img src="/images/logos/safe-security-logo.png"    alt=""                 class="h-7 w-auto object-contain opacity-50 hover:opacity-80 transition-opacity" loading="lazy" aria-hidden="true">
+            <img src="/images/logos/ampeco-logo.png"           alt=""                 class="h-7 w-auto object-contain opacity-50 hover:opacity-80 transition-opacity" loading="lazy" aria-hidden="true">
+            <img src="/images/logos/common-room-logo.svg"      alt=""                 class="h-7 w-auto object-contain opacity-50 hover:opacity-80 transition-opacity" loading="lazy" aria-hidden="true">
+            <img src="/images/logos/quantive-logo.png"         alt=""                 class="h-7 w-auto object-contain opacity-50 hover:opacity-80 transition-opacity" loading="lazy" aria-hidden="true">
+            <img src="/images/logos/officernd-logo.svg"        alt=""                 class="h-7 w-auto object-contain opacity-50 hover:opacity-80 transition-opacity" loading="lazy" aria-hidden="true">
+          </div>
           </div>
         </div>
       </section>

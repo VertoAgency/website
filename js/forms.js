@@ -38,27 +38,28 @@
   }
 
   // ── Newsletter forms (all pages, footer) ──────────────────────────────────
-  document.querySelectorAll('[data-form="newsletter"]').forEach(function (form) {
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
-      var email  = val(form, 'email');
-      var btn    = form.querySelector('button[type="submit"]');
-      var parent = form.parentElement;
-      var success = parent && parent.querySelector('[data-form-success="newsletter"]');
-      if (!email) return;
-      var orig = btn.textContent;
-      btn.disabled = true;
-      btn.textContent = 'Subscribing…';
-      post(Object.assign({ form_type: 'newsletter', email: email }, utmFields()))
-        .then(function () {
-          form.classList.add('hidden');
-          if (success) success.classList.remove('hidden');
-        })
-        .catch(function () {
-          btn.disabled = false;
-          btn.textContent = orig;
-        });
-    });
+  // Event delegation handles forms injected after DOMContentLoaded (e.g. footer.js)
+  document.addEventListener('submit', function (e) {
+    var form = e.target.closest('[data-form="newsletter"]');
+    if (!form) return;
+    e.preventDefault();
+    var email  = val(form, 'email');
+    var btn    = form.querySelector('button[type="submit"]');
+    var parent = form.parentElement;
+    var success = parent && parent.querySelector('[data-form-success="newsletter"]');
+    if (!email) return;
+    var orig = btn.textContent;
+    btn.disabled = true;
+    btn.textContent = 'Subscribing…';
+    post(Object.assign({ form_type: 'newsletter', email: email }, utmFields()))
+      .then(function () {
+        form.classList.add('hidden');
+        if (success) success.classList.remove('hidden');
+      })
+      .catch(function () {
+        btn.disabled = false;
+        btn.textContent = orig;
+      });
   });
 
   // ── Mini contact form (index.html) ────────────────────────────────────────

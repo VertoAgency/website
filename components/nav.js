@@ -38,7 +38,7 @@
 
     /* ── Logo ── */
     .vn-logo { display: flex; align-items: center; flex-shrink: 0; text-decoration: none; }
-    .vn-logo img { height: 36px; width: auto; display: block; }
+    .vn-logo img { height: 44px; width: auto; display: block; }
 
     /* ── Desktop links ── */
     .vn-links {
@@ -86,8 +86,9 @@
 
     .vn-drop {
       position: absolute;
-      top: calc(100% + 10px);
+      top: 100%;
       left: 50%;
+      padding-top: 10px;
       transform: translateX(-50%) translateY(-8px);
       opacity: 0;
       visibility: hidden;
@@ -145,14 +146,14 @@
       display: block;
       padding: 8px 12px;
       font-size: 13.5px;
-      font-weight: 400;
-      color: rgba(6,0,38,0.62);
+      font-weight: 500;
+      color: #2a2452;
       text-decoration: none;
       border-radius: 8px;
       white-space: nowrap;
       transition: color 140ms ease, background 140ms ease;
     }
-    .vn-drop-link:hover { color: #060026; background: rgba(6,0,38,0.04); }
+    .vn-drop-link:hover { color: #060026; background: rgba(0,153,255,0.06); }
 
     .vn-drop-cta {
       display: block;
@@ -359,13 +360,13 @@
       min-height: 42px;
       padding: 2px 8px;
       font-size: 14px;
-      font-weight: 400;
-      color: rgba(6,0,38,0.65);
+      font-weight: 500;
+      color: #2a2452;
       text-decoration: none;
       border-radius: 6px;
       transition: color 140ms ease, background 140ms ease;
     }
-    .vn-mob-acc-link:hover { color: #060026; background: rgba(6,0,38,0.04); }
+    .vn-mob-acc-link:hover { color: #060026; background: rgba(0,153,255,0.06); }
 
     .vn-mob-acc-cta {
       display: flex;

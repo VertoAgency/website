@@ -242,9 +242,8 @@
       transition: transform 280ms cubic-bezier(0.22,1,0.36,1), opacity 200ms ease;
       transform-origin: center;
     }
-    .vn-toggle[aria-expanded="true"] .vn-ham-line:first-child  { transform: translateY(7px) rotate(45deg); }
-    .vn-toggle[aria-expanded="true"] .vn-ham-line:nth-child(2) { opacity: 0; transform: scaleX(0); }
-    .vn-toggle[aria-expanded="true"] .vn-ham-line:last-child   { transform: translateY(-7px) rotate(-45deg); }
+    .vn-toggle[aria-expanded="true"] .vn-ham-line:first-child { transform: translateY(3.5px) rotate(45deg); }
+    .vn-toggle[aria-expanded="true"] .vn-ham-line:last-child  { transform: translateY(-3.5px) rotate(-45deg); }
 
     /* ── Mobile panel ── */
     .vn-mob {
@@ -492,7 +491,6 @@
       <button class="vn-toggle" id="vn-toggle" aria-expanded="false" aria-controls="vn-mob" aria-label="Open menu">
         <span class="vn-ham" aria-hidden="true">
           <span class="vn-ham-lines">
-            <span class="vn-ham-line"></span>
             <span class="vn-ham-line"></span>
             <span class="vn-ham-line"></span>
           </span>

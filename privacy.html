@@ -144,7 +144,12 @@
         opacity: 1;
         transform: scale(1);
       }
-    </style>
+          /* Animated CTA arrow */
+      .cta-btn .nav-cta-arrow { transition: transform 240ms cubic-bezier(0.22, 1, 0.36, 1); }
+      .cta-btn:hover .nav-cta-arrow { transform: translateX(4px); }
+      .cta-btn .nav-cta-arrow .arrow-stem { stroke-dasharray: 14; stroke-dashoffset: 14; transition: stroke-dashoffset 200ms cubic-bezier(0.22, 1, 0.36, 1); }
+      .cta-btn:hover .nav-cta-arrow .arrow-stem { stroke-dashoffset: 0; }
+</style>
   </head>
   <body class="antialiased">
     <!-- Navbar -->
@@ -318,7 +323,7 @@
                 <p class="mt-3 mb-3">
                   <button type="button"
                           onclick="if(window.UC_UI&amp;&amp;typeof window.UC_UI.showSecondLayer==='function'){window.UC_UI.showSecondLayer();}else{window.location.hash='cookies';}"
-                          class="inline-flex items-center gap-2 bg-brand-dark hover:bg-brand-blue text-white px-5 py-2.5 rounded-lg font-medium text-sm transition-colors">
+                          class="inline-flex items-center gap-2 cta-btn bg-brand-dark hover:bg-brand-blue text-white px-5 py-2.5 rounded-lg font-medium text-sm transition-colors">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><path d="M10 5H3"/><path d="M12 19H3"/><path d="M14 3v4"/><path d="M16 17v4"/><path d="M21 12h-9"/><path d="M21 19h-5"/><path d="M21 5h-7"/><path d="M8 10v4"/><path d="M8 12H3"/></svg>
                     Manage cookie preferences
                   </button>

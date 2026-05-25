@@ -579,7 +579,14 @@
   var tmp = document.createElement('div');
   tmp.innerHTML = HTML.trim();
   var navEl = tmp.firstElementChild;
-  SCRIPT.parentNode.replaceChild(navEl, SCRIPT);
+  var navMount = document.getElementById('verto-nav-mount');
+  if (navMount) {
+    navMount.replaceWith(navEl);
+  } else if (SCRIPT && SCRIPT.parentNode) {
+    SCRIPT.parentNode.replaceChild(navEl, SCRIPT);
+  } else {
+    document.body.prepend(navEl);
+  }
 
   /* ─────────────────────────────────── Init ─────────────────────────────────── */
   var nav = document.getElementById('vn');

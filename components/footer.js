@@ -210,6 +210,13 @@
   var tmp = document.createElement('div');
   tmp.innerHTML = HTML.trim();
   var footerEl = tmp.firstElementChild;
-  SCRIPT.parentNode.replaceChild(footerEl, SCRIPT);
+  var footerMount = document.getElementById('verto-footer-mount');
+  if (footerMount) {
+    footerMount.replaceWith(footerEl);
+  } else if (SCRIPT && SCRIPT.parentNode) {
+    SCRIPT.parentNode.replaceChild(footerEl, SCRIPT);
+  } else {
+    document.body.append(footerEl);
+  }
 
 })();

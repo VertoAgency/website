@@ -61,12 +61,12 @@
         <div class="container-brand py-10">
           <p class="text-cool-gray text-[11px] font-mono uppercase tracking-[0.18em] mb-6 text-center">Trusted by teams at</p>
           <div class="flex flex-wrap items-center justify-center gap-x-10 gap-y-5">
-            <img src="/images/logos/cloudflare-logo.png"      alt="Cloudflare"      loading="lazy" class="footer-client-logo">
-            <img src="/images/logos/neo4j-logo.png"           alt="Neo4j"           loading="lazy" class="footer-client-logo">
-            <img src="/images/logos/cribl-logo.png"           alt="Cribl"           loading="lazy" class="footer-client-logo" style="height:28px">
-            <img src="/images/logos/snaplogic-logo.webp"      alt="SnapLogic"       loading="lazy" class="footer-client-logo">
-            <img src="/images/logos/smartrecruiters-logo.png" alt="SmartRecruiters" loading="lazy" class="footer-client-logo" style="height:26px">
-            <img src="/images/logos/payhawk-logo.png"         alt="Payhawk"         loading="lazy" class="footer-client-logo">
+            <img src="/images/logos/cloudflare-logo.png"      alt="Cloudflare"      loading="lazy" width="60" height="20" class="footer-client-logo">
+            <img src="/images/logos/neo4j-logo.png"           alt="Neo4j"           loading="lazy" width="53" height="20" class="footer-client-logo">
+            <img src="/images/logos/cribl-logo.png"           alt="Cribl"           loading="lazy" width="70" height="28" class="footer-client-logo" style="height:28px">
+            <img src="/images/logos/snaplogic-logo.webp"      alt="SnapLogic"       loading="lazy" width="76" height="20" class="footer-client-logo">
+            <img src="/images/logos/smartrecruiters-logo.png" alt="SmartRecruiters" loading="lazy" width="83" height="26" class="footer-client-logo" style="height:26px">
+            <img src="/images/logos/payhawk-logo.png"         alt="Payhawk"         loading="lazy" width="88" height="20" class="footer-client-logo">
           </div>
         </div>
       </div><!-- /band 2 -->

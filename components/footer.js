@@ -131,7 +131,7 @@
               <p class="text-brand-light text-[11px] font-mono font-medium uppercase tracking-[0.18em] mb-2">Newsletter</p>
               <p class="text-cool-gray text-xs mb-4 leading-relaxed">Once a week. Practical B2B marketing tips — from the team that does it.</p>
               <form id="newsletter-form" data-form="newsletter" class="space-y-2">
-                <input type="email" name="email" required
+                <input type="email" name="email" autocomplete="email" required
                   aria-label="Email address"
                   placeholder="work@email.com"
                   class="w-full bg-white/5 border border-white/15 text-white placeholder:text-cool-gray text-sm rounded-lg px-4 py-2.5 focus:outline-none focus:border-brand-light transition-colors" />

@@ -638,19 +638,19 @@
                 </div>
                 <div>
                   <label for="contact-email" class="font-mono text-[12px] text-brand-dark/60 uppercase tracking-widest font-medium">Work email <span class="text-brand-blue">*</span></label>
-                  <input id="contact-email" type="email" name="email" required maxlength="254" placeholder="jane@company.com" class="w-full mt-1 bg-white border border-brand-dark/15 text-brand-dark rounded-lg p-3 text-[14px] focus:border-brand-blue focus:ring-1 focus:ring-brand-blue/30 transition-colors placeholder:text-brand-dark/30" />
+                  <input id="contact-email" type="email" name="email" autocomplete="email" required maxlength="254" placeholder="jane@company.com" class="w-full mt-1 bg-white border border-brand-dark/15 text-brand-dark rounded-lg p-3 text-[14px] focus:border-brand-blue focus:ring-1 focus:ring-brand-blue/30 transition-colors placeholder:text-brand-dark/30" />
                 </div>
                 <div>
                   <label for="contact-title" class="font-mono text-[12px] text-brand-dark/60 uppercase tracking-widest font-medium">Title</label>
-                  <input id="contact-title" type="text" name="title" maxlength="100" placeholder="CMO" class="w-full mt-1 bg-white border border-brand-dark/15 text-brand-dark rounded-lg p-3 text-[14px] focus:border-brand-blue focus:ring-1 focus:ring-brand-blue/30 transition-colors placeholder:text-brand-dark/30" />
+                  <input id="contact-title" type="text" name="title" autocomplete="organization-title" maxlength="100" placeholder="CMO" class="w-full mt-1 bg-white border border-brand-dark/15 text-brand-dark rounded-lg p-3 text-[14px] focus:border-brand-blue focus:ring-1 focus:ring-brand-blue/30 transition-colors placeholder:text-brand-dark/30" />
                 </div>
                 <div>
                   <label for="contact-company" class="font-mono text-[12px] text-brand-dark/60 uppercase tracking-widest font-medium">Company</label>
-                  <input id="contact-company" type="text" name="company" maxlength="100" placeholder="Acme Technologies" class="w-full mt-1 bg-white border border-brand-dark/15 text-brand-dark rounded-lg p-3 text-[14px] focus:border-brand-blue focus:ring-1 focus:ring-brand-blue/30 transition-colors placeholder:text-brand-dark/30" />
+                  <input id="contact-company" type="text" name="company" autocomplete="organization" maxlength="100" placeholder="Acme Technologies" class="w-full mt-1 bg-white border border-brand-dark/15 text-brand-dark rounded-lg p-3 text-[14px] focus:border-brand-blue focus:ring-1 focus:ring-brand-blue/30 transition-colors placeholder:text-brand-dark/30" />
                 </div>
                 <div>
                   <label for="contact-message" class="font-mono text-[12px] text-brand-dark/60 uppercase tracking-widest font-medium">What's the problem? <span class="text-brand-blue">*</span></label>
-                  <textarea id="contact-message" name="message" required rows="4" placeholder="e.g. MQLs up, Stage 1 flat, CAC climbing." class="w-full mt-1 bg-white border border-brand-dark/15 text-brand-dark rounded-lg p-3 text-[14px] focus:border-brand-blue focus:ring-1 focus:ring-brand-blue/30 transition-colors placeholder:text-brand-dark/30 resize-none"></textarea>
+                  <textarea id="contact-message" name="message" autocomplete="off" required rows="4" placeholder="e.g. MQLs up, Stage 1 flat, CAC climbing." class="w-full mt-1 bg-white border border-brand-dark/15 text-brand-dark rounded-lg p-3 text-[14px] focus:border-brand-blue focus:ring-1 focus:ring-brand-blue/30 transition-colors placeholder:text-brand-dark/30 resize-none"></textarea>
                 </div>
                 <button type="submit" class="cta-btn send-msg-btn w-full bg-brand-dark text-white font-medium py-3.5 rounded-lg transition-colors inline-flex items-center justify-center gap-2">
                   Send message <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="nav-cta-arrow w-4 h-4"><path class="arrow-stem" d="M19 12H5"/><path d="m12 5 7 7-7 7"/></svg>

@@ -1,32 +1,31 @@
 # VertoDigital website — agent instructions
 
-## Always ship
+## Workflow
 
-A change isn't done until it's deployed. After completing any code task, the
-final step is **always**:
+Changes are built and previewed locally, deployed to production manually.
+
+- **Local preview** — `python3 -m http.server 8080` at the repo root. No build step needed.
+- **Push to `main`** — triggers no deployment. Safe to push freely.
+- **Deploy to production** — `git push origin main:deploy` when ready to go live. Cloudflare Pages watches the `deploy` branch only.
+
+## What Claude should do on each task
 
 1. Commit on a `claude/<short-descriptive-name>` branch off latest `main`
 2. `git push -u origin <branch>`
 3. Open a PR against `main` via the GitHub MCP tools
 
-The repo's `auto-merge-claude.yml` workflow auto-merges PRs from `claude/*`
-branches once the Cloudflare Pages preview check passes — that produces the
-production deploy. Do not stop at "branch pushed" or "commit made"; the user
-has standing approval to ship every change they ask for.
+PRs are merged manually by Zoran — there is no auto-merge. Always open the PR so changes are visible and reviewable before they land on `main`.
 
 ## Branch naming
 
 - One PR per logical change. Do not bundle unrelated work.
-- Intermediate Edits during a single task share a branch and a single
-  commit — don't create a PR per file edit.
-- Names: kebab-case, descriptive, prefixed `claude/` (e.g.
-  `claude/about-page`, `claude/about-remove-outlines`).
-- Branches are auto-deleted on squash merge — never reuse a merged branch.
+- Intermediate edits during a single task share a branch and a single commit — don't create a PR per file edit.
+- Names: kebab-case, descriptive, prefixed `claude/` (e.g. `claude/about-page`, `claude/about-remove-outlines`).
+- Branches are deleted after merge — never reuse a merged branch.
 
 ## Site context
 
-- Static HTML served by Cloudflare Pages. No build step. Edit `*.html` and the
-  preview deploys.
+- Static HTML served by Cloudflare Pages. No build step. Edit `*.html` directly.
 - Tailwind via CDN; design tokens defined inline in each page's `<head>`.
 - Brand rule: **no outlined boxes anywhere in the design.** Cards, sections,
   list rows, and ghost buttons must not have a 4-side stroke (e.g.

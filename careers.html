@@ -745,32 +745,7 @@
             <div class="aspect-square rounded-xl bg-gradient-to-br from-brand-light/20 to-brand-blue/20 animate-pulse"></div>
           </div>
 
-          <script>
-            fetch('/api/instagram')
-              .then(function (r) { return r.json(); })
-              .then(function (data) {
-                if (!data.data || !data.data.length) return;
-                var grid = document.getElementById('ig-feed-grid');
-                grid.innerHTML = '';
-                data.data.forEach(function (post) {
-                  var imgUrl = post.media_type === 'VIDEO' ? post.thumbnail_url : post.media_url;
-                  if (!imgUrl) return;
-                  var a = document.createElement('a');
-                  a.href = post.permalink;
-                  a.target = '_blank';
-                  a.rel = 'noopener noreferrer';
-                  a.className = 'block aspect-square rounded-xl overflow-hidden group';
-                  var img = document.createElement('img');
-                  img.src = imgUrl;
-                  img.alt = 'VertoDigital on Instagram';
-                  img.className = 'w-full h-full object-cover group-hover:scale-105 transition-transform duration-300';
-                  img.loading = 'lazy';
-                  a.appendChild(img);
-                  grid.appendChild(a);
-                });
-              })
-              .catch(function (e) { console.warn('Instagram feed:', e); });
-          </script>
+          <script src="/js/instagram.js" defer></script>
 
           <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pt-8 border-t border-white/10">
             <p class="text-[14px] text-white/60 leading-[1.55] max-w-[52ch]">Instagram feed loads the latest posts from <span class="font-medium text-white">@vertodigitalagency</span>. When it's quiet, it's quiet — we don't script this.</p>

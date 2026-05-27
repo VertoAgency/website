@@ -20,3 +20,7 @@
 # Renamed page: linkedin-ai-targeting → persona-based-abm
 /services/outbound/linkedin-ai-targeting     /services/outbound/persona-based-abm  301
 /services/outbound/linkedin-ai-targeting/    /services/outbound/persona-based-abm  301
+
+# Renamed page: careers → jobs
+/careers                     /jobs  301
+/careers/                    /jobs  301

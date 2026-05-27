@@ -11,6 +11,37 @@
     <meta name="theme-color" content="#ffffff">
 <title>Jobs · VertoDigital</title>
     <meta name="description" content="Work on global B2B marketing with teammates who sharpen your craft — from Bulgaria, without the ceiling. Three offices in Bulgaria, one outpost in Boston. We're hiring across Sofia, Ruse, and Blagoevgrad." />
+    <link rel="canonical" href="https://vertodigital.com/jobs" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Jobs · VertoDigital" />
+    <meta property="og:description" content="Work on global B2B marketing with teammates who sharpen your craft — from Bulgaria, without the ceiling. Three offices in Bulgaria, one outpost in Boston." />
+    <meta property="og:url" content="https://vertodigital.com/jobs" />
+    <meta property="og:site_name" content="VertoDigital" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Jobs · VertoDigital" />
+    <meta name="twitter:description" content="Work on global B2B marketing with teammates who sharpen your craft — from Bulgaria, without the ceiling." />
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Jobs · VertoDigital",
+      "description": "Work on global B2B marketing with teammates who sharpen your craft — from Bulgaria, without the ceiling.",
+      "url": "https://vertodigital.com/jobs",
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://vertodigital.com"},
+          {"@type": "ListItem", "position": 2, "name": "Jobs", "item": "https://vertodigital.com/jobs"}
+        ]
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "VertoDigital",
+        "url": "https://vertodigital.com",
+        "logo": "https://vertodigital.com/images/logos/vertodigital-logo-dark.svg"
+      }
+    }
+    </script>
     <link rel="preload" href="/fonts/geist-latin.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/fonts/caveat-latin.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/fonts/geist-mono-latin.woff2" as="font" type="font/woff2" crossorigin>
@@ -269,7 +300,7 @@
                 See open roles
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="nav-cta-arrow w-5 h-5"><path class="arrow-stem" d="M19 12H5"/><path d="m12 5 7 7-7 7"/></svg>
               </a>
-              <a href="mailto:hr@vertodigital.com?subject=Introduction" class="bg-white hover:bg-brand-light/40 text-brand-dark px-7 py-4 rounded-lg font-medium text-base transition-colors inline-flex items-center justify-center gap-2">
+              <a href="#" data-u="hr" data-d="vertodigital.com" data-s="Introduction" class="js-email bg-white hover:bg-brand-light/40 text-brand-dark px-7 py-4 rounded-lg font-medium text-base transition-colors inline-flex items-center justify-center gap-2">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg>
                 Introduce yourself
               </a>
@@ -1114,9 +1145,9 @@
             <p class="text-[16px] md:text-[17px] text-brand-dark/80 leading-[1.6] mb-8">
               Doesn't mean there isn't one for you — roles open all the time. Send your CV or LinkedIn with a few lines on why Verto and what you'd want to work on. A real person reads every one.
             </p>
-            <a href="mailto:hr@vertodigital.com?subject=Introduction" class="inline-flex items-center gap-2 cta-btn bg-brand-dark hover:bg-brand-blue text-white px-7 py-4 rounded-lg font-medium text-[15px] transition-colors group">
+            <a href="#" data-u="hr" data-d="vertodigital.com" data-s="Introduction" class="js-email inline-flex items-center gap-2 cta-btn bg-brand-dark hover:bg-brand-blue text-white px-7 py-4 rounded-lg font-medium text-[15px] transition-colors group">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg>
-              hr@vertodigital.com
+              <span class="email-text"></span>
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="nav-cta-arrow w-4 h-4"><path class="arrow-stem" d="M19 12H5"/><path d="m12 5 7 7-7 7"/></svg>
             </a>
             <p class="mt-5 text-[13px] text-brand-dark/55">
@@ -1240,5 +1271,15 @@
 
     <script src="/js/nav.js" defer></script>
     <script src="/js/forms.js" defer></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        document.querySelectorAll('a.js-email').forEach(function (a) {
+          var email = a.dataset.u + '@' + a.dataset.d;
+          a.href = 'mailto:' + email + (a.dataset.s ? '?subject=' + encodeURIComponent(a.dataset.s) : '');
+          var span = a.querySelector('.email-text');
+          if (span) span.textContent = email;
+        });
+      });
+    </script>
   </body>
 </html>

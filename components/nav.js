@@ -476,7 +476,7 @@
       <a href="/case-studies" class="vn-link" data-item="results">Results</a>
 
       <!-- Careers -->
-      <a href="/careers" class="vn-link" data-item="careers">Careers</a>
+      <a href="/jobs" class="vn-link" data-item="jobs">Careers</a>
 
     </div>
 
@@ -558,7 +558,7 @@
       <a href="/case-studies" class="vn-mob-link" data-item="results">Results</a>
 
       <!-- Careers -->
-      <a href="/careers" class="vn-mob-link" data-item="careers">Careers</a>
+      <a href="/jobs" class="vn-mob-link" data-item="jobs">Careers</a>
 
       <!-- Let's Talk CTA -->
       <a href="/contact" class="vn-mob-cta">
@@ -692,7 +692,7 @@
     { item: 'intelligence', test: function (p) { return p === '/services/pipeline-intelligence'; } },
     { item: 'industries',   test: function (p) { return p.startsWith('/industries'); } },
     { item: 'results',      test: function (p) { return p.startsWith('/case-studies'); } },
-    { item: 'careers',      test: function (p) { return p.startsWith('/careers'); } },
+    { item: 'careers',      test: function (p) { return p.startsWith('/jobs'); } },
   ];
 
   ACTIVE_RULES.forEach(function (rule) {

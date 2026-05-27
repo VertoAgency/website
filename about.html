@@ -9,17 +9,17 @@
     <link rel="apple-touch-icon" href="/images/favicon/apple-touch-icon.png">
     <link rel="manifest" href="/images/favicon/site.webmanifest">
     <meta name="theme-color" content="#ffffff">
-    <title>About VertoDigital · The Pipeline Agency for B2B Tech</title>
-    <meta name="description" content="Founded in Sofia in 2018. 200+ B2B technology clients. $1B+ in pipeline generated. Meet the team behind the pipeline agency CMOs come back to." />
+    <title>Our story · VertoDigital</title>
+    <meta name="description" content="VertoDigital was founded in Sofia in 2018 to close the gap between marketing activity and pipeline. Eight years on, 200+ B2B technology clients and $1B+ in pipeline later, this is how we got here." />
     <link rel="canonical" href="https://vertodigital.com/about" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="About VertoDigital · The Pipeline Agency for B2B Tech" />
-    <meta property="og:description" content="Founded in Sofia in 2018. 200+ B2B technology clients. $1B+ in pipeline generated. Meet the team behind the pipeline agency CMOs come back to." />
+    <meta property="og:title" content="Our story · VertoDigital" />
+    <meta property="og:description" content="Founded in Sofia in 2018. Eight years closing the gap between marketing activity and pipeline. 200+ B2B technology clients, $1B+ in pipeline." />
     <meta property="og:url" content="https://vertodigital.com/about" />
     <meta property="og:site_name" content="VertoDigital" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="About VertoDigital · The Pipeline Agency for B2B Tech" />
-    <meta name="twitter:description" content="Founded in Sofia in 2018. 200+ B2B technology clients. $1B+ in pipeline generated." />
+    <meta name="twitter:title" content="Our story · VertoDigital" />
+    <meta name="twitter:description" content="Founded in Sofia in 2018. Eight years closing the gap between marketing activity and pipeline." />
     <link rel="preload" href="/fonts/geist-latin.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/fonts/caveat-latin.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/fonts/geist-mono-latin.woff2" as="font" type="font/woff2" crossorigin>
@@ -97,6 +97,31 @@
       .dollar-icon { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-size: 22px; font-weight: 700; line-height: 1; color: #0099FF; opacity: 0; transform: scale(0.6); transition: opacity 200ms ease, transform 280ms cubic-bezier(0.22, 1, 0.36, 1); }
       [aria-expanded="true"] .hamburger-icon { opacity: 0; }
       [aria-expanded="true"] .dollar-icon { opacity: 1; transform: scale(1); }
+      /* Image placeholder — gradient fill, no border. Swap each div.image-ph for an <img> when the photo is in. */
+      .image-ph {
+        background: linear-gradient(135deg, rgba(102, 204, 255, 0.20), rgba(180, 217, 192, 0.22));
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 14px;
+        color: rgba(6, 0, 38, 0.42);
+        overflow: hidden;
+      }
+      .image-ph-dark {
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.04), rgba(102, 204, 255, 0.08));
+        color: rgba(255, 255, 255, 0.45);
+      }
+      .image-ph-label {
+        font-family: 'Geist Mono', ui-monospace, monospace;
+        font-size: 11px;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        max-width: 32ch;
+        text-align: center;
+        line-height: 1.55;
+        padding: 0 16px;
+      }
     </style>
     <script src="/components/nav.js" defer></script>
     <script src="/components/footer.js" defer></script>
@@ -119,74 +144,58 @@
         </div>
       </div>
 
-      <!-- HERO -->
+      <!-- 1 · HERO -->
       <section class="hero-gradient">
-        <div class="container-brand pt-16 md:pt-24 pb-20 md:pb-28">
+        <div class="container-brand pt-16 md:pt-24 pb-16 md:pb-20">
           <div class="max-w-4xl">
-            <p class="section-eyebrow mb-6">About VertoDigital</p>
-            <h1 class="text-[44px] md:text-[64px] lg:text-[76px] leading-[1.05] tracking-[-0.02em] text-brand-dark">
-              We're the agency CMOs come to when <span class="font-script text-brand-blue text-[1.05em]">the pipeline</span> doesn't add up.
+            <p class="section-eyebrow mb-6">Our story · since 2018</p>
+            <h1 class="text-[44px] md:text-[60px] lg:text-[72px] leading-[1.05] tracking-[-0.02em] text-brand-dark">
+              Marketing should be measured by the <span class="font-script text-brand-blue text-[1.05em]">pipeline</span> it creates. We've spent eight years making sure ours is.
             </h1>
-            <p class="mt-8 text-[19px] md:text-[21px] leading-[1.55] text-brand-dark/75 max-w-3xl">
-              Since 2018, we've worked exclusively with B2B technology companies — generating $1B+ in pipeline across 200+ clients to build forecasts a CFO will actually sign.
+            <p class="mt-8 text-[18px] md:text-[20px] leading-[1.55] text-brand-dark/75 max-w-3xl">
+              VertoDigital is a B2B pipeline agency. We work with technology companies whose CMOs need numbers that hold up — in front of a board, a CFO, or a sceptical sales team.
             </p>
-            <div class="mt-10 flex flex-wrap gap-3">
-              <a href="/contact" class="cta-btn bg-brand-dark hover:bg-brand-blue text-white px-6 py-3 rounded-lg font-medium text-[15px] transition-colors inline-flex items-center gap-2">
-                Book a pipeline diagnostic <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="nav-cta-arrow w-4 h-4"><path class="arrow-stem" d="M19 12H5"/><path d="m12 5 7 7-7 7"/></svg>
-              </a>
-              <a href="#team" class="bg-brand-dark/5 hover:bg-brand-dark/15 text-brand-dark px-6 py-3 rounded-lg font-medium text-[15px] transition-colors">
-                Meet the team
-              </a>
-            </div>
+            <p class="mt-8 font-mono text-[12px] uppercase tracking-[0.2em] text-brand-dark/55">
+              Here's how we got here ↓
+            </p>
           </div>
 
-          <!-- Stat strip -->
-          <div class="mt-20 md:mt-24 grid grid-cols-2 md:grid-cols-4 gap-5">
-            <div class="bg-white rounded-2xl p-6 md:p-7 hover:shadow-xl hover:shadow-brand-dark/5 transition-shadow">
-              <p class="rule-mono mb-2">Founded</p>
-              <p class="text-[28px] md:text-[34px] font-medium text-brand-dark tabular-nums leading-none">2018</p>
-              <p class="text-[13px] text-brand-dark/55 mt-2">Sofia, Bulgaria</p>
-            </div>
-            <div class="bg-white rounded-2xl p-6 md:p-7 hover:shadow-xl hover:shadow-brand-dark/5 transition-shadow">
-              <p class="rule-mono mb-2">Clients served</p>
-              <p class="text-[28px] md:text-[34px] font-medium text-brand-dark tabular-nums leading-none">200+</p>
-              <p class="text-[13px] text-brand-dark/55 mt-2">B2B technology only</p>
-            </div>
-            <div class="bg-white rounded-2xl p-6 md:p-7 hover:shadow-xl hover:shadow-brand-dark/5 transition-shadow">
-              <p class="rule-mono mb-2">Pipeline generated</p>
-              <p class="text-[28px] md:text-[34px] font-medium text-brand-dark tabular-nums leading-none">$1B+</p>
-              <p class="text-[13px] text-brand-dark/55 mt-2">Tied to CRM, not estimates</p>
-            </div>
-            <div class="bg-white rounded-2xl p-6 md:p-7 hover:shadow-xl hover:shadow-brand-dark/5 transition-shadow">
-              <p class="rule-mono mb-2">Team</p>
-              <p class="text-[28px] md:text-[34px] font-medium text-brand-dark tabular-nums leading-none">50+</p>
-              <p class="text-[13px] text-brand-dark/55 mt-2">Sofia · Ruse · Blagoevgrad · Boston</p>
-            </div>
+          <!-- Hero image: whole team photo, wide aspect -->
+          <div class="image-ph mt-12 md:mt-16 rounded-3xl aspect-[16/7]">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="w-9 h-9"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg>
+            <p class="image-ph-label">Hero image — whole team photo, group shot, or large team offsite. Wide aspect ratio.</p>
           </div>
         </div>
       </section>
 
-      <!-- ORIGIN STORY -->
+      <!-- 2 · HOW WE STARTED -->
       <section class="bg-white">
         <div class="container-brand py-24 md:py-32">
-          <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
-            <div class="lg:col-span-4">
-              <p class="section-eyebrow mb-6">Why VertoDigital exists</p>
-              <h2 class="text-[34px] md:text-[44px] leading-[1.1] tracking-[-0.02em] text-brand-dark">
-                Most B2B funnels look healthy at the top and break in the middle.
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-start">
+            <div class="lg:col-span-5">
+              <p class="section-eyebrow mb-6">2018, Sofia</p>
+              <h2 class="text-[34px] md:text-[44px] leading-[1.1] tracking-[-0.02em] text-brand-dark mb-10">
+                It started with a number that didn't add up.
               </h2>
+              <div class="image-ph rounded-2xl aspect-[4/5]">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg>
+                <p class="image-ph-label">Sofia rooftops, Campus X exterior, or an early team photo from 2018. Sense of place &amp; beginning.</p>
+              </div>
             </div>
-            <div class="lg:col-span-8 space-y-6 text-[17px] md:text-[18px] leading-[1.65] text-brand-dark/80">
+            <div class="lg:col-span-7 space-y-6 text-[17px] md:text-[18px] leading-[1.7] text-brand-dark/80">
               <p>
-                VertoDigital was founded in Sofia in 2018 by Zoran Arsovski — built around a single observation. CMOs were walking into board meetings with MQL counts, while CFOs were asking the only question that mattered: <em class="not-italic text-brand-dark">where's the pipeline?</em> The two numbers rarely matched. Most agencies didn't seem to notice.
+                Most B2B technology companies had the same problem. Marketing was producing reports full of leads, clicks, and form fills. Finance was reporting pipeline. The two numbers rarely matched, and nobody could fully explain why.
               </p>
               <p>
-                So we built one that did. We narrowed the practice to B2B technology — long sales cycles, multi-stakeholder buying committees, ARR that has to be defended quarter after quarter. The work isn't easier there. It's just measurable. A click is a click. A pipeline-stage opportunity, attached to a deal, weighted by close probability — that's a number you can stake a forecast on.
+                Most agencies weren't trying to. They were paid to produce activity, and activity is easier to deliver than pipeline.
               </p>
               <p>
-                Eight years later, the team is 50+ people across Sofia and Boston. The clients changed. The mission didn't. We still optimize for the only metric that survives a board review: <strong class="font-medium text-brand-dark">pipeline that closes</strong>.
+                So <a href="https://www.linkedin.com/in/zoranarsovski/" target="_blank" rel="noopener noreferrer" class="text-brand-dark font-medium underline decoration-brand-blue/40 underline-offset-4 hover:decoration-brand-blue transition-colors">Zoran Arsovski</a> started VertoDigital to do the other thing — take the harder question seriously and build an agency around answering it. What does it actually take to make marketing's numbers and pipeline's numbers match?
               </p>
-              <div class="pt-4 flex items-center gap-4">
+              <p>
+                That question turned out to be the work of a decade. Eight years in, we're still answering it.
+              </p>
+              <div class="pt-6 flex items-center gap-4">
                 <div class="h-px flex-1 bg-brand-dark/15"></div>
                 <p class="font-script text-[22px] text-brand-blue">— Zoran Arsovski, Managing Partner</p>
               </div>
@@ -195,100 +204,111 @@
         </div>
       </section>
 
-      <!-- NUMBERS (dark) -->
+      <!-- 3 · THE BET WE MADE -->
       <section class="bg-navy text-white relative overflow-hidden">
         <div aria-hidden="true" class="pointer-events-none absolute -top-40 -left-40 w-[600px] h-[600px] rounded-full bg-brand-blue/10 blur-3xl"></div>
         <div aria-hidden="true" class="pointer-events-none absolute -bottom-40 -right-40 w-[500px] h-[500px] rounded-full bg-brand-light/8 blur-3xl"></div>
         <div class="container-brand py-24 md:py-32 relative">
-          <div class="mb-14 max-w-2xl">
-            <p class="section-eyebrow-light mb-5">By the numbers</p>
+          <div class="max-w-3xl mb-12 md:mb-14">
+            <p class="section-eyebrow-light mb-5">The decision</p>
             <h2 class="text-[34px] md:text-[44px] leading-[1.1] tracking-[-0.02em] text-white">
-              Every number reconciled to a CRM, a platform, or a signed contract.
+              Most agencies were getting wider. We went the other way.
             </h2>
           </div>
-          <div class="grid grid-cols-2 md:grid-cols-3 gap-px bg-white/[0.06] rounded-2xl overflow-hidden">
-            <div class="bg-navy p-8 md:p-10">
-              <p class="text-[48px] md:text-[56px] font-medium text-white tabular-nums leading-none">$1<span class="text-brand-blue">B+</span></p>
-              <p class="mt-3 text-[14px] text-cool-gray leading-[1.5]">Pipeline generated across all active and past client engagements</p>
-            </div>
-            <div class="bg-navy p-8 md:p-10">
-              <p class="text-[48px] md:text-[56px] font-medium text-white tabular-nums leading-none">200<span class="text-brand-blue">+</span></p>
-              <p class="mt-3 text-[14px] text-cool-gray leading-[1.5]">B2B technology companies served — Series A through public. No DTC, no detours.</p>
-            </div>
-            <div class="bg-navy p-8 md:p-10">
-              <p class="text-[48px] md:text-[56px] font-medium text-white tabular-nums leading-none">50<span class="text-brand-blue">+</span></p>
-              <p class="mt-3 text-[14px] text-cool-gray leading-[1.5]">Team members across four offices. One Slack channel, one calendar.</p>
-            </div>
-            <div class="bg-navy p-8 md:p-10">
-              <p class="text-[48px] md:text-[56px] font-medium text-white tabular-nums leading-none">8<span class="text-brand-blue">yr</span></p>
-              <p class="mt-3 text-[14px] text-cool-gray leading-[1.5]">Operating since 2018. Through three downturns and two AI cycles without changing the thesis.</p>
-            </div>
-            <div class="bg-navy p-8 md:p-10">
-              <p class="text-[48px] md:text-[56px] font-medium text-white tabular-nums leading-none">4.9<span class="text-brand-blue">/5</span></p>
-              <p class="mt-3 text-[14px] text-cool-gray leading-[1.5]">Rating on G2 — verified reviews from B2B marketing and demand gen leaders.</p>
-            </div>
-            <div class="bg-navy p-8 md:p-10">
-              <p class="text-[48px] md:text-[56px] font-medium text-white tabular-nums leading-none">45<span class="text-brand-blue">+</span></p>
-              <p class="mt-3 text-[14px] text-cool-gray leading-[1.5]">Accounts in our audited benchmark cohort — the data set behind every recommendation.</p>
-            </div>
-          </div>
-        </div>
-      </section>
 
-      <!-- WHAT WE DO -->
-      <section class="bg-[#fafbff]">
-        <div class="container-brand py-24 md:py-32">
-          <div class="mb-14 max-w-2xl">
-            <p class="section-eyebrow mb-5">What we do</p>
-            <h2 class="text-[34px] md:text-[44px] leading-[1.1] tracking-[-0.02em] text-brand-dark">
-              Three service lines. One objective.
-            </h2>
-            <p class="mt-5 text-[17px] leading-[1.6] text-brand-dark/70">
-              Every engagement starts with measurement. Then we work inbound, outbound, or both — depending on where the pipeline gap is.
-            </p>
+          <div class="image-ph image-ph-dark rounded-3xl aspect-[16/6] mb-14">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="w-9 h-9"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg>
+            <p class="image-ph-label">Strategy session, whiteboard mid-thought, or two people deep in a problem. Reads as focus.</p>
           </div>
 
           <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
-            <a href="/services/inbound-pipeline-growth" class="group bg-white rounded-2xl p-8 hover:shadow-xl hover:shadow-brand-dark/5 transition-shadow block">
-              <div class="w-10 h-10 rounded-xl bg-brand-light/30 flex items-center justify-center mb-6 group-hover:bg-brand-blue/15 transition-colors">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-brand-blue"><path d="M3 3v16a2 2 0 0 0 2 2h16"/><path d="m19 9-5 5-4-4-3 3"/></svg>
-              </div>
-              <p class="font-mono text-[11px] uppercase tracking-widest text-brand-dark/45 mb-3">Inbound Pipeline Growth</p>
-              <h3 class="text-[20px] font-medium text-brand-dark leading-[1.25] mb-4">Capture the demand that's already there.</h3>
-              <p class="text-[15px] leading-[1.6] text-brand-dark/65">Paid search, LinkedIn Ads, SEO, and AEO — built for B2B tech buyers moving through long sales cycles. Every campaign tied back to pipeline stage, not click volume.</p>
-              <span class="inline-flex items-center gap-1 mt-6 text-[13px] text-brand-blue font-medium group-hover:gap-2 transition-all">
-                Inbound services <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-              </span>
-            </a>
-
-            <a href="/services/outbound-pipeline-growth" class="group bg-white rounded-2xl p-8 hover:shadow-xl hover:shadow-brand-dark/5 transition-shadow block">
-              <div class="w-10 h-10 rounded-xl bg-brand-light/30 flex items-center justify-center mb-6 group-hover:bg-brand-blue/15 transition-colors">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-brand-blue"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.99 12 19.79 19.79 0 0 1 1.88 3.4 2 2 0 0 1 3.86 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-              </div>
-              <p class="font-mono text-[11px] uppercase tracking-widest text-brand-dark/45 mb-3">Outbound ABM</p>
-              <h3 class="text-[20px] font-medium text-brand-dark leading-[1.25] mb-4">Reach buying committees before they start searching.</h3>
-              <p class="text-[15px] leading-[1.6] text-brand-dark/65">Account-based, contact-based, and persona-based programs — each matched to where the account sits in its awareness cycle. Built to move multi-stakeholder deals, not spray and pray.</p>
-              <span class="inline-flex items-center gap-1 mt-6 text-[13px] text-brand-blue font-medium group-hover:gap-2 transition-all">
-                Outbound services <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-              </span>
-            </a>
-
-            <a href="/services/pipeline-intelligence" class="group bg-white rounded-2xl p-8 hover:shadow-xl hover:shadow-brand-dark/5 transition-shadow block">
-              <div class="w-10 h-10 rounded-xl bg-brand-light/30 flex items-center justify-center mb-6 group-hover:bg-brand-blue/15 transition-colors">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-brand-blue"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
-              </div>
-              <p class="font-mono text-[11px] uppercase tracking-widest text-brand-dark/45 mb-3">Pipeline Intelligence</p>
-              <h3 class="text-[20px] font-medium text-brand-dark leading-[1.25] mb-4">The measurement layer under everything else.</h3>
-              <p class="text-[15px] leading-[1.6] text-brand-dark/65">Server-side GTM, GA4, BigQuery, CRM integration, offline conversion tracking. Wired so every spend decision feeds back to deal stage — not form fills that disappear from the funnel.</p>
-              <span class="inline-flex items-center gap-1 mt-6 text-[13px] text-brand-blue font-medium group-hover:gap-2 transition-all">
-                Intelligence services <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-              </span>
-            </a>
+            <div class="bg-white/[0.06] rounded-2xl p-7 hover:bg-white/[0.09] transition-colors">
+              <p class="font-mono text-[11px] uppercase tracking-widest text-cool-gray mb-5">What we said no to</p>
+              <p class="text-[15px] leading-[1.65] text-cool-gray">DTC was everywhere. Ecommerce was the easy money. We turned all of it down. B2B technology only — long sales cycles, complex buying committees, ARR you have to defend quarter after quarter.</p>
+            </div>
+            <div class="bg-white/[0.06] rounded-2xl p-7 hover:bg-white/[0.09] transition-colors">
+              <p class="font-mono text-[11px] uppercase tracking-widest text-cool-gray mb-5">What we got in return</p>
+              <p class="text-[15px] leading-[1.65] text-cool-gray">Eight years on the same kind of funnel. Series A through public, US-market B2B tech. Every campaign, every benchmark, every test — feeding back into the same body of knowledge. The 50th company you help is not the same as the first.</p>
+            </div>
+            <div class="bg-white/[0.06] rounded-2xl p-7 hover:bg-white/[0.09] transition-colors">
+              <p class="font-mono text-[11px] uppercase tracking-widest text-cool-gray mb-5">What it ended up proving</p>
+              <p class="text-[15px] leading-[1.65] text-cool-gray">Specialism compounds. Narrow turned out to be the moat. You've already seen the version of your problem before — and the version that worked.</p>
+            </div>
           </div>
         </div>
       </section>
 
-      <!-- TEAM — kept exactly as designed -->
+      <!-- 4 · WHAT WE'VE LEARNED -->
+      <section class="bg-[#fafbff]">
+        <div class="container-brand py-24 md:py-32">
+          <div class="max-w-3xl mb-14">
+            <p class="section-eyebrow mb-5">Eight years in</p>
+            <h2 class="text-[34px] md:text-[44px] leading-[1.1] tracking-[-0.02em] text-brand-dark">
+              Three things you can only build with 200 clients behind you.
+            </h2>
+          </div>
+
+          <div class="space-y-6">
+
+            <!-- Learning 1 -->
+            <div class="bg-white rounded-3xl p-6 md:p-8 hover:shadow-xl hover:shadow-brand-dark/5 transition-shadow">
+              <div class="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-10 items-center">
+                <div class="md:col-span-5">
+                  <div class="image-ph rounded-2xl aspect-[4/3]">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="w-7 h-7"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg>
+                    <p class="image-ph-label">Real dashboard screenshot — GA4, pipeline attribution view, or BigQuery. Client data blurred is fine.</p>
+                  </div>
+                </div>
+                <div class="md:col-span-7">
+                  <p class="font-mono text-[11px] uppercase tracking-widest text-brand-blue mb-4">01 · Measurement</p>
+                  <h3 class="text-[24px] md:text-[28px] font-medium text-brand-dark leading-[1.2] mb-4">A measurement framework that actually works.</h3>
+                  <p class="text-[16px] leading-[1.65] text-brand-dark/75 mb-3">Server-side GTM, GA4, BigQuery, CRM integration, offline conversion tracking — wired so every campaign decision feeds back to deal stage, not form fills.</p>
+                  <p class="text-[15px] leading-[1.65] text-brand-dark/55">You don't build something like this from theory. You build it by watching tracking break across 45+ accounts, fixing it each time, and slowly figuring out what holds up.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Learning 2 (reverse layout) -->
+            <div class="bg-white rounded-3xl p-6 md:p-8 hover:shadow-xl hover:shadow-brand-dark/5 transition-shadow">
+              <div class="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-10 items-center">
+                <div class="md:col-span-7 md:order-2">
+                  <p class="font-mono text-[11px] uppercase tracking-widest text-brand-blue mb-4">02 · AI</p>
+                  <h3 class="text-[24px] md:text-[28px] font-medium text-brand-dark leading-[1.2] mb-4">AI we use, not AI we sell.</h3>
+                  <p class="text-[16px] leading-[1.65] text-brand-dark/75 mb-3">Agents built into how we deliver — audience modelling, content production, reporting, internal tooling. Not a SKU on the price list.</p>
+                  <p class="text-[15px] leading-[1.65] text-brand-dark/55">Most agencies added AI to their pitch deck in 2023. We started building internal agents when they were still awkward to work with. The advantage isn't the technology — it's the year and a half of figuring out where it actually helps.</p>
+                </div>
+                <div class="md:col-span-5 md:order-1">
+                  <div class="image-ph rounded-2xl aspect-[4/3]">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="w-7 h-7"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg>
+                    <p class="image-ph-label">Someone working with an AI tool — Claude session, agent interface, or internal automation screen.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Learning 3 -->
+            <div class="bg-white rounded-3xl p-6 md:p-8 hover:shadow-xl hover:shadow-brand-dark/5 transition-shadow">
+              <div class="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-10 items-center">
+                <div class="md:col-span-5">
+                  <div class="image-ph rounded-2xl aspect-[4/3]">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="w-7 h-7"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg>
+                    <p class="image-ph-label">Data review on screen, cohort analysis in a BI tool, or two people comparing benchmarks.</p>
+                  </div>
+                </div>
+                <div class="md:col-span-7">
+                  <p class="font-mono text-[11px] uppercase tracking-widest text-brand-blue mb-4">03 · Benchmarks</p>
+                  <h3 class="text-[24px] md:text-[28px] font-medium text-brand-dark leading-[1.2] mb-4">Benchmarks from real accounts, not industry averages.</h3>
+                  <p class="text-[16px] leading-[1.65] text-brand-dark/75 mb-3">A 45-account cohort we've audited and compared — CPL benchmarks, conversion rates, CAC by channel, all within the same buyer profile.</p>
+                  <p class="text-[15px] leading-[1.65] text-brand-dark/55">When we suggest a channel mix or a budget shift, it's based on accounts we've actually run. Not a research report.</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- 5 · THE TEAM — kept exactly as designed -->
       <section id="team" class="bg-white">
         <div class="container-brand py-24 md:py-32">
           <div class="max-w-3xl mb-16">
@@ -393,157 +413,141 @@
         </div>
       </section>
 
-      <!-- HOW WE WORK (dark) -->
+      <!-- 6 · WHERE WE WORK -->
+      <section class="bg-[#fafbff]">
+        <div class="container-brand py-24 md:py-32">
+          <div class="max-w-3xl mb-14">
+            <p class="section-eyebrow mb-5">The offices</p>
+            <h2 class="text-[34px] md:text-[44px] leading-[1.1] tracking-[-0.02em] text-brand-dark">
+              Built in Bulgaria. Working with companies across the world.
+            </h2>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+
+            <div>
+              <div class="image-ph rounded-2xl aspect-[4/3] mb-5">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="w-7 h-7"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg>
+                <p class="image-ph-label">Sofia office — Campus X interior. Bright, modern, people working.</p>
+              </div>
+              <p class="font-mono text-[11px] uppercase tracking-widest text-brand-blue mb-2">HQ · Bulgaria</p>
+              <h3 class="text-[24px] font-medium text-brand-dark leading-[1.15] mb-3">Sofia</h3>
+              <p class="text-[15px] leading-[1.65] text-brand-dark/70">Campus X, our headquarters. Most of the senior team works here — strategy, paid media, SEO, analytics, and our AI work. Bulgaria's best tech hub, and we like it that way.</p>
+            </div>
+
+            <div>
+              <div class="image-ph rounded-2xl aspect-[4/3] mb-5">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="w-7 h-7"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg>
+                <p class="image-ph-label">Ruse office or riverside view. Sense of place.</p>
+              </div>
+              <p class="font-mono text-[11px] uppercase tracking-widest text-brand-dark/45 mb-2">Bulgaria</p>
+              <h3 class="text-[24px] font-medium text-brand-dark leading-[1.15] mb-3">Ruse</h3>
+              <p class="text-[15px] leading-[1.65] text-brand-dark/70">On the riverside, near the university. A great pool of analytical and technical people, in a city that's quietly become one of Bulgaria's strongest places to hire.</p>
+            </div>
+
+            <div>
+              <div class="image-ph rounded-2xl aspect-[4/3] mb-5">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="w-7 h-7"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg>
+                <p class="image-ph-label">Blagoevgrad office or AUBG surroundings.</p>
+              </div>
+              <p class="font-mono text-[11px] uppercase tracking-widest text-brand-dark/45 mb-2">Bulgaria</p>
+              <h3 class="text-[24px] font-medium text-brand-dark leading-[1.15] mb-3">Blagoevgrad</h3>
+              <p class="text-[15px] leading-[1.65] text-brand-dark/70">South-west Bulgaria, right next to AUBG. A steady source of early-career hires who turn up curious and sharp.</p>
+            </div>
+
+            <div>
+              <div class="image-ph rounded-2xl aspect-[4/3] mb-5">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="w-7 h-7"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg>
+                <p class="image-ph-label">Boston street, office, or scene that grounds the US presence.</p>
+              </div>
+              <p class="font-mono text-[11px] uppercase tracking-widest text-brand-dark/45 mb-2">United States</p>
+              <h3 class="text-[24px] font-medium text-brand-dark leading-[1.15] mb-3">Boston</h3>
+              <p class="text-[15px] leading-[1.65] text-brand-dark/70">Our US outpost. Strategy, client meetings, and the executive relationships that keep our Sofia-based work feeling close to American B2B tech.</p>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- 7 · WHERE WE'RE GOING -->
       <section class="bg-navy text-white relative overflow-hidden">
         <div aria-hidden="true" class="pointer-events-none absolute top-0 right-0 w-[500px] h-[500px] rounded-full bg-brand-blue/8 blur-3xl"></div>
         <div class="container-brand py-24 md:py-32 relative">
-          <div class="max-w-2xl mb-16">
-            <p class="section-eyebrow-light mb-5">How we work</p>
-            <h2 class="text-[34px] md:text-[44px] leading-[1.1] tracking-[-0.02em] text-white">
-              Three standards. No negotiation.
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+            <div class="lg:col-span-7">
+              <p class="section-eyebrow-light mb-5">What's next</p>
+              <h2 class="text-[32px] md:text-[42px] leading-[1.1] tracking-[-0.02em] text-white mb-8">
+                The AI shift isn't pulling us in a new direction. It's letting us go faster in the one we were already heading.
+              </h2>
+              <div class="space-y-5 text-[16px] md:text-[17px] leading-[1.7] text-cool-gray max-w-2xl">
+                <p>A lot of agencies treated 2023 as the year AI showed up. For us, it was the year our internal tools became useful enough to put in front of clients.</p>
+                <p>The work itself doesn't change. We're still here to build pipeline for B2B technology companies. What changes is how quickly we can do it — faster audience research, agents handling measurement work that used to take a small team a week, content that doesn't slow strategy down.</p>
+                <p>The thesis is the same as it was in 2018. Marketing has to produce pipeline. The only thing different now is how quickly we can prove it.</p>
+              </div>
+            </div>
+            <div class="lg:col-span-5">
+              <div class="image-ph image-ph-dark rounded-3xl aspect-[4/5]">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg>
+                <p class="image-ph-label">Team using AI tools — pair-working with an agent, screen mid-session, reviewing AI output together.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 8 · A WAY TO REACH US -->
+      <section class="hero-gradient">
+        <div class="container-brand py-24 md:py-32">
+          <div class="max-w-4xl mb-14">
+            <p class="section-eyebrow mb-6">A way to reach us</p>
+            <h2 class="text-[34px] md:text-[48px] lg:text-[56px] leading-[1.08] tracking-[-0.02em] text-brand-dark">
+              If you want to talk — about <span class="font-script text-brand-blue text-[1.05em]">pipeline</span>, joining the team, or just what we're working on — we'd like to hear from you.
             </h2>
-            <p class="mt-5 text-[17px] leading-[1.6] text-cool-gray">
-              These aren't suggestions. They're what the work is held to — in the brief, in the deck, and in the Slack thread at 11pm.
-            </p>
           </div>
 
           <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
-            <div class="bg-white/[0.06] rounded-2xl p-8 hover:bg-white/[0.09] transition-colors">
-              <p class="font-mono text-[11px] uppercase tracking-widest text-cool-gray mb-5">01</p>
-              <h3 class="text-[21px] md:text-[24px] font-medium text-white leading-[1.2] tracking-[-0.01em] mb-4">Pipeline, not vanity metrics.</h3>
-              <p class="text-[15px] leading-[1.6] text-cool-gray">You report on what moves pipeline, not what fills a slide. If a metric doesn't connect to an opportunity stage, it doesn't go in the report. If a number can't survive a CFO's question, it doesn't go in the deck.</p>
-            </div>
-            <div class="bg-white/[0.06] rounded-2xl p-8 hover:bg-white/[0.09] transition-colors">
-              <p class="font-mono text-[11px] uppercase tracking-widest text-cool-gray mb-5">02</p>
-              <h3 class="text-[21px] md:text-[24px] font-medium text-white leading-[1.2] tracking-[-0.01em] mb-4">Data over opinion. Always.</h3>
-              <p class="text-[15px] leading-[1.6] text-cool-gray">Recommendations are backed by data, not instinct. We benchmark against 45+ accounts before forming a view. "I think" is the start of a conversation — not a conclusion. The data decides.</p>
-            </div>
-            <div class="bg-white/[0.06] rounded-2xl p-8 hover:bg-white/[0.09] transition-colors">
-              <p class="font-mono text-[11px] uppercase tracking-widest text-cool-gray mb-5">03</p>
-              <h3 class="text-[21px] md:text-[24px] font-medium text-white leading-[1.2] tracking-[-0.01em] mb-4">Specialists, not generalists.</h3>
-              <p class="text-[15px] leading-[1.6] text-cool-gray">We work in B2B technology and nothing else. Every client makes us sharper for the next. That specialism — 200+ companies, same buyer profile — is the thing that's genuinely hard to replicate.</p>
-            </div>
-          </div>
-        </div>
-      </section>
 
-      <!-- WHERE WE WORK -->
-      <section class="bg-[#fafbff]">
-        <div class="container-brand py-24 md:py-32">
-          <div class="mb-14 max-w-2xl">
-            <p class="section-eyebrow mb-5">Where we work</p>
-            <h2 class="text-[34px] md:text-[44px] leading-[1.1] tracking-[-0.02em] text-brand-dark">
-              Four offices. One timezone for delivery, one for clients.
-            </h2>
-          </div>
-
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-            <div class="bg-white rounded-2xl p-7 hover:shadow-xl hover:shadow-brand-dark/5 transition-shadow">
-              <p class="font-mono text-[11px] uppercase tracking-widest text-brand-blue font-medium mb-5">HQ · Bulgaria</p>
-              <h3 class="text-[22px] font-medium text-brand-dark leading-[1.15] mb-3">Sofia</h3>
-              <p class="text-[14px] leading-[1.6] text-brand-dark/65">Based at Campus X. Most senior staff. The hub for strategy, paid media, SEO, analytics, and AI work.</p>
-            </div>
-            <div class="bg-white rounded-2xl p-7 hover:shadow-xl hover:shadow-brand-dark/5 transition-shadow">
-              <p class="font-mono text-[11px] uppercase tracking-widest text-brand-dark/40 font-medium mb-5">Bulgaria</p>
-              <h3 class="text-[22px] font-medium text-brand-dark leading-[1.15] mb-3">Ruse</h3>
-              <p class="text-[14px] leading-[1.6] text-brand-dark/65">Riverside office near the university. A strong pool of analytical and technical talent close to the Romanian border.</p>
-            </div>
-            <div class="bg-white rounded-2xl p-7 hover:shadow-xl hover:shadow-brand-dark/5 transition-shadow">
-              <p class="font-mono text-[11px] uppercase tracking-widest text-brand-dark/40 font-medium mb-5">Bulgaria</p>
-              <h3 class="text-[22px] font-medium text-brand-dark leading-[1.15] mb-3">Blagoevgrad</h3>
-              <p class="text-[14px] leading-[1.6] text-brand-dark/65">South-west Bulgaria, next to AUBG. The source of some of our strongest English-speaking early-career hires.</p>
-            </div>
-            <div class="bg-white rounded-2xl p-7 hover:shadow-xl hover:shadow-brand-dark/5 transition-shadow">
-              <p class="font-mono text-[11px] uppercase tracking-widest text-brand-dark/40 font-medium mb-5">United States</p>
-              <h3 class="text-[22px] font-medium text-brand-dark leading-[1.15] mb-3">Boston</h3>
-              <p class="text-[14px] leading-[1.6] text-brand-dark/65">US outpost for client-facing meetings, sales, and executive relationships. Strategy and client leadership on the ground.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- RECOGNITION -->
-      <section class="bg-white">
-        <div class="container-brand py-24 md:py-32">
-          <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
-            <div class="lg:col-span-4">
-              <p class="section-eyebrow mb-6">Recognition</p>
-              <h2 class="text-[34px] md:text-[44px] leading-[1.1] tracking-[-0.02em] text-brand-dark">
-                Independently verifiable. No badge collecting.
-              </h2>
-              <p class="mt-5 text-[16px] leading-[1.6] text-brand-dark/65">
-                These are things clients and platforms can verify themselves — not self-reported.
-              </p>
-            </div>
-
-            <div class="lg:col-span-8 divide-y divide-brand-dark/8">
-
-              <div class="py-7 grid grid-cols-12 gap-6 items-start">
-                <div class="col-span-12 md:col-span-4">
-                  <p class="rule-mono">Partner status</p>
-                </div>
-                <div class="col-span-12 md:col-span-8">
-                  <h3 class="text-[19px] font-medium text-brand-dark leading-[1.25]">LinkedIn Marketing Partner · Certified</h3>
-                  <p class="mt-2 text-[14px] text-brand-dark/60 leading-[1.55]">LinkedIn Ads Certified agency. 2025 LinkedIn Breakthrough Award — one of a handful of agencies recognised globally for performance on the platform.</p>
-                </div>
+            <a href="/contact" class="group block bg-white rounded-2xl p-7 md:p-8 hover:shadow-xl hover:shadow-brand-blue/10 transition-shadow">
+              <div class="w-11 h-11 rounded-xl bg-brand-light/30 flex items-center justify-center mb-6 group-hover:bg-brand-blue/15 transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-brand-blue"><path d="M3 3v16a2 2 0 0 0 2 2h16"/><path d="m19 9-5 5-4-4-3 3"/></svg>
               </div>
+              <p class="rule-mono mb-3">Work with us</p>
+              <h3 class="text-[22px] font-medium text-brand-dark leading-[1.2] mb-3">Book a pipeline diagnostic</h3>
+              <p class="text-[15px] leading-[1.6] text-brand-dark/65">A 45-minute session. We'll look at your funnel together and tell you what we'd do next. No deck, no pitch.</p>
+              <span class="inline-flex items-center gap-1 mt-5 text-[14px] text-brand-blue font-medium">
+                Book a call <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 group-hover:translate-x-0.5 transition-transform"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </span>
+            </a>
 
-              <div class="py-7 grid grid-cols-12 gap-6 items-start">
-                <div class="col-span-12 md:col-span-4">
-                  <p class="rule-mono">Client reviews</p>
-                </div>
-                <div class="col-span-12 md:col-span-8">
-                  <h3 class="text-[19px] font-medium text-brand-dark leading-[1.25]">★ 4.9 / 5 on G2
-                    <a href="https://www.g2.com/products/vertodigital/reviews" target="_blank" rel="noopener noreferrer" class="ml-3 inline-flex items-center gap-1 text-[13px] font-normal text-brand-blue underline align-middle">View reviews <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3 h-3"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></a>
-                  </h3>
-                  <p class="mt-2 text-[14px] text-brand-dark/60 leading-[1.55]">Verified reviews from B2B marketing and demand gen leaders — not anonymous.</p>
-                </div>
+            <a href="/jobs" class="group block bg-white rounded-2xl p-7 md:p-8 hover:shadow-xl hover:shadow-brand-blue/10 transition-shadow">
+              <div class="w-11 h-11 rounded-xl bg-brand-light/30 flex items-center justify-center mb-6 group-hover:bg-brand-blue/15 transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-brand-blue"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><path d="M16 3.128a4 4 0 0 1 0 7.744"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><circle cx="9" cy="7" r="4"/></svg>
               </div>
+              <p class="rule-mono mb-3">Join the team</p>
+              <h3 class="text-[22px] font-medium text-brand-dark leading-[1.2] mb-3">We're hiring</h3>
+              <p class="text-[15px] leading-[1.6] text-brand-dark/65">Across Sofia, Ruse, Blagoevgrad, and Boston. Sharp thinking, a drive to keep learning — the rest we'll teach.</p>
+              <span class="inline-flex items-center gap-1 mt-5 text-[14px] text-brand-blue font-medium">
+                See open roles <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 group-hover:translate-x-0.5 transition-transform"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </span>
+            </a>
 
-              <div class="py-7 grid grid-cols-12 gap-6 items-start">
-                <div class="col-span-12 md:col-span-4">
-                  <p class="rule-mono">Methodology</p>
-                </div>
-                <div class="col-span-12 md:col-span-8">
-                  <h3 class="text-[19px] font-medium text-brand-dark leading-[1.25]">45-client audited benchmark cohort</h3>
-                  <p class="mt-2 text-[14px] text-brand-dark/60 leading-[1.55]">Every recommendation is benchmarked against real performance data from 45+ B2B tech accounts — not industry averages or agency estimates.</p>
-                </div>
+            <div class="bg-white rounded-2xl p-7 md:p-8 hover:shadow-xl hover:shadow-brand-blue/10 transition-shadow">
+              <div class="w-11 h-11 rounded-xl bg-brand-light/30 flex items-center justify-center mb-6">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 text-brand-blue" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.063 2.063 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
               </div>
-
-              <div class="py-7 grid grid-cols-12 gap-6 items-start">
-                <div class="col-span-12 md:col-span-4">
-                  <p class="rule-mono">Toolchain</p>
-                </div>
-                <div class="col-span-12 md:col-span-8">
-                  <h3 class="text-[19px] font-medium text-brand-dark leading-[1.25]">Salesforce · HubSpot · 6sense · Clay · Profound · Ahrefs</h3>
-                  <p class="mt-2 text-[14px] text-brand-dark/60 leading-[1.55]">Certified across all major ad platforms. The stack is evaluated and integrated internally before it's recommended to clients.</p>
-                </div>
+              <p class="rule-mono mb-3">Follow the work</p>
+              <h3 class="text-[22px] font-medium text-brand-dark leading-[1.2] mb-3">We share what we learn</h3>
+              <p class="text-[15px] leading-[1.6] text-brand-dark/65">Zoran and the team post on LinkedIn — what's working, what isn't, and the patterns we see across 200+ B2B tech companies. No newsletter required.</p>
+              <div class="mt-5 flex flex-col gap-2">
+                <a href="https://www.linkedin.com/company/vertodigital" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-[14px] text-brand-blue font-medium hover:underline">
+                  VertoDigital on LinkedIn <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+                </a>
+                <a href="https://www.linkedin.com/in/zoranarsovski/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-[14px] text-brand-blue font-medium hover:underline">
+                  Zoran Arsovski on LinkedIn <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+                </a>
               </div>
-
             </div>
-          </div>
-        </div>
-      </section>
 
-      <!-- FINAL CTA -->
-      <section class="hero-gradient">
-        <div class="container-brand py-24 md:py-32">
-          <div class="max-w-4xl">
-            <p class="section-eyebrow mb-6">One last thing</p>
-            <h2 class="text-[40px] md:text-[56px] lg:text-[64px] leading-[1.05] tracking-[-0.02em] text-brand-dark">
-              200+ clients in. The pattern hasn't changed — <span class="font-script text-brand-blue text-[1.05em]">funnels leak</span> at the top, and pipeline gets fixed in the middle.
-            </h2>
-            <p class="mt-8 text-[18px] md:text-[20px] leading-[1.55] text-brand-dark/75 max-w-3xl">
-              If yours is leaking, we've probably already seen the version of it. Bring the funnel. We'll bring the math.
-            </p>
-            <div class="mt-10 flex flex-wrap gap-3">
-              <a href="/contact" class="cta-btn bg-brand-dark hover:bg-brand-blue text-white px-6 py-3 rounded-lg font-medium text-[15px] transition-colors inline-flex items-center gap-2">
-                Book a pipeline diagnostic <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="nav-cta-arrow w-4 h-4"><path class="arrow-stem" d="M19 12H5"/><path d="m12 5 7 7-7 7"/></svg>
-              </a>
-              <a href="/case-studies" class="bg-brand-dark/5 hover:bg-brand-dark/15 text-brand-dark px-6 py-3 rounded-lg font-medium text-[15px] transition-colors inline-flex items-center gap-2">
-                See case studies first
-              </a>
-            </div>
           </div>
         </div>
       </section>

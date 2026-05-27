@@ -1,32 +1,31 @@
 # VertoDigital website — agent instructions
 
-## Always ship
+## Workflow
 
-A change isn't done until it's deployed. After completing any code task, the
-final step is **always**:
+**Local-first. Deploy only when asked.**
 
-1. Commit on a `claude/<short-descriptive-name>` branch off latest `main`
-2. `git push -u origin <branch>`
-3. Open a PR against `main` via the GitHub MCP tools
+1. Make the change and commit directly to `main`
+2. Push to `main` — Zoran's local auto-pull script picks it up within seconds
+3. Zoran reviews at `http://localhost:3000`
+4. When Zoran says "deploy" → run `git push origin main:deploy` to ship to CF Pages
 
-The repo's `auto-merge-claude.yml` workflow auto-merges PRs from `claude/*`
-branches once the Cloudflare Pages preview check passes — that produces the
-production deploy. Do not stop at "branch pushed" or "commit made"; the user
-has standing approval to ship every change they ask for.
+Never push to the `deploy` branch unless Zoran explicitly asks. Never create feature branches or PRs for individual tasks — commit straight to `main`. Fast iteration is the priority.
 
-## Branch naming
+## Zoran's local auto-pull (runs in a terminal tab)
 
-- One PR per logical change. Do not bundle unrelated work.
-- Intermediate Edits during a single task share a branch and a single
-  commit — don't create a PR per file edit.
-- Names: kebab-case, descriptive, prefixed `claude/` (e.g.
-  `claude/about-page`, `claude/about-remove-outlines`).
-- Branches are auto-deleted on squash merge — never reuse a merged branch.
+```bash
+cd ~/website && while sleep 6; do git pull --ff-only origin main -q && echo "↓ $(date +%H:%M:%S)"; done
+```
+
+## Git commit style
+
+- One commit per logical change. Multiple file edits for the same task = one commit.
+- Short, descriptive message. No PR boilerplate.
+- Push immediately after committing: `git push origin main`
 
 ## Site context
 
-- Static HTML served by Cloudflare Pages. No build step. Edit `*.html` and the
-  preview deploys.
+- Static HTML served by Cloudflare Pages. No build step. Edit `*.html` and the preview deploys.
 - Tailwind via CDN; design tokens defined inline in each page's `<head>`.
 - Brand rule: **no outlined boxes anywhere in the design.** Cards, sections,
   list rows, and ghost buttons must not have a 4-side stroke (e.g.
@@ -39,7 +38,6 @@ has standing approval to ship every change they ask for.
     - Single-side hairlines used as section rules — `border-b` under the
       sticky nav, `border-t` above the footer's legal row, etc. These are
       dividers, not outlines.
-  (Originally enforced in commit `d5631e2`.)
 - Brand rule: **light text on deep-navy backgrounds is `cool-gray` (#B4D9C0).**
   Never reach for white-with-opacity (`text-white/65`, `text-white/80`, etc.) for
   body or secondary text on dark sections. Pure `text-white` for headlines is

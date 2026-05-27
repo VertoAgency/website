@@ -16,7 +16,7 @@ export async function onRequest(context) {
     if (!igId) throw new Error('Instagram Business Account not found on this Page');
 
     const mediaRes = await fetch(
-      `https://graph.facebook.com/v21.0/${igId}/media?fields=id,media_type,media_url,thumbnail_url,permalink&limit=6&access_token=${token}`
+      `https://graph.facebook.com/v21.0/${igId}/media?fields=id,media_type,media_url,thumbnail_url,permalink,caption&limit=6&access_token=${token}`
     );
     const media = await mediaRes.json();
     if (media.error) throw new Error(media.error.message);

@@ -121,7 +121,7 @@
               <ul class="space-y-3 text-sm">
                 <li><a href="/about"        class="text-white hover:text-brand-blue transition-colors">About</a></li>
                 <li><a href="/case-studies" class="text-white hover:text-brand-blue transition-colors">Results</a></li>
-                <li><a href="/jobs"      class="text-white hover:text-brand-blue transition-colors">Careers</a></li>
+                <li><a href="/jobs"      class="text-white hover:text-brand-blue transition-colors">Jobs</a></li>
                 <li><a href="/contact"      class="text-white hover:text-brand-blue transition-colors">Contact</a></li>
               </ul>
             </div>

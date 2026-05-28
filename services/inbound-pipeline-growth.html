@@ -114,6 +114,13 @@
       .cta-btn:hover .nav-cta-arrow { transform: translateX(4px); }
       .cta-btn .nav-cta-arrow .arrow-stem { stroke-dasharray: 14; stroke-dashoffset: 14; transition: stroke-dashoffset 200ms cubic-bezier(0.22, 1, 0.36, 1); }
       .cta-btn:hover .nav-cta-arrow .arrow-stem { stroke-dashoffset: 0; }
+      @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+      .marquee-track { animation: marquee 45s linear infinite; will-change: transform; display: flex; align-items: center; gap: 96px; width: max-content; touch-action: pan-y; }
+      .marquee-track:hover { animation-play-state: paused; }
+      .marquee-logo { height: 28px; width: auto; flex-shrink: 0; opacity: 0.55; transition: opacity 180ms; display: block; }
+      .marquee-logo:hover { opacity: 0.9; }
+      @media (max-width: 767px) { .marquee-track { animation-duration: 30s; gap: 60px; } .marquee-logo { height: 22px; } }
+      .marquee-wrap { -webkit-mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%); mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%); }
 </style>
     <script src="/components/nav.js" defer></script>
     <script src="/components/footer.js" defer></script>
@@ -180,20 +187,31 @@
       </section>
 
       <!-- Client logos strip -->
-      <div class="bg-white border-b border-brand-dark/8">
-        <div class="container-brand py-10 md:py-12">
-          <p class="rule-mono text-center mb-8">A few of the 200+ B2B technology companies we've worked with</p>
-          <div class="flex flex-wrap items-center justify-center gap-x-8 md:gap-x-12 gap-y-4">
-            <span class="text-[17px] md:text-[19px] font-semibold text-brand-dark/35 tracking-[-0.01em]">SnapLogic</span>
-            <span class="text-[17px] md:text-[19px] font-semibold text-brand-dark/35 tracking-[-0.01em]">IRONSCALES</span>
-            <span class="text-[17px] md:text-[19px] font-semibold text-brand-dark/35 tracking-[-0.01em]">Cribl</span>
-            <span class="text-[17px] md:text-[19px] font-semibold text-brand-dark/35 tracking-[-0.01em]">Cloudflare</span>
-            <span class="text-[17px] md:text-[19px] font-semibold text-brand-dark/35 tracking-[-0.01em]">Neo4j</span>
-            <span class="text-[17px] md:text-[19px] font-semibold text-brand-dark/35 tracking-[-0.01em]">Payhawk</span>
-            <span class="text-[17px] md:text-[19px] font-semibold text-brand-dark/35 tracking-[-0.01em]">SmartRecruiters</span>
-            <span class="text-[17px] md:text-[19px] font-semibold text-brand-dark/35 tracking-[-0.01em]">Safe Security</span>
-            <span class="text-[17px] md:text-[19px] font-semibold text-brand-dark/35 tracking-[-0.01em]">Netgain</span>
-            <span class="text-[17px] md:text-[19px] font-semibold text-brand-dark/35 tracking-[-0.01em]">Scalefocus</span>
+      <div class="bg-white border-b border-brand-dark/8 py-6 overflow-hidden">
+        <p class="container-brand font-mono text-[11px] uppercase tracking-[0.2em] text-brand-dark/55 font-medium mb-5">A few of the 200+ B2B technology companies we've worked with</p>
+        <div class="marquee-wrap overflow-hidden">
+          <div class="marquee-track">
+            <img src="/images/logos/snaplogic-logo.webp"      alt="SnapLogic"       width="106" height="28" class="marquee-logo" loading="lazy">
+            <img src="/images/logos/ironscales-logo.png"      alt="IRONSCALES"      width="93"  height="28" class="marquee-logo" loading="lazy">
+            <img src="/images/logos/cribl-logo.png"           alt="Cribl"           width="100" height="40" class="marquee-logo" loading="lazy" style="height:40px">
+            <img src="/images/logos/cloudflare-logo.png"      alt="Cloudflare"      width="85"  height="28" class="marquee-logo" loading="lazy">
+            <img src="/images/logos/neo4j-logo.png"           alt="Neo4j"           width="75"  height="28" class="marquee-logo" loading="lazy">
+            <img src="/images/logos/payhawk-logo.png"         alt="Payhawk"         width="123" height="28" class="marquee-logo" loading="lazy">
+            <img src="/images/logos/smartrecruiters-logo.png" alt="SmartRecruiters" width="115" height="36" class="marquee-logo" loading="lazy" style="height:36px">
+            <img src="/images/logos/safe-security-logo.png"   alt="Safe Security"   width="110" height="28" class="marquee-logo" loading="lazy">
+            <img src="/images/logos/netgain-logo.png"         alt="Netgain"         width="100" height="28" class="marquee-logo" loading="lazy">
+            <img src="/images/logos/scalefocus-logo.svg"      alt="Scalefocus"      width="110" height="28" class="marquee-logo" loading="lazy">
+            <!-- duplicate set for seamless loop -->
+            <img src="/images/logos/snaplogic-logo.webp"      alt="" width="106" height="28" class="marquee-logo" loading="lazy" aria-hidden="true">
+            <img src="/images/logos/ironscales-logo.png"      alt="" width="93"  height="28" class="marquee-logo" loading="lazy" aria-hidden="true">
+            <img src="/images/logos/cribl-logo.png"           alt="" width="100" height="40" class="marquee-logo" loading="lazy" aria-hidden="true" style="height:40px">
+            <img src="/images/logos/cloudflare-logo.png"      alt="" width="85"  height="28" class="marquee-logo" loading="lazy" aria-hidden="true">
+            <img src="/images/logos/neo4j-logo.png"           alt="" width="75"  height="28" class="marquee-logo" loading="lazy" aria-hidden="true">
+            <img src="/images/logos/payhawk-logo.png"         alt="" width="123" height="28" class="marquee-logo" loading="lazy" aria-hidden="true">
+            <img src="/images/logos/smartrecruiters-logo.png" alt="" width="115" height="36" class="marquee-logo" loading="lazy" aria-hidden="true" style="height:36px">
+            <img src="/images/logos/safe-security-logo.png"   alt="" width="110" height="28" class="marquee-logo" loading="lazy" aria-hidden="true">
+            <img src="/images/logos/netgain-logo.png"         alt="" width="100" height="28" class="marquee-logo" loading="lazy" aria-hidden="true">
+            <img src="/images/logos/scalefocus-logo.svg"      alt="" width="110" height="28" class="marquee-logo" loading="lazy" aria-hidden="true">
           </div>
         </div>
       </div>

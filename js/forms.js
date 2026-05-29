@@ -20,6 +20,11 @@
   }
 
   function post(payload) {
+    // Local dev — CF Functions don't run on a plain static server
+    if (location.hostname === 'localhost' || location.hostname === '127.0.0.1') {
+      console.log('[DEV] Form submission (not sent):', payload);
+      return Promise.resolve({ success: true });
+    }
     return fetch(API, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },

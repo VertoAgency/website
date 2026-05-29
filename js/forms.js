@@ -50,23 +50,35 @@
     message: function(v) { return v.length >= 15; },
   };
 
+  var FIELD_ERRORS = {
+    name:    'Please enter your name (at least 2 characters).',
+    email:   'Please enter a valid work email address.',
+    message: 'Please add a bit more detail — at least 15 characters.',
+  };
+
   function invalidField(form, name) {
     var el = form.querySelector('[name="' + name + '"]');
     if (!el) return false;
     var v = el.value.trim();
     var rule = FIELD_RULES[name];
-    if (v && rule && rule(v)) return false; // valid
-    markInvalid(el);
+    if (v && rule && rule(v)) return false;
+    markInvalid(el, FIELD_ERRORS[name] || '');
     return true;
   }
 
-  function markInvalid(el) {
+  function markInvalid(el, message) {
     el.style.borderColor = 'rgb(239,68,68)';
     el.style.boxShadow = '0 0 0 2px rgba(239,68,68,0.25)';
     el.focus();
+    var errorEl = el.parentElement && el.parentElement.querySelector('[data-field-error]');
+    if (errorEl) {
+      errorEl.textContent = message || '';
+      errorEl.style.display = 'block';
+    }
     el.addEventListener('input', function () {
       el.style.borderColor = '';
       el.style.boxShadow = '';
+      if (errorEl) errorEl.style.display = 'none';
     }, { once: true });
   }
 

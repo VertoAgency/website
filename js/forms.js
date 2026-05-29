@@ -74,6 +74,7 @@
     if (errorEl) {
       errorEl.textContent = message || '';
       errorEl.style.display = 'block';
+      errorEl.style.color = 'rgb(239,68,68)';
     }
     el.addEventListener('input', function () {
       el.style.borderColor = '';

@@ -75,14 +75,13 @@ export async function onRequestPost({ request, env }) {
     sendEmails(fields, form_type, env),
   ]);
 
-  if (emailResult.status === 'rejected') {
-    console.error('Resend failed:', emailResult.reason?.message);
-    return jsonRes({ success: false, message: 'Could not send confirmation email — please try again.' }, 500);
+  if (hsResult.status === 'rejected') {
+    console.error('HubSpot failed:', hsResult.reason?.message);
   }
 
-  if (hsResult.status === 'rejected') {
-    // Non-blocking: log but don't fail the user
-    console.error('HubSpot failed:', hsResult.reason?.message);
+  if (emailResult.status === 'rejected') {
+    console.error('Resend failed:', emailResult.reason?.message);
+    // Non-blocking: lead is in HubSpot — don't fail the user over an email error
   }
 
   return jsonRes({ success: true });

@@ -465,6 +465,7 @@
         </button>
         <div class="vn-drop" id="vn-drop-industries">
           <div class="vn-drop-inner" style="min-width:260px">
+            <a href="/industries/b2b-saas"                            class="vn-drop-link">B2B SaaS</a>
             <a href="/industries/cybersecurity"                        class="vn-drop-link">Cybersecurity</a>
             <a href="/industries/data-platforms-and-ai-infrastructure" class="vn-drop-link">Data Platforms &amp; AI Infrastructure</a>
             <a href="/industries/fintech-and-financial-services"       class="vn-drop-link">Fintech &amp; Financial Services</a>
@@ -547,6 +548,7 @@
         </button>
         <div class="vn-mob-acc-body">
           <div class="vn-mob-acc-inner">
+            <a href="/industries/b2b-saas"                            class="vn-mob-acc-link">B2B SaaS</a>
             <a href="/industries/cybersecurity"                        class="vn-mob-acc-link">Cybersecurity</a>
             <a href="/industries/data-platforms-and-ai-infrastructure" class="vn-mob-acc-link">Data Platforms &amp; AI Infrastructure</a>
             <a href="/industries/fintech-and-financial-services"       class="vn-mob-acc-link">Fintech &amp; Financial Services</a>

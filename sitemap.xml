@@ -12,6 +12,7 @@
   <url><loc>https://vertodigital.com/services/outbound/account-based-abm</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://vertodigital.com/services/outbound/contact-based-abm</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://vertodigital.com/services/outbound/persona-based-abm</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://vertodigital.com/industries/b2b-saas</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://vertodigital.com/industries/cybersecurity</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://vertodigital.com/industries/data-platforms-and-ai-infrastructure</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://vertodigital.com/industries/fintech-and-financial-services</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>

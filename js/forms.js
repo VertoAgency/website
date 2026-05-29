@@ -93,6 +93,8 @@
       post(payload)
         .then(function () {
           miniForm.classList.add('hidden');
+          var intro = document.getElementById('contact-form-intro');
+          if (intro) intro.classList.add('hidden');
           if (miniSuccess) miniSuccess.classList.remove('hidden');
         })
         .catch(function () {

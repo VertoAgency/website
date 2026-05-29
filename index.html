@@ -634,9 +634,11 @@
 
             <!-- Secondary: Compact form -->
             <div class="lg:col-span-5 bg-light-blue p-8 md:p-10 rounded-2xl">
-              <p class="font-mono text-[12px] text-brand-dark/60 uppercase tracking-widest font-medium mb-2">Not ready for a call?</p>
-              <h3 class="text-2xl font-medium text-brand-dark mb-2 leading-[1.2]">Send a note instead.</h3>
-              <p class="text-[14px] text-brand-dark/70 mb-8 leading-[1.5]">Tell us what's not working. We reply within a business day.</p>
+              <div id="contact-form-intro">
+                <p class="font-mono text-[12px] text-brand-dark/60 uppercase tracking-widest font-medium mb-2">Not ready for a call?</p>
+                <h3 class="text-2xl font-medium text-brand-dark mb-2 leading-[1.2]">Send a note instead.</h3>
+                <p class="text-[14px] text-brand-dark/70 mb-8 leading-[1.5]">Tell us what's not working. We reply within a business day.</p>
+              </div>
               <form id="contact-form" data-form="contact-mini" class="space-y-4">
                 <div>
                   <label for="contact-name" class="font-mono text-[12px] text-brand-dark/60 uppercase tracking-widest font-medium">Name <span class="text-brand-blue">*</span></label>
@@ -664,9 +666,22 @@
                 <input type="text" name="_hp" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px">
                 <p class="text-[12px] text-brand-dark/60 text-center">By submitting, you agree to our <a href="/privacy" class="text-brand-blue underline">Privacy Policy</a>.</p>
               </form>
-              <div id="contact-success" class="hidden text-center py-8">
-                <p class="text-[22px] font-medium text-brand-dark mb-2">Thanks — note received.</p>
-                <p class="text-[14px] text-brand-dark/65">We'll reply within one business day.</p>
+              <div id="contact-success" class="hidden py-8 text-center">
+                <div class="relative inline-block mb-6">
+                  <img src="/images/team/paul-green.webp" alt="Paul Green" width="72" height="72" class="rounded-full object-cover shadow-md" style="width:72px;height:72px" />
+                  <span class="absolute -bottom-1 -right-1 w-6 h-6 rounded-full bg-gradient-to-br from-brand-blue to-brand-light flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5"><path d="M20 6 9 17l-5-5"/></svg>
+                  </span>
+                </div>
+                <p class="font-mono text-[12px] text-brand-dark/55 uppercase tracking-widest font-medium mb-3">Note received</p>
+                <p class="text-[22px] font-medium text-brand-dark mb-3 leading-[1.2]">Paul will be in touch within one business day.</p>
+                <p class="text-[14px] text-brand-dark/65 leading-[1.6] max-w-[38ch] mx-auto">He reads every note personally — expect a short, direct reply.</p>
+                <div class="mt-8 flex flex-col items-center gap-3">
+                  <a href="/case-studies" class="inline-flex items-center gap-2 text-sm font-medium text-brand-blue hover:opacity-75 transition-opacity">
+                    Explore our work
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                  </a>
+                </div>
               </div>
               <p id="contact-mini-error" class="hidden bg-red-50 rounded-xl p-4 mt-2 text-[14px] text-red-700">Something went wrong — please try again or email us directly.</p>
             </div>

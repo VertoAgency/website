@@ -42,6 +42,19 @@
     return el ? el.value.trim() : '';
   }
 
+  function requireField(form, name) {
+    var el = form.querySelector('[name="' + name + '"]');
+    if (!el || el.value.trim()) return false;
+    el.style.borderColor = 'rgb(239,68,68)';
+    el.style.boxShadow = '0 0 0 2px rgba(239,68,68,0.25)';
+    el.focus();
+    el.addEventListener('input', function () {
+      el.style.borderColor = '';
+      el.style.boxShadow = '';
+    }, { once: true });
+    return true;
+  }
+
   // ── Newsletter forms (all pages, footer) ──────────────────────────────────
   // Event delegation handles forms injected after DOMContentLoaded (e.g. footer.js)
   document.addEventListener('submit', function (e) {
@@ -85,7 +98,9 @@
         message:   val(miniForm, 'message'),
         _hp:       val(miniForm, '_hp'),
       }, utmFields());
-      if (!payload.email) return;
+      if (requireField(miniForm, 'name'))    return;
+      if (requireField(miniForm, 'email'))   return;
+      if (requireField(miniForm, 'message')) return;
       if (miniError) miniError.classList.add('hidden');
       var orig = btn.textContent;
       btn.disabled = true;

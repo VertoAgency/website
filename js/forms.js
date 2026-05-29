@@ -42,9 +42,25 @@
     return el ? el.value.trim() : '';
   }
 
-  function requireField(form, name) {
+  var EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+
+  var FIELD_RULES = {
+    name:    function(v) { return v.length >= 2; },
+    email:   function(v) { return EMAIL_RE.test(v); },
+    message: function(v) { return v.length >= 15; },
+  };
+
+  function invalidField(form, name) {
     var el = form.querySelector('[name="' + name + '"]');
-    if (!el || el.value.trim()) return false;
+    if (!el) return false;
+    var v = el.value.trim();
+    var rule = FIELD_RULES[name];
+    if (v && rule && rule(v)) return false; // valid
+    markInvalid(el);
+    return true;
+  }
+
+  function markInvalid(el) {
     el.style.borderColor = 'rgb(239,68,68)';
     el.style.boxShadow = '0 0 0 2px rgba(239,68,68,0.25)';
     el.focus();
@@ -52,7 +68,6 @@
       el.style.borderColor = '';
       el.style.boxShadow = '';
     }, { once: true });
-    return true;
   }
 
   // ── Newsletter forms (all pages, footer) ──────────────────────────────────
@@ -65,7 +80,7 @@
     var btn    = form.querySelector('button[type="submit"]');
     var parent = form.parentElement;
     var success = parent && parent.querySelector('[data-form-success="newsletter"]');
-    if (!email) return;
+    if (!email || !EMAIL_RE.test(email)) return;
     var orig = btn.textContent;
     btn.disabled = true;
     btn.textContent = 'Subscribing…';
@@ -98,9 +113,9 @@
         message:   val(miniForm, 'message'),
         _hp:       val(miniForm, '_hp'),
       }, utmFields());
-      if (requireField(miniForm, 'name'))    return;
-      if (requireField(miniForm, 'email'))   return;
-      if (requireField(miniForm, 'message')) return;
+      if (invalidField(miniForm, 'name'))    return;
+      if (invalidField(miniForm, 'email'))   return;
+      if (invalidField(miniForm, 'message')) return;
       if (miniError) miniError.classList.add('hidden');
       var orig = btn.textContent;
       btn.disabled = true;

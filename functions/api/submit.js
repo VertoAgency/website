@@ -163,27 +163,25 @@ async function createNote(contactId, body, env) {
 // ─── Resend emails ───────────────────────────────────────────────────────────
 
 async function sendEmails(fields, formType, env) {
-  const sends = [
-    sendEmail({
-      from:     FROM_TEAM,
-      to:       NOTIFY_EMAILS,
-      reply_to: fields.email,
-      subject:  `[${formLabel(formType)}] ${fields.email}`,
-      html:     notifyHtml(fields, formType),
-    }, env),
-  ];
+  // Internal notification — required; if this fails we surface an error to the user
+  await sendEmail({
+    from:     FROM_TEAM,
+    to:       NOTIFY_EMAILS,
+    reply_to: fields.email,
+    subject:  `[${formLabel(formType)}] ${fields.email}`,
+    html:     notifyHtml(fields, formType),
+  }, env);
 
+  // Confirmation to submitter — best-effort; don't fail the submission if it bounces
   if (formType !== 'newsletter') {
-    sends.push(sendEmail({
+    sendEmail({
       from:     FROM_TEAM,
       to:       [fields.email],
       reply_to: REPLY_TO,
       subject:  confirmSubject(formType),
       html:     confirmHtml(fields, formType),
-    }, env));
+    }, env).catch(e => console.error('Confirmation email failed:', e.message));
   }
-
-  await Promise.all(sends);
 }
 
 async function sendEmail(payload, env) {

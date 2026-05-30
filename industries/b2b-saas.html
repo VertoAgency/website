@@ -20,7 +20,6 @@
     <meta property="og:site_name" content="VertoDigital" />
     <meta name="twitter:card" content="summary_large_image" />
 
-    <!-- Service schema · B2B SaaS umbrella -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -37,7 +36,6 @@
     }
     </script>
 
-    <!-- BreadcrumbList schema -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -65,18 +63,22 @@
       @media (min-width: 1280px) { .container-brand { padding-left: 120px; padding-right: 120px; } }
       .section-eyebrow { font-family: 'Geist Mono', ui-monospace, monospace; font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(6, 0, 38, 0.55); font-weight: 500; }
       .section-eyebrow-light { font-family: 'Geist Mono', ui-monospace, monospace; font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; color: #B4D9C0; font-weight: 500; }
+      .rule-mono { font-family: 'Geist Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(6, 0, 38, 0.5); }
+      .blueprint-grid { background-image: linear-gradient(rgba(6, 0, 38, 0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(6, 0, 38, 0.04) 1px, transparent 1px); background-size: 32px 32px; }
       .hero-stat { font-family: 'Geist', sans-serif; font-weight: 500; line-height: 0.85; letter-spacing: -0.04em; }
+      @keyframes dot-pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.35; } }
+      .dot-pulse { animation: dot-pulse 2.4s ease-in-out infinite; }
       .menu-icon-stack { position: relative; width: 22px; height: 22px; display: inline-flex; align-items: center; justify-content: center; }
       .cta-btn .nav-cta-arrow { transition: transform 240ms cubic-bezier(0.22, 1, 0.36, 1); }
       .cta-btn:hover .nav-cta-arrow { transform: translateX(4px); }
       .cta-btn .nav-cta-arrow .arrow-stem { stroke-dasharray: 14; stroke-dashoffset: 14; transition: stroke-dashoffset 200ms cubic-bezier(0.22, 1, 0.36, 1); }
       .cta-btn:hover .nav-cta-arrow .arrow-stem { stroke-dashoffset: 0; }
+      @media (prefers-reduced-motion: reduce) { .dot-pulse { animation: none; } }
     </style>
     <script src="/components/nav.js" defer></script>
     <script src="/components/footer.js" defer></script>
   </head>
   <body class="antialiased">
-    <!-- Navbar -->
     <div id="verto-nav-mount"></div>
 
     <main>
@@ -94,24 +96,28 @@
       </div>
 
       <!-- ============================================================
-           BLOCK 1 — HERO · the universal tension as a fact about the category
+           HERO
            ============================================================ -->
       <section class="hero-gradient relative overflow-hidden">
         <svg aria-hidden="true" class="absolute inset-0 w-full h-full pointer-events-none opacity-[0.14]" preserveAspectRatio="xMidYMid slice" viewBox="0 0 1440 720">
           <g fill="#0099FF" fill-opacity="0.4">
             <circle cx="180" cy="120" r="3"/><circle cx="320" cy="200" r="3"/><circle cx="280" cy="320" r="3"/>
-            <circle cx="540" cy="180" r="3"/><circle cx="640" cy="280" r="3"/><circle cx="780" cy="180" r="3"/>
-            <circle cx="880" cy="320" r="3"/><circle cx="1020" cy="220" r="3"/><circle cx="1140" cy="340" r="3"/>
-            <circle cx="1280" cy="240" r="3"/><circle cx="380" cy="540" r="3"/><circle cx="560" cy="560" r="3"/>
+            <circle cx="420" cy="280" r="3"/><circle cx="540" cy="180" r="3"/><circle cx="500" cy="380" r="3"/>
+            <circle cx="640" cy="280" r="3"/><circle cx="780" cy="180" r="3"/><circle cx="720" cy="400" r="3"/>
+            <circle cx="880" cy="320" r="3"/><circle cx="1020" cy="220" r="3"/><circle cx="980" cy="420" r="3"/>
+            <circle cx="1140" cy="340" r="3"/><circle cx="1280" cy="240" r="3"/><circle cx="1240" cy="440" r="3"/>
+            <circle cx="200" cy="500" r="3"/><circle cx="380" cy="540" r="3"/><circle cx="560" cy="560" r="3"/>
             <circle cx="740" cy="540" r="3"/><circle cx="920" cy="580" r="3"/><circle cx="1100" cy="540" r="3"/>
           </g>
           <g stroke="#0099FF" stroke-opacity="0.22" stroke-width="0.75" fill="none">
             <line x1="180" y1="120" x2="320" y2="200"/><line x1="320" y1="200" x2="540" y2="180"/>
             <line x1="540" y1="180" x2="780" y2="180"/><line x1="780" y1="180" x2="1020" y2="220"/>
-            <line x1="1020" y1="220" x2="1280" y2="240"/><line x1="640" y1="280" x2="880" y2="320"/>
-            <line x1="880" y1="320" x2="1140" y2="340"/><line x1="380" y1="540" x2="560" y2="560"/>
-            <line x1="560" y1="560" x2="740" y2="540"/><line x1="740" y1="540" x2="920" y2="580"/>
-            <line x1="920" y1="580" x2="1100" y2="540"/>
+            <line x1="1020" y1="220" x2="1280" y2="240"/><line x1="280" y1="320" x2="420" y2="280"/>
+            <line x1="420" y1="280" x2="640" y2="280"/><line x1="640" y1="280" x2="880" y2="320"/>
+            <line x1="880" y1="320" x2="1140" y2="340"/><line x1="500" y1="380" x2="720" y2="400"/>
+            <line x1="720" y1="400" x2="980" y2="420"/><line x1="200" y1="500" x2="380" y2="540"/>
+            <line x1="380" y1="540" x2="560" y2="560"/><line x1="560" y1="560" x2="740" y2="540"/>
+            <line x1="740" y1="540" x2="920" y2="580"/><line x1="920" y1="580" x2="1100" y2="540"/>
           </g>
           <g fill="#0099FF" fill-opacity="0.7">
             <circle cx="640" cy="280" r="5"/><circle cx="880" cy="320" r="5"/><circle cx="780" cy="180" r="5"/>
@@ -127,26 +133,47 @@
             <h1 class="text-[34px] md:text-[48px] lg:text-[56px] leading-[1.05] tracking-[-0.02em] text-brand-dark">
               Marketing for B2B SaaS. <span class="text-brand-blue">Measured the way the board measures it.</span>
             </h1>
-            <div class="mt-7 text-[17px] md:text-[19px] leading-[1.6] text-brand-dark/80 max-w-3xl">
+            <div class="mt-7 space-y-4 text-[17px] md:text-[19px] leading-[1.6] text-brand-dark/80 max-w-3xl">
               <p>
                 Recurring revenue changes the math. A lead that never converts costs you twice — once to acquire, once to ignore. <span class="text-brand-dark font-medium">The hard part of B2B SaaS marketing isn't generating activity.</span> It's proving that the activity becomes pipeline, expansion, and revenue that renews.
               </p>
+              <p>
+                We've run pipeline programs for 200+ B2B SaaS companies since 2018 — from Series A to public, across PLG-led, sales-led, and hybrid motions.
+              </p>
             </div>
-            <div class="mt-8 flex flex-wrap items-center gap-x-5 gap-y-3">
-              <p class="font-mono text-[13px] uppercase tracking-[0.18em] text-brand-dark/55 font-medium">200+ B2B SaaS companies · since 2018</p>
+          </div>
+        </div>
+
+        <!-- Credentials row -->
+        <div class="border-t border-brand-dark/10 bg-white/55 backdrop-blur-sm">
+          <div class="container-brand py-5 flex flex-wrap items-center justify-center md:justify-between gap-x-8 gap-y-4">
+            <div class="flex flex-wrap items-center gap-x-5 md:gap-x-6 gap-y-3">
+              <span class="inline-flex items-center gap-2.5 text-[13px] font-medium text-brand-dark bg-white shadow-sm px-3 py-1.5 rounded-lg">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-brand-blue"><path d="M12 2v4"/><path d="m4.93 4.93 2.83 2.83"/><path d="M2 12h4"/><path d="m4.93 19.07 2.83-2.83"/><path d="M12 18v4"/><path d="m19.07 19.07-2.83-2.83"/><path d="M22 12h-4"/><path d="m19.07 4.93-2.83 2.83"/></svg>
+                <span class="font-medium">200+ B2B SaaS companies · <span class="text-brand-blue">since 2018</span></span>
+              </span>
               <span class="hidden md:inline-block w-1 h-1 rounded-full bg-brand-dark/25" aria-hidden="true"></span>
-              <a href="https://www.g2.com/products/vertodigital/reviews" target="_blank" rel="noopener noreferrer" data-track="g2_widget_click" class="inline-flex items-center gap-2 bg-white hover:bg-brand-light/30 px-3 py-2 rounded-lg transition-colors group shadow-sm">
-                <span class="inline-flex items-center justify-center w-6 h-6 rounded-md bg-[#FF492C] text-white font-bold text-[12px] tabular-nums">G2</span>
-                <span class="text-[13px] font-medium text-brand-dark"><span class="text-brand-blue">★ 4.9</span></span>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5 text-brand-dark/55 group-hover:text-brand-blue transition-colors"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
-              </a>
+              <span class="inline-flex items-center gap-2 text-[13px] font-medium text-brand-dark">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-brand-blue"><path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z"/><path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12"/><path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17"/></svg>
+                Inbound · Outbound · Pipeline Intelligence
+              </span>
+              <span class="hidden md:inline-block w-1 h-1 rounded-full bg-brand-dark/25" aria-hidden="true"></span>
+              <span class="inline-flex items-center gap-2 text-[13px] font-medium text-brand-dark">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-brand-blue"><path d="M18 21a8 8 0 0 0-16 0"/><circle cx="10" cy="8" r="5"/><path d="M22 20c0-3.37-2-6.5-4-8a5 5 0 0 0-.45-8.3"/></svg>
+                PLG · sales-led · hybrid motions
+              </span>
             </div>
+            <a href="https://www.g2.com/products/vertodigital/reviews" target="_blank" rel="noopener noreferrer" data-track="g2_widget_click" class="inline-flex items-center gap-2 bg-white hover:bg-brand-light/30 px-3 py-2 rounded-lg transition-colors group">
+              <span class="inline-flex items-center justify-center w-6 h-6 rounded-md bg-[#FF492C] text-white font-bold text-[12px] tabular-nums">G2</span>
+              <span class="text-[13px] font-medium text-brand-dark"><span class="text-brand-blue">★ 4.9</span></span>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5 text-brand-dark/55 group-hover:text-brand-blue transition-colors"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+            </a>
           </div>
         </div>
       </section>
 
       <!-- ============================================================
-           BLOCK 2 — TRUST STRIP · range across SaaS categories
+           TRUST STRIP
            ============================================================ -->
       <section class="bg-white border-b border-brand-dark/5">
         <div class="container-brand py-12 md:py-14">
@@ -168,123 +195,432 @@
       </section>
 
       <!-- ============================================================
-           BLOCK 3 — WHAT'S DIFFERENT ABOUT B2B SAAS MARKETING
+           WHAT'S DIFFERENT — pipeline data-flow diagram + 4 structural reasons
            ============================================================ -->
-      <section class="bg-white">
-        <div class="container-brand py-20 md:py-28">
+      <section id="whats-different" class="bg-white">
+        <div class="container-brand py-24 md:py-32">
           <div class="max-w-3xl mb-12 md:mb-14">
             <p class="section-eyebrow mb-6">What's different</p>
-            <h2 class="text-[30px] md:text-[40px] leading-[1.12] tracking-[-0.02em] text-brand-dark">
-              B2B SaaS doesn't sell like everything else. <span class="text-brand-blue">The marketing has to account for that.</span>
+            <h2 class="text-[34px] md:text-[44px] leading-[1.1] tracking-[-0.02em] text-brand-dark">
+              B2B SaaS doesn't sell like everything else. <span class="font-script text-brand-blue text-[1.05em] leading-none">The marketing has to account for that.</span>
             </h2>
-            <p class="mt-6 text-[17px] md:text-[18px] leading-[1.6] text-brand-dark/75">
-              B2B SaaS marketing underperforms for a few structural reasons — and most agencies, trained on lead-gen heuristics, miss all of them. Four dynamics shape every program that works in this category.
+            <p class="mt-6 text-[17px] md:text-[18px] leading-[1.6] text-brand-dark/75 max-w-[68ch]">
+              B2B SaaS marketing underperforms for a few structural reasons — and most agencies, trained on lead-gen heuristics, miss all of them.
             </p>
           </div>
 
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-10">
-            <div class="flex gap-5">
-              <span class="inline-flex items-center justify-center w-11 h-11 rounded-full bg-brand-blue text-white font-mono text-[14px] font-semibold flex-shrink-0">01</span>
-              <div>
-                <h3 class="text-[19px] md:text-[20px] font-medium text-brand-dark leading-[1.3] mb-2">Recurring revenue redefines the win.</h3>
-                <p class="text-[15px] md:text-[16px] text-brand-dark/75 leading-[1.6]">A signed logo isn't the win — retention and expansion are. Marketing that optimizes for first-touch conversion and stops there is optimizing for the wrong number. The work has to connect to net revenue retention, not just new-logo pipeline.</p>
-              </div>
-            </div>
-            <div class="flex gap-5">
-              <span class="inline-flex items-center justify-center w-11 h-11 rounded-full bg-brand-blue text-white font-mono text-[14px] font-semibold flex-shrink-0">02</span>
-              <div>
-                <h3 class="text-[19px] md:text-[20px] font-medium text-brand-dark leading-[1.3] mb-2">The buyer is a committee, not a persona.</h3>
-                <p class="text-[15px] md:text-[16px] text-brand-dark/75 leading-[1.6]">A champion, an economic buyer, a technical evaluator, a procurement gate — sometimes a security or compliance reviewer. The deal closes when enough of them align. Reaching "the buyer" as if they were one person is why most B2B SaaS campaigns stall between MQL and opportunity.</p>
-              </div>
-            </div>
-            <div class="flex gap-5">
-              <span class="inline-flex items-center justify-center w-11 h-11 rounded-full bg-brand-blue text-white font-mono text-[14px] font-semibold flex-shrink-0">03</span>
-              <div>
-                <h3 class="text-[19px] md:text-[20px] font-medium text-brand-dark leading-[1.3] mb-2">The motion is rarely pure.</h3>
-                <p class="text-[15px] md:text-[16px] text-brand-dark/75 leading-[1.6]">Most B2B SaaS sits between self-serve and enterprise sales. Product signups and sales-led pipeline run in parallel, and the marketing has to feed both — and tie product-usage signal back to the campaigns that drove it.</p>
-              </div>
-            </div>
-            <div class="flex gap-5">
-              <span class="inline-flex items-center justify-center w-11 h-11 rounded-full bg-brand-blue text-white font-mono text-[14px] font-semibold flex-shrink-0">04</span>
-              <div>
-                <h3 class="text-[19px] md:text-[20px] font-medium text-brand-dark leading-[1.3] mb-2">The ad platforms can't see what closes.</h3>
-                <p class="text-[15px] md:text-[16px] text-brand-dark/75 leading-[1.6]">Form fills happen in the platform's view. Deals close weeks later in the CRM. Without a data layer connecting the two, the bid algorithms optimize for whoever fills a form — not whoever buys. This is the single most common reason SaaS paid budgets underperform.</p>
-              </div>
+          <!-- Pipeline measurement gap diagram -->
+          <div class="blueprint-grid rounded-2xl p-5 md:p-8 mb-14 md:mb-16 bg-light-blue/30">
+            <p class="font-mono text-[10px] uppercase tracking-[0.2em] text-brand-dark/55 font-medium mb-5">The measurement gap · why SaaS paid budgets underperform</p>
+            <svg viewBox="0 0 1080 280" class="w-full h-auto" role="img" aria-labelledby="mgap-title mgap-desc">
+              <title id="mgap-title">The B2B SaaS pipeline measurement gap</title>
+              <desc id="mgap-desc">A diagram showing how ad platforms only see form fills while deal outcomes live in the CRM weeks later. Pipeline Intelligence bridges the gap with offline conversion tracking flowing signal back to the ad algorithms.</desc>
+              <defs>
+                <marker id="arr-blue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+                  <path d="M 0 0 L 10 5 L 0 10 z" fill="#0099FF"/>
+                </marker>
+                <marker id="arr-green" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+                  <path d="M 0 0 L 10 5 L 0 10 z" fill="#22c55e"/>
+                </marker>
+                <marker id="arr-red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+                  <path d="M 0 0 L 10 5 L 0 10 z" fill="#ef4444"/>
+                </marker>
+              </defs>
+
+              <!-- Stage boxes top row -->
+              <!-- Ad Platform -->
+              <rect x="20" y="40" width="160" height="72" rx="10" fill="#0099FF"/>
+              <text x="100" y="72" text-anchor="middle" font-family="Geist, sans-serif" font-size="14" font-weight="500" fill="#ffffff">Ad Platform</text>
+              <text x="100" y="92" text-anchor="middle" font-family="Geist Mono, monospace" font-size="9" letter-spacing="1.5" fill="#ffffff" fill-opacity="0.8">GOOGLE · LINKEDIN</text>
+
+              <!-- Arrow 1 -->
+              <line x1="182" y1="76" x2="238" y2="76" stroke="#0099FF" stroke-width="1.5" marker-end="url(#arr-blue)"/>
+
+              <!-- Form Fill -->
+              <rect x="240" y="40" width="160" height="72" rx="10" fill="#ffffff" stroke="#0099FF" stroke-width="1.5"/>
+              <text x="320" y="72" text-anchor="middle" font-family="Geist, sans-serif" font-size="14" font-weight="500" fill="#060026">Form Fill</text>
+              <text x="320" y="92" text-anchor="middle" font-family="Geist Mono, monospace" font-size="9" letter-spacing="1.5" fill="#0099FF">PLATFORM SEES THIS</text>
+
+              <!-- Arrow 2 -->
+              <line x1="402" y1="76" x2="458" y2="76" stroke="#060026" stroke-width="1.5" stroke-dasharray="5 3"/>
+
+              <!-- MQL / Opp -->
+              <rect x="460" y="40" width="160" height="72" rx="10" fill="#ffffff" stroke="#060026" stroke-width="1.5" stroke-dasharray="5 3"/>
+              <text x="540" y="72" text-anchor="middle" font-family="Geist, sans-serif" font-size="14" font-weight="500" fill="#060026" fill-opacity="0.5">MQL → Opp</text>
+              <text x="540" y="92" text-anchor="middle" font-family="Geist Mono, monospace" font-size="9" letter-spacing="1.5" fill="#060026" fill-opacity="0.4">WEEKS LATER</text>
+
+              <!-- Arrow 3 -->
+              <line x1="622" y1="76" x2="678" y2="76" stroke="#060026" stroke-width="1.5" stroke-dasharray="5 3"/>
+
+              <!-- CRM -->
+              <rect x="680" y="40" width="160" height="72" rx="10" fill="#060026"/>
+              <text x="760" y="72" text-anchor="middle" font-family="Geist, sans-serif" font-size="14" font-weight="500" fill="#ffffff">CRM</text>
+              <text x="760" y="92" text-anchor="middle" font-family="Geist Mono, monospace" font-size="9" letter-spacing="1.5" fill="#B4D9C0">DEAL CLOSES HERE</text>
+
+              <!-- Arrow 4 -->
+              <line x1="842" y1="76" x2="898" y2="76" stroke="#0099FF" stroke-width="1.5" marker-end="url(#arr-blue)"/>
+
+              <!-- Revenue -->
+              <rect x="900" y="40" width="160" height="72" rx="10" fill="#0099FF"/>
+              <text x="980" y="72" text-anchor="middle" font-family="Geist, sans-serif" font-size="14" font-weight="500" fill="#ffffff">Revenue</text>
+              <text x="980" y="92" text-anchor="middle" font-family="Geist Mono, monospace" font-size="9" letter-spacing="1.5" fill="#ffffff" fill-opacity="0.8">NRR · EXPANSION</text>
+
+              <!-- GAP annotation -->
+              <rect x="430" y="28" width="360" height="96" rx="12" fill="none" stroke="#ef4444" stroke-width="1.5" stroke-dasharray="4 3"/>
+              <text x="610" y="18" text-anchor="middle" font-family="Geist Mono, monospace" font-size="9" letter-spacing="1.5" fill="#ef4444" font-weight="500">PLATFORM BLIND SPOT</text>
+
+              <!-- Pipeline Intelligence feedback loop (curved arrow below) -->
+              <path d="M 760 114 C 760 160 540 185 320 160 C 220 148 180 140 100 114" fill="none" stroke="#22c55e" stroke-width="1.5" stroke-dasharray="6 3" marker-start="url(#arr-green)"/>
+              <rect x="390" y="170" width="300" height="34" rx="8" fill="#060026"/>
+              <text x="540" y="192" text-anchor="middle" font-family="Geist, sans-serif" font-size="12" font-weight="500" fill="#ffffff">Pipeline Intelligence · offline conversion signal</text>
+
+              <!-- Bottom label strip -->
+              <rect x="20" y="228" width="1040" height="36" rx="8" fill="#0099FF" fill-opacity="0.1"/>
+              <text x="540" y="252" text-anchor="middle" font-family="Geist, sans-serif" font-size="12" font-weight="500" fill="#060026">Without the feedback loop, the algorithm optimizes for whoever fills a form — not whoever buys, expands, and renews.</text>
+            </svg>
+          </div>
+
+          <!-- Four structural reasons -->
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+            <div class="lg:col-span-10 space-y-7">
+              <article>
+                <h3 class="text-[19px] md:text-[21px] font-medium text-brand-dark leading-[1.3] mb-2">Recurring revenue redefines the win.</h3>
+                <p class="text-[15px] md:text-[16px] leading-[1.65] text-brand-dark/80">A signed logo isn't the win — retention and expansion are. Marketing that optimizes for first-touch conversion and stops there is optimizing for the wrong number. <span class="text-brand-dark font-medium">The work has to connect to net revenue retention, not just new-logo pipeline.</span></p>
+              </article>
+              <article>
+                <h3 class="text-[19px] md:text-[21px] font-medium text-brand-dark leading-[1.3] mb-2">The buyer is a committee, not a persona.</h3>
+                <p class="text-[15px] md:text-[16px] leading-[1.65] text-brand-dark/80">A champion, an economic buyer, a technical evaluator, a procurement gate — sometimes a security or compliance reviewer. The deal closes when enough of them align. <span class="text-brand-dark font-medium">Reaching "the buyer" as if they were one person is why most B2B SaaS campaigns stall between MQL and opportunity.</span></p>
+              </article>
+              <article>
+                <h3 class="text-[19px] md:text-[21px] font-medium text-brand-dark leading-[1.3] mb-2">The motion is rarely pure.</h3>
+                <p class="text-[15px] md:text-[16px] leading-[1.65] text-brand-dark/80">Most B2B SaaS sits between self-serve and enterprise sales. Product signups and sales-led pipeline run in parallel. <span class="text-brand-dark font-medium">Marketing has to feed both — and tie product-usage signal back to the campaigns that drove it.</span></p>
+              </article>
+              <article>
+                <h3 class="text-[19px] md:text-[21px] font-medium text-brand-dark leading-[1.3] mb-2">The ad platforms can't see what closes.</h3>
+                <p class="text-[15px] md:text-[16px] leading-[1.65] text-brand-dark/80">Form fills happen in the platform's view. Deals close weeks later in the CRM. Without a data layer connecting the two, the bid algorithms optimize for whoever fills a form — not whoever buys. <span class="text-brand-dark font-medium">This is the single most common reason SaaS paid budgets underperform.</span></p>
+              </article>
             </div>
           </div>
         </div>
       </section>
 
       <!-- ============================================================
-           BLOCK 4 — THE B2B SAAS BUYING COMMITTEE
+           BUYING COMMITTEE — radial map + per-role breakdown
            ============================================================ -->
-      <section class="bg-light-blue/40">
-        <div class="container-brand py-20 md:py-28">
-          <div class="max-w-3xl">
-            <p class="section-eyebrow mb-6">The buying committee</p>
-            <h2 class="text-[30px] md:text-[40px] leading-[1.12] tracking-[-0.02em] text-brand-dark">
-              The deal closes when the committee aligns — not when one person says yes.
-            </h2>
-            <div class="mt-7 space-y-5 text-[16px] md:text-[18px] leading-[1.6] text-brand-dark/80">
-              <p>
-                Across every B2B SaaS category, more than one person has to say yes. The exact committee shifts by vertical — a security architect gates a cyber deal, a Head of Compliance gates a fintech deal, a data-leadership reviewer gates an infrastructure deal — but the structure is constant: a champion who wants it, an economic buyer who funds it, a technical evaluator who validates it, and a procurement gate that closes it.
-              </p>
-              <p>
-                Marketing's job isn't to reach the champion. It's to give each member of the committee what they need to say yes — the right content, on the right channel, sequenced across a cycle that often runs six to eighteen months. Running campaigns "to the buyer" as if they were one person is why pipeline stalls.
-              </p>
-            </div>
-            <p class="mt-7 text-[15px] md:text-[16px] leading-[1.6] text-brand-dark/60 max-w-[68ch]">
-              What the committee looks like — and what moves it — depends on your category. We've mapped it in detail for the three we work in most.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <!-- ============================================================
-           BLOCK 5 — HOW WE THINK ABOUT IT · two streams + data layer
-           ============================================================ -->
-      <section class="bg-white">
-        <div class="container-brand py-20 md:py-28">
+      <section id="buying-committee" class="bg-light-blue/40">
+        <div class="container-brand py-24 md:py-32">
           <div class="max-w-3xl mb-12 md:mb-14">
-            <p class="section-eyebrow mb-6">How we think about it</p>
-            <h2 class="text-[30px] md:text-[40px] leading-[1.12] tracking-[-0.02em] text-brand-dark">
-              Two streams and a data layer. <span class="text-brand-blue">The same system, tuned to your motion.</span>
+            <p class="section-eyebrow mb-6">The buying committee</p>
+            <h2 class="text-[34px] md:text-[44px] leading-[1.1] tracking-[-0.02em] text-brand-dark">
+              The deal closes when the committee aligns — <span class="font-script text-brand-blue text-[1.05em] leading-none">not when one person says yes.</span>
             </h2>
-            <p class="mt-6 text-[17px] md:text-[18px] leading-[1.6] text-brand-dark/75">
-              Channel-by-channel marketing doesn't build pipeline; a sequenced system does. We think about B2B SaaS marketing as two growth streams connected by a measurement layer — so every campaign can be traced to the revenue it influenced.
+            <p class="mt-6 text-[17px] md:text-[18px] leading-[1.6] text-brand-dark/75 max-w-[68ch]">
+              Each role has different concerns, engages on different channels, and responds to different content. <span class="text-brand-dark">Marketing's job isn't reaching the champion — it's giving each member of the committee what they need to say yes.</span>
             </p>
           </div>
 
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
-            <!-- Inbound · light card -->
-            <article class="bg-light-blue/40 rounded-2xl p-7 md:p-8 flex flex-col">
-              <p class="font-mono text-[11px] uppercase tracking-[0.2em] text-brand-blue font-medium mb-4">Inbound</p>
-              <p class="text-[15px] md:text-[16px] text-brand-dark/80 leading-[1.6] flex-1">Generate awareness, capture demand, grow organically. SEO and AEO that surface in search — including AI search. Paid that brings in-market buyers into the funnel. Content built for the technical buyer, not the dashboard.</p>
-              <a href="/services/inbound-pipeline-growth" class="mt-6 inline-flex items-center gap-1.5 text-[14px] text-brand-blue font-medium hover:gap-2.5 transition-all">Inbound <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
-            </article>
+          <!-- Radial diagram + per-role breakdown -->
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 md:gap-8 mb-10">
 
-            <!-- Pipeline Intelligence · DARK emphasis card (connective tissue) -->
-            <article class="bg-brand-dark rounded-2xl p-7 md:p-8 flex flex-col relative overflow-hidden">
-              <div class="absolute -top-20 -right-20 w-56 h-56 bg-brand-blue/25 rounded-full blur-3xl pointer-events-none"></div>
-              <div class="relative flex flex-col h-full">
-                <p class="font-mono text-[11px] uppercase tracking-[0.2em] text-brand-light font-medium mb-4">Pipeline Intelligence</p>
-                <p class="text-[15px] md:text-[16px] text-cool-gray leading-[1.6] flex-1">The data layer that makes the streams measurable. Server-side GTM, CRM integration, offline conversion tracking. Deal-stage signals flow back to the ad platforms so the algorithms optimize for who buys, expands, and renews — not who fills forms.</p>
-                <a href="/services/pipeline-intelligence" class="mt-6 inline-flex items-center gap-1.5 text-[14px] text-white font-medium hover:gap-2.5 transition-all">Pipeline Intelligence <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+            <!-- Diagram (5 cols) -->
+            <div class="lg:col-span-5 bg-white rounded-2xl p-5 md:p-7">
+              <div class="flex items-center gap-2 mb-5">
+                <span class="inline-flex w-2 h-2 rounded-full bg-brand-blue dot-pulse" aria-hidden="true"></span>
+                <p class="font-mono text-[11px] uppercase tracking-[0.2em] text-brand-dark/60 font-medium">Universal B2B SaaS buying committee</p>
               </div>
+              <svg viewBox="0 0 480 480" class="w-full h-auto" role="img" aria-labelledby="bc-title bc-desc">
+                <title id="bc-title">Universal B2B SaaS buying committee map</title>
+                <desc id="bc-desc">A central deal hub surrounded by five role bubbles: Champion (top, budget-backed advocate), Economic Buyer (top-right, fund approver), Technical Evaluator (right, integration reviewer), Procurement Gate (bottom, commercial gatekeeper), and Security or Compliance Reviewer (left, risk reviewer). Each connects to the center hub.</desc>
+
+                <circle cx="240" cy="240" r="170" fill="none" stroke="#060026" stroke-opacity="0.08" stroke-dasharray="3 4"/>
+                <circle cx="240" cy="240" r="100" fill="none" stroke="#060026" stroke-opacity="0.05" stroke-dasharray="2 4"/>
+
+                <!-- Central hub -->
+                <circle cx="240" cy="240" r="56" fill="#060026"/>
+                <text x="240" y="234" text-anchor="middle" font-family="Geist, sans-serif" font-size="13" font-weight="500" fill="#ffffff">Deal</text>
+                <text x="240" y="254" text-anchor="middle" font-family="Geist Mono, monospace" font-size="9" letter-spacing="1.5" fill="#B4D9C0">B2B SAAS BUYER</text>
+
+                <!-- Connection lines -->
+                <g stroke="#0099FF" stroke-width="1.25" stroke-opacity="0.55" fill="none">
+                  <line x1="240" y1="184" x2="240" y2="100"/>
+                  <line x1="280" y1="208" x2="390" y2="130"/>
+                  <line x1="290" y1="252" x2="408" y2="310"/>
+                  <line x1="240" y1="296" x2="240" y2="390"/>
+                  <line x1="190" y1="218" x2="88" y2="140"/>
+                </g>
+
+                <!-- 12 o'clock · Champion -->
+                <g>
+                  <circle cx="240" cy="76" r="36" fill="#0099FF"/>
+                  <text x="240" y="72" text-anchor="middle" font-family="Geist, sans-serif" font-size="12" font-weight="500" fill="#ffffff">Champion</text>
+                  <text x="240" y="88" text-anchor="middle" font-family="Geist Mono, monospace" font-size="8" letter-spacing="1.2" fill="#ffffff" fill-opacity="0.85">INTERNAL DRIVER</text>
+                </g>
+
+                <!-- 2 o'clock · Economic Buyer -->
+                <g>
+                  <circle cx="406" cy="122" r="36" fill="#ffffff" stroke="#0099FF" stroke-width="1.5"/>
+                  <text x="406" y="118" text-anchor="middle" font-family="Geist, sans-serif" font-size="11" font-weight="500" fill="#060026">Economic</text>
+                  <text x="406" y="133" text-anchor="middle" font-family="Geist, sans-serif" font-size="11" font-weight="500" fill="#060026">Buyer</text>
+                </g>
+
+                <!-- 4 o'clock · Technical Evaluator -->
+                <g>
+                  <circle cx="430" cy="318" r="36" fill="#ffffff" stroke="#0099FF" stroke-width="1.5"/>
+                  <text x="430" y="314" text-anchor="middle" font-family="Geist, sans-serif" font-size="11" font-weight="500" fill="#060026">Technical</text>
+                  <text x="430" y="329" text-anchor="middle" font-family="Geist, sans-serif" font-size="11" font-weight="500" fill="#060026">Evaluator</text>
+                </g>
+
+                <!-- 6 o'clock · Procurement Gate -->
+                <g>
+                  <circle cx="240" cy="406" r="36" fill="#ffffff" stroke="#0099FF" stroke-width="1.5"/>
+                  <text x="240" y="402" text-anchor="middle" font-family="Geist, sans-serif" font-size="11" font-weight="500" fill="#060026">Procurement</text>
+                  <text x="240" y="417" text-anchor="middle" font-family="Geist, sans-serif" font-size="11" font-weight="500" fill="#060026">Gate</text>
+                </g>
+
+                <!-- 10 o'clock · Security / Compliance -->
+                <g>
+                  <circle cx="68" cy="132" r="36" fill="#ffffff" stroke="#0099FF" stroke-width="1.5"/>
+                  <text x="68" y="128" text-anchor="middle" font-family="Geist, sans-serif" font-size="11" font-weight="500" fill="#060026">Security /</text>
+                  <text x="68" y="143" text-anchor="middle" font-family="Geist, sans-serif" font-size="11" font-weight="500" fill="#060026">Compliance</text>
+                </g>
+              </svg>
+            </div>
+
+            <!-- Per-role breakdown (7 cols) -->
+            <div class="lg:col-span-7 grid grid-cols-1 gap-3">
+              <article class="bg-white rounded-xl p-5 md:p-6 flex items-start gap-4">
+                <span class="inline-flex items-center justify-center w-9 h-9 rounded-md bg-brand-blue text-white text-[10px] font-mono font-medium flex-shrink-0 text-center leading-tight">CH<br>MP</span>
+                <div class="flex-1">
+                  <p class="text-[15px] font-medium text-brand-dark leading-tight">Champion <span class="text-brand-dark/55 font-normal text-[13px]">· Internal driver</span></p>
+                  <p class="text-[13px] text-brand-dark/70 mt-1.5 leading-[1.55]">Knows the problem. Needs ammunition to sell it up. Responds to technical depth, peer benchmarks, and ROI framing they can repeat to the economic buyer.</p>
+                  <p class="text-[11px] text-brand-blue mt-2 font-mono uppercase tracking-[0.18em]">SEO · AEO · LinkedIn awareness · gated content</p>
+                </div>
+              </article>
+
+              <article class="bg-white rounded-xl p-5 md:p-6 flex items-start gap-4">
+                <span class="inline-flex items-center justify-center w-9 h-9 rounded-md bg-brand-light/40 text-brand-blue flex-shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><line x1="12" x2="12" y1="2" y2="22"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                </span>
+                <div class="flex-1">
+                  <p class="text-[15px] font-medium text-brand-dark leading-tight">Economic Buyer <span class="text-brand-dark/55 font-normal text-[13px]">· Fund approver</span></p>
+                  <p class="text-[13px] text-brand-dark/70 mt-1.5 leading-[1.55]">CMO, VP Marketing, or CFO. Responds to pipeline impact, peer-validated ROI stories, and board-level outcomes. Not persuaded by features.</p>
+                  <p class="text-[11px] text-brand-blue mt-2 font-mono uppercase tracking-[0.18em]">LinkedIn AI targeting · ABM · case study content</p>
+                </div>
+              </article>
+
+              <article class="bg-white rounded-xl p-5 md:p-6 flex items-start gap-4">
+                <span class="inline-flex items-center justify-center w-9 h-9 rounded-md bg-brand-light/40 text-brand-blue flex-shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><rect width="20" height="8" x="2" y="2" rx="2" ry="2"/><rect width="20" height="8" x="2" y="14" rx="2" ry="2"/><line x1="6" x2="6.01" y1="6" y2="6"/><line x1="6" x2="6.01" y1="18" y2="18"/></svg>
+                </span>
+                <div class="flex-1">
+                  <p class="text-[15px] font-medium text-brand-dark leading-tight">Technical Evaluator <span class="text-brand-dark/55 font-normal text-[13px]">· Integration reviewer</span></p>
+                  <p class="text-[13px] text-brand-dark/70 mt-1.5 leading-[1.55]">Engineering lead, solutions architect, or IT director. Validates the integration story, API depth, and support quality. Responds to documentation and technical content.</p>
+                  <p class="text-[11px] text-brand-blue mt-2 font-mono uppercase tracking-[0.18em]">Paid search · technical SEO · doc-led content</p>
+                </div>
+              </article>
+
+              <article class="bg-white rounded-xl p-5 md:p-6 flex items-start gap-4">
+                <span class="inline-flex items-center justify-center w-9 h-9 rounded-md bg-brand-light/40 text-brand-blue flex-shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><path d="M10.5 22H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.706.706l3.588 3.588A2.4 2.4 0 0 1 20 8v6"/><path d="M14 2v5a1 1 0 0 0 1 1h5"/><path d="m14 20 2 2 4-4"/></svg>
+                </span>
+                <div class="flex-1">
+                  <p class="text-[15px] font-medium text-brand-dark leading-tight">Security / Compliance Reviewer <span class="text-brand-dark/55 font-normal text-[13px]">· Risk gatekeeper</span></p>
+                  <p class="text-[13px] text-brand-dark/70 mt-1.5 leading-[1.55]">Relevant in regulated verticals and larger enterprises. Evaluates trust posture, data handling, and compliance certifications. Can block a deal in the final stage.</p>
+                  <p class="text-[11px] text-brand-blue mt-2 font-mono uppercase tracking-[0.18em]">Specialized content · late-cycle ABM</p>
+                </div>
+              </article>
+
+              <article class="bg-white rounded-xl p-5 md:p-6 flex items-start gap-4">
+                <span class="inline-flex items-center justify-center w-9 h-9 rounded-md bg-brand-light/40 text-brand-blue flex-shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                </span>
+                <div class="flex-1">
+                  <p class="text-[15px] font-medium text-brand-dark leading-tight">Procurement Gate <span class="text-brand-dark/55 font-normal text-[13px]">· Commercial gatekeeper</span></p>
+                  <p class="text-[13px] text-brand-dark/70 mt-1.5 leading-[1.55]">Validates pricing benchmarks, negotiates terms, and controls the timeline to signature. Responds to ROI proof and multi-year value modeling. Arrives late — but can stall deals indefinitely.</p>
+                  <p class="text-[11px] text-brand-blue mt-2 font-mono uppercase tracking-[0.18em]">Sales enablement · ROI modeling · contact-level ABM</p>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <p class="text-[16px] md:text-[17px] leading-[1.65] text-brand-dark/85 max-w-[68ch]">
+            <span class="text-brand-dark font-medium">Pipeline-driven B2B SaaS marketing is the work of orchestrating this</span> — not running campaigns to "the buyer" as if they were one person. The exact committee shifts by vertical; the structure doesn't.
+          </p>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           GTM MOTION — matrix + stage-weighting cards
+           ============================================================ -->
+      <section id="services-mapping" class="bg-white">
+        <div class="container-brand py-24 md:py-32">
+          <div class="max-w-3xl mb-12 md:mb-14">
+            <p class="section-eyebrow mb-6">Services · B2B SaaS GTM mapping</p>
+            <h2 class="text-[34px] md:text-[44px] leading-[1.1] tracking-[-0.02em] text-brand-dark">
+              Two streams and a data layer. <span class="font-script text-brand-blue text-[1.05em] leading-none">Tuned to your motion.</span>
+            </h2>
+            <p class="mt-6 text-[17px] md:text-[18px] leading-[1.6] text-brand-dark/75 max-w-[68ch]">
+              The full system runs on every engagement. Specific channels get weighted based on your GTM motion — PLG-led, sales-led, or hybrid. Pipeline Intelligence connects everything back to the CRM so the algorithms learn from what closes, not what clicks.
+            </p>
+          </div>
+
+          <!-- Service-by-GTM-motion matrix -->
+          <div class="blueprint-grid rounded-2xl p-5 md:p-8 mb-14 md:mb-16 bg-light-blue/30 overflow-x-auto">
+            <p class="font-mono text-[10px] uppercase tracking-[0.2em] text-brand-dark/55 font-medium mb-5">Service · B2B SaaS GTM motion · matrix</p>
+
+            <table class="w-full text-[12px] md:text-[13px] min-w-[680px]">
+              <thead>
+                <tr class="border-b border-brand-dark/15">
+                  <th class="text-left font-mono uppercase tracking-[0.18em] text-brand-dark/55 font-medium py-3 pr-3 align-bottom">GTM motion ↓ · Service →</th>
+                  <th class="text-center font-mono uppercase tracking-[0.18em] text-brand-dark/55 font-medium py-3 px-2 align-bottom"><span class="block">LinkedIn</span><span class="block text-[10px] mt-0.5 normal-case tracking-normal opacity-60">Paid Social</span></th>
+                  <th class="text-center font-mono uppercase tracking-[0.18em] text-brand-dark/55 font-medium py-3 px-2 align-bottom"><span class="block">Paid</span><span class="block text-[10px] mt-0.5 normal-case tracking-normal opacity-60">Search</span></th>
+                  <th class="text-center font-mono uppercase tracking-[0.18em] text-brand-dark/55 font-medium py-3 px-2 align-bottom"><span class="block">SEO /</span><span class="block text-[10px] mt-0.5 normal-case tracking-normal opacity-60">AEO</span></th>
+                  <th class="text-center font-mono uppercase tracking-[0.18em] text-brand-dark/55 font-medium py-3 px-2 align-bottom"><span class="block">Account</span><span class="block text-[10px] mt-0.5 normal-case tracking-normal opacity-60">ABM</span></th>
+                  <th class="text-center font-mono uppercase tracking-[0.18em] text-brand-dark/55 font-medium py-3 px-2 align-bottom"><span class="block">LinkedIn</span><span class="block text-[10px] mt-0.5 normal-case tracking-normal opacity-60">AI Targeting</span></th>
+                  <th class="text-center font-mono uppercase tracking-[0.18em] text-brand-dark/55 font-medium py-3 px-2 align-bottom"><span class="block">Contact</span><span class="block text-[10px] mt-0.5 normal-case tracking-normal opacity-60">-Level ABM</span></th>
+                  <th class="text-center font-mono uppercase tracking-[0.18em] text-brand-blue font-medium py-3 px-2 align-bottom"><span class="block">Pipeline</span><span class="block text-[10px] mt-0.5 normal-case tracking-normal opacity-60">Intelligence</span></th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- PLG self-serve awareness -->
+                <tr class="border-b border-brand-dark/10 hover:bg-white transition-colors">
+                  <td class="py-3 pr-3 text-brand-dark font-medium leading-snug">PLG self-serve demand</td>
+                  <td class="text-center"><span class="inline-flex w-6 h-6 rounded-md bg-brand-blue/20 text-brand-blue items-center justify-center"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-2.5 h-2.5 fill-current"><circle cx="12" cy="12" r="10"/></svg></span></td>
+                  <td class="text-center"><span class="inline-flex w-6 h-6 rounded-md bg-brand-blue text-white items-center justify-center"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5"><path d="M20 6 9 17l-5-5"/></svg></span></td>
+                  <td class="text-center"><span class="inline-flex w-6 h-6 rounded-md bg-brand-blue text-white items-center justify-center"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5"><path d="M20 6 9 17l-5-5"/></svg></span></td>
+                  <td class="text-center"><span class="inline-flex w-6 h-6 rounded-md text-brand-dark/25 items-center justify-center"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3 h-3"><path d="M5 12h14"/></svg></span></td>
+                  <td class="text-center"><span class="inline-flex w-6 h-6 rounded-md text-brand-dark/25 items-center justify-center"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3 h-3"><path d="M5 12h14"/></svg></span></td>
+                  <td class="text-center"><span class="inline-flex w-6 h-6 rounded-md text-brand-dark/25 items-center justify-center"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3 h-3"><path d="M5 12h14"/></svg></span></td>
+                  <td class="text-center"><span class="inline-flex w-6 h-6 rounded-md bg-brand-blue text-white items-center justify-center"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5"><path d="M20 6 9 17l-5-5"/></svg></span></td>
+                </tr>
+                <!-- Buying-committee awareness -->
+                <tr class="border-b border-brand-dark/10 hover:bg-white transition-colors">
+                  <td class="py-3 pr-3 text-brand-dark font-medium leading-snug">Buying-committee awareness</td>
+                  <td class="text-center"><span class="inline-flex w-6 h-6 rounded-md bg-brand-blue text-white items-center justify-center"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5"><path d="M20 6 9 17l-5-5"/></svg></span></td>
+                  <td class="text-center"><span class="inline-flex w-6 h-6 rounded-md bg-brand-blue/20 text-brand-blue items-center justify-center"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-2.5 h-2.5 fill-current"><circle cx="12" cy="12" r="10"/></svg></span></td>
+                  <td class="text-center"><span class="inline-flex w-6 h-6 rounded-md bg-brand-blue text-white items-center justify-center"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5"><path d="M20 6 9 17l-5-5"/></svg></span></td>
+                  <td class="text-center"><span class="inline-flex w-6 h-6 rounded-md text-brand-dark/25 items-center justify-center"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3 h-3"><path d="M5 12h14"/></svg></span></td>
+                  <td class="text-center"><span class="inline-flex w-6 h-6 rounded-md bg-brand-blue/20 text-brand-blue items-center justify-center"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-2.5 h-2.5 fill-current"><circle cx="12" cy="12" r="10"/></svg></span></td>
+                  <td class="text-center"><span class="inline-flex w-6 h-6 rounded-md text-brand-dark/25 items-center justify-center"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3 h-3"><path d="M5 12h14"/></svg></span></td>
+                  <td class="text-center"><span class="inline-flex w-6 h-6 rounded-md bg-brand-blue/20 text-brand-blue items-center justify-center"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-2.5 h-2.5 fill-current"><circle cx="12" cy="12" r="10"/></svg></span></td>
+                </tr>
+                <!-- Named-account ABM -->
+                <tr class="border-b border-brand-dark/10 hover:bg-white transition-colors">
+                  <td class="py-3 pr-3 text-brand-dark font-medium leading-snug">Named-account ABM</td>
+                  <td class="text-center"><span class="inline-flex w-6 h-6 rounded-md bg-brand-blue/20 text-brand-blue items-center justify-center"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-2.5 h-2.5 fill-current"><circle cx="12" cy="12" r="10"/></svg></span></td>
+                  <td class="text-center"><span class="inline-flex w-6 h-6 rounded-md text-brand-dark/25 items-center justify-center"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3 h-3"><path d="M5 12h14"/></svg></span></td>
+                  <td class="text-center"><span class="inline-flex w-6 h-6 rounded-md text-brand-dark/25 items-center justify-center"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3 h-3"><path d="M5 12h14"/></svg></span></td>
+                  <td class="text-center"><span class="inline-flex w-6 h-6 rounded-md bg-brand-blue text-white items-center justify-center"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5"><path d="M20 6 9 17l-5-5"/></svg></span></td>
+                  <td class="text-center"><span class="inline-flex w-6 h-6 rounded-md bg-brand-blue text-white items-center justify-center"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5"><path d="M20 6 9 17l-5-5"/></svg></span></td>
+                  <td class="text-center"><span class="inline-flex w-6 h-6 rounded-md bg-brand-blue/20 text-brand-blue items-center justify-center"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-2.5 h-2.5 fill-current"><circle cx="12" cy="12" r="10"/></svg></span></td>
+                  <td class="text-center"><span class="inline-flex w-6 h-6 rounded-md bg-brand-blue/20 text-brand-blue items-center justify-center"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-2.5 h-2.5 fill-current"><circle cx="12" cy="12" r="10"/></svg></span></td>
+                </tr>
+                <!-- Evaluation-stage retargeting -->
+                <tr class="border-b border-brand-dark/10 hover:bg-white transition-colors">
+                  <td class="py-3 pr-3 text-brand-dark font-medium leading-snug">Evaluation-stage retargeting</td>
+                  <td class="text-center"><span class="inline-flex w-6 h-6 rounded-md bg-brand-blue/20 text-brand-blue items-center justify-center"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-2.5 h-2.5 fill-current"><circle cx="12" cy="12" r="10"/></svg></span></td>
+                  <td class="text-center"><span class="inline-flex w-6 h-6 rounded-md bg-brand-blue text-white items-center justify-center"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5"><path d="M20 6 9 17l-5-5"/></svg></span></td>
+                  <td class="text-center"><span class="inline-flex w-6 h-6 rounded-md text-brand-dark/25 items-center justify-center"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3 h-3"><path d="M5 12h14"/></svg></span></td>
+                  <td class="text-center"><span class="inline-flex w-6 h-6 rounded-md bg-brand-blue/20 text-brand-blue items-center justify-center"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-2.5 h-2.5 fill-current"><circle cx="12" cy="12" r="10"/></svg></span></td>
+                  <td class="text-center"><span class="inline-flex w-6 h-6 rounded-md bg-brand-blue text-white items-center justify-center"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5"><path d="M20 6 9 17l-5-5"/></svg></span></td>
+                  <td class="text-center"><span class="inline-flex w-6 h-6 rounded-md bg-brand-blue text-white items-center justify-center"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5"><path d="M20 6 9 17l-5-5"/></svg></span></td>
+                  <td class="text-center"><span class="inline-flex w-6 h-6 rounded-md bg-brand-blue text-white items-center justify-center"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5"><path d="M20 6 9 17l-5-5"/></svg></span></td>
+                </tr>
+                <!-- Expansion and renewal -->
+                <tr class="border-b border-brand-dark/10 hover:bg-white transition-colors">
+                  <td class="py-3 pr-3 text-brand-dark font-medium leading-snug">Expansion &amp; renewal nurture</td>
+                  <td class="text-center"><span class="inline-flex w-6 h-6 rounded-md bg-brand-blue/20 text-brand-blue items-center justify-center"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-2.5 h-2.5 fill-current"><circle cx="12" cy="12" r="10"/></svg></span></td>
+                  <td class="text-center"><span class="inline-flex w-6 h-6 rounded-md text-brand-dark/25 items-center justify-center"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3 h-3"><path d="M5 12h14"/></svg></span></td>
+                  <td class="text-center"><span class="inline-flex w-6 h-6 rounded-md text-brand-dark/25 items-center justify-center"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3 h-3"><path d="M5 12h14"/></svg></span></td>
+                  <td class="text-center"><span class="inline-flex w-6 h-6 rounded-md bg-brand-blue/20 text-brand-blue items-center justify-center"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-2.5 h-2.5 fill-current"><circle cx="12" cy="12" r="10"/></svg></span></td>
+                  <td class="text-center"><span class="inline-flex w-6 h-6 rounded-md bg-brand-blue text-white items-center justify-center"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5"><path d="M20 6 9 17l-5-5"/></svg></span></td>
+                  <td class="text-center"><span class="inline-flex w-6 h-6 rounded-md bg-brand-blue text-white items-center justify-center"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5"><path d="M20 6 9 17l-5-5"/></svg></span></td>
+                  <td class="text-center"><span class="inline-flex w-6 h-6 rounded-md bg-brand-blue text-white items-center justify-center"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5"><path d="M20 6 9 17l-5-5"/></svg></span></td>
+                </tr>
+                <!-- Pipeline-attributed reporting -->
+                <tr class="hover:bg-white transition-colors">
+                  <td class="py-3 pr-3 text-brand-dark font-medium leading-snug">Pipeline-attributed reporting</td>
+                  <td class="text-center"><span class="inline-flex w-6 h-6 rounded-md text-brand-dark/25 items-center justify-center"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3 h-3"><path d="M5 12h14"/></svg></span></td>
+                  <td class="text-center"><span class="inline-flex w-6 h-6 rounded-md text-brand-dark/25 items-center justify-center"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3 h-3"><path d="M5 12h14"/></svg></span></td>
+                  <td class="text-center"><span class="inline-flex w-6 h-6 rounded-md text-brand-dark/25 items-center justify-center"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3 h-3"><path d="M5 12h14"/></svg></span></td>
+                  <td class="text-center"><span class="inline-flex w-6 h-6 rounded-md text-brand-dark/25 items-center justify-center"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3 h-3"><path d="M5 12h14"/></svg></span></td>
+                  <td class="text-center"><span class="inline-flex w-6 h-6 rounded-md text-brand-dark/25 items-center justify-center"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3 h-3"><path d="M5 12h14"/></svg></span></td>
+                  <td class="text-center"><span class="inline-flex w-6 h-6 rounded-md text-brand-dark/25 items-center justify-center"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3 h-3"><path d="M5 12h14"/></svg></span></td>
+                  <td class="text-center"><span class="inline-flex w-6 h-6 rounded-md bg-brand-blue text-white items-center justify-center"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5"><path d="M20 6 9 17l-5-5"/></svg></span></td>
+                </tr>
+              </tbody>
+            </table>
+
+            <div class="mt-5 pt-4 border-t border-brand-dark/10 flex items-center gap-5 text-[11px] text-brand-dark/65">
+              <span class="inline-flex items-center gap-1.5"><span class="inline-flex w-4 h-4 rounded bg-brand-blue text-white items-center justify-center"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-2.5 h-2.5"><path d="M20 6 9 17l-5-5"/></svg></span>Primary</span>
+              <span class="inline-flex items-center gap-1.5"><span class="inline-flex w-4 h-4 rounded bg-brand-blue/20 text-brand-blue items-center justify-center"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-2 h-2 fill-current"><circle cx="12" cy="12" r="10"/></svg></span>Supporting</span>
+              <span class="inline-flex items-center gap-1.5"><span class="inline-flex w-4 h-4 rounded text-brand-dark/25 items-center justify-center"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-2.5 h-2.5"><path d="M5 12h14"/></svg></span>Not primary</span>
+            </div>
+          </div>
+
+          <!-- Stage-weighting cards — three GTM motions -->
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-5 md:gap-6 mb-10">
+
+            <article class="bg-light-blue/40 rounded-2xl p-7 md:p-8 flex flex-col">
+              <p class="font-mono text-[11px] uppercase tracking-[0.2em] text-brand-blue font-medium mb-3">PLG-led</p>
+              <h3 class="text-[20px] md:text-[22px] font-medium text-brand-dark leading-[1.2] mb-4">Product-led growth.</h3>
+              <ul class="space-y-3 text-[14px] leading-[1.6] text-brand-dark/80">
+                <li class="flex items-start gap-3"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-brand-blue flex-shrink-0 mt-1"><path d="M20 6 9 17l-5-5"/></svg><span>Paid Search + SEO/AEO to capture self-serve demand where users are already searching</span></li>
+                <li class="flex items-start gap-3"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-brand-blue flex-shrink-0 mt-1"><path d="M20 6 9 17l-5-5"/></svg><span>Pipeline Intelligence wires product-trial signal back to campaigns — optimizing for users who convert, not who sign up</span></li>
+                <li class="flex items-start gap-3"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-brand-blue flex-shrink-0 mt-1"><path d="M20 6 9 17l-5-5"/></svg><span>LinkedIn AI Targeting layers enterprise awareness on the accounts most likely to expand</span></li>
+              </ul>
             </article>
 
-            <!-- Outbound · light card -->
             <article class="bg-light-blue/40 rounded-2xl p-7 md:p-8 flex flex-col">
-              <p class="font-mono text-[11px] uppercase tracking-[0.2em] text-brand-blue font-medium mb-4">Outbound</p>
-              <p class="text-[15px] md:text-[16px] text-brand-dark/80 leading-[1.6] flex-1">Reach the buying committee directly. Account intelligence at the account level, AI targeting at the persona level, contact-level ABM at the person level — with sales alerted the moment a named contact engages.</p>
-              <a href="/services/outbound-pipeline-growth" class="mt-6 inline-flex items-center gap-1.5 text-[14px] text-brand-blue font-medium hover:gap-2.5 transition-all">Outbound <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+              <p class="font-mono text-[11px] uppercase tracking-[0.2em] text-brand-blue font-medium mb-3">Sales-led</p>
+              <h3 class="text-[20px] md:text-[22px] font-medium text-brand-dark leading-[1.2] mb-4">Enterprise sales motion.</h3>
+              <ul class="space-y-3 text-[14px] leading-[1.6] text-brand-dark/80">
+                <li class="flex items-start gap-3"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-brand-blue flex-shrink-0 mt-1"><path d="M20 6 9 17l-5-5"/></svg><span>Named-account ABM and Contact-Level ABM across the full buying committee — not just one persona</span></li>
+                <li class="flex items-start gap-3"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-brand-blue flex-shrink-0 mt-1"><path d="M20 6 9 17l-5-5"/></svg><span>LinkedIn awareness sustained across the cycle — champion support today, economic-buyer awareness months later</span></li>
+                <li class="flex items-start gap-3"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-brand-blue flex-shrink-0 mt-1"><path d="M20 6 9 17l-5-5"/></svg><span>SDR enablement with per-contact engagement scoring from Pipeline Intelligence</span></li>
+              </ul>
             </article>
+
+            <article class="bg-brand-dark text-white rounded-2xl p-7 md:p-8 flex flex-col">
+              <p class="font-mono text-[11px] uppercase tracking-[0.2em] text-brand-light font-medium mb-3">Hybrid</p>
+              <h3 class="text-[20px] md:text-[22px] font-medium text-white leading-[1.2] mb-4">Both streams, coordinated.</h3>
+              <ul class="space-y-3 text-[14px] leading-[1.6] text-cool-gray">
+                <li class="flex items-start gap-3"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-accent-lime flex-shrink-0 mt-1"><path d="M20 6 9 17l-5-5"/></svg><span>Inbound stream captures self-serve demand; outbound stream targets the named enterprise accounts in parallel</span></li>
+                <li class="flex items-start gap-3"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-accent-lime flex-shrink-0 mt-1"><path d="M20 6 9 17l-5-5"/></svg><span>PLG trial signal fed back to ABM — accounts that show product intent get elevated in the enterprise sequence</span></li>
+                <li class="flex items-start gap-3"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-accent-lime flex-shrink-0 mt-1"><path d="M20 6 9 17l-5-5"/></svg><span>Pipeline Intelligence ties every self-serve and enterprise signal back to closed ARR — one unified view</span></li>
+              </ul>
+            </article>
+          </div>
+
+          <!-- Service cross-links -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <a href="/services/inbound-pipeline-growth" data-track="cta_explore_inbound" class="group bg-white hover:bg-light-blue/40 rounded-xl p-5 transition-colors flex items-center justify-between gap-3 border-b-2 border-brand-blue/20 hover:border-brand-blue">
+              <div>
+                <p class="font-mono text-[10px] uppercase tracking-[0.18em] text-brand-blue font-medium">Inbound</p>
+                <p class="text-brand-dark font-medium text-[15px] mt-1">Explore Inbound</p>
+              </div>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-brand-dark/45 group-hover:text-brand-blue group-hover:translate-x-0.5 transition-all"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </a>
+            <a href="/services/outbound-pipeline-growth" data-track="cta_explore_outbound" class="group bg-white hover:bg-light-blue/40 rounded-xl p-5 transition-colors flex items-center justify-between gap-3 border-b-2 border-brand-blue/20 hover:border-brand-blue">
+              <div>
+                <p class="font-mono text-[10px] uppercase tracking-[0.18em] text-brand-blue font-medium">Outbound</p>
+                <p class="text-brand-dark font-medium text-[15px] mt-1">Explore Outbound</p>
+              </div>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-brand-dark/45 group-hover:text-brand-blue group-hover:translate-x-0.5 transition-all"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </a>
+            <a href="/services/pipeline-intelligence" data-track="cta_explore_pi" class="group bg-white hover:bg-light-blue/40 rounded-xl p-5 transition-colors flex items-center justify-between gap-3 border-b-2 border-brand-blue/20 hover:border-brand-blue">
+              <div>
+                <p class="font-mono text-[10px] uppercase tracking-[0.18em] text-brand-blue font-medium">Data &amp; Analytics</p>
+                <p class="text-brand-dark font-medium text-[15px] mt-1">Inside Pipeline Intelligence</p>
+              </div>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-brand-dark/45 group-hover:text-brand-blue group-hover:translate-x-0.5 transition-all"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </a>
           </div>
         </div>
       </section>
 
       <!-- ============================================================
-           BLOCK 6 — GO DEEPER: THREE VERTICALS · umbrella hinge
+           GO DEEPER — three verticals
            ============================================================ -->
       <section class="bg-light-blue/40">
         <div class="container-brand py-20 md:py-28">
@@ -294,7 +630,7 @@
               Three categories where we've gone deep.
             </h2>
             <p class="mt-6 text-[17px] md:text-[18px] leading-[1.6] text-brand-dark/75">
-              The fundamentals are constant across B2B SaaS. The execution isn't. We've spent years inside three categories where the buying committee, the compliance bar, and the content motion differ enough to need their own playbook. If you're in one, start there.
+              The fundamentals are constant across B2B SaaS. The execution isn't. We've spent years inside three categories where the buying committee, the compliance bar, and the content motion differ enough to need their own playbook.
             </p>
           </div>
 
@@ -317,20 +653,20 @@
           </div>
 
           <p class="mt-10 text-[16px] md:text-[17px] leading-[1.6] text-brand-dark/70 max-w-[78ch]">
-            Not in one of these? Most of our work is with B2B SaaS companies outside these three categories — HR tech, martech, devtools, vertical SaaS, and more. <span class="text-brand-dark font-medium">The system is the same.</span>
+            Not in one of these? Most of our work is with B2B SaaS companies outside these three — HR tech, martech, devtools, vertical SaaS, and more. <span class="text-brand-dark font-medium">The system is the same.</span>
           </p>
         </div>
       </section>
 
       <!-- ============================================================
-           BLOCK 7 — WHAT THIS HAS LOOKED LIKE · proof as competence evidence
+           PROOF — richer case study tiles
            ============================================================ -->
       <section id="proof" class="bg-white">
-        <div class="container-brand py-20 md:py-28">
-          <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-5 mb-12 md:mb-14">
+        <div class="container-brand py-24 md:py-32">
+          <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12 md:mb-14">
             <div class="max-w-2xl">
               <p class="section-eyebrow mb-6">What this has looked like</p>
-              <h2 class="text-[30px] md:text-[40px] leading-[1.12] tracking-[-0.02em] text-brand-dark">
+              <h2 class="text-[34px] md:text-[44px] leading-[1.1] tracking-[-0.02em] text-brand-dark">
                 The work, across the B2B SaaS landscape.
               </h2>
               <p class="mt-6 text-[17px] md:text-[18px] leading-[1.6] text-brand-dark/75">
@@ -343,36 +679,128 @@
           </div>
 
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
-            <article class="bg-light-blue/40 rounded-2xl p-6 md:p-7 flex flex-col">
-              <p class="font-mono text-[11px] uppercase tracking-[0.18em] text-brand-blue font-medium mb-3">SnapLogic · iPaaS</p>
-              <p class="hero-stat text-[30px] md:text-[34px] text-brand-dark mb-3">11× ROAS</p>
-              <p class="text-[14px] text-brand-dark/75 leading-[1.55] flex-1">Value-based bidding tied to CRM-defined ICP signals; the algorithm learned to optimize for accounts that close.</p>
-              <a href="/case-studies/snaplogic-troas" class="mt-5 inline-flex items-center gap-1.5 text-[13px] text-brand-blue font-medium hover:gap-2.5 transition-all">See the work <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
-            </article>
-            <article class="bg-light-blue/40 rounded-2xl p-6 md:p-7 flex flex-col">
-              <p class="font-mono text-[11px] uppercase tracking-[0.18em] text-brand-blue font-medium mb-3">IRONSCALES · Email Security</p>
-              <p class="hero-stat text-[30px] md:text-[34px] text-brand-dark mb-3">2.3× pipeline</p>
-              <p class="text-[14px] text-brand-dark/75 leading-[1.55] flex-1">First-party data activation rebuilt the campaign infrastructure; +227% marketing-sourced pipeline at the same budget, in 90 days.</p>
-              <a href="/case-studies/ironscales" class="mt-5 inline-flex items-center gap-1.5 text-[13px] text-brand-blue font-medium hover:gap-2.5 transition-all">See the work <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
-            </article>
-            <article class="bg-light-blue/40 rounded-2xl p-6 md:p-7 flex flex-col">
-              <p class="font-mono text-[11px] uppercase tracking-[0.18em] text-brand-blue font-medium mb-3">Cribl · Observability</p>
-              <p class="hero-stat text-[30px] md:text-[34px] text-brand-dark mb-3">+95% organic</p>
-              <p class="text-[14px] text-brand-dark/75 leading-[1.55] flex-1">Technical SEO foundation plus a hybrid AI + human content engine; contribution to the $100M ARR milestone.</p>
-              <a href="/case-studies/cribl-100m-arr" class="mt-5 inline-flex items-center gap-1.5 text-[13px] text-brand-blue font-medium hover:gap-2.5 transition-all">See the work <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
-            </article>
-            <article class="bg-light-blue/40 rounded-2xl p-6 md:p-7 flex flex-col">
-              <p class="font-mono text-[11px] uppercase tracking-[0.18em] text-brand-blue font-medium mb-3">SmartRecruiters · HR Tech</p>
-              <p class="hero-stat text-[30px] md:text-[34px] text-brand-dark mb-3">4× opps</p>
-              <p class="text-[14px] text-brand-dark/75 leading-[1.55] flex-1">Marketo + Salesforce + Google Ads pipeline integration via offline conversion tracking; 4× opportunities at 50% budget, −88% cost per MQL.</p>
-              <a href="/case-studies/smartrecruiters" class="mt-5 inline-flex items-center gap-1.5 text-[13px] text-brand-blue font-medium hover:gap-2.5 transition-all">See the work <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
-            </article>
+
+            <a href="/case-studies/snaplogic-troas" data-track="case_tile_snaplogic" class="group bg-light-blue/40 rounded-2xl p-7 hover:shadow-2xl hover:shadow-brand-dark/10 transition-all flex flex-col">
+              <div class="flex items-center justify-between mb-5">
+                <span class="text-[16px] font-medium text-brand-dark">SnapLogic</span>
+                <span class="font-mono text-[10px] uppercase tracking-[0.18em] text-brand-dark/55">iPaaS</span>
+              </div>
+              <p class="font-mono text-[38px] md:text-[42px] font-medium text-brand-blue leading-none tabular-nums">11×</p>
+              <p class="text-[12px] text-brand-dark/65 mt-1.5 leading-[1.45] mb-4">ROAS from value-based bidding</p>
+              <p class="font-mono text-[22px] font-medium text-brand-dark leading-none tabular-nums">+125%</p>
+              <p class="text-[12px] text-brand-dark/65 mt-1.5 leading-[1.45]">Stage 1 opportunities</p>
+              <p class="mt-auto pt-5 border-t border-brand-dark/10 text-[13px] leading-[1.55] text-brand-dark/75">CRM-defined ICP signals fed back to the bid algorithm via offline conversion tracking. The platform learned to optimize for accounts that close.</p>
+              <span class="mt-3 inline-flex items-center gap-1 text-[12px] font-medium text-brand-blue group-hover:gap-2 transition-all">See the work <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3 h-3"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></span>
+            </a>
+
+            <a href="/case-studies/ironscales" data-track="case_tile_ironscales" class="group bg-light-blue/40 rounded-2xl p-7 hover:shadow-2xl hover:shadow-brand-dark/10 transition-all flex flex-col">
+              <div class="flex items-center justify-between mb-5">
+                <span class="text-[16px] font-medium text-brand-dark">IRONSCALES</span>
+                <span class="font-mono text-[10px] uppercase tracking-[0.18em] text-brand-dark/55">Email Security</span>
+              </div>
+              <p class="font-mono text-[38px] md:text-[42px] font-medium text-brand-blue leading-none tabular-nums">2.3×</p>
+              <p class="text-[12px] text-brand-dark/65 mt-1.5 leading-[1.45] mb-4">pipeline in 90 days</p>
+              <p class="font-mono text-[22px] font-medium text-brand-dark leading-none tabular-nums">+227%</p>
+              <p class="text-[12px] text-brand-dark/65 mt-1.5 leading-[1.45]">marketing-sourced pipeline</p>
+              <p class="mt-auto pt-5 border-t border-brand-dark/10 text-[13px] leading-[1.55] text-brand-dark/75">First-party data activation rebuilt the campaign infrastructure. +92% MQLs at the same Cost/MQL. Same budget — different data layer.</p>
+              <span class="mt-3 inline-flex items-center gap-1 text-[12px] font-medium text-brand-blue group-hover:gap-2 transition-all">See the work <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3 h-3"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></span>
+            </a>
+
+            <a href="/case-studies/cribl-100m-arr" data-track="case_tile_cribl" class="group bg-light-blue/40 rounded-2xl p-7 hover:shadow-2xl hover:shadow-brand-dark/10 transition-all flex flex-col">
+              <div class="flex items-center justify-between mb-5">
+                <span class="text-[16px] font-medium text-brand-dark">Cribl</span>
+                <span class="font-mono text-[10px] uppercase tracking-[0.18em] text-brand-dark/55">Observability</span>
+              </div>
+              <p class="font-mono text-[38px] md:text-[42px] font-medium text-brand-blue leading-none tabular-nums">+95%</p>
+              <p class="text-[12px] text-brand-dark/65 mt-1.5 leading-[1.45] mb-4">organic traffic growth</p>
+              <p class="font-mono text-[22px] font-medium text-brand-dark leading-none tabular-nums">$100M</p>
+              <p class="text-[12px] text-brand-dark/65 mt-1.5 leading-[1.45]">ARR milestone reached</p>
+              <p class="mt-auto pt-5 border-t border-brand-dark/10 text-[13px] leading-[1.55] text-brand-dark/75">Technical SEO foundation plus a hybrid AI + human content engine, compounding organic authority over the growth stage.</p>
+              <span class="mt-3 inline-flex items-center gap-1 text-[12px] font-medium text-brand-blue group-hover:gap-2 transition-all">See the work <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3 h-3"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></span>
+            </a>
+
+            <a href="/case-studies/smartrecruiters" data-track="case_tile_smartrecruiters" class="group bg-light-blue/40 rounded-2xl p-7 hover:shadow-2xl hover:shadow-brand-dark/10 transition-all flex flex-col">
+              <div class="flex items-center justify-between mb-5">
+                <span class="text-[16px] font-medium text-brand-dark">SmartRecruiters</span>
+                <span class="font-mono text-[10px] uppercase tracking-[0.18em] text-brand-dark/55">HR Tech</span>
+              </div>
+              <p class="font-mono text-[38px] md:text-[42px] font-medium text-brand-blue leading-none tabular-nums">4×</p>
+              <p class="text-[12px] text-brand-dark/65 mt-1.5 leading-[1.45] mb-4">opportunities at 50% budget</p>
+              <p class="font-mono text-[22px] font-medium text-brand-dark leading-none tabular-nums">−88%</p>
+              <p class="text-[12px] text-brand-dark/65 mt-1.5 leading-[1.45]">cost per MQL</p>
+              <p class="mt-auto pt-5 border-t border-brand-dark/10 text-[13px] leading-[1.55] text-brand-dark/75">Marketo + Salesforce + Google Ads pipeline integration via offline conversion tracking. The algorithm learned to find enterprise buyers, not just form-fillers.</p>
+              <span class="mt-3 inline-flex items-center gap-1 text-[12px] font-medium text-brand-blue group-hover:gap-2 transition-all">See the work <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3 h-3"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></span>
+            </a>
+
           </div>
         </div>
       </section>
 
       <!-- ============================================================
-           BLOCK 8 — ONE SOFT CLOSING CTA
+           CUSTOMER VOICE — G2 quotes
+           ============================================================ -->
+      <section id="customer-voice" class="bg-light-blue/40">
+        <div class="container-brand py-24 md:py-32">
+          <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-8 mb-12 md:mb-14">
+            <div class="max-w-2xl">
+              <p class="section-eyebrow mb-6">Customer voice</p>
+              <h2 class="text-[34px] md:text-[44px] leading-[1.1] tracking-[-0.02em] text-brand-dark">
+                Our <span class="font-script text-brand-blue text-[1.05em] leading-none">clients</span> speak for themselves.
+              </h2>
+            </div>
+            <a href="https://www.g2.com/products/vertodigital/reviews" target="_blank" rel="noopener noreferrer" data-track="g2_widget_click_voice" class="group bg-white rounded-xl px-5 py-3 inline-flex items-center gap-4 hover:shadow-lg hover:shadow-brand-dark/5 transition-shadow self-start">
+              <span class="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-[#FF492C] text-white font-bold text-[15px] tabular-nums flex-shrink-0">G2</span>
+              <p class="font-mono text-[28px] md:text-[34px] font-medium text-brand-dark leading-none tabular-nums">
+                <span class="text-brand-blue">4.9</span><span class="text-brand-dark/40 text-[22px]"> / 5</span>
+              </p>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-brand-dark/45 group-hover:text-brand-blue transition-colors"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+            </a>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+
+            <figure class="bg-white rounded-2xl p-7 md:p-8 flex flex-col hover:shadow-xl hover:shadow-brand-dark/5 transition-shadow">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-7 h-7 text-brand-blue/30 mb-5"><path d="M16 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"/><path d="M5 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"/></svg>
+              <blockquote class="text-[17px] md:text-[18px] font-medium text-brand-dark leading-[1.5] tracking-[-0.005em] mb-7">
+                "They built a paid acquisition program that became one of marketing's top three sources of pipeline generation for our business."
+              </blockquote>
+              <figcaption class="mt-auto pt-5 border-t border-brand-dark/10 flex items-center gap-4">
+                <div class="w-11 h-11 rounded-full bg-gradient-to-br from-dark-blue to-brand-blue flex items-center justify-center text-white font-medium text-[14px] flex-shrink-0" aria-hidden="true">GH</div>
+                <div class="flex-1 min-w-0">
+                  <p class="font-medium text-brand-dark text-[14px] leading-tight">Grant Ho</p>
+                  <p class="text-brand-dark/60 text-[12px] leading-snug mt-1">CMO, IRONSCALES · LP, Stage 2 Capital Catalyst</p>
+                </div>
+              </figcaption>
+              <p class="mt-3 inline-flex items-center gap-1.5 text-[11px] text-brand-dark/55">
+                <span class="inline-flex items-center justify-center w-4 h-4 rounded bg-[#FF492C] text-white font-bold text-[8px] tabular-nums">G2</span>
+                G2 verified review · January 2025
+              </p>
+            </figure>
+
+            <figure class="bg-white rounded-2xl p-7 md:p-8 flex flex-col hover:shadow-xl hover:shadow-brand-dark/5 transition-shadow">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-7 h-7 text-brand-blue/30 mb-5"><path d="M16 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"/><path d="M5 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"/></svg>
+              <blockquote class="text-[17px] md:text-[18px] font-medium text-brand-dark leading-[1.5] tracking-[-0.005em] mb-7">
+                "They brought real opinions, not just execution. They understood what our ICP responds to and weren't afraid to tell us when something wasn't made right, even if fixing it meant more work on their end or ours."
+              </blockquote>
+              <figcaption class="mt-auto pt-5 border-t border-brand-dark/10 flex items-center gap-4">
+                <div class="w-11 h-11 rounded-full bg-gradient-to-br from-accent-purple to-brand-blue flex items-center justify-center text-white flex-shrink-0" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
+                <div class="flex-1 min-w-0">
+                  <p class="font-medium text-brand-dark text-[14px] leading-tight">Verified G2 Reviewer</p>
+                  <p class="text-brand-dark/60 text-[12px] leading-snug mt-1">B2B SaaS · Small-Business</p>
+                </div>
+              </figcaption>
+              <p class="mt-3 inline-flex items-center gap-1.5 text-[11px] text-brand-dark/55">
+                <span class="inline-flex items-center justify-center w-4 h-4 rounded bg-[#FF492C] text-white font-bold text-[8px] tabular-nums">G2</span>
+                G2 verified review · April 2026
+              </p>
+            </figure>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           CLOSING CTA
            ============================================================ -->
       <section class="hero-gradient">
         <div class="container-brand py-24 md:py-32">
@@ -396,7 +824,6 @@
       </section>
     </main>
 
-    <!-- Footer · canonical block matching the rest of the site -->
     <div id="verto-footer-mount"></div>
 
     <script src="/js/nav.js" defer></script>

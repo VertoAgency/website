@@ -60,7 +60,7 @@
       <div class="border-t border-white/10">
         <div class="container-brand py-10">
           <p class="text-cool-gray text-[11px] font-mono uppercase tracking-[0.18em] mb-6 text-center">Trusted by teams at</p>
-          <div class="grid grid-cols-2 md:grid-cols-3 items-center justify-items-center gap-x-12 gap-y-6">
+          <div class="grid grid-cols-2 md:grid-cols-6 items-center justify-items-center gap-x-12 gap-y-6">
             <img src="/images/logos/cloudflare-logo.png"      alt="Cloudflare"      loading="lazy" width="60" height="20" class="footer-client-logo">
             <img src="/images/logos/neo4j-logo.png"           alt="Neo4j"           loading="lazy" width="53" height="20" class="footer-client-logo">
             <img src="/images/logos/cribl-logo.png"           alt="Cribl"           loading="lazy" width="70" height="28" class="footer-client-logo" style="height:28px">

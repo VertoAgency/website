@@ -11,6 +11,8 @@
   var CSS = `
     .footer-client-logo { filter: brightness(0) invert(1); opacity: 0.45; transition: opacity 200ms ease; display: block; height: 20px; width: auto; max-width: 110px; object-fit: contain; }
     .footer-client-logo:hover { opacity: 0.75; }
+    .footer-logo-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); justify-items: center; align-items: center; gap: 1.75rem 2.5rem; max-width: 320px; margin: 0 auto; }
+    @media (min-width: 768px) { .footer-logo-grid { grid-template-columns: repeat(6, minmax(0, 1fr)); max-width: none; gap: 1rem 3rem; } }
     .footer-manifesto { font-family: 'Geist', sans-serif; font-weight: 500; font-size: clamp(2rem, 5.5vw, 4.25rem); line-height: 1.05; letter-spacing: -0.025em; }
     .footer-g2-badge { transition: color 180ms ease; }
     .footer-g2-badge:hover { color: #ffffff; }
@@ -60,7 +62,7 @@
       <div class="border-t border-white/10">
         <div class="container-brand py-10">
           <p class="text-cool-gray text-[11px] font-mono uppercase tracking-[0.18em] mb-6 text-center">Trusted by teams at</p>
-          <div class="grid grid-cols-2 md:grid-cols-6 items-center justify-items-center gap-x-10 gap-y-7 max-w-xs mx-auto md:max-w-none">
+          <div class="footer-logo-grid">
             <img src="/images/logos/cloudflare-logo.png"      alt="Cloudflare"      loading="lazy" width="60" height="20" class="footer-client-logo">
             <img src="/images/logos/neo4j-logo.png"           alt="Neo4j"           loading="lazy" width="53" height="20" class="footer-client-logo">
             <img src="/images/logos/cribl-logo.png"           alt="Cribl"           loading="lazy" width="70" height="28" class="footer-client-logo" style="height:28px">

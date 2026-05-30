@@ -11,8 +11,8 @@
   var CSS = `
     .footer-client-logo { filter: brightness(0) invert(1); opacity: 0.45; transition: opacity 200ms ease; display: block; height: 20px; width: auto; max-width: 110px; object-fit: contain; }
     .footer-client-logo:hover { opacity: 0.75; }
-    .footer-logo-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); justify-items: center; align-items: center; gap: 2rem 2rem; max-width: 360px; margin: 0 auto; }
-    @media (min-width: 768px) { .footer-logo-grid { grid-template-columns: repeat(6, minmax(0, 1fr)); max-width: none; gap: 1rem 3rem; } }
+    .footer-logo-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); justify-items: center; align-items: center; gap: 1.25rem 2.5rem; max-width: 360px; margin: 0 auto; }
+    @media (min-width: 768px) { .footer-logo-grid { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; max-width: none; gap: 1.25rem 2.5rem; } }
     .footer-manifesto { font-family: 'Geist', sans-serif; font-weight: 500; font-size: clamp(2rem, 5.5vw, 4.25rem); line-height: 1.05; letter-spacing: -0.025em; }
     .footer-g2-badge { transition: color 180ms ease; }
     .footer-g2-badge:hover { color: #ffffff; }

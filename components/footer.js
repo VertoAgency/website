@@ -85,22 +85,22 @@
 
               <p class="text-brand-light text-[9px] font-mono uppercase tracking-[0.18em] mb-2">Inbound</p>
               <ul class="space-y-2 text-sm mb-6">
-                <li><a href="/services/inbound-pipeline-growth" class="text-white hover:text-brand-blue transition-colors">Inbound Pipeline Growth</a></li>
-                <li class="pl-3"><a href="/services/inbound/linkedin-paid-social" class="text-cool-gray hover:text-white transition-colors text-xs">LinkedIn Paid Social</a></li>
-                <li class="pl-3"><a href="/services/inbound/paid-search"          class="text-cool-gray hover:text-white transition-colors text-xs">Paid Search</a></li>
-                <li class="pl-3"><a href="/services/inbound/seo-and-aeo"          class="text-cool-gray hover:text-white transition-colors text-xs">SEO &amp; AEO</a></li>
+                <li><a href="/services/b2b-inbound-pipeline-growth-and-demand-generation" class="text-white hover:text-brand-blue transition-colors">Inbound Pipeline Growth</a></li>
+                <li class="pl-3"><a href="/services/inbound/b2b-and-saas-linkedin-advertising" class="text-cool-gray hover:text-white transition-colors text-xs">LinkedIn Paid Social</a></li>
+                <li class="pl-3"><a href="/services/inbound/b2b-and-saas-paid-search"          class="text-cool-gray hover:text-white transition-colors text-xs">Paid Search</a></li>
+                <li class="pl-3"><a href="/services/inbound/b2b-seo-and-aeo"          class="text-cool-gray hover:text-white transition-colors text-xs">SEO &amp; AEO</a></li>
               </ul>
 
               <p class="text-brand-light text-[9px] font-mono uppercase tracking-[0.18em] mb-2">Outbound</p>
               <ul class="space-y-2 text-sm mb-6">
-                <li><a href="/services/outbound-pipeline-growth" class="text-white hover:text-brand-blue transition-colors">Outbound Pipeline Growth</a></li>
-                <li class="pl-3"><a href="/services/outbound/account-based-abm"  class="text-cool-gray hover:text-white transition-colors text-xs">Account-Based ABM</a></li>
-                <li class="pl-3"><a href="/services/outbound/contact-based-abm"  class="text-cool-gray hover:text-white transition-colors text-xs">Contact-Based ABM</a></li>
-                <li class="pl-3"><a href="/services/outbound/persona-based-abm"  class="text-cool-gray hover:text-white transition-colors text-xs">Persona-Based ABM</a></li>
+                <li><a href="/services/b2b-outbound-pipeline-growth-and-demand-generation" class="text-white hover:text-brand-blue transition-colors">Outbound Pipeline Growth</a></li>
+                <li class="pl-3"><a href="/services/outbound/account-based-marketing"  class="text-cool-gray hover:text-white transition-colors text-xs">Account-Based ABM</a></li>
+                <li class="pl-3"><a href="/services/outbound/contact-based-marketing"  class="text-cool-gray hover:text-white transition-colors text-xs">Contact-Based ABM</a></li>
+                <li class="pl-3"><a href="/services/outbound/persona-based-marketing"  class="text-cool-gray hover:text-white transition-colors text-xs">Persona-Based ABM</a></li>
               </ul>
 
               <ul class="space-y-3 text-sm">
-                <li><a href="/services/pipeline-intelligence" class="text-white hover:text-brand-blue transition-colors">Pipeline Intelligence</a></li>
+                <li><a href="/services/b2b-pipeline-intelligence-and-marketing-attribution" class="text-white hover:text-brand-blue transition-colors">Pipeline Intelligence</a></li>
                 <li><a href="/assessment"                     class="text-white hover:text-brand-blue transition-colors">Free Pipeline Assessment</a></li>
               </ul>
             </div>
@@ -109,9 +109,9 @@
             <div>
               <p class="text-brand-light text-[11px] font-mono font-medium uppercase tracking-[0.18em] mb-5">Industries</p>
               <ul class="space-y-3 text-sm">
-                <li><a href="/industries/cybersecurity"                        class="text-white hover:text-brand-blue transition-colors">Cybersecurity</a></li>
-                <li><a href="/industries/data-platforms-and-ai-infrastructure" class="text-white hover:text-brand-blue transition-colors">Data Platforms &amp; AI</a></li>
-                <li><a href="/industries/fintech-and-financial-services"       class="text-white hover:text-brand-blue transition-colors">Fintech &amp; Financial</a></li>
+                <li><a href="/industries/cybersecurity-marketing"                        class="text-white hover:text-brand-blue transition-colors">Cybersecurity</a></li>
+                <li><a href="/industries/data-platforms-and-ai-infrastructure-marketing" class="text-white hover:text-brand-blue transition-colors">Data Platforms &amp; AI</a></li>
+                <li><a href="/industries/fintech-and-financial-services-marketing"       class="text-white hover:text-brand-blue transition-colors">Fintech &amp; Financial</a></li>
               </ul>
             </div>
 

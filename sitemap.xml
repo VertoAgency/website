@@ -3,19 +3,19 @@
   <url><loc>https://vertodigital.com/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
   <url><loc>https://vertodigital.com/about</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://vertodigital.com/services</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://vertodigital.com/services/inbound-pipeline-growth</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://vertodigital.com/services/outbound-pipeline-growth</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://vertodigital.com/services/pipeline-intelligence</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://vertodigital.com/services/inbound/linkedin-paid-social</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://vertodigital.com/services/inbound/paid-search</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://vertodigital.com/services/inbound/seo-and-aeo</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://vertodigital.com/services/outbound/account-based-abm</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://vertodigital.com/services/outbound/contact-based-abm</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://vertodigital.com/services/outbound/persona-based-abm</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://vertodigital.com/services/b2b-inbound-pipeline-growth-and-demand-generation</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://vertodigital.com/services/b2b-outbound-pipeline-growth-and-demand-generation</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://vertodigital.com/services/b2b-pipeline-intelligence-and-marketing-attribution</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://vertodigital.com/services/inbound/b2b-and-saas-linkedin-advertising</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://vertodigital.com/services/inbound/b2b-and-saas-paid-search</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://vertodigital.com/services/inbound/b2b-seo-and-aeo</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://vertodigital.com/services/outbound/account-based-marketing</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://vertodigital.com/services/outbound/contact-based-marketing</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://vertodigital.com/services/outbound/persona-based-marketing</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://vertodigital.com/industries/b2b-saas</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://vertodigital.com/industries/cybersecurity</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://vertodigital.com/industries/data-platforms-and-ai-infrastructure</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://vertodigital.com/industries/fintech-and-financial-services</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://vertodigital.com/industries/cybersecurity-marketing</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://vertodigital.com/industries/data-platforms-and-ai-infrastructure-marketing</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://vertodigital.com/industries/fintech-and-financial-services-marketing</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://vertodigital.com/case-studies</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://vertodigital.com/case-studies/access-finance</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://vertodigital.com/case-studies/ampeco-abm-tracking</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>

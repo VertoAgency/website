@@ -426,11 +426,11 @@
         </button>
         <div class="vn-drop" id="vn-drop-inbound">
           <div class="vn-drop-inner">
-            <a href="/services/inbound-pipeline-growth" class="vn-drop-hub">Inbound Pipeline Growth &rarr;</a>
+            <a href="/services/b2b-inbound-pipeline-growth-and-demand-generation" class="vn-drop-hub">Inbound Pipeline Growth &rarr;</a>
             <div class="vn-drop-div"></div>
-            <a href="/services/inbound/linkedin-paid-social" class="vn-drop-link">LinkedIn Paid Social</a>
-            <a href="/services/inbound/paid-search"          class="vn-drop-link">Paid Search</a>
-            <a href="/services/inbound/seo-and-aeo"          class="vn-drop-link">SEO &amp; AEO</a>
+            <a href="/services/inbound/b2b-and-saas-linkedin-advertising" class="vn-drop-link">LinkedIn Paid Social</a>
+            <a href="/services/inbound/b2b-and-saas-paid-search"          class="vn-drop-link">Paid Search</a>
+            <a href="/services/inbound/b2b-seo-and-aeo"          class="vn-drop-link">SEO &amp; AEO</a>
             <div class="vn-drop-div"></div>
             <a href="/assessment" class="vn-drop-cta">&#10022; Free Pipeline Assessment &rarr;</a>
           </div>
@@ -444,11 +444,11 @@
         </button>
         <div class="vn-drop" id="vn-drop-outbound">
           <div class="vn-drop-inner">
-            <a href="/services/outbound-pipeline-growth" class="vn-drop-hub">Outbound Pipeline Growth &rarr;</a>
+            <a href="/services/b2b-outbound-pipeline-growth-and-demand-generation" class="vn-drop-hub">Outbound Pipeline Growth &rarr;</a>
             <div class="vn-drop-div"></div>
-            <a href="/services/outbound/account-based-abm"  class="vn-drop-link">Account-based ABM</a>
-            <a href="/services/outbound/persona-based-abm"  class="vn-drop-link">Persona-based ABM</a>
-            <a href="/services/outbound/contact-based-abm"  class="vn-drop-link">Contact-based ABM</a>
+            <a href="/services/outbound/account-based-marketing"  class="vn-drop-link">Account-based ABM</a>
+            <a href="/services/outbound/persona-based-marketing"  class="vn-drop-link">Persona-based ABM</a>
+            <a href="/services/outbound/contact-based-marketing"  class="vn-drop-link">Contact-based ABM</a>
             <div class="vn-drop-div"></div>
             <a href="/assessment" class="vn-drop-cta">&#10022; Free Pipeline Assessment &rarr;</a>
           </div>
@@ -456,7 +456,7 @@
       </div>
 
       <!-- Intelligence (direct link) -->
-      <a href="/services/pipeline-intelligence" class="vn-link" data-item="intelligence">Intelligence</a>
+      <a href="/services/b2b-pipeline-intelligence-and-marketing-attribution" class="vn-link" data-item="intelligence">Intelligence</a>
 
       <!-- Industries -->
       <div class="vn-item" data-item="industries">
@@ -466,9 +466,9 @@
         <div class="vn-drop" id="vn-drop-industries">
           <div class="vn-drop-inner" style="min-width:260px">
             <a href="/industries/b2b-saas"                            class="vn-drop-link">B2B SaaS</a>
-            <a href="/industries/cybersecurity"                        class="vn-drop-link">Cybersecurity</a>
-            <a href="/industries/data-platforms-and-ai-infrastructure" class="vn-drop-link">Data Platforms &amp; AI Infrastructure</a>
-            <a href="/industries/fintech-and-financial-services"       class="vn-drop-link">Fintech &amp; Financial Services</a>
+            <a href="/industries/cybersecurity-marketing"                        class="vn-drop-link">Cybersecurity</a>
+            <a href="/industries/data-platforms-and-ai-infrastructure-marketing" class="vn-drop-link">Data Platforms &amp; AI Infrastructure</a>
+            <a href="/industries/fintech-and-financial-services-marketing"       class="vn-drop-link">Fintech &amp; Financial Services</a>
           </div>
         </div>
       </div>
@@ -511,11 +511,11 @@
         </button>
         <div class="vn-mob-acc-body">
           <div class="vn-mob-acc-inner">
-            <a href="/services/inbound-pipeline-growth" class="vn-mob-acc-hub">Inbound Pipeline Growth</a>
+            <a href="/services/b2b-inbound-pipeline-growth-and-demand-generation" class="vn-mob-acc-hub">Inbound Pipeline Growth</a>
             <span class="vn-mob-acc-label">Channels</span>
-            <a href="/services/inbound/linkedin-paid-social" class="vn-mob-acc-link">LinkedIn Paid Social</a>
-            <a href="/services/inbound/paid-search"          class="vn-mob-acc-link">Paid Search</a>
-            <a href="/services/inbound/seo-and-aeo"          class="vn-mob-acc-link">SEO &amp; AEO</a>
+            <a href="/services/inbound/b2b-and-saas-linkedin-advertising" class="vn-mob-acc-link">LinkedIn Paid Social</a>
+            <a href="/services/inbound/b2b-and-saas-paid-search"          class="vn-mob-acc-link">Paid Search</a>
+            <a href="/services/inbound/b2b-seo-and-aeo"          class="vn-mob-acc-link">SEO &amp; AEO</a>
             <a href="/assessment" class="vn-mob-acc-cta">&#10022; Free Pipeline Assessment &rarr;</a>
           </div>
         </div>
@@ -528,18 +528,18 @@
         </button>
         <div class="vn-mob-acc-body">
           <div class="vn-mob-acc-inner">
-            <a href="/services/outbound-pipeline-growth" class="vn-mob-acc-hub">Outbound Pipeline Growth</a>
+            <a href="/services/b2b-outbound-pipeline-growth-and-demand-generation" class="vn-mob-acc-hub">Outbound Pipeline Growth</a>
             <span class="vn-mob-acc-label">Approaches</span>
-            <a href="/services/outbound/account-based-abm"  class="vn-mob-acc-link">Account-based ABM</a>
-            <a href="/services/outbound/persona-based-abm"  class="vn-mob-acc-link">Persona-based ABM</a>
-            <a href="/services/outbound/contact-based-abm"  class="vn-mob-acc-link">Contact-based ABM</a>
+            <a href="/services/outbound/account-based-marketing"  class="vn-mob-acc-link">Account-based ABM</a>
+            <a href="/services/outbound/persona-based-marketing"  class="vn-mob-acc-link">Persona-based ABM</a>
+            <a href="/services/outbound/contact-based-marketing"  class="vn-mob-acc-link">Contact-based ABM</a>
             <a href="/assessment" class="vn-mob-acc-cta">&#10022; Free Pipeline Assessment &rarr;</a>
           </div>
         </div>
       </div>
 
       <!-- Intelligence -->
-      <a href="/services/pipeline-intelligence" class="vn-mob-link" data-item="intelligence">Intelligence</a>
+      <a href="/services/b2b-pipeline-intelligence-and-marketing-attribution" class="vn-mob-link" data-item="intelligence">Intelligence</a>
 
       <!-- Industries accordion -->
       <div class="vn-mob-acc" data-item="industries">
@@ -549,9 +549,9 @@
         <div class="vn-mob-acc-body">
           <div class="vn-mob-acc-inner">
             <a href="/industries/b2b-saas"                            class="vn-mob-acc-link">B2B SaaS</a>
-            <a href="/industries/cybersecurity"                        class="vn-mob-acc-link">Cybersecurity</a>
-            <a href="/industries/data-platforms-and-ai-infrastructure" class="vn-mob-acc-link">Data Platforms &amp; AI Infrastructure</a>
-            <a href="/industries/fintech-and-financial-services"       class="vn-mob-acc-link">Fintech &amp; Financial Services</a>
+            <a href="/industries/cybersecurity-marketing"                        class="vn-mob-acc-link">Cybersecurity</a>
+            <a href="/industries/data-platforms-and-ai-infrastructure-marketing" class="vn-mob-acc-link">Data Platforms &amp; AI Infrastructure</a>
+            <a href="/industries/fintech-and-financial-services-marketing"       class="vn-mob-acc-link">Fintech &amp; Financial Services</a>
           </div>
         </div>
       </div>
@@ -691,7 +691,7 @@
   var ACTIVE_RULES = [
     { item: 'inbound',      test: function (p) { return p.startsWith('/services/inbound'); } },
     { item: 'outbound',     test: function (p) { return p.startsWith('/services/outbound'); } },
-    { item: 'intelligence', test: function (p) { return p === '/services/pipeline-intelligence'; } },
+    { item: 'intelligence', test: function (p) { return p === '/services/b2b-pipeline-intelligence-and-marketing-attribution'; } },
     { item: 'industries',   test: function (p) { return p.startsWith('/industries'); } },
     { item: 'results',      test: function (p) { return p.startsWith('/case-studies'); } },
     { item: 'jobs',      test: function (p) { return p.startsWith('/jobs'); } },

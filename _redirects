@@ -24,3 +24,29 @@
 # Renamed page: careers → jobs
 /careers                     /jobs  301
 /careers/                    /jobs  301
+
+# URL slug updates — keyword-optimised renames (May 2026)
+/services/pipeline-intelligence                         /services/b2b-pipeline-intelligence-and-marketing-attribution  301
+/services/pipeline-intelligence/                        /services/b2b-pipeline-intelligence-and-marketing-attribution  301
+/industries/cybersecurity                               /industries/cybersecurity-marketing  301
+/industries/cybersecurity/                              /industries/cybersecurity-marketing  301
+/industries/data-platforms-and-ai-infrastructure        /industries/data-platforms-and-ai-infrastructure-marketing  301
+/industries/data-platforms-and-ai-infrastructure/       /industries/data-platforms-and-ai-infrastructure-marketing  301
+/industries/fintech-and-financial-services              /industries/fintech-and-financial-services-marketing  301
+/industries/fintech-and-financial-services/             /industries/fintech-and-financial-services-marketing  301
+/services/inbound-pipeline-growth                       /services/b2b-inbound-pipeline-growth-and-demand-generation  301
+/services/inbound-pipeline-growth/                      /services/b2b-inbound-pipeline-growth-and-demand-generation  301
+/services/inbound/seo-and-aeo                           /services/inbound/b2b-seo-and-aeo  301
+/services/inbound/seo-and-aeo/                          /services/inbound/b2b-seo-and-aeo  301
+/services/inbound/paid-search                           /services/inbound/b2b-and-saas-paid-search  301
+/services/inbound/paid-search/                          /services/inbound/b2b-and-saas-paid-search  301
+/services/inbound/linkedin-paid-social                  /services/inbound/b2b-and-saas-linkedin-advertising  301
+/services/inbound/linkedin-paid-social/                 /services/inbound/b2b-and-saas-linkedin-advertising  301
+/services/outbound-pipeline-growth                      /services/b2b-outbound-pipeline-growth-and-demand-generation  301
+/services/outbound-pipeline-growth/                     /services/b2b-outbound-pipeline-growth-and-demand-generation  301
+/services/outbound/account-based-abm                    /services/outbound/account-based-marketing  301
+/services/outbound/account-based-abm/                   /services/outbound/account-based-marketing  301
+/services/outbound/persona-based-abm                    /services/outbound/persona-based-marketing  301
+/services/outbound/persona-based-abm/                   /services/outbound/persona-based-marketing  301
+/services/outbound/contact-based-abm                    /services/outbound/contact-based-marketing  301
+/services/outbound/contact-based-abm/                   /services/outbound/contact-based-marketing  301
